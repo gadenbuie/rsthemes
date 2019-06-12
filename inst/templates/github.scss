@@ -1,0 +1,67 @@
+/* rs-theme-name: GitHub {rsthemes} */
+/* rs-theme-is-dark: FALSE */
+
+@import "palettes/_github.scss";
+
+// primary UI colors
+$ui-background           : #FFFFFF;
+$ui-foreground           : $base07;
+$ui-code-chunk-background: $base01;
+$ui-selection            : transparentize($blue, 0.85);
+$ui-cursor               : $base0C;
+$ui-cursor-normal-mode   : $ui-cursor;
+$ui-margin-line          : $base02;
+$ui-gutter-color         : $base03;
+$ui-gutter-background    : $ui-background;
+
+// less common UI colors
+//$ui-line-active           : transparentize(darken($ui-background, 10%), 0.5);
+$ui-line-active           : $light-blue;
+$ui-line-active-gutter    : $light-blue;
+$ui-line-active-selection : transparentize($blue, 0.85);
+$ui-line-find             : $light-green;
+$ui-bracket               : $light-red;
+$ui-invisible             : $base03;
+$ui-indent-guide          : $base02;
+$ui-debug-background      : $light-red;
+$ui-fold-arrows-background: $base08;
+$ui-fold-arrows-color     : $light-red;
+
+// rstudio
+$ui-rstudio-background          : $ui-background;
+$ui-rstudio-color               : $ui-foreground;
+$ui-rstudio-tabs-inactive       : $base00;
+$ui-rstudio-tabs-inactive-color : $base03;
+$ui-rstudio-tabs-selected       : $base02;
+$ui-rstudio-tabs-selected-color : $blue;
+$ui-rstudio-toolbar             : $base02;
+$ui-rstudio-toolbar-color       : $base05;
+$ui-rstudio-search              : $ui-rstudio-toolbar;
+$ui-completions-background      : $ui-background;
+$ui-completions-color           : $ui-foreground;
+$ui-completions-border          : $ui-bracket;
+$ui-rstudio-scrollbar-background: $ui-background;
+$ui-rstudio-scrollbar-handle    : $ui-code-chunk-background;
+
+// R language colors
+$rlang-comment  : $base04;
+$rlang-string   : $base0B;
+$rlang-function : $base0D;
+$rlang-reserved : $base0E;
+$rlang-operator : $ui-foreground;
+$rlang-bracket  : $ui-foreground;
+$rlang-value    : $base0C;
+$rlang-namespace: $base0A;
+$rlang-variable : $base09;
+$rlang-message  : $base0F;
+$rlang-namespace-font-style: normal;
+
+$other-tag: $base08;
+
+// R Markdown
+$rmd-heading-weight: 600 !default;
+$rmd-heading-color: $base0F !default;
+$rmd-chunk-header: $blue !default;
+$rmd-href: $base0A !default;
+
+@import "rstudio/_rstudio-light", "rstudio/_terminal";

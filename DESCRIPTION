@@ -1,0 +1,26 @@
+Package: rsthemes
+Title: Full Themes for RStudio v1.2+
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Garrick",
+           family = "Aden-Buie",
+           role = c("aut", "cre"),
+           email = "garrick@adenbuie.com")
+Description: A collection of full RStudio themes built on SCSS
+    theme templates.
+License: MIT + file LICENSE
+URL: https://github.com/gadenbuie/rsthemes
+BugReports: https://github.com/gadenbuie/rsthemes/issues
+Imports: 
+    fs (>= 1.3.0),
+    purrr,
+    rstudioapi (>= 0.9.0)
+Suggests: 
+    sass (>= 0.1.0),
+    whisker
+Remotes: 
+    rstudio/rstudioapi
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1

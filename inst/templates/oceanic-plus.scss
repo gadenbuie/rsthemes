@@ -1,0 +1,60 @@
+/* rs-theme-name: Oceanic Plus {rsthemes} */
+/* rs-theme-is-dark: TRUE */
+
+@import "palettes/_oceanic-plus";
+
+// primary UI colors
+$ui-background           : $base00;
+$ui-foreground           : $base07;
+$ui-code-chunk-background: $base01;
+$ui-selection            : transparentize($base05, 0.6);
+$ui-cursor               : $base0A;
+$ui-cursor-normal-mode   : $ui-cursor;
+$ui-margin-line          : transparentize($ui-selection, 0.25);
+$ui-gutter-color         : transparentize($ui-foreground, 0.5);
+$ui-gutter-background    : $ui-background;
+
+// less common UI colors
+$ui-line-active           : transparentize(darken($ui-background, 5%), 0.5);
+$ui-line-active-gutter    : $base01;
+$ui-line-active-selection : $base02;
+$ui-line-find             : $base01;
+$ui-bracket               : $base02;
+$ui-invisible             : $base03;
+$ui-indent-guide          : $base02;
+$ui-debug-background      : lighten($ui-background, 10%);
+$ui-fold-arrows-background: $base08;
+$ui-fold-arrows-color     : $ui-foreground;
+
+// rstudio
+$ui-rstudio-background          : $base01;
+$ui-rstudio-color               : $ui-foreground;
+$ui-rstudio-tabs-inactive       : $base01;
+$ui-rstudio-tabs-inactive-color : $base04;
+$ui-rstudio-tabs-selected       : $base02;
+$ui-rstudio-tabs-selected-color : $base07;
+$ui-rstudio-toolbar             : $ui-rstudio-tabs-selected;
+$ui-rstudio-toolbar-color       : $ui-foreground;
+$ui-rstudio-search              : $ui-rstudio-toolbar;
+$ui-completions-background      : $ui-background;
+$ui-completions-color           : $ui-foreground;
+$ui-completions-border          : $ui-bracket;
+$ui-rstudio-scrollbar-background: $ui-background;
+$ui-rstudio-scrollbar-handle    : $ui-code-chunk-background;
+
+// R language colors
+$rlang-comment  : $base04;
+$rlang-string   : $base0B;
+$rlang-function : $base0D;
+$rlang-reserved : $base0E;
+$rlang-operator : $base0C;
+$rlang-bracket  : $rlang-operator;
+$rlang-value    : $base09;
+$rlang-namespace: $base0A;
+$rlang-variable : $base08;
+$rlang-message  : $base0F;
+$rlang-namespace-font-style: italic;
+
+$other-tag: $rlang-variable;
+
+@import "rstudio/_rstudio-dark", "rstudio/_terminal";

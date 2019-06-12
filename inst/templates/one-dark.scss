@@ -1,0 +1,67 @@
+/* rs-theme-name: One Dark {rsthemes} */
+/* rs-theme-is-dark: TRUE */
+
+@import "palettes/_one-dark";
+
+// primary UI colors
+$ui-background           : $syntax-bg;
+$ui-foreground           : $syntax-fg;
+$ui-code-chunk-background: darken($ui-background, 2%);
+$ui-selection            : $syntax-selection-color;
+$ui-cursor               : $syntax-cursor-color;
+$ui-cursor-normal-mode   : $ui-cursor;
+$ui-margin-line          : lighten($ui-selection, 15%);
+$ui-gutter-color         : $syntax-gutter-text-color;
+$ui-gutter-background    : $ui-background;
+
+// less common UI colors
+$ui-line-active           : transparentize($mono-3, 0.8);
+$ui-line-active-gutter    : $ui-line-active;
+$ui-line-active-selection : transparentize($ui-selection, 0.4);
+$ui-line-find             : $ui-selection;
+$ui-bracket               : transparentize($ui-cursor, 0.6);
+$ui-invisible             : transparentize($syntax-guide, 0.5);
+$ui-indent-guide          : $ui-invisible;
+$ui-debug-background      : darken($hue-6-2, 10%);
+$ui-fold-arrows-color     : $syntax-color-snippet;
+$ui-fold-arrows-background: transparentize($ui-fold-arrows-color, 0.5);
+
+// rstudio
+$ui-rstudio-background          : darken($ui-background, 3%);
+$ui-rstudio-color               : $ui-foreground;
+$ui-rstudio-tabs-inactive       : $ui-rstudio-background;
+$ui-rstudio-tabs-inactive-color : transparentize($ui-foreground, 0.5);
+$ui-rstudio-tabs-selected       : $ui-background;
+$ui-rstudio-tabs-selected-color : $ui-foreground;
+$ui-completions-background      : $ui-background;
+$ui-completions-color           : $ui-foreground;
+$ui-completions-border          : $ui-bracket;
+$ui-rstudio-scrollbar-background: $ui-background;
+$ui-rstudio-scrollbar-handle    : $ui-code-chunk-background;
+
+// R language colors
+$rlang-comment  : transparentize($ui-foreground, 0.5);
+$rlang-string   : $syntax-color-snippet;
+$rlang-function : $syntax-color-function;
+$rlang-reserved : $syntax-color-keyword;
+$rlang-operator : $syntax-color-method;
+$rlang-bracket  : $syntax-fg;
+$rlang-value    : $syntax-color-value;
+$rlang-namespace: $syntax-color-import;
+$rlang-variable : $syntax-color-variable;
+$rlang-message  : $syntax-color-tag;
+$rlang-namespace-font-style: normal;
+
+// custom css
+//[class="ace_keyword"] {
+//  font-weight: bold;
+//}
+
+$other-tag: $syntax-color-tag;
+
+// Rmd
+$rmd-heading-color: $hue-5-2;
+$rmd-chunk-header: $hue-1;
+$rmd-href: $hue-6-2;
+
+@import "rstudio/_rstudio-dark", "rstudio/_terminal";

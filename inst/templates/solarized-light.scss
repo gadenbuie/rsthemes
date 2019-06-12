@@ -1,0 +1,60 @@
+/* rs-theme-name: Solarized Light {rsthemes} */
+/* rs-theme-is-dark: FALSE */
+
+@import "palettes/_solarized";
+
+// primary UI colors
+$ui-background           : $base3;
+$ui-foreground           : $base00;
+$ui-code-chunk-background: $base2;
+$ui-selection            : transparentize($base0, 0.6);
+$ui-cursor               : $red;
+$ui-cursor-normal-mode   : $ui-cursor;
+$ui-margin-line          : transparentize($ui-selection, 0.25);
+$ui-gutter-color         : $base1;
+$ui-gutter-background    : $base2;
+
+// less common UI colors
+$ui-line-active           : transparentize(darken($ui-background, 5%), 0.5);
+$ui-line-active-gutter    : $ui-gutter-color;
+$ui-line-active-selection : $base1;
+$ui-line-find             : $base00;
+$ui-bracket               : transparentize($ui-cursor, 0.6);
+$ui-invisible             : $base2;
+$ui-indent-guide          : $base2;
+$ui-debug-background      : lighten($ui-background, 10%);
+$ui-fold-arrows-background: $violet;
+$ui-fold-arrows-color     : $ui-foreground;
+
+// rstudio
+$ui-rstudio-background          : lighten($base3, 3%);
+$ui-rstudio-color               : $ui-foreground;
+$ui-rstudio-tabs-inactive       : $base3;
+$ui-rstudio-tabs-inactive-color : $base1;
+$ui-rstudio-tabs-selected       : $base2;
+$ui-rstudio-tabs-selected-color : $base01;
+$ui-rstudio-toolbar             : $ui-rstudio-tabs-selected;
+$ui-rstudio-toolbar-color       : $ui-rstudio-tabs-selected-color;
+$ui-rstudio-search              : $ui-rstudio-toolbar;
+$ui-completions-background      : $ui-background;
+$ui-completions-color           : $ui-foreground;
+$ui-completions-border          : $ui-bracket;
+$ui-rstudio-scrollbar-background: $ui-background;
+$ui-rstudio-scrollbar-handle    : $ui-code-chunk-background;
+
+// R language colors
+$rlang-comment  : $base1;
+$rlang-string   : $cyan;
+$rlang-function : $blue;
+$rlang-reserved : $green;
+$rlang-operator : $yellow;
+$rlang-bracket  : $yellow;
+$rlang-value    : $magenta;
+$rlang-namespace: $red;
+$rlang-variable : $violet;
+$rlang-message  : $orange;
+$rlang-namespace-font-style: italic;
+
+$other-tag: $rlang-variable;
+
+@import "rstudio/_rstudio-light", "rstudio/_terminal";

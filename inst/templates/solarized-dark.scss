@@ -1,0 +1,60 @@
+/* rs-theme-name: Solarized Dark {rsthemes} */
+/* rs-theme-is-dark: TRUE */
+
+@import "palettes/_solarized";
+
+// primary UI colors
+$ui-background           : $base03;
+$ui-foreground           : $base0;
+$ui-code-chunk-background: $base02;
+$ui-selection            : transparentize($base00, 0.6);
+$ui-cursor               : $red;
+$ui-cursor-normal-mode   : $ui-cursor;
+$ui-margin-line          : transparentize($ui-selection, 0.25);
+$ui-gutter-color         : $base0;
+$ui-gutter-background    : $base03;
+
+// less common UI colors
+$ui-line-active           : transparentize(darken($ui-background, 5%), 0.5);
+$ui-line-active-gutter    : $base01;
+$ui-line-active-selection : $base01;
+$ui-line-find             : $base0;
+$ui-bracket               : $base00;
+$ui-invisible             : $base00;
+$ui-indent-guide          : $base01;
+$ui-debug-background      : lighten($ui-background, 10%);
+$ui-fold-arrows-background: $violet;
+$ui-fold-arrows-color     : $ui-foreground;
+
+// rstudio
+$ui-rstudio-background          : $base02;
+$ui-rstudio-color               : $ui-foreground;
+$ui-rstudio-tabs-inactive       : $base02;
+$ui-rstudio-tabs-inactive-color : $base1;
+$ui-rstudio-tabs-selected       : $base01;
+$ui-rstudio-tabs-selected-color : $base3;
+$ui-rstudio-toolbar             : $ui-rstudio-tabs-selected;
+$ui-rstudio-toolbar-color       : $base2;
+$ui-rstudio-search              : $ui-rstudio-toolbar;
+$ui-completions-background      : $ui-background;
+$ui-completions-color           : $ui-foreground;
+$ui-completions-border          : $ui-bracket;
+$ui-rstudio-scrollbar-background: $ui-background;
+$ui-rstudio-scrollbar-handle    : $base02;
+
+// R language colors
+$rlang-comment  : $base0;
+$rlang-string   : $cyan;
+$rlang-function : $blue;
+$rlang-reserved : $green;
+$rlang-operator : $yellow;
+$rlang-bracket  : $yellow;
+$rlang-value    : $magenta;
+$rlang-namespace: $red;
+$rlang-variable : $violet;
+$rlang-message  : $orange;
+$rlang-namespace-font-style: italic;
+
+$other-tag: $rlang-variable;
+
+@import "rstudio/_rstudio-dark", "rstudio/_terminal";
