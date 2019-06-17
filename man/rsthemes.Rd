@@ -32,6 +32,11 @@ are listed instead.}
 
 \item{delay}{Number of seconds to wait bewtween themes. Set to 0 to be
 prompted to continue after each theme.}
+
+\item{...}{Ignored.}
+
+\item{validate}{If provided to \code{rsthemes_styles()}, checks that the
+specified style is valid.}
 }
 \description{
 This package provides a set of complete RStudio themes that restyle the

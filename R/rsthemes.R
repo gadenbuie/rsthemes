@@ -137,6 +137,9 @@ try_rsthemes <- function(
 }
 
 #' @describeIn rsthemes List style options
+#' @param validate If provided to `rsthemes_styles()`, checks that the
+#'   specified style is valid.
+#' @param ... Ignored.
 #' @export
 rsthemes_styles <- function(..., validate = NULL) {
   style_options = c("all", "light", "dark", "base16")
