@@ -9,21 +9,26 @@
 \alias{rsthemes_styles}
 \title{Full RStudio Themes}
 \usage{
-install_rsthemes(include_base16 = TRUE)
+install_rsthemes(style = "all", include_base16 = TRUE)
 
-remove_rsthemes(style = rsthemes_styles())
+remove_rsthemes(style = rsthemes_styles(), include_base16 = TRUE)
 
-list_rsthemes(style = rsthemes_styles())
+list_rsthemes(style = "all", include_base16 = TRUE,
+  list_installed = TRUE)
 
-try_rsthemes(style = rsthemes_styles(), delay = 0)
+try_rsthemes(style = "all", include_base16 = TRUE, delay = 0)
 
 rsthemes_styles(..., validate = NULL)
 }
 \arguments{
-\item{include_base16}{Should the \code{base16} theme set be installed?}
+\item{style}{Limit to a subgroup of themes, chosen from the options returned
+by \code{\link[=rsthemes_styles]{rsthemes_styles()}}.}
 
-\item{style}{List a subgroup of themes, one of the options returned by
-\code{\link[=rsthemes_styles]{rsthemes_styles()}}.}
+\item{include_base16}{Should the \code{base16} themes be included?}
+
+\item{list_installed}{Should the installed \pkg{rsthemes} themes be listed
+(default). If \code{FALSE}, the available themes in the \pkg{rsthemes} package
+are listed instead.}
 
 \item{delay}{Number of seconds to wait bewtween themes. Set to 0 to be
 prompted to continue after each theme.}
@@ -46,7 +51,7 @@ June 11, 2019). Please report any issues you encounter here:
 
 \item \code{remove_rsthemes}: Remove rsthemes from RStudio
 
-\item \code{list_rsthemes}: List installed rsthemes
+\item \code{list_rsthemes}: List installed themes (default) or available themes
 
 \item \code{try_rsthemes}: Try each rsthemes RStudio theme
 

@@ -45,6 +45,10 @@ render_sass <- function(
   invisible(TRUE)
 }
 
+theme_is_dark <- function(file) {
+  x <- readLines(file, warn = FALSE)
+  any(grepl("rs-theme-is-dark:\\s*TRUE", x))
+}
 
 get_theme_name <- function(file) {
   x <- readLines(file, warn = FALSE)

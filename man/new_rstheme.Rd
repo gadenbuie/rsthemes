@@ -7,5 +7,5 @@
 new_rstheme()
 }
 \description{
-Writes the template files required to create a new theme.
+Writes the template files required to create a new theme. Not yet implemented.
 }
