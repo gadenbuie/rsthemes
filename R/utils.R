@@ -16,11 +16,11 @@ requires_rstudioapi <- function(..., has_fun = "getThemes", version = "1.2.1335"
 }
 
 package_theme <- function(...) {
-  system.file("themes", ..., package = "rsthemes")
+  system.file("themes", ..., package = "rsthemes", mustWork = TRUE)
 }
 
 package_template <- function(...) {
-  system.file("templates", ..., package = "rsthemes")
+  system.file("templates", ..., package = "rsthemes", mustWork = TRUE)
 }
 
 rstudio_theme_home <- function(...) {
