@@ -124,16 +124,18 @@ try_rsthemes <- function(
     rstudioapi::applyTheme(theme)
     if (delay > 0) {
       Sys.sleep(delay)
-    } else if (theme != themes[length(themes)]) {
-      res <- readline("Press [enter] for next, [k] to keep, [q] to quit...")
-      if (tolower(res) == "k") return(invisible())
-      if (tolower(res) == "q") {
-        message("Restoring \"", current_theme$editor, "\"")
-        rstudioapi::applyTheme(current_theme$editor)
-        return(invisible())
+    } else {
+      if (theme != themes[length(themes)]) {
+        res <- readline("Enter [blank] for next, [k] to keep, [q] to quit: ")
+      } else {
+        res <- readline("Enter [blank] or [q] to quit, [k] to keep: ")
       }
+      if (tolower(res) == "k") return(invisible())
+      if (tolower(res) == "q") break
     }
   }
+  message("Restoring \"", current_theme$editor, "\"")
+  rstudioapi::applyTheme(current_theme$editor)
 }
 
 #' @describeIn rsthemes List style options
