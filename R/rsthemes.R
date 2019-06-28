@@ -125,10 +125,10 @@ try_rsthemes <- function(
     if (delay > 0) {
       Sys.sleep(delay)
     } else {
-      if (theme != themes[length(themes)]) {
-        res <- readline("Enter [blank] for next, [k] to keep, [q] to quit: ")
+      res <- if (theme != themes[length(themes)]) {
+        readline("Enter [blank] for next, [k] to keep, [q] to quit: ")
       } else {
-        res <- readline("Enter [blank] or [q] to quit, [k] to keep: ")
+        readline("Enter [blank] or [q] to quit, [k] to keep: ")
       }
       if (tolower(res) == "k") return(invisible())
       if (tolower(res) == "q") break
