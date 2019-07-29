@@ -1,7 +1,10 @@
-make_rsthemes <- function(outdir = fs::path("inst", "themes")) {
-  fs::dir_create(fs::path(outdir, "base16"), recurse = TRUE)
-  outdir <- fs::path_abs(outdir)
-  owd <- setwd(fs::path("inst", "templates"))
+make_rsthemes <- function(
+  path_out = fs::path("inst", "themes"),
+  path_template = fs::path("inst", "templates")
+) {
+  fs::dir_create(fs::path(path_out, "base16"), recurse = TRUE)
+  path_out <- fs::path_abs(path_out)
+  owd <- setwd(path_template)
   on.exit(setwd(owd))
 
   base16_palettes <- ls_theme_templates(base16 = TRUE)
@@ -9,11 +12,11 @@ make_rsthemes <- function(outdir = fs::path("inst", "themes")) {
     base16_sass <- base16_prep_theme(base16_pal)
     base16_outfile <- sub("_base16", "base16", base16_pal)
     base16_outfile <- rstheme_outfile(base16_outfile)
-    render_sass(base16_sass, base16_outfile, fs::path(outdir, "base16"))
+    render_sass(base16_sass, base16_outfile, fs::path(path_out, "base16"))
   }
 
   for (theme_file in ls_theme_templates(base16 = FALSE)) {
-    render_sass(theme_file, outdir = outdir)
+    render_sass(theme_file, outdir = path_out)
   }
 
   invisible(TRUE)
