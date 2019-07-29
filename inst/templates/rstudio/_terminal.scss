@@ -21,9 +21,13 @@
     outline: 1px solid $ui-foreground;
     outline-offset: -1px;
   }
-  .xterm-selection div {
-    position: absolute;
-    background-color: $ui-selection;
+  .xterm-selection {
+    opacity: 1 !important;
+    z-index: 0 !important;
+    div {
+      position: absolute;
+      background-color: $ui-console-selection;
+    }
   }
   .xterm-viewport {
     background-color: $ui-background;
@@ -556,4 +560,4 @@
 .xtermColor254 { color: #e4e4e4 !important; }
 .xtermBgColor254 { background-color: #e4e4e4; }
 .xtermColor255 { color: #eeeeee !important; }
-.xtermBgColor255 { background-color: #eeeeee; } 
+.xtermBgColor255 { background-color: #eeeeee; }

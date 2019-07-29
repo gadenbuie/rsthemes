@@ -197,7 +197,7 @@
 .ace_meta.ace_tag {
 	color: $rlang-operator;
 }
-.ace_markup.ace_heading, 
+.ace_markup.ace_heading,
 .ace_markup.ace_heading ~ .ace_heading {
 	font-weight: $rmd-heading-weight;
 	color: $rmd-heading-color;
@@ -212,6 +212,9 @@
 }
 .nocolor.ace_editor .ace_line span {
 	color: $rlang-reserved !important;
+}
+#rstudio_console_input .ace_marker-layer .ace_selection {
+  background: $ui-console-selection;
 }
 
 /* ---- RStudio Theme ---- */
@@ -271,7 +274,7 @@ table.rstheme_tabLayoutCenter, .rstudio-themes-flat .rstudio-themes-dark-grey .g
   .popupMiddleCenter, .menuPopupMiddleCenter, .suggestPopupMiddleCenter {
   		 background: $ui-completions-background !important;
   		 color: $ui-completions-color !important;
-  		 
+
   		 .item.item-selected {
     		 color: $ui-completions-background !important;
     		 background: $ui-completions-color !important;

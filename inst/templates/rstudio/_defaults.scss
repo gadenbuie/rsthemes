@@ -20,6 +20,7 @@ $ui-indent-guide          : $ui-invisible !default;
 $ui-debug-background      : lighten($ui-background, 10%) !default;
 $ui-fold-arrows-color     : $ui-cursor !default;
 $ui-fold-arrows-background: transparentize($ui-fold-arrows-color, 0.5) !default;
+$ui-console-selection     : $ui-selection !default;
 
 // rstudio
 $ui-rstudio-background          : darken($ui-background, 2%) !default;
