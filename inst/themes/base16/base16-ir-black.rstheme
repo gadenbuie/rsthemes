@@ -256,6 +256,10 @@
   color: #ff73fd !important;
 }
 
+#rstudio_console_input .ace_marker-layer .ace_selection {
+  background: rgba(181, 179, 170, 0.4);
+}
+
 /* ---- RStudio Theme ---- */
 /* background */
 .rstudio-themes-flat .rstudio-themes-dark-grey {
@@ -420,6 +424,11 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
 .terminal:not(.focus) .terminal-cursor {
   outline: 1px solid #fdfbee;
   outline-offset: -1px;
+}
+
+.terminal .xterm-selection {
+  opacity: 1 !important;
+  z-index: 0 !important;
 }
 
 .terminal .xterm-selection div {
