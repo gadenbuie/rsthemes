@@ -6,8 +6,9 @@ Authors@R:
            family = "Aden-Buie",
            role = c("aut", "cre"),
            email = "garrick@adenbuie.com")
-Description: A collection of full RStudio themes built on SCSS
-    theme templates.
+Description: A collection of full RStudio themes built using
+    SCSS theme templates. Includes several hand crafted themes in addition
+    to a large collection of base16 themes.
 License: MIT + file LICENSE
 URL: https://github.com/gadenbuie/rsthemes
 BugReports: https://github.com/gadenbuie/rsthemes/issues
