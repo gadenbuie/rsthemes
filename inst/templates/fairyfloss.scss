@@ -10,7 +10,7 @@ $ui-code-chunk-background: darken($ui-background, 2%);
 $ui-selection            : darken($ui-background, 10%);
 $ui-cursor               : $syntax-cursor-color;
 $ui-cursor-normal-mode   : $ui-cursor;
-$ui-margin-line          : $syntax-indent-guide-color;
+$ui-margin-line          : transparentize($ui-selection, 0.5);
 $ui-gutter-color         : transparentize($syntax-gutter-text-color, 0.5);
 $ui-gutter-background    : $syntax-gutter-background-color;
 

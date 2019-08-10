@@ -11,7 +11,7 @@
 
 .ace_print-margin {
   width: 2px;
-  background: #3B3A32;
+  background: rgba(67, 63, 87, 0.5);
 }
 
 .ace_editor {
