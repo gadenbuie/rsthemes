@@ -1,0 +1,46 @@
+/* rs-theme-name: Fairyfloss {rsthemes} */
+/* rs-theme-is-dark: TRUE */
+
+@import "palettes/_fairyfloss.scss";
+
+// primary UI colors
+$ui-background           : $syntax-background-color;
+$ui-foreground           : $syntax-text-color;
+$ui-code-chunk-background: darken($ui-background, 2%);
+$ui-selection            : darken($ui-background, 10%);
+$ui-cursor               : $syntax-cursor-color;
+$ui-cursor-normal-mode   : $ui-cursor;
+$ui-margin-line          : $syntax-indent-guide-color;
+$ui-gutter-color         : transparentize($syntax-gutter-text-color, 0.5);
+$ui-gutter-background    : $syntax-gutter-background-color;
+
+// less common UI colors
+$ui-line-active           : $ui-code-chunk-background;
+$ui-line-active-gutter    : $syntax-gutter-text-color-selected;
+$ui-fold-arrows-color     : $ui-foreground;
+$ui-fold-arrows-background: #AE81FF;
+
+// rstudio
+$ui-rstudio-background          : darken($ui-background, 5%);
+$ui-rstudio-tabs-inactive       : lighten($ui-background, 2%) !default;
+
+// R language colors
+$rlang-string   : #ffea00;
+$rlang-function : #c2ffdf;
+$rlang-value    : #c5a3ff;
+$rlang-operator : #ffb8d1;
+$rlang-message  : #c2ffdf;
+$rlang-comment  : #e6c000;
+$rlang-reserved : #C5A3FF;
+$rlang-variable : #ff857f;
+$rlang-bracket  : $ui-foreground;
+$other-tag      : #f8f8f0;
+$rlang-namespace-font-style: italic;
+
+// R Markdown
+$rmd-heading-weight: 600;
+$rmd-heading-color: #c2ffdf;
+$rmd-chunk-header: #fff352;
+$rmd-href: #ae81ff;
+
+@import "rstudio/_rstudio-dark", "rstudio/_terminal";

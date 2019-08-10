@@ -1,0 +1,32 @@
+// https://github.com/sailorhg/fairyfloss
+
+// This defines all syntax variables that syntax themes must implement when they
+// include a syntax-variables.less file.
+
+// General colors
+$syntax-text-color: #F8F8F2;
+$syntax-cursor-color: #F8F8F0;
+$syntax-selection-color: #49483E;
+$syntax-background-color: #5A5475;
+
+// Guide colors
+$syntax-wrap-guide-color: #3B3A32;
+$syntax-indent-guide-color: #3B3A32;
+$syntax-invisible-character-color: #3B3A32;
+
+// For find and replace markers
+$syntax-result-marker-color: #3B3A32;
+$syntax-result-marker-color-selected: #F8F8F2;
+
+// Gutter colors
+$syntax-gutter-text-color: #F8F8F2;
+$syntax-gutter-text-color-selected: #F8F8F2;
+$syntax-gutter-background-color: #5A5475;
+$syntax-gutter-background-color-selected: #3E3D32;
+
+// For git diff info. i.e. in the gutter
+// These are static and were not extracted from your textmate theme
+$syntax-color-renamed: #96CBFE;
+$syntax-color-added: #A8FF60;
+$syntax-color-modified: #E9C062;
+$syntax-color-removed: #CC6666;
