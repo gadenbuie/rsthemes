@@ -21,8 +21,12 @@ $ui-fold-arrows-color     : $ui-foreground;
 $ui-fold-arrows-background: #AE81FF;
 
 // rstudio
-$ui-rstudio-background          : darken($ui-background, 5%);
-$ui-rstudio-tabs-inactive       : lighten($ui-background, 2%) !default;
+$ui-rstudio-background          : darken($ui-background, 20%);
+$ui-rstudio-tabs-inactive       : darken($ui-background, 15%);
+
+.rstudio-themes-dark-grey .rstheme_minimizedWindowObject table.rstheme_center {
+  background-color: $ui-rstudio-tabs-inactive !important;
+}
 
 // R language colors
 $rlang-string   : #ffea00;

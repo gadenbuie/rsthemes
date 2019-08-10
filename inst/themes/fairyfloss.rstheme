@@ -1,5 +1,9 @@
 /* rs-theme-name: Fairyfloss {rsthemes} */
 /* rs-theme-is-dark: TRUE */
+.rstudio-themes-dark-grey .rstheme_minimizedWindowObject table.rstheme_center {
+  background-color: #383448 !important;
+}
+
 .ace_gutter {
   background: #5A5475;
   color: rgba(248, 248, 242, 0.5);
@@ -261,17 +265,17 @@
 /* ---- RStudio Theme ---- */
 /* background */
 .rstudio-themes-flat .rstudio-themes-dark-grey {
-  background: #4f4966 !important;
+  background: #2c293a !important;
   color: #F8F8F2 !important;
 }
 
 .rstudio-themes-flat .rstudio-themes-dark-grey .rstudio-themes-background {
-  background: #4f4966 !important;
+  background: #2c293a !important;
 }
 
 /* inactive tabs */
 table.rstheme_tabLayoutCenter, .rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs, .rstheme_multiPodUtilityTabArea {
-  background: #5f587b !important;
+  background: #383448 !important;
 }
 
 table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs .gwt-Label, .rstheme_multiPodUtilityTabArea .gwt-Label {
@@ -355,7 +359,7 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
 
 /* hacky toolbars section */
 .rstudio-themes-flat .rstudio-themes-dark-grey div.windowframe > div:last-child > div > div > div > div > div:not(.gwt-TabLayoutPanelTabs) {
-  background: #5f587b !important;
+  background: #383448 !important;
 }
 
 /* Data Frame Preview */
