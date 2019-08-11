@@ -2600,3 +2600,76 @@ rstudio-themes-flat > .rstudio-themes-dark .gwt-SplitLayoutPanel td {
   border: none;
 }
 
+/* crayon */
+.xtermColor0 {
+  color: #3B3A32 !important;
+}
+
+.xtermBgColor0 {
+  background-color: #3B3A32;
+}
+
+.xtermColor1 {
+  color: #ff857f !important;
+}
+
+.xtermBgColor1 {
+  background-color: #ff857f;
+}
+
+.xtermColor2 {
+  color: #A8FF60 !important;
+}
+
+.xtermBgColor2 {
+  background-color: #A8FF60;
+}
+
+.xtermColor3 {
+  color: #ffea00 !important;
+}
+
+.xtermBgColor3 {
+  background-color: #ffea00;
+}
+
+.xtermColor4 {
+  color: #96CBFE !important;
+}
+
+.xtermBgColor4 {
+  background-color: #96CBFE;
+}
+
+.xtermColor5 {
+  color: #CC6666 !important;
+}
+
+.xtermBgColor5 {
+  background-color: #CC6666;
+}
+
+.xtermColor6 {
+  color: #c2ffdf !important;
+}
+
+.xtermBgColor6 {
+  background-color: #c2ffdf;
+}
+
+.xtermColor7 {
+  color: #F8F8F2 !important;
+}
+
+.xtermBgColor7 {
+  background-color: #F8F8F2;
+}
+
+.xtermColor8 {
+  color: #F8F8F2 !important;
+}
+
+.xtermBgColor8 {
+  background-color: #F8F8F2;
+}
+

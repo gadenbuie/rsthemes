@@ -120,3 +120,32 @@ rstudio-themes-flat > .rstudio-themes-dark .gwt-SplitLayoutPanel td {
 .rstudio-themes-dark .gwt-TabLayoutPanelTab.gwt-TabLayoutPanelTab-selected .rstheme_tabLayoutCenter {
   border: none;
 }
+
+/* crayon */
+// black -- 0
+.xtermColor0 { color: $syntax-wrap-guide-color !important; }
+.xtermBgColor0 { background-color: $syntax-wrap-guide-color; }
+// red -- 1
+.xtermColor1 { color: $rlang-variable !important; }
+.xtermBgColor1 { background-color: $rlang-variable }
+// green -- 2
+.xtermColor2 { color: $syntax-color-added !important; }
+.xtermBgColor2 { background-color: $syntax-color-added; }
+// yellow -- 3 {
+.xtermColor3 { color: $rlang-string !important; }
+.xtermBgColor3 { background-color: $rlang-string; }
+// blue -- 4
+.xtermColor4 { color: $syntax-color-renamed !important; }
+.xtermBgColor4 { background-color: $syntax-color-renamed; }
+// magenta -- 5
+.xtermColor5 { color: $syntax-color-removed !important; }
+.xtermBgColor5 { background-color: $syntax-color-removed; }
+// cyan -- 6
+.xtermColor6 { color: $rlang-message !important; }
+.xtermBgColor6 { background-color: $rlang-message; }
+// white -- 7
+.xtermColor7 { color: $ui-foreground !important; }
+.xtermBgColor7 { background-color: $ui-foreground; }
+// gray -- 8
+.xtermColor8 { color: $syntax-gutter-text-color !important; }
+.xtermBgColor8 { background-color: $syntax-gutter-text-color; }
