@@ -19,10 +19,16 @@ You can install rsthemes from GitHub with:
 devtools::install_github("gadenbuie/rsthemes")
 ```
 
-Then, install the included themes with:
+Then, install the included, hand-crafted themes with:
 
 ``` r
 rsthemes::install_rsthemes()
+```
+
+to you can install the themes plus an additional set of [base16-based themes](https://github.com/chriskempson/base16) with
+
+``` r
+rsthemes::install_rsthemes(base16 = TRUE)
 ```
 
 ## Usage

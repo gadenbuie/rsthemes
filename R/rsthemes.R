@@ -19,7 +19,7 @@ NULL
 #'   by [rsthemes_styles()].
 #' @param include_base16 Should the `base16` themes be included?
 #' @export
-install_rsthemes <- function(style = "all", include_base16 = TRUE) {
+install_rsthemes <- function(style = "all", include_base16 = FALSE) {
   theme_files <- list_pkg_rsthemes(style, include_base16)
   theme_files <- unname(theme_files)
 
