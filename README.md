@@ -25,7 +25,7 @@ Then, install the included, hand-crafted themes with:
 rsthemes::install_rsthemes()
 ```
 
-to you can install the themes plus an additional set of [base16-based themes](https://github.com/chriskempson/base16) with
+or you can install the themes plus an additional set of [base16-based themes](https://github.com/chriskempson/base16) with
 
 ``` r
 rsthemes::install_rsthemes(base16 = TRUE)
