@@ -354,6 +354,14 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
   color: #131513;
 }
 
+/* datagrid */
+.rstudio-themes-dark .dataGridHeader,
+.rstudio-themes-dark tr[__gwt_header_row] > :-webkit-any(td, th),
+.rstudio-themes-dark .dataTables_info {
+  background-color: #131513 !important;
+  border-color: #242924 !important;
+}
+
 /* hacky toolbars section */
 .rstudio-themes-flat .rstudio-themes-dark-grey div.windowframe > div:last-child > div > div > div > div > div:not(.gwt-TabLayoutPanelTabs) {
   background: #242924 !important;

@@ -262,12 +262,12 @@
 /* ---- RStudio Theme ---- */
 /* background */
 .rstudio-themes-flat .rstudio-themes-default {
-  background: #fafafa !important;
+  background: #f9fafb !important;
   color: #4c566a !important;
 }
 
 .rstudio-themes-flat .rstudio-themes-default .rstudio-themes-background {
-  background: #fafafa !important;
+  background: #f9fafb !important;
 }
 
 /* inactive tabs */
