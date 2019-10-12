@@ -72,11 +72,16 @@ set_theme_dark <- function(theme = NULL) {
 }
 
 set_theme <- function(theme = NULL, style = c("light", "dark")) {
-  theme <- theme %||% get_current_theme_name()
-  theme <- stop_if_theme_not_valid(theme)
-  style <- match.arg(style)
-  theme <- warn_theme_style_mismatch(theme, style)
+  if (is.null(theme)) {
+    if (!in_rstudio()) return(NULL)
+    theme <- get_current_theme_name()
+  }
+  if (in_rstudio()) {
+    theme <- stop_if_theme_not_valid(theme)
+    theme <- warn_theme_style_mismatch(theme, style)
+  }
 
+  style <- match.arg(style)
   switch(
     style,
     "light" = options("rsthemes.theme_light" = theme),
@@ -94,6 +99,8 @@ use_theme_light <- function(quietly = FALSE) use_theme("light", quietly)
 use_theme_dark <- function(quietly = FALSE) use_theme("dark", quietly)
 
 use_theme <- function(style = c("light", "dark"), quietly = FALSE) {
+  if (!in_rstudio()) return(invisible())
+
   theme <- switch(
     match.arg(style),
     "light" = getOption("rsthemes.theme_light", NULL),
@@ -178,6 +185,7 @@ stop_if_theme_not_set <- function(theme_opt = NULL, style = c("light", "dark")) 
 }
 
 stop_if_theme_not_valid <- function(theme) {
+  if (!in_rstudio()) return(theme)
   if (theme %in% get_theme_names()) return(theme)
   stop("'", theme, '" is not the name of an installed theme.', call. = FALSE)
 }
