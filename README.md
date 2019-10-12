@@ -59,7 +59,7 @@ rstudioapi::applyTheme("One Dark {rsthemes}")
 
 You can also automatically choose the dark or light theme by time of day, either with the included **Auto Choose Dark or Light Theme** addin, or by calling `rsthemes::use_theme_auto()` in your `~/.Rprofile`.
 
-For best results, use the following template in your `~/.Rprofile` to declare your preffered dark and light themes and to choose the correct style when your R session reloads.
+For best results, use the following template in your `~/.Rprofile` to declare your preferred dark and light themes and to choose the correct style when your R session reloads.
 
 ```r
 if (interactive() && requireNamespace(c("rsthemes", "later"), quietly = TRUE)) {
