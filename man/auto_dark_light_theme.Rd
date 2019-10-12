@@ -28,9 +28,9 @@ use_theme_auto(dark_start = "18:00", dark_end = "6:00",
 
 \item{quietly}{Suppress confirmation messages}
 
-\item{dark_start}{Start time of dark mode, in \code{"HH:MM"} format.}
+\item{dark_start}{Start time of dark mode, in 24-hour \code{"HH:MM"} format.}
 
-\item{dark_end}{End time of dark mode, in \code{"HH:MM"} format.}
+\item{dark_end}{End time of dark mode, in 24-hour \code{"HH:MM"} format.}
 }
 \description{
 These functions help manage switching between preferred dark and light

@@ -50,8 +50,8 @@
 #'
 #' @param theme The name of the theme, or `NULL` to use current theme.
 #' @param quietly Suppress confirmation messages
-#' @param dark_start Start time of dark mode, in `"HH:MM"` format.
-#' @param dark_end End time of dark mode, in `"HH:MM"` format.
+#' @param dark_start Start time of dark mode, in 24-hour `"HH:MM"` format.
+#' @param dark_end End time of dark mode, in 24-hour `"HH:MM"` format.
 #' @name auto_dark_light_theme
 NULL
 
