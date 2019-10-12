@@ -4,9 +4,9 @@
 </p>
 
 <!-- badges: start -->
-[![](https://img.shields.io/badge/rstudio-1.2.1335-%2381A9D7.svg)](https://www.rstudio.com/products/rstudio/)
+[![](https://img.shields.io/badge/rstudio->=1.2.1335-%2381A9D7.svg)](https://www.rstudio.com/products/rstudio/)
 ![](https://www.r-pkg.org/badges/version/rsthemes)
-![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
+![](https://img.shields.io/badge/lifecycle-maturing-blue.svg)
 <!-- badges: end -->
 
 
@@ -51,6 +51,36 @@ Use `rstudioapi::applyTheme()` to activate a theme from the R console, or use *T
 ``` r
 # Use a theme
 rstudioapi::applyTheme("One Dark {rsthemes}")
+```
+
+## Automatic &#x1F305; Light and &#x1F303; Dark Mode
+
+**rsthemes** includes an RStudio addin to easily **Toggle Dark Mode** to switch between two preferred dark and light themes. You can then create a keyboard shortcut (I used <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>D</kbd>) to toggle dark mode.
+
+You can also automatically choose the dark or light theme by time of day, either with the included **Auto Choose Dark or Light Theme** addin, or by calling `rsthemes::use_theme_auto()` in your `~/.Rprofile`.
+
+For best results, use the following template in your `~/.Rprofile` to declare your preferred dark and light themes and to choose the correct style when your R session reloads.
+
+```r
+if (interactive() && requireNamespace(c("rsthemes", "later"), quietly = TRUE)) {
+  # Use later to delay until RStudio is ready
+  later::later(function() {
+    rsthemes::set_theme_light("One Light {rsthemes}")  # light theme
+    rsthemes::set_theme_dark("One Dark {rsthemes}") # dark theme
+
+    # To automatically choose theme based on time of day
+    rsthemes::use_theme_auto(dark_start = "18:00", dark_end = "6:00")
+  }, delay = 1)
+}
+```
+
+If you'd rather stay low-tech and manually toggle dark mode, you can use a simplified `~/.Rprofile`.
+
+```r
+options(
+  rsthemes.theme_light = "One Light {rsthemes}",
+  rsthemes.theme_dark = "One Dark {rsthemes}"
+)
 ```
 
 ## Uninstall
