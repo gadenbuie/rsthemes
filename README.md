@@ -62,7 +62,11 @@ You can also automatically choose the dark or light theme by time of day, either
 For best results, use the following template in your `~/.Rprofile` to declare your preferred dark and light themes and to choose the correct style when your R session reloads.
 
 ```r
-if (interactive() && requireNamespace(c("rsthemes", "later"), quietly = TRUE)) {
+if (
+  interactive() && 
+  requireNamespace("rsthemes", quietly = TRUE) && 
+  requireNamespace("later", quietly = TRUE)
+) {
   # Use later to delay until RStudio is ready
   later::later(function() {
     rsthemes::set_theme_light("One Light {rsthemes}")  # light theme

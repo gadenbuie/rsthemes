@@ -60,10 +60,14 @@ automatically set your theme to dark mode using \code{use_theme_auto()}.
 
 
 Add the following to your \code{~/.Rprofile} (see \code{\link[usethis:edit_r_profile]{usethis::edit_r_profile()}}) to
-declare your default themes:\preformatted{if (interactive() && requireNamespace(c("rsthemes", "later"), quietly = TRUE)) {
+declare your default themes:\preformatted{if (
+  interactive() &&
+  requireNamespace("rsthemes", quietly = TRUE) &&
+  requireNamespace("later", quietly = TRUE)
+) {
   # Use later to delay until RStudio is ready
   later::later(function() {
-    rsthemes::set_theme_light("One Light {rsthemes}") # light theme
+    rsthemes::set_theme_light("One Light {rsthemes}")  # light theme
     rsthemes::set_theme_dark("One Dark {rsthemes}") # dark theme
 
     # To automatically choose theme based on time of day
