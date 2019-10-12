@@ -1,0 +1,20 @@
+Name: Toggle Dark Mode
+Description: Toggle Between Dark and Light Mode
+Binding: use_theme_toggle
+Interactive: false
+
+Name: Auto Choose Dark or Light Theme
+Description: Automatically Choose Theme Style by Time of Day
+Binding: use_theme_auto
+Interactive: false
+
+Name: Set Default Light Theme to Current
+Description: Use the Current Theme as the Default Light Theme
+Binding: set_theme_light
+Interactive: false
+
+Name: Set Default Dark Theme to Current
+Description: Use the Current Theme as the Default Dark Theme
+Binding: set_theme_dark
+Interactive: false
+

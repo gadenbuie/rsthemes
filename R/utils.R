@@ -1,3 +1,4 @@
+`%||%` <- function(x, y) if (is.null(x)) y else x
 
 requires_rstudioapi <- function(..., has_fun = "getThemes", version = "1.2.1335") {
   if (!requireNamespace("rstudioapi", quietly = TRUE)) {
