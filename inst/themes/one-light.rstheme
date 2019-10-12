@@ -399,6 +399,74 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
   color: #333333;
 }
 
+/* borders on toolbar under editor */
+.rstudio-themes-flat table.rstudio-themes-background td > div:first-child {
+  border-color: whitesmoke !important;
+}
+
+/* Borrowed from https://github.com/anthonynorth/rscodeio */
+/* splitters */
+.rstudio-themes-flat > .rstudio-themes-default .gwt-SplitLayoutPanel-HDragger {
+  border-color: whitesmoke;
+}
+
+.rstudio-themes-flat > .rstudio-themes-default .gwt-SplitLayoutPanel-VDragger {
+  border-color: whitesmoke;
+}
+
+.rstudio-themes-flat > .rstudio-themes-default .gwt-SplitLayoutPanel td {
+  border-color: #fafafa !important;
+}
+
+/* window containers */
+.rstudio-themes-flat
+> .rstudio-themes-default
+:-webkit-any(.windowframe, .rstheme_minimizedWindowObject)
+> div:last-child {
+  border-radius: 0;
+}
+
+/* main toolbar */
+.rstudio-themes-default > div:last-child > div > div > .rstheme_toolbarWrapper,
+.rstudio-themes-dark [role="application"] > div > .rstheme_toolbarWrapper {
+  border-color: #fafafa;
+}
+
+/* toolbars */
+.rstudio-themes-default .rstheme_toolbarWrapper,
+.rstudio-themes-default .rstheme_secondaryToolbar {
+  border-color: #fafafa !important;
+  border-radius: 0 !important;
+}
+
+/* other toolbars */
+.rstudio-themes-default .rstudio-themes-background {
+  border-top-color: #fafafa !important;
+  border-bottom-color: #fafafa !important;
+  border-radius: 0 !important;
+}
+
+/* tabs container */
+.rstudio-themes-default .gwt-TabLayoutPanelTabs,
+.rstudio-themes-default .windowframe,
+.rstudio-themes-default :-webkit-any(.rstheme_multiPodUtilityTabArea, .GD15MCFCCS, .GJQ3LUQCCS) {
+  background: #fafafa !important;
+  border-color: #fafafa !important;
+}
+
+/* tabs */
+.rstudio-themes-default .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected) .rstheme_tabLayoutCenter,
+.rstudio-themes-default .rstheme_minimizedWindowObject .rstheme_center {
+  border-color: #fafafa !important;
+  border-right: 1px solid #fafafa !important;
+  border-radius: 0;
+}
+
+/* active tab */
+.rstudio-themes-default .gwt-TabLayoutPanelTab.gwt-TabLayoutPanelTab-selected .rstheme_tabLayoutCenter {
+  border: none;
+}
+
 .terminal {
   background-color: #fafafa;
   color: #383a42;

@@ -58,4 +58,5 @@ $rlang-namespace-font-style: italic;
 
 $other-tag: $nord9;
 
-@import "rstudio/_rstudio-dark", "rstudio/_terminal";
+@import "rstudio/_rstudio-dark", "rstudio/_rstudio-dark-flatter";
+@import "rstudio/_terminal";

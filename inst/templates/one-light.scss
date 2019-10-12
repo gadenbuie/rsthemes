@@ -49,11 +49,6 @@ $rlang-variable : $syntax-color-variable;
 $rlang-message  : $syntax-color-tag;
 $rlang-namespace-font-style: normal;
 
-// custom css
-//[class="ace_keyword"] {
-//  font-weight: bold;
-//}
-
 $other-tag: $syntax-color-tag;
 
 // Rmd
@@ -61,4 +56,5 @@ $rmd-heading-color: $hue-5-2;
 $rmd-chunk-header: $hue-1;
 $rmd-href: $hue-6-2;
 
-@import "rstudio/_rstudio-light", "rstudio/_terminal";
+@import "rstudio/_rstudio-light", "rstudio/_rstudio-light-flatter";
+@import "rstudio/_terminal";

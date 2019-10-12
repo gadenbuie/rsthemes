@@ -410,6 +410,75 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
   color: #333333;
 }
 
+/* borders on toolbar under editor */
+.rstudio-themes-flat .rstudio-themes-dark table.rstudio-themes-background td > div:first-child {
+  border-color: #383448 !important;
+}
+
+/* Borrowed from https://github.com/anthonynorth/rscodeio */
+/* splitters */
+.rstudio-themes-flat > .rstudio-themes-dark .gwt-SplitLayoutPanel-HDragger {
+  border-color: #383448;
+}
+
+.rstudio-themes-flat > .rstudio-themes-dark .gwt-SplitLayoutPanel-VDragger {
+  border-color: #383448;
+}
+
+.rstudio-themes-flat > .rstudio-themes-dark .gwt-SplitLayoutPanel td {
+  border-color: #5A5475 !important;
+}
+
+/* window containers */
+.rstudio-themes-flat
+> .rstudio-themes-dark
+:-webkit-any(.windowframe, .rstheme_minimizedWindowObject)
+> div:last-child {
+  border-radius: 0;
+  border-color: #5A5475;
+}
+
+/* main toolbar */
+.rstudio-themes-dark > div:last-child > div > div > .rstheme_toolbarWrapper,
+.rstudio-themes-dark [role="application"] > div > .rstheme_toolbarWrapper {
+  border-color: #433f57;
+}
+
+/* toolbars */
+.rstudio-themes-dark .rstheme_toolbarWrapper,
+.rstudio-themes-dark .rstheme_secondaryToolbar {
+  border-color: #433f57 !important;
+  border-radius: 0 !important;
+}
+
+/* other toolbars */
+.rstudio-themes-dark .rstudio-themes-background {
+  border-top-color: #433f57 !important;
+  border-bottom-color: #433f57 !important;
+  border-radius: 0 !important;
+}
+
+/* tabs container */
+.rstudio-themes-dark .gwt-TabLayoutPanelTabs,
+.rstudio-themes-dark .windowframe,
+.rstudio-themes-dark :-webkit-any(.rstheme_multiPodUtilityTabArea, .GD15MCFCCS, .GJQ3LUQCCS) {
+  background: #433f57 !important;
+  border-color: #433f57 !important;
+}
+
+/* tabs */
+.rstudio-themes-dark .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected) .rstheme_tabLayoutCenter,
+.rstudio-themes-dark .rstheme_minimizedWindowObject .rstheme_center {
+  border-color: #433f57 !important;
+  border-right: 1px solid #433f57 !important;
+  border-radius: 0;
+}
+
+/* active tab */
+.rstudio-themes-dark .gwt-TabLayoutPanelTab.gwt-TabLayoutPanelTab-selected .rstheme_tabLayoutCenter {
+  border: none;
+}
+
 .terminal {
   background-color: #5A5475;
   color: #F8F8F2;
@@ -2529,75 +2598,6 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
 
 .xtermBgColor255 {
   background-color: #eeeeee;
-}
-
-/* borders on toolbar under editor */
-.rstudio-themes-flat .rstudio-themes-dark table.rstudio-themes-background td > div:first-child {
-  border-color: #383448 !important;
-}
-
-/* Borrowed from https://github.com/anthonynorth/rscodeio */
-/* splitters */
-.rstudio-themes-flat > .rstudio-themes-dark .gwt-SplitLayoutPanel-HDragger {
-  border-color: #383448;
-}
-
-.rstudio-themes-flat > .rstudio-themes-dark .gwt-SplitLayoutPanel-VDragger {
-  border-color: #383448;
-}
-
-rstudio-themes-flat > .rstudio-themes-dark .gwt-SplitLayoutPanel td {
-  boder-color: #383448 !important;
-}
-
-/* window containers */
-.rstudio-themes-flat
-> .rstudio-themes-dark
-:-webkit-any(.windowframe, .rstheme_minimizedWindowObject)
-> div:last-child {
-  border-radius: 0;
-  border: none !important;
-}
-
-/* main toolbar */
-.rstudio-themes-dark > div:last-child > div > div > .rstheme_toolbarWrapper,
-.rstudio-themes-dark [role="application"] > div > .rstheme_toolbarWrapper {
-  border-color: #433f57;
-}
-
-/* toolbars */
-.rstudio-themes-dark .rstheme_toolbarWrapper,
-.rstudio-themes-dark .rstheme_secondaryToolbar {
-  border-color: #433f57 !important;
-  border-radius: 0 !important;
-}
-
-/* other toolbars */
-.rstudio-themes-dark .rstudio-themes-background {
-  border-top-color: #433f57 !important;
-  border-bottom-color: #433f57 !important;
-  border-radius: 0 !important;
-}
-
-/* tabs container */
-.rstudio-themes-dark .gwt-TabLayoutPanelTabs,
-.rstudio-themes-dark .windowframe,
-.rstudio-themes-dark :-webkit-any(.rstheme_multiPodUtilityTabArea, .GD15MCFCCS, .GJQ3LUQCCS) {
-  background: #433f57 !important;
-  border-color: #433f57 !important;
-}
-
-/* tabs */
-.rstudio-themes-dark .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected) .rstheme_tabLayoutCenter,
-.rstudio-themes-dark .rstheme_minimizedWindowObject .rstheme_center {
-  border-color: #433f57 !important;
-  border-right: 1px solid #433f57 !important;
-  border-radius: 0;
-}
-
-/* active tab */
-.rstudio-themes-dark .gwt-TabLayoutPanelTab.gwt-TabLayoutPanelTab-selected .rstheme_tabLayoutCenter {
-  border: none;
 }
 
 /* crayon */
