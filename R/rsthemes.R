@@ -7,8 +7,8 @@
 #' provide an easy-to-extend framework for customizing the look of RStudio. See
 #' [new_rstheme()] for more information about creating your own theme. I've done
 #' my best to avoid hacky CSS rules wherever possible, and the themes are tested
-#' against the current production release of RStudio (verision 1.2.1335 as of
-#' June 11, 2019). Please report any issues you encounter here:
+#' against the current production release of RStudio (version 1.2.1335 through
+#' 1.3+ as of November 1, 2019). Please report any issues you encounter here:
 #' [github.com/gadenbuie/rsthemes/issues](https://github.com/gadenbuie/rsthemes/issues).
 #'
 #' @name rsthemes
@@ -18,17 +18,26 @@ NULL
 #' @param style Limit to a subgroup of themes, chosen from the options returned
 #'   by [rsthemes_styles()].
 #' @param include_base16 Should the `base16` themes be included?
+#' @param destdir The desination directory for the `.rstheme` files. By default
+#'   will attempt to choose the correct directory for the current RStudio
+#'   version 1.2 or 1.3+.
 #' @export
-install_rsthemes <- function(style = "all", include_base16 = FALSE) {
+install_rsthemes <- function(style = "all", include_base16 = FALSE, destdir = NULL) {
   theme_files <- list_pkg_rsthemes(style, include_base16)
   theme_files <- unname(theme_files)
 
   theme_rstudio_files <- paste0("rsthemes_", fs::path_file(theme_files))
 
-  fs::dir_create(rstudio_theme_home())
+  if (is.null(destdir)) {
+    destdir <- rstudio_theme_home()
+    message("Installing themes to ", destdir)
+  }
+  destdir <- fs::path_abs(destdir)
+  fs::dir_create(destdir)
+
   fs::file_copy(
     theme_files,
-    fs::path(rstudio_theme_home(), theme_rstudio_files),
+    fs::path(destdir, theme_rstudio_files),
     overwrite = TRUE
   )
   message("Installed ", length(theme_files), " themes, ",

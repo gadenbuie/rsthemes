@@ -29,7 +29,11 @@ package_template <- function(...) {
 }
 
 rstudio_theme_home <- function(...) {
-  fs::path_home_r(".R", "rstudio", "themes", ...)
+  if (rstudioapi::versionInfo()$version >= "1.3.555") {
+    fs::path_home_r(".config", "rstudio", "themes", ...)
+  } else {
+    fs::path_home_r(".R", "rstudio", "themes", ...)
+  }
 }
 
 cp_to_rstudio <- function(file, overwrite = TRUE) {

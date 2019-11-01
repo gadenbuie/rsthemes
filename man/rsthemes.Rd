@@ -9,7 +9,8 @@
 \alias{rsthemes_styles}
 \title{Full RStudio Themes}
 \usage{
-install_rsthemes(style = "all", include_base16 = FALSE)
+install_rsthemes(style = "all", include_base16 = FALSE,
+  destdir = NULL)
 
 remove_rsthemes(style = rsthemes_styles(), include_base16 = TRUE)
 
@@ -25,6 +26,10 @@ rsthemes_styles(..., validate = NULL)
 by \code{\link[=rsthemes_styles]{rsthemes_styles()}}.}
 
 \item{include_base16}{Should the \code{base16} themes be included?}
+
+\item{destdir}{The desination directory for the \code{.rstheme} files. By default
+will attempt to choose the correct directory for the current RStudio
+version 1.2 or 1.3+.}
 
 \item{list_installed}{Should the installed \pkg{rsthemes} themes be listed
 (default). If \code{FALSE}, the available themes in the \pkg{rsthemes} package
@@ -46,8 +51,8 @@ ultimately, contain the CSS files that provide the themes. The sass templates
 provide an easy-to-extend framework for customizing the look of RStudio. See
 \code{\link[=new_rstheme]{new_rstheme()}} for more information about creating your own theme. I've done
 my best to avoid hacky CSS rules wherever possible, and the themes are tested
-against the current production release of RStudio (verision 1.2.1335 as of
-June 11, 2019). Please report any issues you encounter here:
+against the current production release of RStudio (version 1.2.1335 through
+1.3+ as of November 1, 2019). Please report any issues you encounter here:
 \href{https://github.com/gadenbuie/rsthemes/issues}{github.com/gadenbuie/rsthemes/issues}.
 }
 \section{Functions}{
