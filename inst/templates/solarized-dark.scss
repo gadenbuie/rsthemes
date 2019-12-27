@@ -20,8 +20,8 @@ $ui-line-active-gutter    : $base01;
 $ui-line-active-selection : $base01;
 $ui-line-find             : $base0;
 $ui-bracket               : $base00;
-$ui-invisible             : $base00;
-$ui-indent-guide          : $base01;
+$ui-invisible             : transparentize($base01, 0.66);
+$ui-indent-guide          : transparentize($base01, 0.66);
 $ui-debug-background      : lighten($ui-background, 10%);
 $ui-fold-arrows-background: $violet;
 $ui-fold-arrows-color     : $ui-foreground;
@@ -43,7 +43,7 @@ $ui-rstudio-scrollbar-background: $ui-background;
 $ui-rstudio-scrollbar-handle    : $base02;
 
 // R language colors
-$rlang-comment  : $base0;
+$rlang-comment  : $base01;
 $rlang-string   : $cyan;
 $rlang-function : $blue;
 $rlang-reserved : $green;
@@ -56,5 +56,9 @@ $rlang-message  : $orange;
 $rlang-namespace-font-style: italic;
 
 $other-tag: $rlang-variable;
+
+.ace_comment {
+  font-style: italic;
+}
 
 @import "rstudio/_rstudio-dark", "rstudio/_terminal";

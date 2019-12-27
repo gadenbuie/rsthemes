@@ -1,6 +1,10 @@
 /* rs-theme-name: Solarized Light {rsthemes} */
 /* rs-theme-is-dark: FALSE */
 /* https://ethanschoonover.com/solarized */
+.ace_comment {
+  font-style: italic;
+}
+
 .ace_gutter {
   background: #eee8d5;
   color: #93a1a1;
@@ -99,7 +103,7 @@
 }
 
 .ace_indent-guide {
-  border-right: 1px solid #eee8d5;
+  border-right: 1px solid rgba(147, 161, 161, 0.34);
   margin-right: -1px;
 }
 
@@ -184,7 +188,7 @@
 }
 
 .ace_invisible {
-  color: #eee8d5;
+  color: rgba(147, 161, 161, 0.34);
 }
 
 .ace_variable {

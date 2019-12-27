@@ -20,8 +20,8 @@ $ui-line-active-gutter    : $ui-gutter-color;
 $ui-line-active-selection : $base1;
 $ui-line-find             : $base00;
 $ui-bracket               : transparentize($ui-cursor, 0.6);
-$ui-invisible             : $base2;
-$ui-indent-guide          : $base2;
+$ui-invisible             : transparentize($base1, 0.66);
+$ui-indent-guide          : transparentize($base1, 0.66);
 $ui-debug-background      : lighten($ui-background, 10%);
 $ui-fold-arrows-background: $violet;
 $ui-fold-arrows-color     : $ui-foreground;
@@ -56,5 +56,9 @@ $rlang-message  : $orange;
 $rlang-namespace-font-style: italic;
 
 $other-tag: $rlang-variable;
+
+.ace_comment {
+  font-style: italic;
+}
 
 @import "rstudio/_rstudio-light", "rstudio/_terminal";
