@@ -9,13 +9,11 @@
 \alias{rsthemes_styles}
 \title{Full RStudio Themes}
 \usage{
-install_rsthemes(style = "all", include_base16 = FALSE,
-  destdir = NULL)
+install_rsthemes(style = "all", include_base16 = FALSE, destdir = NULL)
 
 remove_rsthemes(style = rsthemes_styles(), include_base16 = TRUE)
 
-list_rsthemes(style = "all", include_base16 = TRUE,
-  list_installed = TRUE)
+list_rsthemes(style = "all", include_base16 = TRUE, list_installed = TRUE)
 
 try_rsthemes(style = "all", include_base16 = TRUE, delay = 0)
 

@@ -18,10 +18,9 @@ Imports:
     purrr,
     rstudioapi (>= 0.9.0)
 Suggests: 
-    later,
     sass (>= 0.1.0),
     whisker
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
