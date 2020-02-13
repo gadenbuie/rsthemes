@@ -20,8 +20,7 @@ use_theme_dark(quietly = FALSE)
 
 use_theme_toggle(quietly = FALSE)
 
-use_theme_auto(dark_start = "18:00", dark_end = "6:00",
-  quietly = FALSE)
+use_theme_auto(dark_start = "18:00", dark_end = "6:00", quietly = FALSE)
 }
 \arguments{
 \item{theme}{The name of the theme, or \code{NULL} to use current theme.}
@@ -36,7 +35,7 @@ use_theme_auto(dark_start = "18:00", dark_end = "6:00",
 These functions help manage switching between preferred dark and light
 themes. Use \code{rsthemes::set_theme_light()} and \code{rsthemes::set_theme_dark()} to
 declare your preferred light/dark themes. Set the preferred theme in your
-\code{~/.Rprofile} (see the section below) for ease of switching. Then use the
+\verb{~/.Rprofile} (see the section below) for ease of switching. Then use the
 \code{use_theme_light()} or \code{use_theme_dark()} to switch to your preferred theme.
 Switch between dark and light themes with \code{use_theme_toggle()} or
 automatically set your theme to dark mode using \code{use_theme_auto()}.
@@ -59,29 +58,29 @@ automatically set your theme to dark mode using \code{use_theme_auto()}.
 \section{Set preferred theme in \code{.Rprofile}}{
 
 
-Add the following to your \code{~/.Rprofile} (see \code{\link[usethis:edit_r_profile]{usethis::edit_r_profile()}}) to
-declare your default themes:\preformatted{if (
-  interactive() &&
-  requireNamespace("rsthemes", quietly = TRUE) &&
-  requireNamespace("later", quietly = TRUE)
-) {
-  # Use later to delay until RStudio is ready
-  later::later(function() {
-    rsthemes::set_theme_light("One Light {rsthemes}")  # light theme
-    rsthemes::set_theme_dark("One Dark {rsthemes}") # dark theme
+Add the following to your \verb{~/.Rprofile} (see \code{\link[usethis:edit_r_profile]{usethis::edit_r_profile()}}) to
+declare your default themes:\preformatted{if (interactive() && requireNamespace("rsthemes", quietly = TRUE)) \{
+  # Set preferred themes if not handled elsewhere..
+  rsthemes::set_theme_light("One Light \{rsthemes\}")  # light theme
+  rsthemes::set_theme_dark("One Dark \{rsthemes\}") # dark theme
 
-    # To automatically choose theme based on time of day
+  # Whenever the R session restarts inside RStudio...
+  setHook("rstudio.sessionInit", function(isNewSession) \{
+    # Automatically choose the correct theme based on time of day
     rsthemes::use_theme_auto(dark_start = "18:00", dark_end = "6:00")
-  }, delay = 1)
-}
+  \}, action = "append")
+\}
 }
 
-Note that \pkg{later} is required to add a slight delay to allow RStudio to
-start up. If you'd rather not use this approach, you can simply declare the
-global options that declare the default themes, but you won't be able to use
-\code{\link[=use_theme_auto]{use_theme_auto()}} at startup.\preformatted{options(
-  rsthemes.theme_light = "One Light {rsthemes}",
-  rsthemes.theme_dark = "One Dark {rsthemes}"
+If you'd rather not use this approach, you can simply declare the global
+options that declare the default themes, but you won't be able to use
+\code{\link[=use_theme_auto]{use_theme_auto()}} at startup.\preformatted{# ~/.Rprofile
+rsthemes::set_theme_light("One Light \{rsthemes\}")
+rsthemes::set_theme_dark("One Dark \{rsthemes\}")
+}\preformatted{# ~/.Rprofile
+options(
+  rsthemes.theme_light = "One Light \{rsthemes\}",
+  rsthemes.theme_dark = "One Dark \{rsthemes\}"
 )
 }
 }

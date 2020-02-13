@@ -14,28 +14,31 @@
 #' declare your default themes:
 #'
 #' ```
-#' if (
-#'   interactive() &&
-#'   requireNamespace("rsthemes", quietly = TRUE) &&
-#'   requireNamespace("later", quietly = TRUE)
-#' ) {
-#'   # Use later to delay until RStudio is ready
-#'   later::later(function() {
-#'     rsthemes::set_theme_light("One Light {rsthemes}")  # light theme
-#'     rsthemes::set_theme_dark("One Dark {rsthemes}") # dark theme
+#' if (interactive() && requireNamespace("rsthemes", quietly = TRUE)) {
+#'   # Set preferred themes if not handled elsewhere..
+#'   rsthemes::set_theme_light("One Light {rsthemes}")  # light theme
+#'   rsthemes::set_theme_dark("One Dark {rsthemes}") # dark theme
 #'
-#'     # To automatically choose theme based on time of day
+#'   # Whenever the R session restarts inside RStudio...
+#'   setHook("rstudio.sessionInit", function(isNewSession) {
+#'     # Automatically choose the correct theme based on time of day
 #'     rsthemes::use_theme_auto(dark_start = "18:00", dark_end = "6:00")
-#'   }, delay = 1)
+#'   }, action = "append")
 #' }
 #' ```
 #'
-#' Note that \pkg{later} is required to add a slight delay to allow RStudio to
-#' start up. If you'd rather not use this approach, you can simply declare the
-#' global options that declare the default themes, but you won't be able to use
+#' If you'd rather not use this approach, you can simply declare the global
+#' options that declare the default themes, but you won't be able to use
 #' [use_theme_auto()] at startup.
 #'
 #' ```
+#' # ~/.Rprofile
+#' rsthemes::set_theme_light("One Light {rsthemes}")
+#' rsthemes::set_theme_dark("One Dark {rsthemes}")
+#' ```
+#'
+#' ```
+#' # ~/.Rprofile
 #' options(
 #'   rsthemes.theme_light = "One Light {rsthemes}",
 #'   rsthemes.theme_dark = "One Dark {rsthemes}"
