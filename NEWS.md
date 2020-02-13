@@ -1,3 +1,13 @@
+# rsthemes 0.0.5
+
+* Rewrite automatic light/dark section of README for clarity (thanks @MikeJohnPage, #12)
+* Remove dependency on `later` and recommend using `rstudio.sessionInit` hook to
+  set the auto light/dark theme selection (thanks @mine-centinkaya-rundel, #8)
+
+# rsthemes 0.0.4
+
+* Update comment and invisible colors of Solarized Themes (thanks @dragosmg, #3)
+
 # rsthemes 0.0.3
 
 * Choose theme installation directory based on RStudio version. For 1.3.555+ the
