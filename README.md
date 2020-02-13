@@ -65,7 +65,7 @@ rsthemes::set_theme_light()
 rsthemes::set_theme_dark()
 ```
 
-You can then create a keyboard shortcut (I used <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>D</kbd>) to toggle dark mode. If you would like for the themes to be remebered during each new session, you can add the following code to your `~/.Rprofile`:
+You can then create a keyboard shortcut (I used <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>D</kbd>) to toggle dark mode. If you would like the default themes to be remebered during each new session, you can add the following code to your `~/.Rprofile`:
 
 ```r
 options(
