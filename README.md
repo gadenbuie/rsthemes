@@ -55,11 +55,26 @@ rstudioapi::applyTheme("One Dark {rsthemes}")
 
 ## Automatic &#x1F305; Light and &#x1F303; Dark Mode
 
-**rsthemes** includes an RStudio addin to easily **Toggle Dark Mode** to switch between two preferred dark and light themes. You can then create a keyboard shortcut (I used <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>D</kbd>) to toggle dark mode.
+**rsthemes** includes an RStudio addin to easily **Toggle Dark Mode** to switch between two preferred dark and light themes. For the toggle to work, you must set a default light and dark theme. These can be set using the **Set Default Light Theme to Current** and **Set Default Dark Theme to Current** addins, or alternatively, using the set light and dark theme functions:
 
-You can also automatically choose the dark or light theme by time of day, either with the included **Auto Choose Dark or Light Theme** addin, or by calling `rsthemes::use_theme_auto()` in your `~/.Rprofile`.
+``` r
+# Set a default light theme
+rsthemes::set_theme_light()
 
-For best results, use the following template in your `~/.Rprofile` to declare your preferred dark and light themes and to choose the correct style when your R session reloads.
+# Set a default dark theme
+rsthemes::set_theme_dark()
+```
+
+You can then create a keyboard shortcut (I used <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>D</kbd>) to toggle dark mode. If you would like for the themes to be remebered during each new session, you can add the following code to your `~/.Rprofile`:
+
+```r
+options(
+  rsthemes.theme_light = "One Light {rsthemes}",
+  rsthemes.theme_dark = "One Dark {rsthemes}"
+)
+```
+
+You can also automatically choose the dark or light theme by time of day, using the included **Auto Choose Dark or Light Theme** addin. This addin also requires default light and dark themes to be chosen. If you would like to automatically choose the dark or light theme by time of day during each new session, you can call `rsthemes::use_theme_auto()` in your `~/.Rprofile`. For best results, use the following template in your `~/.Rprofile` to declare your preferred dark and light themes and to choose the correct style when your R session reloads.
 
 ```r
 if (
@@ -76,15 +91,6 @@ if (
     rsthemes::use_theme_auto(dark_start = "18:00", dark_end = "6:00")
   }, delay = 1)
 }
-```
-
-If you'd rather stay low-tech and manually toggle dark mode, you can use a simplified `~/.Rprofile`.
-
-```r
-options(
-  rsthemes.theme_light = "One Light {rsthemes}",
-  rsthemes.theme_dark = "One Dark {rsthemes}"
-)
 ```
 
 ## Uninstall
