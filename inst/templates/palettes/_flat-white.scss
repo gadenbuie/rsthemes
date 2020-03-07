@@ -1,0 +1,30 @@
+/* Flat White
+ *
+ * Based on the "Flat White" Atom Syntax Theme
+ * By Dmitry Biletskyy
+ * https://github.com/biletskyy/flatwhite-syntax
+ */
+$base1: hsl(35,  8%, 35%); // Contrast 6 Luma 10.4% #605A52
+$base2: hsl(35, 15%, 50%); // Contrast 3.3 Luma 23.5% #93836C
+$base3: hsl(35, 22%, 65%); // Contrast 2 Luma 40.8% #B9A992
+$base4: hsl(35, 24%, 82%);
+$base5: hsl(35, 25%, 86%);
+$base6: hsl(35, 30%, 92%);
+$base7: hsl(35, 36%, 95%); // Luma 90%
+$accent: hsl(250, 100%, 65%);
+
+$orange-text: hsl(35, 15%, 31%); // Contrast 6
+$orange-text-sec: hsl(35, 22%, 48%); // Contrast 3
+$orange-bg: hsla(35, 100%, 47%, 0.18); // #F7E0C3
+$green-text: hsl(71, 12%, 30%); // Contrast 6
+$green-text-sec: hsl(71, 19%, 45%); // Contrast 3
+$green-bg: hsla(78, 100%, 37%, 0.19); // Luma: 78.3% Hue 71° #E2E9C1
+$teal-text: hsl(161, 12%, 31%); // Contrast 6
+$teal-text-sec: hsl(161, 19%, 46%); // Contrast 3
+$teal-bg: hsla(172, 100%, 37%, 0.15); // Hue 161° #D2EBE3
+$blue-text: hsl(220, 12%, 34%); // Contrast 6
+$blue-text-sec: hsl(220, 19%, 54%); // Contrast 3
+$blue-bg: hsla(220, 100%, 73%, 0.20); // Luma: 77.2% Hue 219° #DDE4F2
+$purple-text: hsl(300, 12%, 34%); // Contrast 6
+$purple-text-sec: hsl(300, 17%, 53%); // Contrast 3
+$purple-bg: hsla(282, 100%, 68%, 0.15); // Contrast 1.144 Luma: 76.8% Hue 300° #F1DDF1
