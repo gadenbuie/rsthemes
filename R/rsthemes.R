@@ -19,8 +19,9 @@ NULL
 #'   by [rsthemes_styles()].
 #' @param include_base16 Should the `base16` themes be included?
 #' @param destdir The desination directory for the `.rstheme` files. By default
-#'   will attempt to choose the correct directory for the current RStudio
-#'   version 1.2 or 1.3+.
+#'   uses [rstudioapi::addTheme()] to install themes, but this argument lets
+#'   users install themes to non-standard directories, or in case the location
+#'   of the RStudio theme directory has changed.
 #' @export
 install_rsthemes <- function(style = "all", include_base16 = FALSE, destdir = NULL) {
   theme_files <- list_pkg_rsthemes(style, include_base16)
@@ -28,18 +29,21 @@ install_rsthemes <- function(style = "all", include_base16 = FALSE, destdir = NU
 
   theme_rstudio_files <- paste0("rsthemes_", fs::path_file(theme_files))
 
-  if (is.null(destdir)) {
-    destdir <- rstudio_theme_home()
+  if (!is.null(destdir)) {
     message("Installing themes to ", destdir)
-  }
-  destdir <- fs::path_abs(destdir)
-  fs::dir_create(destdir)
+    destdir <- fs::path_abs(destdir)
+    fs::dir_create(destdir)
 
-  fs::file_copy(
-    theme_files,
-    fs::path(destdir, theme_rstudio_files),
-    overwrite = TRUE
-  )
+    fs::file_copy(
+      theme_files,
+      fs::path(destdir, theme_rstudio_files),
+      overwrite = TRUE
+    )
+  } else {
+    for (theme in theme_files) {
+      suppressWarnings(rstudioapi::addTheme(theme, force = TRUE))
+    }
+  }
   message("Installed ", length(theme_files), " themes, ",
           "use `rsthemes::list_rsthemes()` to list themes and ",
           "`rstudioapi::applyTheme()` to enable.")

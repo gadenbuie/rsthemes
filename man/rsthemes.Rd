@@ -26,8 +26,9 @@ by \code{\link[=rsthemes_styles]{rsthemes_styles()}}.}
 \item{include_base16}{Should the \code{base16} themes be included?}
 
 \item{destdir}{The desination directory for the \code{.rstheme} files. By default
-will attempt to choose the correct directory for the current RStudio
-version 1.2 or 1.3+.}
+uses \code{\link[rstudioapi:addTheme]{rstudioapi::addTheme()}} to install themes, but this argument lets
+users install themes to non-standard directories, or in case the location
+of the RStudio theme directory has changed.}
 
 \item{list_installed}{Should the installed \pkg{rsthemes} themes be listed
 (default). If \code{FALSE}, the available themes in the \pkg{rsthemes} package
