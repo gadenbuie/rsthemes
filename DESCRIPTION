@@ -13,6 +13,7 @@ License: MIT + file LICENSE
 URL: https://github.com/gadenbuie/rsthemes
 BugReports: https://github.com/gadenbuie/rsthemes/issues
 Imports: 
+    cli,
     fs (>= 1.3.0),
     hms,
     purrr,

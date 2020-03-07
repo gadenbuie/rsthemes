@@ -109,12 +109,16 @@ use_theme <- function(style = c("light", "dark"), quietly = FALSE) {
     "light" = getOption("rsthemes.theme_light", NULL),
     "dark" = getOption("rsthemes.theme_dark", NULL)
   )
-  theme <- stop_if_theme_not_set(theme)
+  stop_if_theme_not_set(theme)
   if (theme == get_current_theme_name()) {
     return(invisible())
   }
   if (!quietly) {
-    message("Switching to ", style, " theme: '", theme, "'")
+    cli::cli_alert_success("Switching to {style} theme: {.emph {theme}}")
+  }
+  if (!theme %in% get_theme_names()) {
+    cli::cli_alert_danger("{.emph {theme}} is not installed")
+    return(invisible())
   }
   rstudioapi::applyTheme(theme)
   invisible(theme)

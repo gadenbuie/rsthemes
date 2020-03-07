@@ -30,7 +30,7 @@ install_rsthemes <- function(style = "all", include_base16 = FALSE, destdir = NU
   theme_rstudio_files <- paste0("rsthemes_", fs::path_file(theme_files))
 
   if (!is.null(destdir)) {
-    message("Installing themes to ", destdir)
+    cli::cli_alert("Installing themes to {.file {destdir}}")
     destdir <- fs::path_abs(destdir)
     fs::dir_create(destdir)
 
@@ -44,9 +44,11 @@ install_rsthemes <- function(style = "all", include_base16 = FALSE, destdir = NU
       suppressWarnings(rstudioapi::addTheme(theme, force = TRUE))
     }
   }
-  message("Installed ", length(theme_files), " themes, ",
-          "use `rsthemes::list_rsthemes()` to list themes and ",
-          "`rstudioapi::applyTheme()` to enable.")
+  cli::cli_alert_success(
+    "Installed {length(theme_files)} themes"
+  )
+  cli::cli_alert_info("Use {.code rsthemes::list_rsthemes()} to list installed themes")
+  cli::cli_alert_info("Use {.code rstudioapi::applyTheme()} to enable a theme")
 }
 
 #' @describeIn rsthemes Remove rsthemes from RStudio
@@ -57,7 +59,6 @@ remove_rsthemes <- function(style = rsthemes_styles(), include_base16 = TRUE) {
 
   themes <- list_rsthemes(style, include_base16)
   if (length(themes) == 0) {
-    message("No {rsthemes} themes are installed.")
     return(invisible())
   }
 
@@ -65,7 +66,14 @@ remove_rsthemes <- function(style = rsthemes_styles(), include_base16 = TRUE) {
     rstudioapi::removeTheme(theme)
   }
 
-  message("Uninstalled ", length(themes), " themes")
+  cli::cli_alert_success("Uninstalled {length(themes)} themes")
+}
+
+cli_how2install <- function() {
+  cli::cli_alert_danger("No {.pkg rsthemes} themes are installed.")
+  cli::cli_alert_info(
+    "Use {.code rsthemes::install_rsthemes()} to install {.pkg rsthemes} RStudio themes"
+  )
 }
 
 #' @describeIn rsthemes List installed themes (default) or available themes
@@ -95,6 +103,10 @@ list_rsthemes <- function(
   }
   themes <- purrr::map_chr(themes, "name")
   themes <- themes[grepl("\\{rsthemes\\}", themes)]
+  if (list_installed && !length(themes)) {
+    cli_how2install()
+    return(invisible())
+  }
   unname(themes)
 }
 
@@ -147,7 +159,7 @@ try_rsthemes <- function(
       if (tolower(res) == "q") break
     }
   }
-  message("Restoring \"", current_theme$editor, "\"")
+  cli::cli_alert_success("Restoring \"{.strong {current_theme$editor}}\"")
   rstudioapi::applyTheme(current_theme$editor)
 }
 
