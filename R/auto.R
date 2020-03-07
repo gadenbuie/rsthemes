@@ -1,12 +1,15 @@
-#' Automatically or manually toggle light and dark themes
+#' Automatically or manually toggle light, dark, or favorite themes
 #'
-#' These functions help manage switching between preferred dark and light
-#' themes. Use `rsthemes::set_theme_light()` and `rsthemes::set_theme_dark()` to
-#' declare your preferred light/dark themes. Set the preferred theme in your
-#' `~/.Rprofile` (see the section below) for ease of switching. Then use the
-#' `use_theme_light()` or `use_theme_dark()` to switch to your preferred theme.
-#' Switch between dark and light themes with `use_theme_toggle()` or
-#' automatically set your theme to dark mode using `use_theme_auto()`.
+#' These functions help manage switching between preferred themes. Use
+#' `set_theme_light()` and `set_theme_dark()` to declare your preferred
+#' light/dark themes that can be toggled or selected automatically with
+#' `use_theme_toggle()` or `use_theme_auto()` or their corresponding RStudio
+#' addins. Alternatively, you can create a list of favorite themes with
+#' `set_theme_favorite()`. You can then cycle through this list with
+#' `use_theme_favorite()` or by using the RStudio addin.
+#'
+#' For best results, set your preferred themes in your `~/.Rprofile` using the
+#' instructions in the section below.
 #'
 #' @section Set preferred theme in `.Rprofile`:
 #'
@@ -18,6 +21,10 @@
 #'   # Set preferred themes if not handled elsewhere..
 #'   rsthemes::set_theme_light("One Light {rsthemes}")  # light theme
 #'   rsthemes::set_theme_dark("One Dark {rsthemes}") # dark theme
+#'   rsthemes::set_theme_favorite(c(
+#'     "GitHub {rsthemes}", "Solarized Dark {rsthemes}", "Fairyfloss {rsthemes}"
+#'   ))
+#'
 #'
 #'   # Whenever the R session restarts inside RStudio...
 #'   setHook("rstudio.sessionInit", function(isNewSession) {
@@ -35,6 +42,9 @@
 #' # ~/.Rprofile
 #' rsthemes::set_theme_light("One Light {rsthemes}")
 #' rsthemes::set_theme_dark("One Dark {rsthemes}")
+#' rsthemes::set_theme_favorite(c(
+#'   "GitHub {rsthemes}", "Solarized Dark {rsthemes}", "Fairyfloss {rsthemes}"
+#' ))
 #' ```
 #'
 #' ```
@@ -42,62 +52,91 @@
 #' options(
 #'   rsthemes.theme_light = "One Light {rsthemes}",
 #'   rsthemes.theme_dark = "One Dark {rsthemes}"
+#'   rsthemes.theme_favorite = c("GitHub {rsthemes}", "One Light {rsthemes}")
 #' )
 #' ```
 #'
 #' @section RStudio Addins:
 #'
-#' \pkg{rsthemes} includes four RStudio addins to help you easily switch between
+#' \pkg{rsthemes} includes five RStudio addins to help you easily switch between
 #' light and dark modes. You can set the default dark or light theme to the
 #' current theme. You can also toggle between light and dark mode or switch
 #' to the automatically chosen light/dark theme based on time of day. You can
-#' set a keyboard shortcut to **Toggle Dark Mode** or
+#' set a keyboard shortcut to **Toggle Dark Mode**, **Next Favorite Theme**, or
 #' **Auto Choose Dark or Light Theme** from the _Modify Keyboard Shortcuts..._
-#' window under the RSTudio _Tools_ menu.
+#' window under the RStudio _Tools_ menu.
 #'
 #' @param theme The name of the theme, or `NULL` to use current theme.
 #' @param quietly Suppress confirmation messages
 #' @param dark_start Start time of dark mode, in 24-hour `"HH:MM"` format.
 #' @param dark_end End time of dark mode, in 24-hour `"HH:MM"` format.
-#' @name auto_dark_light_theme
+#' @name auto_theme
 NULL
 
-#' @describeIn auto_dark_light_theme Set default light theme
+#' @describeIn auto_theme Set default light theme
 #' @export
 set_theme_light <- function(theme = NULL) {
-  set_theme(theme, "light")
+  set_theme_light_dark(theme, "light")
 }
 
-#' @describeIn auto_dark_light_theme Set default dark theme
+#' @describeIn auto_theme Set default dark theme
 #' @export
 set_theme_dark <- function(theme = NULL) {
-  set_theme(theme, "dark")
+  set_theme_light_dark(theme, "dark")
 }
 
-set_theme <- function(theme = NULL, style = c("light", "dark")) {
+#' @describeIn auto_theme Set favorite themes
+#' @param append \[set_theme_favorite\] Should the theme be appended to the list
+#'   of favorite themes? If `FALSE`, then `theme` replaces the current list of
+#'   favorite themes.
+#' @export
+set_theme_favorite <- function(theme = NULL, append = TRUE) {
+  for (i in seq_along(theme)) {
+    theme[i] <- get_or_check_theme(theme[i])
+  }
+  favorite_themes <- if (isTRUE(append)) get_theme_option("favorite") else c()
+  favorite_already <- intersect(theme, favorite_themes)
+  if (length(favorite_already)) {
+    favorite_already <- gsub(" ", "\u00a0", favorite_already)
+    cli::cli_alert_warning("{.emph {favorite_already}} already {?is a/are} favorite theme{?s}")
+    return(invisible())
+  }
+  theme <- setdiff(theme, favorite_already)
+  options(rsthemes.theme_favorite = c(favorite_themes, theme))
+  invisible(theme)
+}
+
+get_or_check_theme <- function(theme = NULL, style = NULL) {
   if (is.null(theme)) {
     if (!in_rstudio()) return(NULL)
     theme <- get_current_theme_name()
   }
   if (in_rstudio()) {
     theme <- stop_if_theme_not_valid(theme)
-    theme <- warn_theme_style_mismatch(theme, style)
+    if (!is.null(style)) {
+      warn_theme_style_mismatch(theme, style)
+    }
   }
+  theme
+}
 
+set_theme_light_dark <- function(theme = NULL, style = c("light", "dark")) {
   style <- match.arg(style)
+  theme <- get_or_check_theme(theme, style)
+
   switch(
     style,
     "light" = options("rsthemes.theme_light" = theme),
-    "dark" = options("rsthemes.theme_dark" = theme)
+    "dark" = options("rsthemes.theme_dark" = theme),
   )
   invisible(theme)
 }
 
-#' @describeIn auto_dark_light_theme Use default light theme
+#' @describeIn auto_theme Use default light theme
 #' @export
 use_theme_light <- function(quietly = FALSE) use_theme("light", quietly)
 
-#' @describeIn auto_dark_light_theme Use default dark theme
+#' @describeIn auto_theme Use default dark theme
 #' @export
 use_theme_dark <- function(quietly = FALSE) use_theme("dark", quietly)
 
@@ -109,12 +148,20 @@ use_theme <- function(style = c("light", "dark"), quietly = FALSE) {
     "light" = getOption("rsthemes.theme_light", NULL),
     "dark" = getOption("rsthemes.theme_dark", NULL)
   )
+  apply_Theme(theme, quietly, style)
+}
+
+apply_theme <- function(theme, quietly = FALSE, style = NULL) {
   stop_if_theme_not_set(theme)
   if (theme == get_current_theme_name()) {
     return(invisible())
   }
   if (!quietly) {
-    cli::cli_alert_success("Switching to {style} theme: {.emph {theme}}")
+    if (!is.null(style)) {
+      cli::cli_alert("Switching to {style} theme: {.emph {theme}}")
+    } else {
+      cli::cli_alert("{.emph {theme}}")
+    }
   }
   if (!theme %in% get_theme_names()) {
     cli::cli_alert_danger("{.emph {theme}} is not installed")
@@ -124,7 +171,7 @@ use_theme <- function(style = c("light", "dark"), quietly = FALSE) {
   invisible(theme)
 }
 
-#' @describeIn auto_dark_light_theme Toggle between dark and light themes
+#' @describeIn auto_theme Toggle between dark and light themes
 #' @export
 use_theme_toggle <- function(quietly = FALSE) {
   theme_current <- rstudioapi::getThemeInfo()
@@ -135,7 +182,7 @@ use_theme_toggle <- function(quietly = FALSE) {
   }
 }
 
-#' @describeIn auto_dark_light_theme Auto switch between dark and light themes
+#' @describeIn auto_theme Auto switch between dark and light themes
 #' @export
 use_theme_auto <- function(dark_start = "18:00", dark_end = "6:00", quietly = FALSE) {
   dark_start <- hms::parse_hm(dark_start)
@@ -161,11 +208,30 @@ use_theme_auto <- function(dark_start = "18:00", dark_end = "6:00", quietly = FA
   }
 }
 
-get_theme_option <- function(style = c("light", "dark")) {
+#' @describeIn auto_theme Walk through a list of favorite themes
+#' @export
+use_theme_favorite <- function(quietly = FALSE) {
+  themes <- get_theme_option("favorite")
+  if (!length(themes)) {
+    cli::cli_alert_warning("No favorite themes are set")
+    cli::cli_alert_info("Use {.code rsthemes::set_theme_favorite()} to set your favorite theme list")
+    return(invisible())
+  }
+  current <- get_current_theme_name()
+  idx <- which(current == themes)
+  if (!length(idx)) idx <- 0
+  if (length(idx) > 1) idx <- idx[1]
+  idx <- idx + 1
+  if (idx > length(themes)) idx <- 1
+  apply_theme(themes[idx], quietly)
+}
+
+get_theme_option <- function(style = c("light", "dark", "favorite")) {
   switch(
     match.arg(style),
     "light" = getOption("rsthemes.theme_light", NULL),
     "dark" = getOption("rsthemes.theme_dark", NULL),
+    "favorite" = getOption("rsthemes.theme_favorite", NULL),
     stop("Unkown theme style: '", style, "'", call. = FALSE)
   )
 }

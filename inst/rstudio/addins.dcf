@@ -18,3 +18,8 @@ Description: Use the Current Theme as the Default Dark Theme
 Binding: set_theme_dark
 Interactive: false
 
+Name: Next Favorite Theme
+Description: Use the next Favorite Theme (see rsthemes::set_theme_favorite())
+Binding: use_theme_favorite
+Interactive: false
+
