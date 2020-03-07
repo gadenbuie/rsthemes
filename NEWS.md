@@ -1,3 +1,17 @@
+# rsthemes 0.0.6
+
+* Added a favorite themes list. Similar to the preferred light/dark themes,
+  users can now chose their favorite themes and walk through them.
+  Use `set_theme_favorite()` interactively or in your `~/.Rprofile` with a
+  vector of theme names. Then use `use_theme_favorite()` or the **Next Favorite Theme**
+  RStudio addin to walk through this list of themes. (#11)
+
+* `install_rsthemes()` now uses `rstudioapi::addTheme(..., force = TRUE)` to
+  install themes, rather than trying to guess the correct directory. If this
+  method fails, users can use the `destdir` option to install into non-standard
+  directories. If all else fails, please open an issue in 
+  [rstudio/rstudioapi](https://github.com/rstudio/rstudioapi). (thanks @leonawicz, #15)
+
 # rsthemes 0.0.5
 
 * Rewrite automatic light/dark section of README for clarity (thanks @MikeJohnPage, #12)
