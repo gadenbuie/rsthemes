@@ -22,8 +22,14 @@
 		}
 	}
 	.ace_editor_theme {
-		background-color: $ui-background;
-		color: $ui-foreground;
+    background-color: $ui-background !important;
+    color: $ui-foreground !important;
+    table {
+      background-color: $ui-background !important;
+      thead > tr > th {
+        background-color: $ui-background !important;
+      }
+    }
 	}
 	&.ace_editor_theme a {
 		color: $ui-foreground !important;
@@ -88,50 +94,67 @@
 .ace_active-line ~ .ace_selection.ace_start {
 	background-color: $ui-line-active-selection;
 }
+[class="ace_keyword"] {
+	color: $rlang-reserved;
+	background-color: $rlang-reserved-bg;
+}
 .ace_keyword {
 	font-style: normal;
-	color: $rlang-reserved;
 	&.ace_operator {
 		font-style: normal;
 		color: $rlang-operator;
+		background-color: $rlang-operator-bg;
 	}
 	&.ace_other.ace_unit {
 		font-style: normal;
 		color: $rlang-value;
+		background-color: $rlang-value-bg;
 	}
 }
 .ace_constant {
 	&.ace_language {
 		color: $rlang-message;
+		background-color: $rlang-message-bg;
 	}
 	&.ace_numeric {
 		color: $rlang-value;
+		background-color: $rlang-value-bg;
 	}
 	&.ace_character {
 		color: $rlang-value;
+		background-color: $rlang-value-bg;
 	}
 	&.ace_other {
 		color: $ui-foreground;
 	}
 }
-.ace_support {
+.ace_line > .ace_constant.ace_language {
+	color: $rlang-value;
+	background-color: $rlang-value-bg;
+}
+.ace_identifier.ace_support {
 	&.ace_function {
 		color: $rlang-function;
+		background-color: $rlang-function-bg;
 	}
 	&.ace_constant {
 		color: $rlang-value;
+		background-color: $rlang-value-bg;
 	}
 	&.ace_class {
 		font-style: $rlang-namespace-font-style;
 		color: $rlang-namespace;
+		background-color: $rlang-namespace-bg;
 	}
 	&.ace_type {
 		color: $rlang-namespace;
+		background-color: $rlang-namespace-bg;
 	}
 }
 .ace_paren {
 	&.ace_keyword.ace_operator {
 		color: $rlang-bracket;
+		background-color: $rlang-bracket-bg;
 	}
 }
 .ace_storage {
@@ -148,23 +171,32 @@
 }
 .ace_string {
 	color: $rlang-string;
+	background-color: $rlang-string-bg;
 }
 .ace_comment {
 	color: $rlang-comment;
+	background-color: $rlang-comment-bg;
 }
 .ace_invisible {
 	color: $ui-invisible;
 }
 .ace_variable {
 	color: $rlang-variable;
+	background-color: $rlang-variable-bg;
 	&.ace_parameter {
 		color: $rlang-value;
+		background-color: $rlang-value-bg;
 	}
+}
+.ace_identifier {
+	color: $rlang-identifier;
+	background-color: $rlang-identifier-bg;
 }
 .ace_entity {
 	&.ace_name {
 		&.ace_function {
 			color: $rlang-function;
+			background-color: $rlang-function-bg;
 		}
 		&.ace_tag {
 			color: $other-tag;
@@ -172,6 +204,7 @@
 	}
 	&.ace_other.ace_attribute-name {
 		color: $rlang-reserved;
+		background-color: $rlang-reserved-bg;
 	}
 }
 .ace_bracket {
@@ -197,22 +230,27 @@
 }
 .ace_meta.ace_tag {
 	color: $rlang-operator;
+	background-color: $rlang-operator-bg;
 }
 .ace_markup.ace_heading,
 .ace_markup.ace_heading ~ .ace_heading {
 	font-weight: $rmd-heading-weight;
 	color: $rmd-heading-color;
+	background-color: $rmd-heading-color-bg;
 }
 .ace_support.ace_function {
   &.ace_codebegin, &.ace_codeend {
     color: $rmd-chunk-header;
+    background-color: $rmd-chunk-header-bg;
   }
 }
 .ace_markup.ace_href {
   color: $rmd-href;
+  background-color: $rmd-href-bg;
 }
 .nocolor.ace_editor .ace_line span {
 	color: $rlang-reserved !important;
+	background-color: $rlang-reserved-bg !important;
 }
 #rstudio_console_input .ace_marker-layer .ace_selection {
   background: $ui-console-selection;

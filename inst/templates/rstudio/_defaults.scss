@@ -51,10 +51,27 @@ $rlang-reserved : $rlang-string !default;
 $rlang-operator : $rlang-value !default;
 $rlang-bracket  : $rlang-function !default;
 $rlang-namespace: $rlang-variable !default;
+$rlang-identifier: $rlang-variable !default;
 $other-tag: $rlang-string !default;
+
+$rlang-string-bg: inherit !default;
+$rlang-function-bg: inherit !default;
+$rlang-value-bg: inherit !default;
+$rlang-variable-bg: inherit !default;
+$rlang-message-bg: inherit !default;
+$rlang-comment-bg: inherit !default;
+$rlang-namespace-font-style-bg: inherit !default;
+$rlang-reserved-bg: inherit !default;
+$rlang-operator-bg: inherit !default;
+$rlang-bracket-bg: inherit !default;
+$rlang-namespace-bg: inherit !default;
+$rlang-identifier-bg: inherit !default;
 
 // R Markdown
 $rmd-heading-weight: 600 !default;
 $rmd-heading-color: $rlang-string !default;
+$rmd-heading-color-bg: $rlang-string-bg !default;
 $rmd-chunk-header: $rlang-function !default;
+$rmd-chunk-header-bg: $rlang-function-bg !default;
 $rmd-href: $rlang-reserved !default;
+$rmd-href-bg: $rlang-reserved-bg !default;
