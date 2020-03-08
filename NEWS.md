@@ -1,3 +1,12 @@
+# rsthemes 0.0.7
+
+* Added a new theme: Flat White. Based on the [Atom theme](https://github.com/biletskyy/flatwhite-syntax).
+
+* Many improvements were made to the light theme template,
+  including adding background color preferences, better
+  targeting of R-specific tokens, and the addition of
+  `$rlang-identifier`.
+
 # rsthemes 0.0.6
 
 * Added a favorite themes list. Similar to the preferred light/dark themes,
