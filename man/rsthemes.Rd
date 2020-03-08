@@ -67,3 +67,18 @@ against the current production release of RStudio (version 1.2.1335 through
 \item \code{rsthemes_styles}: List style options
 }}
 
+\section{Palettes}{
+ \pkg{rsthemes} includes RStudio themes based on the
+following colors palettes.
+\itemize{
+\item \emph{\href{https://github.com/chriskempson/base16}{base16}} (Various Authors)
+\item \emph{\href{https://github.com/sailorhg/fairyfloss}{Fairyfloss}} (\href{https://github.com/sailorhg}{Amy Wibowo (sailorhg)})
+\item \emph{\href{https://github.com/biletskyy/flatwhite-syntax}{Flat White}} (\href{https://github.com/biletskyy}{Dmitry Biletskyy})
+\item \emph{\href{https://github.com/arcticicestudio/nord}{Nord}} (\href{https://www.svengreb.de/}{Sven Greb})
+\item \emph{\href{https://github.com/marcoms/oceanic-plus}{Oceanic Plus}} (\href{https://github.com/marcoms}{Marco Scannadinari})
+\item \emph{\href{https://github.com/atom/atom/tree/master/packages/one-dark-syntax}{Atom One Dark}}
+\item \emph{\href{https://github.com/atom/atom/tree/master/packages/one-light-syntax}{Atom One Light}}
+\item \emph{\href{https://ethanschoonover.com/solarized}{Solarized}} (Ethan Schoonover)
+}
+}
+

@@ -155,6 +155,28 @@ rsthemes::remove_rsthemes()
 rsthemes::remove_rsthemes("base16")
 ```
 
+## Thanks and Theme Credits
+
+### Palettes
+
+- [base16] (Various Authors)
+- [Fairyfloss] ([Amy Wibowo (sailorhg)](https://github.com/sailorhg))
+- [Flat White][flat-white] ([Dmitry Biletskyy](https://github.com/biletskyy))
+- [Nord] ([Sven Greb](https://www.svengreb.de/))
+- [Oceanic Plus][oceanic-plus] ([Marco Scannadinari](https://github.com/marcoms))
+- [Atom One Dark][one-dark]
+- [Atom One Light][one-light]
+- [Solarized] (Ethan Schoonover)
+
+[base16]: https://github.com/chriskempson/base16
+[fairyfloss]: https://github.com/sailorhg/fairyfloss
+[flat-white]: https://github.com/biletskyy/flatwhite-syntax
+[nord]: https://github.com/arcticicestudio/nord
+[oceanic-plus]: https://github.com/marcoms/oceanic-plus
+[one-light]: https://github.com/atom/atom/tree/master/packages/one-light-syntax
+[one-dark]: https://github.com/atom/atom/tree/master/packages/one-dark-syntax
+[solarized]: https://ethanschoonover.com/solarized
+
 ***
 
 Please note that the 'rsthemes' project is released with a

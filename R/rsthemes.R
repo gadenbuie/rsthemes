@@ -11,6 +11,26 @@
 #' 1.3+ as of November 1, 2019). Please report any issues you encounter here:
 #' [github.com/gadenbuie/rsthemes/issues](https://github.com/gadenbuie/rsthemes/issues).
 #'
+#' @section Palettes: \pkg{rsthemes} includes RStudio themes based on the
+#'   following colors palettes.
+#'
+#'   - _[base16]_ (Various Authors)
+#'   - _[Fairyfloss]_ ([Amy Wibowo (sailorhg)](https://github.com/sailorhg))
+#'   - _[Flat White][flat-white]_ ([Dmitry Biletskyy](https://github.com/biletskyy))
+#'   - _[Nord]_ ([Sven Greb](https://www.svengreb.de/))
+#'   - _[Oceanic Plus][oceanic-plus]_ ([Marco Scannadinari](https://github.com/marcoms))
+#'   - _[Atom One Dark][one-dark]_
+#'   - _[Atom One Light][one-light]_
+#'   - _[Solarized]_ (Ethan Schoonover)
+#'
+#'   [base16]: https://github.com/chriskempson/base16
+#'   [fairyfloss]: https://github.com/sailorhg/fairyfloss
+#'   [flat-white]: https://github.com/biletskyy/flatwhite-syntax
+#'   [nord]: https://github.com/arcticicestudio/nord
+#'   [oceanic-plus]: https://github.com/marcoms/oceanic-plus
+#'   [one-light]: https://github.com/atom/atom/tree/master/packages/one-light-syntax
+#'   [one-dark]: https://github.com/atom/atom/tree/master/packages/one-dark-syntax
+#'   [solarized]: https://ethanschoonover.com/solarized
 #' @name rsthemes
 NULL
 

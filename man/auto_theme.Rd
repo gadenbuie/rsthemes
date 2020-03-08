@@ -120,6 +120,6 @@ current theme. You can also toggle between light and dark mode or switch
 to the automatically chosen light/dark theme based on time of day. You can
 set a keyboard shortcut to \strong{Toggle Dark Mode}, \strong{Next Favorite Theme}, or
 \strong{Auto Choose Dark or Light Theme} from the \emph{Modify Keyboard Shortcuts...}
-window under the RSTudio \emph{Tools} menu.
+window under the RStudio \emph{Tools} menu.
 }
 
