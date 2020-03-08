@@ -8,7 +8,7 @@
  */
 .ace_gutter {
   background: #f7f3ee;
-  color: #b9a992;
+  color: #a59073;
 }
 
 .ace_print-margin {
@@ -213,7 +213,7 @@
 }
 
 .ace_comment {
-  color: #b9a992;
+  color: #a59073;
   background-color: inherit;
 }
 
