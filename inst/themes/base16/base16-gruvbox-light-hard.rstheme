@@ -27,8 +27,16 @@
 }
 
 .rstudio-themes-flat .ace_editor_theme {
-  background-color: #f9f5d7;
-  color: #282828;
+  background-color: #f9f5d7 !important;
+  color: #282828 !important;
+}
+
+.rstudio-themes-flat .ace_editor_theme table {
+  background-color: #f9f5d7 !important;
+}
+
+.rstudio-themes-flat .ace_editor_theme table thead > tr > th {
+  background-color: #f9f5d7 !important;
 }
 
 .rstudio-themes-flat.ace_editor_theme a {
@@ -107,56 +115,75 @@
   background-color: #d5c4a1;
 }
 
+[class="ace_keyword"] {
+  color: #8f3f71;
+  background-color: inherit;
+}
+
 .ace_keyword {
   font-style: normal;
-  color: #8f3f71;
 }
 
 .ace_keyword.ace_operator {
   font-style: normal;
   color: #427b58;
+  background-color: inherit;
 }
 
 .ace_keyword.ace_other.ace_unit {
   font-style: normal;
   color: #af3a03;
+  background-color: inherit;
 }
 
 .ace_constant.ace_language {
   color: #d65d0e;
+  background-color: inherit;
 }
 
 .ace_constant.ace_numeric {
   color: #af3a03;
+  background-color: inherit;
 }
 
 .ace_constant.ace_character {
   color: #af3a03;
+  background-color: inherit;
 }
 
 .ace_constant.ace_other {
   color: #282828;
 }
 
-.ace_support.ace_function {
-  color: #076678;
-}
-
-.ace_support.ace_constant {
+.ace_line > .ace_constant.ace_language {
   color: #af3a03;
+  background-color: inherit;
 }
 
-.ace_support.ace_class {
+.ace_identifier.ace_support.ace_function {
+  color: #076678;
+  background-color: inherit;
+}
+
+.ace_identifier.ace_support.ace_constant {
+  color: #af3a03;
+  background-color: inherit;
+}
+
+.ace_identifier.ace_support.ace_class {
   font-style: italic;
   color: #b57614;
+  background-color: inherit;
 }
 
-.ace_support.ace_type {
+.ace_identifier.ace_support.ace_type {
   color: #b57614;
+  background-color: inherit;
 }
 
 .ace_paren.ace_keyword.ace_operator {
   color: #427b58;
+  background-color: inherit;
 }
 
 .ace_storage {
@@ -177,10 +204,12 @@
 
 .ace_string {
   color: #79740e;
+  background-color: inherit;
 }
 
 .ace_comment {
   color: #665c54;
+  background-color: inherit;
 }
 
 .ace_invisible {
@@ -189,14 +218,22 @@
 
 .ace_variable {
   color: #9d0006;
+  background-color: inherit;
 }
 
 .ace_variable.ace_parameter {
   color: #af3a03;
+  background-color: inherit;
+}
+
+.ace_identifier {
+  color: #9d0006;
+  background-color: inherit;
 }
 
 .ace_entity.ace_name.ace_function {
   color: #076678;
+  background-color: inherit;
 }
 
 .ace_entity.ace_name.ace_tag {
@@ -205,6 +242,7 @@
 
 .ace_entity.ace_other.ace_attribute-name {
   color: #8f3f71;
+  background-color: inherit;
 }
 
 .ace_bracket {
@@ -236,24 +274,29 @@
 
 .ace_meta.ace_tag {
   color: #427b58;
+  background-color: inherit;
 }
 
 .ace_markup.ace_heading,
 .ace_markup.ace_heading ~ .ace_heading {
   font-weight: 600;
   color: #79740e;
+  background-color: inherit;
 }
 
 .ace_support.ace_function.ace_codebegin, .ace_support.ace_function.ace_codeend {
   color: #076678;
+  background-color: inherit;
 }
 
 .ace_markup.ace_href {
   color: #8f3f71;
+  background-color: inherit;
 }
 
 .nocolor.ace_editor .ace_line span {
   color: #8f3f71 !important;
+  background-color: inherit !important;
 }
 
 #rstudio_console_input .ace_marker-layer .ace_selection {
