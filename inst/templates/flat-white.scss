@@ -88,6 +88,14 @@ $rmd-href-bg: $green-bg;
   color: $orange-text;
   background-color: $orange-bg;
 }
+// this next selector misses the first backtick of inline code chunks
+// if they're the first thing on the line,
+// but it doesn't background highlight regular markdown code chunks
+.ace_line > .ace_invisible:first-child + [class="ace_support ace_function"],
+.ace_line > [class="ace_support ace_function"]:first-child {
+  color: #845009; // orange-related
+  background-color: inherit;
+}
 
 /* Rmd bold and italics */
 .ace_constant.ace_numeric.ace_text {
