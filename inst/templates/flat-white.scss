@@ -7,7 +7,7 @@
 $ui-background           : $base7;
 $ui-foreground           : $base1;
 $ui-code-chunk-background: $base6;
-$ui-selection            : transparentize($accent, 0.8);
+$ui-selection            : transparentize($accent, 0.9);
 $ui-cursor               : $accent;
 $ui-cursor-normal-mode   : $ui-cursor;
 $ui-margin-line          : $base6;
@@ -15,7 +15,7 @@ $ui-gutter-color         : $base3;
 $ui-gutter-background    : $ui-background;
 
 // less common UI colors
-$ui-line-active           : $base5;
+$ui-line-active           : transparentize($base5, 0.2);
 $ui-line-active-gutter    : $base6;
 $ui-line-active-selection : transparentize($accent, 0.8);
 $ui-line-find             : $ui-line-active-selection;
