@@ -122,7 +122,7 @@ Use the **Next Favorite Theme** addin to walk through your list of favorite them
 Each time you run the addin, RStudio switches to the next theme in your favorites list. This is great if you have a few themes that you use in various contexts. For example, I have my personal favorite themes plus a few themes that work well during class or presentation sessions.
 
 
-### Toggle Dark Mode
+### Automatic or Manual Light/Dark Mode
 
 Use the **Toggle Dark Mode** addin to switch between your default light and dark themes. You can even set a keyboard shortcut in RStudio — I used <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>D</kbd> — to toggle dark mode.
 
