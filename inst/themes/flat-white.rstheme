@@ -538,6 +538,8 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
 }
 
 .rstudio-themes-flat .gwt-TabLayoutPanelTab-selected .rstheme_tabLayoutCenter {
+  box-shadow: 2px 0 0 #CF9A4F inset;
+  border-radius: 0 !important;
   border-top: solid 1px #dcd3c6 !important;
   border-right: solid 1px #dcd3c6 !important;
   border-left: solid 1px #dcd3c6 !important;

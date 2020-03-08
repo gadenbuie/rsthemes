@@ -25,6 +25,7 @@ $ui-indent-guide          : $ui-invisible;
 $ui-debug-background      : lighten($accent, 40%);
 $ui-fold-arrows-color     : $purple-text;
 $ui-fold-arrows-background: $purple-bg;
+$ui-rstudio-tabs-active-border-left: #CF9A4F;
 
 // rstudio
 $ui-rstudio-background          : $base5;
@@ -163,6 +164,8 @@ $rmd-href-bg: $green-bg;
 }
 
 .rstudio-themes-flat .gwt-TabLayoutPanelTab-selected .rstheme_tabLayoutCenter {
+  box-shadow: 2px 0 0 $ui-rstudio-tabs-active-border-left inset;
+  border-radius: 0 !important;
   border-top: solid 1px $base4 !important;
   border-right: solid 1px $base4 !important;
   border-left: solid 1px $base4 !important;
