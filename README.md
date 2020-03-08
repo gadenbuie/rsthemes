@@ -53,13 +53,19 @@ Use `rstudioapi::applyTheme()` to activate a theme from the R console, or use *T
 rstudioapi::applyTheme("One Dark {rsthemes}")
 ```
 
-## Automatic &#x1F305; Light and &#x1F303; Dark Mode
+## Easy Theme Switching
 
-**rsthemes** includes an RStudio addin to easily **Toggle Dark Mode** to switch between two preferred dark and light themes.
+**rsthemes** includes RStudio addins and functions to... <a name="automatic--light-and--dark-mode" />
 
-### Choose Default Light and Dark Themes
+- &#x1F305; **Toggle Dark Mode**<br>Switch between two preferred dark and light themes
 
-First, set a default light and dark theme. You can use the **Set Default Light Theme to Current** addin (or the corresponding dark theme addin), or you can call the `set_theme_light()` or `set_theme_dark()` functions:
+- &#x1F303; **Auto Dark Mode**<br>Automatically choose a dark or light theme by time of day
+
+- &#x2764;&#xFE0F; **Favorite Themes**<br>Switch between a few of your favorite themes
+
+#### Choose Your Preferred Themes
+
+First, set a default light and dark theme. For your current R sessions, you can use the **Set Default Light Theme to Current** addin (or the corresponding dark theme addin), or you can call the `set_theme_light()` or `set_theme_dark()` functions:
 
 ``` r
 # Set current theme to default light or dark theme
@@ -71,11 +77,31 @@ rsthemes::set_theme_light("One Light {rsthemes}")
 rsthemes::set_theme_dark("One Dark {rsthemes}")
 ```
 
-To set these defaults for all R sessions, add your preferences to your `~/.Rprofile`. (You can use `usethis::edit_r_profile()` to quickly open your `~/.Rprofile` for editing.)
+To create a list of your **favorite** themes, you can use `set_theme_favorite()`.
 
 ```r
-rsthemes::set_theme_light("GitHub {rsthemes}")
-rsthemes::set_theme_dark("Fairyfloss {rsthemes}")
+# Add current theme to your list of favorites
+rsthemes::set_theme_favorite()
+
+# Add a list of themes to your favorites
+rsthemes::set_theme_favorite(
+  c("GitHub {rsthemes}", "One Light {rsthemes}", "One Dark {rsthemes}")
+)
+```
+
+These functions only save your preferences for the _current_ R session. To set these defaults for all R sessions, add your preferences to your `~/.Rprofile`. (You can use `usethis::edit_r_profile()` to quickly open your `~/.Rprofile` for editing.)
+
+```r
+# ~/.Rprofile
+if (interactive()) {
+  rsthemes::set_theme_light("GitHub {rsthemes}")
+  rsthemes::set_theme_dark("Fairyfloss {rsthemes}")
+  rsthemes::set_theme_favorite(
+    c("GitHub {rsthemes}", 
+      "One Light {rsthemes}", 
+      "One Dark {rsthemes}")
+  )
+}
 ```
 
 You can also set the following global options directly.
@@ -84,9 +110,17 @@ You can also set the following global options directly.
 # ~/.Rprofile
 options(
   rsthemes.theme_light = "Nord Snow Storm {rsthemes}",
-  rsthemes.theme_dark = "Nord Polar Night Aurora {rsthemes}"
+  rsthemes.theme_dark = "Nord Polar Night Aurora {rsthemes}",
+  rsthemes.theme_favorite = paste("One", c("Light", "Dark"), "{rsthemes}")
 )
 ```
+
+### Toggle Your Favorite Themes
+
+Use the **Next Favorite Theme** addin to walk through your list of favorite themes. Use the _Modify Keyboard Shortcuts..._ dialog in the _Tools_ menu of RStudio to create a keyboard shortcut to make it easy to quickly switch themes — I use <kbd>Ctrl</kbd>+ <kbd>Alt</kbd> + <kbd>N</kbd>. You can also manually call `use_theme_favorite()` to use the next theme in the your favorites list.
+
+Each time you run the addin, RStudio switches to the next theme in your favorites list. This is great if you have a few themes that you use in various contexts. For example, I have my personal favorite themes plus a few themes that work well during class or presentation sessions.
+
 
 ### Toggle Dark Mode
 
