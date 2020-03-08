@@ -70,6 +70,11 @@ $rmd-href-bg: $green-bg;
 
 @import "rstudio/_rstudio-light";
 
+/* let lines breathe */
+#rstudio_source_text_editor {
+    line-height: 1.6 !important;
+}
+
 /* Rmd Chunk Headers */
 .ace_support.ace_function {
   &.ace_codebegin, &.ace_codeend {
