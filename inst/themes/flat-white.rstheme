@@ -64,7 +64,7 @@
 }
 
 .ace_marker-layer .ace_selection {
-  background: rgba(106, 77, 255, 0.2);
+  background: rgba(106, 77, 255, 0.1);
 }
 
 .ace_marker-layer .ace_step {
@@ -77,11 +77,11 @@
 }
 
 .ace_marker-layer .ace_active-line {
-  background: #e4ddd2;
+  background: rgba(228, 221, 210, 0.8);
 }
 
 .ace_marker-layer .ace_selected-word {
-  border: 1px solid rgba(106, 77, 255, 0.2);
+  border: 1px solid rgba(106, 77, 255, 0.1);
 }
 
 .ace_marker-layer .ace_foreign_line {
@@ -305,7 +305,7 @@
 }
 
 #rstudio_console_input .ace_marker-layer .ace_selection {
-  background: rgba(106, 77, 255, 0.2);
+  background: rgba(106, 77, 255, 0.1);
 }
 
 /* ---- RStudio Theme ---- */
@@ -586,7 +586,7 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
 
 .terminal .xterm-selection div {
   position: absolute;
-  background-color: rgba(106, 77, 255, 0.2);
+  background-color: rgba(106, 77, 255, 0.1);
 }
 
 .terminal .xterm-viewport {
