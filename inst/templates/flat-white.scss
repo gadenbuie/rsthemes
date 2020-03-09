@@ -181,4 +181,8 @@ $rmd-href-bg: $green-bg;
   border-right: solid 1px $base4 !important;
 }
 
+.gwt-MenuItem-selected, .subMenuIcon-selected, .gwt-SuggestBoxPopup .item-selected {
+  background-color: transparentize($accent, 0.9) !important;
+}
+
 @import "rstudio/_terminal";

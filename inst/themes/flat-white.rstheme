@@ -555,6 +555,10 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
   border-right: solid 1px #dcd3c6 !important;
 }
 
+.gwt-MenuItem-selected, .subMenuIcon-selected, .gwt-SuggestBoxPopup .item-selected {
+  background-color: rgba(106, 77, 255, 0.1) !important;
+}
+
 .terminal {
   background-color: #f7f3ee;
   color: #605a52;
