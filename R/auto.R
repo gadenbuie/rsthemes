@@ -148,7 +148,7 @@ use_theme <- function(style = c("light", "dark"), quietly = FALSE) {
     "light" = getOption("rsthemes.theme_light", NULL),
     "dark" = getOption("rsthemes.theme_dark", NULL)
   )
-  apply_Theme(theme, quietly, style)
+  apply_theme(theme, quietly, style)
 }
 
 apply_theme <- function(theme, quietly = FALSE, style = NULL) {
