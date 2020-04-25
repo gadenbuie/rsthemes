@@ -8,7 +8,7 @@ $ui-background           : $syntax-background-color;
 $ui-foreground           : $syntax-text-color;
 $ui-code-chunk-background: darken($ui-background, 2%);
 $ui-selection            : darken($ui-background, 10%);
-$ui-cursor               : $syntax-cursor-color;
+$ui-cursor               : #c2ffdf;
 $ui-cursor-normal-mode   : $ui-cursor;
 $ui-margin-line          : transparentize($ui-selection, 0.5);
 $ui-gutter-color         : transparentize($syntax-gutter-text-color, 0.5);
