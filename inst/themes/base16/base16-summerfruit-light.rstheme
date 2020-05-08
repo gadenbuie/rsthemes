@@ -405,7 +405,7 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
 
 /* Data Frame Preview */
 .dataTables_wrapper thead th {
-  background: #E0E0E0 !important;
+  background-color: #E0E0E0 !important;
   color: #101010 !important;
 }
 

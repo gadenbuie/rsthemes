@@ -355,7 +355,7 @@ table.rstheme_tabLayoutCenter, .rstudio-themes-flat .rstudio-themes-default .gwt
 
 /* Data Frame Preview */
 .dataTables_wrapper thead th {
-    background: $ui-rstudio-tabs-selected !important;
+    background-color: $ui-rstudio-tabs-selected !important;
     color: $ui-rstudio-tabs-selected-color !important;
 }
 .dataTables_scrollBody table tbody td:first-child {
