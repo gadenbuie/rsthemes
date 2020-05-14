@@ -25,7 +25,7 @@ input#rstudio_command_palette_search {
 }
 
 .rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [aria-selected="true"] {
-  &, table .gwt-Label {
+  &, table .gwt-Label, table td {
     background-color: $ui-command-palette-item-selected-background;
   }
 }
