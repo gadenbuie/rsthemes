@@ -1,6 +1,6 @@
 Package: rsthemes
 Title: Full Themes for RStudio v1.2+
-Version: 0.0.7
+Version: 0.0.8
 Authors@R: 
     person(given = "Garrick",
            family = "Aden-Buie",
