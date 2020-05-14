@@ -1,0 +1,44 @@
+$ui-command-palette-background: $ui-background !default;
+$ui-command-palette-search-background: $ui-command-palette-background !default;
+$ui-command-palette-border: $ui-completions-border !default;
+$ui-command-palette-item-background: $ui-command-palette-background !default;
+$ui-command-palette-item-color: $ui-foreground !default;
+$ui-command-palette-item-hover-background: if($ui-rstudio-is-dark, lighten($ui-command-palette-item-background, 5%), darken($ui-command-palette-item-background, 5%)) !default;
+$ui-command-palette-item-selected-background: if($ui-rstudio-is-dark, lighten($ui-command-palette-item-background, 10%), darken($ui-command-palette-item-background, 10%)) !default;
+
+#rstudio_command_palette_search,
+#rstudio_command_palette_list [id*="rstudio_command_"],
+input#rstudio_command_palette_search {
+  background-color: $ui-command-palette-search-background;
+}
+
+.rstudio-themes-flat .rstudio-themes-border {
+  border-color: $ui-command-palette-border;
+}
+
+.rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [id*="rstudio_command_"] {
+  table .gwt-Label,
+  table td {
+    background-color: $ui-command-palette-item-background;
+    color: $ui-command-palette-item-color;
+  }
+}
+
+.rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [aria-selected="true"] {
+  &, table .gwt-Label {
+    background-color: $ui-command-palette-item-selected-background;
+  }
+}
+
+.rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [id*="rstudio_command_"]:hover {
+  &, table .gwt-Label, table td {
+    background-color: $ui-command-palette-item-hover-background;
+  }
+}
+
+input#rstudio_command_palette_search {
+  margin: -15px;
+  padding: 15px;
+  width: 600px;
+  border-color: $ui-command-palette-border;
+}

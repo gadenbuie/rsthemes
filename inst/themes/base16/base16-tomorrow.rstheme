@@ -2564,3 +2564,34 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
   background-color: #eeeeee;
 }
 
+#rstudio_command_palette_search,
+#rstudio_command_palette_list [id*="rstudio_command_"],
+input#rstudio_command_palette_search {
+  background-color: #ffffff;
+}
+
+.rstudio-themes-flat .rstudio-themes-border {
+  border-color: #d6d6d6;
+}
+
+.rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [id*="rstudio_command_"] table .gwt-Label,
+.rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [id*="rstudio_command_"] table td {
+  background-color: #ffffff;
+  color: #1d1f21;
+}
+
+.rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [aria-selected="true"], .rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [aria-selected="true"] table .gwt-Label {
+  background-color: #e6e6e6;
+}
+
+.rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [id*="rstudio_command_"]:hover, .rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [id*="rstudio_command_"]:hover table .gwt-Label, .rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [id*="rstudio_command_"]:hover table td {
+  background-color: #f2f2f2;
+}
+
+input#rstudio_command_palette_search {
+  margin: -15px;
+  padding: 15px;
+  width: 600px;
+  border-color: #d6d6d6;
+}
+
