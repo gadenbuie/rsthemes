@@ -78,7 +78,7 @@
 .ace_marker-layer .ace_active_debug_line {
   position: absolute;
   z-index: -1;
-  background-color: #ddac50;
+  background-color: rgba(229, 192, 123, 0.4);
 }
 
 .ace_marker-layer .ace_find_line {

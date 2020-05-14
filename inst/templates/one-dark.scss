@@ -22,7 +22,7 @@ $ui-line-find             : $ui-selection;
 $ui-bracket               : transparentize($ui-cursor, 0.6);
 $ui-invisible             : transparentize($syntax-guide, 0.5);
 $ui-indent-guide          : $ui-invisible;
-$ui-debug-background      : darken($hue-6-2, 10%);
+$ui-debug-background      : transparentize($hue-6-2, 0.6);
 $ui-fold-arrows-color     : $syntax-color-snippet;
 $ui-fold-arrows-background: transparentize($ui-fold-arrows-color, 0.5);
 
