@@ -7,9 +7,10 @@ $ui-command-palette-item-hover-background: if($ui-rstudio-is-dark, lighten($ui-c
 $ui-command-palette-item-selected-background: if($ui-rstudio-is-dark, lighten($ui-command-palette-item-background, 10%), darken($ui-command-palette-item-background, 10%)) !default;
 
 #rstudio_command_palette_search,
-#rstudio_command_palette_list [id*="rstudio_command_"],
+#rstudio_command_palette_list [id^="rstudio_command_"],
 input#rstudio_command_palette_search {
   background-color: $ui-command-palette-search-background;
+  border: none;
 }
 
 .rstudio-themes-flat .rstudio-themes-border {
@@ -22,23 +23,32 @@ input#rstudio_command_palette_search {
     background-color: $ui-command-palette-item-background;
     color: $ui-command-palette-item-color;
   }
+  &:hover {
+    &, [id^="rstudio_command_entry"], table .gwt-Label, table td {
+      background-color: $ui-command-palette-item-hover-background;
+    }
+  }
 }
 
 .rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [aria-selected="true"] {
-  &, table .gwt-Label, table td {
+  &, [id^="rstudio_command_entry"], table .gwt-Label, table td {
     background-color: $ui-command-palette-item-selected-background;
   }
 }
 
-.rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [id*="rstudio_command_"]:hover {
-  &, table .gwt-Label, table td {
-    background-color: $ui-command-palette-item-hover-background;
+input#rstudio_command_palette_search {
+  padding: 10px 0;
+  width: 580px;
+  border: none;
+  .js-focus-visible & {
+    outline-offset: 5px !important;
   }
 }
 
-input#rstudio_command_palette_search {
-  margin: -15px;
-  padding: 15px;
-  width: 600px;
-  border-color: $ui-command-palette-border;
+// Fix labels colliding with other CSS rules for popups
+.rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rstudio_command_entry_"] .gwt-Label {
+  &, & span {
+    background-color: $ui-command-palette-item-background !important;
+    border: none;
+  }
 }

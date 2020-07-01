@@ -325,20 +325,23 @@ table.rstheme_tabLayoutCenter, .rstudio-themes-flat .rstudio-themes-default .gwt
   	& ~ div.popupContent div:nth-child(1) {
   	  border: solid 1px $ui-completions-border;
   	}
+  	& + .rstudio-themes-scrollbars {
+      border-color: $ui-completions-border;
+    }
   }
   .popupContent {
     background: $ui-completions-background;
   	color: $ui-completions-color;
   	&:not(.popupMiddleCenterInner) div div:nth-child(2) {
-    	background: $ui-completions-background !important;
-    	border: solid 1px $ui-completions-border;
+    	background-color: unset;
+    	border: none;
     }
   }
   .gwt-PopupPanel .popupContent {
     background: inherit;
     color: $ui-completions-color;
   	table {
-      background: $ui-completions-color;
+      background-color: $ui-completions-color;
       border: 0;
       .gwt-Label {
         color: $ui-completions-background;

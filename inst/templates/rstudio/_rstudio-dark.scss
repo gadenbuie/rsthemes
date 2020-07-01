@@ -290,9 +290,13 @@ table.rstheme_tabLayoutCenter, .rstudio-themes-flat .rstudio-themes-dark-grey .g
   .popupContent {
     background: $ui-completions-background;
   	color: $ui-completions-color;
+  	border-color: $ui-completions-border;
   	&:not(.popupMiddleCenterInner) div div:nth-child(2) {
-    	background: $ui-completions-background !important;
-    	border: solid 1px $ui-completions-border;
+    	background-color: unset;
+    	border: none;
+    }
+    & + .rstudio-themes-scrollbars {
+      border-color: $ui-completions-border;
     }
   }
   .gwt-PopupPanel .popupContent {
