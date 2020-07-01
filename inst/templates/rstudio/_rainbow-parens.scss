@@ -1,0 +1,31 @@
+/* Rainbow Parenthesis */
+$ui-paren-0: rgb(255, 124, 124) !default;
+$ui-paren-1: rgb(255, 187, 0) !default;
+$ui-paren-2: #00ff1f !default;
+$ui-paren-3: #2bcf2b !default;
+$ui-paren-4: lightskyblue !default;
+$ui-paren-5: rgb(150, 94, 255) !default;
+$ui-paren-6: violet !default;
+
+
+@if $ui-rstudio-is-dark {
+  .editor-dark {
+    .ace_paren_color_0 {color: $ui-paren-0;}
+    .ace_paren_color_1 {color: $ui-paren-1;}
+    .ace_paren_color_2 {color: $ui-paren-2;}
+    .ace_paren_color_3 {color: $ui-paren-3;}
+    .ace_paren_color_4 {color: $ui-paren-4;}
+    .ace_paren_color_5 {color: $ui-paren-5;}
+    .ace_paren_color_6 {color: $ui-paren-6;}
+  }
+}
+@else {
+  .ace_paren_color_0 {color: $ui-paren-0;}
+  .ace_paren_color_1 {color: $ui-paren-1;}
+  .ace_paren_color_2 {color: $ui-paren-2;}
+  .ace_paren_color_3 {color: $ui-paren-3;}
+  .ace_paren_color_4 {color: $ui-paren-4;}
+  .ace_paren_color_5 {color: $ui-paren-5;}
+  .ace_paren_color_6 {color: $ui-paren-6;}
+}
+

@@ -27,6 +27,16 @@ $ui-fold-arrows-color     : $purple-text;
 $ui-fold-arrows-background: $purple-bg;
 $ui-rstudio-tabs-active-border-left: #CF9A4F;
 
+// rainbow parens
+$ui-paren-0: $ui-foreground;
+$ui-paren-1: darken(hsl(35, 100%, 47%), 10%);  // orange
+$ui-paren-2: $accent;
+$ui-paren-3: darken(hsl(282, 100%, 68%), 10%); // purple
+$ui-paren-4: darken(hsl(172, 100%, 37%), 10%); // teal
+$ui-paren-5: $accent-red;
+$ui-paren-6: darken(hsl(220, 100%, 73%), 10%); // blue
+
+
 // rstudio
 $ui-rstudio-background          : $base5;
 $ui-rstudio-color               : $base7;
