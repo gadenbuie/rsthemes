@@ -337,11 +337,16 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
 .rstudio-themes-flat .popupContent {
   background: #002b36;
   color: #839496;
+  border-color: #657b83;
 }
 
 .rstudio-themes-flat .popupContent:not(.popupMiddleCenterInner) div div:nth-child(2) {
-  background: #002b36 !important;
-  border: solid 1px #657b83;
+  background-color: unset;
+  border: none;
+}
+
+.rstudio-themes-flat .popupContent + .rstudio-themes-scrollbars {
+  border-color: #657b83;
 }
 
 .rstudio-themes-flat .gwt-PopupPanel .popupContent {
