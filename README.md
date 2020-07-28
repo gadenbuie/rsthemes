@@ -11,6 +11,8 @@
 
 
 ## Installation
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fgadenbuie%2Frsthemes.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fgadenbuie%2Frsthemes?ref=badge_shield)
+
 
 You can install rsthemes from GitHub with:
 
@@ -182,3 +184,7 @@ rsthemes::remove_rsthemes("base16")
 Please note that the 'rsthemes' project is released with a
 [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
 By contributing to this project, you agree to abide by its terms.
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fgadenbuie%2Frsthemes.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fgadenbuie%2Frsthemes?ref=badge_large)
