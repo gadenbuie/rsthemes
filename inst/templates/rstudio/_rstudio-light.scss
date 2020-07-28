@@ -307,18 +307,18 @@ table.rstheme_tabLayoutCenter, .rstudio-themes-flat .rstudio-themes-default .gwt
 
 /* pane toolbars */
 .rstheme_secondaryToolbar, .rstudio-themes-flat .dataGridHeader {
-     background: $ui-rstudio-toolbar !important;
+  background: $ui-rstudio-toolbar !important;
 }
 /* menu background */
 .rstudio-themes-flat {
   .popupMiddleCenter, .menuPopupMiddleCenter, .suggestPopupMiddleCenter {
-  		 background: $ui-completions-background !important;
-  		 color: $ui-completions-color !important;
+    background: $ui-completions-background !important;
+    color: $ui-completions-color !important;
 
-  		 .item.item-selected, .item-selected {
-    		 color: $ui-completions-background !important;
-    		 background: $ui-completions-color !important;
-  		 }
+    .item.item-selected, .item-selected {
+     color: $ui-completions-background !important;
+     background: $ui-completions-color !important;
+    }
   }
   .themedPopupPanel {
   	border: solid 1px $ui-completions-border;

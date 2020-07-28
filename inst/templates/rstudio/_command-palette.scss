@@ -1,6 +1,6 @@
 $ui-command-palette-background: $ui-background !default;
 $ui-command-palette-search-background: $ui-command-palette-background !default;
-$ui-command-palette-border: $ui-completions-border !default;
+$ui-command-palette-border: $ui-command-palette-background !default;
 $ui-command-palette-item-background: $ui-command-palette-background !default;
 $ui-command-palette-item-color: $ui-foreground !default;
 $ui-command-palette-item-hover-background: if($ui-rstudio-is-dark, lighten($ui-command-palette-item-background, 5%), darken($ui-command-palette-item-background, 5%)) !default;
@@ -11,6 +11,11 @@ $ui-command-palette-item-selected-background: if($ui-rstudio-is-dark, lighten($u
 input#rstudio_command_palette_search {
   background-color: $ui-command-palette-search-background;
   border: none;
+}
+
+#rstudio_command_palette_list {
+  background-color: $ui-command-palette-search-background;
+  border-color: $ui-command-palette-search-background;
 }
 
 .rstudio-themes-flat .rstudio-themes-border {
