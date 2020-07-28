@@ -57,5 +57,14 @@ $rlang-namespace-font-style: italic;
 
 $other-tag: $rlang-variable;
 
+// rainbow parens;
+$ui-paren-0: $base0C;
+$ui-paren-1: $base0D;
+$ui-paren-2: $base0A;
+$ui-paren-3: $base09;
+$ui-paren-4: $base08;
+$ui-paren-5: $base0B;
+$ui-paren-6: $base0E;
+
 @import "rstudio/_rstudio-dark", "rstudio/_rstudio-dark-flatter";
 @import "rstudio/_components";

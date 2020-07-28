@@ -47,6 +47,15 @@ $rmd-heading-color: #c2ffdf;
 $rmd-chunk-header: #fff352;
 $rmd-href: #ae81ff;
 
+// rainbow parens;
+$ui-paren-0: $rlang-message;        // cyan
+$ui-paren-1: $syntax-color-renamed; // blue
+$ui-paren-2: $syntax-color-added;   // green
+$ui-paren-3: $rlang-string;         // yellow
+$ui-paren-4: $rlang-variable;       // red
+$ui-paren-5: $syntax-color-removed; // magenta
+$ui-paren-6: $ui-foreground;        // white
+
 @import "rstudio/_rstudio-dark", "rstudio/_rstudio-dark-flatter.scss";
 @import "rstudio/_components";
 

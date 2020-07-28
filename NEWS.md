@@ -1,3 +1,7 @@
+# rsthemes 0.0.11 (2020-07-28)
+
+* Customized rainbow parenthesis colors for all themes (#28)
+
 # rsthemes 0.0.10 (2020-07-27)
 
 * Added option to favorite themes in `try_rsthemes()`. The required code for

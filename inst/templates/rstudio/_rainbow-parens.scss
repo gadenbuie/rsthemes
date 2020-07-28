@@ -9,7 +9,7 @@ $ui-paren-6: violet !default;
 
 
 @if $ui-rstudio-is-dark {
-  .editor-dark {
+  .rstudio-themes-dark {
     .ace_paren_color_0 {color: $ui-paren-0;}
     .ace_paren_color_1 {color: $ui-paren-1;}
     .ace_paren_color_2 {color: $ui-paren-2;}

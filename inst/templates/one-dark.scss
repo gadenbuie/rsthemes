@@ -59,6 +59,15 @@ $rmd-heading-color: $hue-5-2;
 $rmd-chunk-header: $hue-1;
 $rmd-href: $hue-6-2;
 
+// Rainbow parens
+$ui-paren-0: $syntax-fg;
+$ui-paren-1: $hue-4;
+$ui-paren-2: $hue-6;
+$ui-paren-3: $hue-5;
+$ui-paren-4: $hue-1;
+$ui-paren-5: $hue-3;
+$ui-paren-6: $hue-2;
+
 @import "rstudio/_rstudio-dark", "rstudio/_rstudio-dark-flatter";
 @import "rstudio/_components";
 

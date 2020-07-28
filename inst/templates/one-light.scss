@@ -51,6 +51,15 @@ $rlang-namespace-font-style: normal;
 
 $other-tag: $syntax-color-tag;
 
+// Rainbow parens
+$ui-paren-0: $syntax-fg;
+$ui-paren-1: $hue-4;
+$ui-paren-2: $hue-6;
+$ui-paren-3: $hue-5;
+$ui-paren-4: $hue-1;
+$ui-paren-5: $hue-3;
+$ui-paren-6: $hue-2;
+
 // Rmd
 $rmd-heading-color: $hue-5-2;
 $rmd-chunk-header: $hue-1;

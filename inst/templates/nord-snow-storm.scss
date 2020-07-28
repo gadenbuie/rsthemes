@@ -62,5 +62,14 @@ $rmd-heading-color: $nord10;
 $rmd-chunk-header: $nord7;
 $rmd-href: $nord9;
 
+// rainbow parens;
+$ui-paren-0: $nord7;  // teal
+$ui-paren-1: $nord10; // blue
+$ui-paren-2: $nord11; // red
+$ui-paren-3: $nord12; // orange
+$ui-paren-4: $nord13; // yellow
+$ui-paren-5: $nord14; // green
+$ui-paren-6: $nord15; // purple
+
 @import "rstudio/_rstudio-light", "rstudio/_rstudio-light-flatter";
 @import "rstudio/_components";
