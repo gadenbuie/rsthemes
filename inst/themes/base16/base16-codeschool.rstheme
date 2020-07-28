@@ -466,32 +466,32 @@ input#rstudio_command_palette_search {
 }
 
 /* Rainbow Parenthesis */
-.editor-dark .ace_paren_color_0 {
-  color: #ff7c7c;
+.rstudio-themes-dark .ace_paren_color_0 {
+  color: #b02f30;
 }
 
-.editor-dark .ace_paren_color_1 {
-  color: #ffbb00;
+.rstudio-themes-dark .ace_paren_color_1 {
+  color: #484d79;
 }
 
-.editor-dark .ace_paren_color_2 {
-  color: #00ff1f;
+.rstudio-themes-dark .ace_paren_color_2 {
+  color: #a03b1e;
 }
 
-.editor-dark .ace_paren_color_3 {
-  color: #2bcf2b;
+.rstudio-themes-dark .ace_paren_color_3 {
+  color: #43820d;
 }
 
-.editor-dark .ace_paren_color_4 {
-  color: lightskyblue;
+.rstudio-themes-dark .ace_paren_color_4 {
+  color: #2a5491;
 }
 
-.editor-dark .ace_paren_color_5 {
-  color: #965eff;
+.rstudio-themes-dark .ace_paren_color_5 {
+  color: #237986;
 }
 
-.editor-dark .ace_paren_color_6 {
-  color: violet;
+.rstudio-themes-dark .ace_paren_color_6 {
+  color: #c59820;
 }
 
 .terminal {

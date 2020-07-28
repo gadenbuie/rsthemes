@@ -502,31 +502,31 @@ input#rstudio_command_palette_search {
 
 /* Rainbow Parenthesis */
 .ace_paren_color_0 {
-  color: #ff7c7c;
+  color: #3971ED;
 }
 
 .ace_paren_color_1 {
-  color: #ffbb00;
+  color: #3971ED;
 }
 
 .ace_paren_color_2 {
-  color: #00ff1f;
+  color: #FBA922;
 }
 
 .ace_paren_color_3 {
-  color: #2bcf2b;
+  color: #F96A38;
 }
 
 .ace_paren_color_4 {
-  color: lightskyblue;
+  color: #CC342B;
 }
 
 .ace_paren_color_5 {
-  color: #965eff;
+  color: #198844;
 }
 
 .ace_paren_color_6 {
-  color: violet;
+  color: #A36AC7;
 }
 
 .terminal {
