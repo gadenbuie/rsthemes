@@ -407,7 +407,15 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
 }
 
 /* hacky toolbars section */
-.rstudio-themes-flat .rstudio-themes-default div.windowframe > div:last-child > div > div > div > div > div:not(.gwt-TabLayoutPanelTabs) {
+.rstudio-themes-flat .rstudio-themes-default {
+  /* this next one might not be needed anymore (at least after 1.4+) */
+}
+
+.rstudio-themes-flat .rstudio-themes-default .windowframe > div:last-child > div > div > div > div > div:not(.gwt-TabLayoutPanelTabs) {
+  background: #fdf6e3 !important;
+}
+
+.rstudio-themes-flat .rstudio-themes-default .windowframe > div:last-child > div > div > div:nth-child(3) > div {
   background: #fdf6e3 !important;
 }
 

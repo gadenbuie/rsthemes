@@ -1,3 +1,10 @@
+# rsthemes 0.0.10 (2020-07-27)
+
+* Added option to favorite themes in `try_rsthemes()`. The required code for
+  your `~/.Rprofile` is provided, including current favorite themes (#21)
+  
+* Fixed command palette outlines and highlights as of RStudio 1.4.642
+
 # rsthemes 0.0.7
 
 * Added a new theme: Flat White. Based on the [Atom theme](https://github.com/biletskyy/flatwhite-syntax).

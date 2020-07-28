@@ -368,7 +368,15 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
 }
 
 /* hacky toolbars section */
-.rstudio-themes-flat .rstudio-themes-dark-grey div.windowframe > div:last-child > div > div > div > div > div:not(.gwt-TabLayoutPanelTabs) {
+.rstudio-themes-flat .rstudio-themes-dark-grey {
+  /* this next one might not be needed anymore (at least after 1.4+) */
+}
+
+.rstudio-themes-flat .rstudio-themes-dark-grey .windowframe > div:last-child > div > div > div > div > div:not(.gwt-TabLayoutPanelTabs) {
+  background: #663399 !important;
+}
+
+.rstudio-themes-flat .rstudio-themes-dark-grey .windowframe > div:last-child > div > div > div:nth-child(3) > div {
   background: #663399 !important;
 }
 
@@ -419,8 +427,13 @@ input#rstudio_command_palette_search {
   border: none;
 }
 
+#rstudio_command_palette_list {
+  background-color: #292a44;
+  border-color: #292a44;
+}
+
 .rstudio-themes-flat .rstudio-themes-border {
-  border-color: #383a62;
+  border-color: #292a44;
 }
 
 .rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [id*="rstudio_command_"] table .gwt-Label,
