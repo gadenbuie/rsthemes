@@ -496,7 +496,6 @@ input#rstudio_command_palette_search {
 }
 
 .rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rstudio_command_entry_"] .gwt-Label, .rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rstudio_command_entry_"] .gwt-Label span {
-  background-color: #f7f7f7 !important;
   border: none;
 }
 

@@ -53,7 +53,6 @@ input#rstudio_command_palette_search {
 // Fix labels colliding with other CSS rules for popups
 .rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rstudio_command_entry_"] .gwt-Label {
   &, & span {
-    background-color: $ui-command-palette-item-background !important;
     border: none;
   }
 }
