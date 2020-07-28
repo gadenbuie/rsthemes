@@ -68,7 +68,7 @@ install_rsthemes <- function(style = "all", include_base16 = FALSE, destdir = NU
     "Installed {length(theme_files)} themes"
   )
   cli::cli_alert_info("Use {.code rsthemes::list_rsthemes()} to list installed themes")
-  cli::cli_alert_info("Use {.code rstudioapi::applyTheme()} to enable a theme")
+  cli::cli_alert_info("Use {.code rsthemes::try_rsthemes()} to try all installed themes")
 }
 
 #' @describeIn rsthemes Remove rsthemes from RStudio
@@ -152,7 +152,7 @@ list_pkg_rsthemes <- function(style = "all", include_base16 = TRUE) {
 }
 
 #' @describeIn rsthemes Try each rsthemes RStudio theme
-#' @param delay Number of seconds to wait bewtween themes. Set to 0 to be
+#' @param delay Number of seconds to wait between themes. Set to 0 to be
 #'   prompted to continue after each theme.
 #' @export
 try_rsthemes <- function(
@@ -164,6 +164,7 @@ try_rsthemes <- function(
   style <- rsthemes_styles(validate = style)
   current_theme <- rstudioapi::getThemeInfo()
   themes <- list_rsthemes(style, include_base16)
+  favorites <- c()
   for (theme in themes) {
     cat("\u2022", theme, "\n")
     rstudioapi::applyTheme(theme)
@@ -171,14 +172,19 @@ try_rsthemes <- function(
       Sys.sleep(delay)
     } else {
       res <- if (theme != themes[length(themes)]) {
-        readline("Enter [blank] for next, [k] to keep, [q] to quit: ")
+        readline("Enter [blank] for next, [k] to keep, [f] to favorite, [q] to quit: ")
       } else {
-        readline("Enter [blank] or [q] to quit, [k] to keep: ")
+        readline("Enter [blank] or [q] to quit, [k] to keep, [f] to favorite: ")
       }
-      if (tolower(res) == "k") return(invisible())
+      if (tolower(res) == "k") {
+        instruct_favorites(favorites)
+        return(invisible())
+      }
+      if (tolower(res) == "f") favorites <- c(favorites, theme)
       if (tolower(res) == "q") break
     }
   }
+  instruct_favorites(favorites)
   cli::cli_alert_success("Restoring \"{.strong {current_theme$editor}}\"")
   rstudioapi::applyTheme(current_theme$editor)
 }
@@ -192,6 +198,28 @@ rsthemes_styles <- function(..., validate = NULL) {
   style_options = c("all", "light", "dark", "base16")
   if (is.null(validate)) return(style_options)
   match.arg(validate, style_options, several.ok = FALSE)
+}
+
+instruct_favorites <- function(favorites = c()) {
+  if (!length(favorites)) return(invisible())
+  old_favorites <- get_theme_option("favorite")
+  favorites <- c(favorites, old_favorites)
+  favorites <- gsub(" ", "\u200b", favorites)
+  favorites <- paste0('"', favorites, '"', collapse = ", ")
+  favorites <- strwrap(favorites, width = 76, indent = 4, exdent = 4)
+  favorites <- paste(favorites, collapse = "\n")
+  favorites <- gsub("\u200b", " ", favorites)
+  cli::cli_alert_info("Add your favorite themes to your .Rprofile")
+  cli::cli_alert_info("Use {.code rsthemes::use_theme_favorite()} to cycle through your favorite themes")
+  cli::cli_rule(left = fs::path_home_r(".Rprofile"))
+  cli::cli_code(paste(
+    sep = "\n",
+    'if (interactive() && requireNamespace("rsthemes", quietly = TRUE)) {',
+    '  rsthemes::set_theme_favorite(c(',
+    favorites,
+    '  ))',
+    '}'
+  ))
 }
 
 # base16 filters ----

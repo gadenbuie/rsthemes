@@ -76,7 +76,7 @@ instructions in the section below.
 \section{Set preferred theme in \code{.Rprofile}}{
 
 
-Add the following to your \verb{~/.Rprofile} (see \code{\link[usethis:edit_r_profile]{usethis::edit_r_profile()}}) to
+Add the following to your \verb{~/.Rprofile} (see \code{\link[usethis:edit]{usethis::edit_r_profile()}}) to
 declare your default themes:\preformatted{if (interactive() && requireNamespace("rsthemes", quietly = TRUE)) \{
   # Set preferred themes if not handled elsewhere..
   rsthemes::set_theme_light("One Light \{rsthemes\}")  # light theme

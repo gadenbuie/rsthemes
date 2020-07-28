@@ -34,7 +34,7 @@ of the RStudio theme directory has changed.}
 (default). If \code{FALSE}, the available themes in the \pkg{rsthemes} package
 are listed instead.}
 
-\item{delay}{Number of seconds to wait bewtween themes. Set to 0 to be
+\item{delay}{Number of seconds to wait between themes. Set to 0 to be
 prompted to continue after each theme.}
 
 \item{...}{Ignored.}
