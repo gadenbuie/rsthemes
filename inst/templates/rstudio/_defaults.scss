@@ -1,6 +1,6 @@
 // primary UI colors
-// $ui-background           : ;
-// $ui-foreground           : ;
+//$ui-background           : ;
+//$ui-foreground           : ;
 $ui-code-chunk-background: darken($ui-background, 5%) !default;
 $ui-selection            : transparentize($ui-code-chunk-background, 0.6) !default;
 $ui-cursor               : #FF0000 !default;
@@ -51,7 +51,7 @@ $rlang-reserved : $rlang-string !default;
 $rlang-operator : $rlang-value !default;
 $rlang-bracket  : $rlang-function !default;
 $rlang-namespace: $rlang-variable !default;
-$rlang-identifier: $rlang-variable !default;
+$rlang-identifier: $ui-foreground !default;
 $other-tag: $rlang-string !default;
 
 $rlang-string-bg: inherit !default;
