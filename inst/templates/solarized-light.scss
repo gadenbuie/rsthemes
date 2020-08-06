@@ -4,61 +4,62 @@
 @import "palettes/_solarized";
 
 // primary UI colors
-$ui-background           : $base3;
-$ui-foreground           : $base00;
-$ui-code-chunk-background: $base2;
-$ui-selection            : transparentize($base0, 0.6);
-$ui-cursor               : $red;
-$ui-cursor-normal-mode   : $ui-cursor;
-$ui-margin-line          : transparentize($ui-selection, 0.25);
-$ui-gutter-color         : $base1;
-$ui-gutter-background    : $base2;
+$ui_background           : $base3;
+$ui_foreground           : $base00;
+$rmd_chunk_background: $base2;
+$ui_selection            : transparentize($base0, 0.6);
+$ui_cursor               : $red;
+$ui_cursor_normal_mode   : $ui_cursor;
+$ui_margin_line          : transparentize($ui_selection, 0.25);
+$ui_gutter_foreground         : $base1;
+$ui_gutter_background    : $base2;
 
 // less common UI colors
-$ui-line-active           : transparentize(darken($ui-background, 5%), 0.5);
-$ui-line-active-gutter    : $ui-gutter-color;
-$ui-line-active-selection : $base1;
-$ui-line-find             : $base00;
-$ui-bracket               : transparentize($ui-cursor, 0.6);
-$ui-invisible             : transparentize($base1, 0.66);
-$ui-indent-guide          : transparentize($base1, 0.66);
-$ui-debug-background      : lighten($ui-background, 10%);
-$ui-fold-arrows-background: $violet;
-$ui-fold-arrows-color     : $ui-foreground;
+$ui_line_active           : transparentize(darken($ui_background, 5%), 0.5);
+$ui_line_active_gutter    : $ui_gutter_foreground;
+$ui_line_active_selection : $base1;
+$ui_line_find             : $base00;
+$ui_bracket               : transparentize($ui_cursor, 0.6);
+$ui_invisible             : transparentize($base1, 0.66);
+$ui_indent_guide          : transparentize($base1, 0.66);
+$ui_debug_background      : lighten($ui_background, 10%);
+$ui_fold_arrows_background: $violet;
+$ui_fold_arrows_foreground     : $ui_foreground;
 
 // rstudio
-$ui-rstudio-background          : lighten($base3, 3%);
-$ui-rstudio-color               : $ui-foreground;
-$ui-rstudio-tabs-inactive       : $base3;
-$ui-rstudio-tabs-inactive-color : $base1;
-$ui-rstudio-tabs-selected       : $base2;
-$ui-rstudio-tabs-selected-color : $base01;
-$ui-rstudio-toolbar             : $ui-rstudio-tabs-selected;
-$ui-rstudio-toolbar-color       : $ui-rstudio-tabs-selected-color;
-$ui-rstudio-search              : $ui-rstudio-toolbar;
-$ui-completions-background      : $ui-background;
-$ui-completions-color           : $ui-foreground;
-$ui-completions-border          : $ui-bracket;
-$ui-rstudio-scrollbar-background: $ui-background;
-$ui-rstudio-scrollbar-handle    : $ui-code-chunk-background;
+$ui_rstudio_background          : lighten($base3, 3%);
+$ui_rstudio_foreground               : $ui_foreground;
+$ui_rstudio_tabs_inactive_background       : $base3;
+$ui_rstudio_tabs_inactive_foreground : $base1;
+$ui_rstudio_tabs_active_background       : $base2;
+$ui_rstudio_tabs_active_foreground : $base01;
+$ui_rstudio_toolbar_background             : $ui_rstudio_tabs_active_background;
+$ui_rstudio_toolbar_foreground       : $ui_rstudio_tabs_active_foreground;
+$ui_rstudio_search              : $ui_rstudio_toolbar_background;
+$ui_completions_background      : $ui_background;
+$ui_completions_foreground           : $ui_foreground;
+$ui_completions_border          : $ui_bracket;
+$ui_rstudio_scrollbar_background: $ui_background;
+$ui_rstudio_scrollbar_handle    : $rmd_chunk_background;
 
 // R language colors
-$rlang-comment  : $base1;
-$rlang-string   : $cyan;
-$rlang-function : $blue;
-$rlang-reserved : $green;
-$rlang-operator : $yellow;
-$rlang-bracket  : $yellow;
-$rlang-value    : $magenta;
-$rlang-namespace: $red;
-$rlang-variable : $violet;
-$rlang-message  : $orange;
-$rlang-namespace-font-style: italic;
+$code_comment  : $base1;
+$code_string   : $cyan;
+$code_function : $blue;
+$code_reserved : $green;
+$code_operator : $yellow;
+$code_bracket  : $yellow;
+$code_value    : $magenta;
+$code_namespace: $red;
+$code_variable : $violet;
+$code_message  : $orange;
+$code_namespace_font_style: italic;
 
-$other-tag: $rlang-variable;
+$other_tag: $code_variable;
 
 .ace_comment {
   font-style: italic;
 }
 
 @import "rstudio/_rstudio-dark", "rstudio/_terminal", "rstudio/_components";
+

@@ -1,220 +1,220 @@
 @import "_defaults";
-$ui-rstudio-is-dark: false;
+$ui_rstudio_is_dark: false;
 
 .ace_gutter {
-	background: $ui-gutter-background;
-	color: $ui-gutter-color;
+	background: $ui_gutter_background;
+	color: $ui_gutter_foreground;
 }
 .ace_print-margin {
 	width: 2px;
-	background: $ui-margin-line;
+	background: $ui_margin_line;
 }
 .ace_editor {
-	background-color: $ui-background;
-	color: $ui-foreground;
+	background-color: $ui_background;
+	color: $ui_foreground;
 }
 .rstudio-themes-flat {
 	&.ace_editor_theme {
-		background-color: $ui-background;
-		color: $ui-foreground;
+		background-color: $ui_background;
+		color: $ui_foreground;
 		.profvis-flamegraph {
-			background-color: $ui-background;
-			color: $ui-foreground;
+			background-color: $ui_background;
+			color: $ui_foreground;
 		}
 	}
 	.ace_editor_theme {
-    background-color: $ui-background !important;
-    color: $ui-foreground !important;
+    background-color: $ui_background !important;
+    color: $ui_foreground !important;
     table {
-      background-color: $ui-background !important;
+      background-color: $ui_background !important;
       thead > tr > th {
-        background-color: $ui-background !important;
+        background-color: $ui_background !important;
       }
     }
 	}
 	&.ace_editor_theme a {
-		color: $ui-foreground !important;
+		color: $ui_foreground !important;
 		font-weight: bold;
 	}
 	.gwt-Label {
-	  color: $ui-foreground;
+	  color: $ui_foreground;
 	}
 }
 .ace_cursor {
-	color: $ui-cursor;
+	color: $ui_cursor;
 }
 .normal-mode .ace_cursor {
   border: 0!important;
-  background-color: $ui-cursor-normal-mode;
+  background-color: $ui_cursor_normal_mode;
   opacity: 0.5;
 }
 .ace_marker-layer {
 	.ace_selection {
-		background: $ui-selection;
+		background: $ui_selection;
 	}
 	.ace_step {
-		background: lighten($rlang-string, 10%);
+		background: lighten($code_string, 10%);
 	}
 	.ace_bracket {
 		margin: -1px 0 0 -1px;
-		border: 1px solid $ui-bracket;
+		border: 1px solid $ui_bracket;
 	}
 	.ace_active-line {
-		background: $ui-line-active;
+		background: $ui_line_active;
 	}
 	.ace_selected-word {
-		border: 1px solid $ui-selection;
+		border: 1px solid $ui_selection;
 	}
 	.ace_foreign_line {
 		position: absolute;
 		z-index: -1;
-		background-color: $ui-code-chunk-background;
+		background-color: $rmd_chunk_background;
 	}
 	.ace_active_debug_line {
 		position: absolute;
 		z-index: -1;
-		background-color: $ui-debug-background;
+		background-color: $ui_debug_background;
 	}
 	.ace_find_line {
 		position: absolute;
 		z-index: -1;
-		background-color: $ui-line-find;
+		background-color: $ui_line_find;
 	}
 }
 .ace_gutter-active-line {
-	background-color: $ui-line-active-gutter;
+	background-color: $ui_line_active_gutter;
 }
 .ace_fold {
-	background-color: $ui-fold-arrows-background;
-	border: 1px solid $ui-fold-arrows-color !important;
+	background-color: $ui_fold_arrows_background;
+	border: 1px solid $ui_fold_arrows_foreground !important;
 }
 .ace_indent-guide{
-	border-right: 1px solid $ui-indent_guide;
+	border-right: 1px solid $ui_indent_guide;
 	margin-right: -1px;
 }
 .ace_active-line ~ .ace_selection.ace_start {
-	background-color: $ui-line-active-selection;
+	background-color: $ui_line_active_selection;
 }
 [class="ace_keyword"] {
-	color: $rlang-reserved;
-	background-color: $rlang-reserved-bg;
+	color: $code_reserved;
+	background-color: $code_reserved_background;
 }
 .ace_keyword {
 	font-style: normal;
 	&.ace_operator {
 		font-style: normal;
-		color: $rlang-operator;
-		background-color: $rlang-operator-bg;
+		color: $code_operator;
+		background-color: $code_operator_background;
 	}
 	&.ace_other.ace_unit {
 		font-style: normal;
-		color: $rlang-value;
-		background-color: $rlang-value-bg;
+		color: $code_value;
+		background-color: $code_value_background;
 	}
 }
 .ace_constant {
 	&.ace_language {
-		color: $rlang-message;
-		background-color: $rlang-message-bg;
+		color: $code_message;
+		background-color: $code_message_background;
 	}
 	&.ace_numeric {
-		color: $rlang-value;
-		background-color: $rlang-value-bg;
+		color: $code_value;
+		background-color: $code_value_background;
 	}
 	&.ace_character {
-		color: $rlang-value;
-		background-color: $rlang-value-bg;
+		color: $code_value;
+		background-color: $code_value_background;
 	}
 	&.ace_other {
-		color: $ui-foreground;
+		color: $ui_foreground;
 	}
 }
 .ace_line > .ace_constant.ace_language {
-	color: $rlang-value;
-	background-color: $rlang-value-bg;
+	color: $code_value;
+	background-color: $code_value_background;
 }
 .ace_identifier.ace_support {
 	&.ace_function {
-		color: $rlang-function;
-		background-color: $rlang-function-bg;
+		color: $code_function;
+		background-color: $code_function_background;
 	}
 	&.ace_constant {
-		color: $rlang-value;
-		background-color: $rlang-value-bg;
+		color: $code_value;
+		background-color: $code_value_background;
 	}
 	&.ace_class {
-		font-style: $rlang-namespace-font-style;
-		color: $rlang-namespace;
-		background-color: $rlang-namespace-bg;
+		font-style: $code_namespace_font_style;
+		color: $code_namespace;
+		background-color: $code_namespace_background;
 	}
 	&.ace_type {
-		color: $rlang-namespace;
-		background-color: $rlang-namespace-bg;
+		color: $code_namespace;
+		background-color: $code_namespace_background;
 	}
 }
 .ace_paren {
 	&.ace_keyword.ace_operator {
-		color: $rlang-bracket;
-		background-color: $rlang-bracket-bg;
+		color: $code_bracket;
+		background-color: $code_bracket_background;
 	}
 }
 .ace_storage {
-	color: $rlang-reserved;
+	color: $code_reserved;
 	&.ace_type {
-		color: $rlang-reserved;
+		color: $code_reserved;
 	}
 }
 .ace_invalid {
-	background-color: transparentize($rlang-variable, 0.5);
+	background-color: transparentize($code_variable, 0.5);
 	&.ace_deprecated {
-		background-color: transparentize($rlang-reserved, 0.5);
+		background-color: transparentize($code_reserved, 0.5);
 	}
 }
 .ace_string {
-	color: $rlang-string;
-	background-color: $rlang-string-bg;
+	color: $code_string;
+	background-color: $code_string_background;
 }
 .ace_comment {
-	color: $rlang-comment;
-	background-color: $rlang-comment-bg;
+	color: $code_comment;
+	background-color: $code_comment_background;
 }
 .ace_invisible {
-	color: $ui-invisible;
+	color: $ui_invisible;
 }
 .ace_variable {
-	color: $rlang-variable;
-	background-color: $rlang-variable-bg;
+	color: $code_variable;
+	background-color: $code_variable_background;
 	&.ace_parameter {
-		color: $rlang-value;
-		background-color: $rlang-value-bg;
+		color: $code_value;
+		background-color: $code_value_background;
 	}
 }
 .ace_identifier {
-	color: $rlang-identifier;
-	background-color: $rlang-identifier-bg;
+	color: $code_identifier;
+	background-color: $code_identifier_background;
 }
 .ace_entity {
 	&.ace_name {
 		&.ace_function {
-			color: $rlang-function;
-			background-color: $rlang-function-bg;
+			color: $code_function;
+			background-color: $code_function_background;
 		}
 		&.ace_tag {
-			color: $other-tag;
+			color: $other_tag;
 		}
 	}
 	&.ace_other.ace_attribute-name {
-		color: $rlang-reserved;
-		background-color: $rlang-reserved-bg;
+		color: $code_reserved;
+		background-color: $code_reserved_background;
 	}
 }
 .ace_bracket {
 	margin: 0 !important;
 	border: 0 !important;
-	background-color: $ui-bracket;
+	background-color: $ui_bracket;
 }
 .ace_console_error {
-	background-color: $ui-line-find;
+	background-color: $ui_line_find;
 }
 .ace_layer {
 	z-index: 3;
@@ -226,71 +226,71 @@ $ui-rstudio-is-dark: false;
 	}
 }
 .ace_selection.ace_start {
-	box-shadow: 0 0 3px 0 $ui-background;
+	box-shadow: 0 0 3px 0 $ui_background;
 	border-radius: 2px;
 }
 .ace_meta.ace_tag {
-	color: $rlang-operator;
-	background-color: $rlang-operator-bg;
+	color: $code_operator;
+	background-color: $code_operator_background;
 }
 .ace_markup.ace_heading,
 .ace_markup.ace_heading ~ .ace_heading {
-	font-weight: $rmd-heading-weight;
-	color: $rmd-heading-color;
-	background-color: $rmd-heading-color-bg;
+	font-weight: $rmd_heading_weight;
+	color: $rmd_heading_color;
+	background-color: $rmd_heading_color_background;
 }
 .ace_support.ace_function {
   &.ace_codebegin, &.ace_codeend {
-    color: $rmd-chunk-header;
-    background-color: $rmd-chunk-header-bg;
+    color: $rmd_chunk_header;
+    background-color: $rmd_chunk_header_background;
   }
 }
 .ace_markup.ace_href {
-  color: $rmd-href;
-  background-color: $rmd-href-bg;
+  color: $rmd_href;
+  background-color: $rmd_href_background;
 }
 .nocolor.ace_editor .ace_line span {
-	color: $rlang-reserved !important;
-	background-color: $rlang-reserved-bg !important;
+	color: $code_reserved !important;
+	background-color: $code_reserved_background !important;
 }
 #rstudio_console_input .ace_marker-layer .ace_selection {
-  background: $ui-console-selection;
+  background: $ui_console_selection;
 }
 
 /* ---- RStudio Theme ---- */
 /* background */
 .rstudio-themes-flat .rstudio-themes-default {
-	background: $ui-rstudio-background !important;
-	color: $ui-rstudio-color !important;
+	background: $ui_rstudio_background !important;
+	color: $ui_rstudio_foreground !important;
   .rstudio-themes-background {
-    background: $ui-rstudio-background !important;
+    background: $ui_rstudio_background !important;
   }
 }
 
 /* inactive tabs */
 table.rstheme_tabLayoutCenter, .rstudio-themes-flat .rstudio-themes-default .gwt-TabLayoutPanelTabs, .rstheme_multiPodUtilityTabArea {
-	background: $ui-rstudio-tabs-inactive !important;
+	background: $ui_rstudio_tabs_inactive_background !important;
 	.gwt-Label {
-		color: $ui-rstudio-tabs-inactive-color;
+		color: $ui_rstudio_tabs_inactive_foreground;
 	}
 }
 
 /* toolbar and selected tab */
 .rstudio-themes-flat .rstudio-themes-default {
   .rstheme_center, .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTab-selected table.rstheme_tabLayoutCenter {
-		background: $ui-rstudio-tabs-selected !important;
+		background: $ui_rstudio_tabs_active_background !important;
   }
 	.gwt-TabLayoutPanelTab-selected .gwt-Label {
-		color: $ui-rstudio-tabs-selected-color;
+		color: $ui_rstudio_tabs_active_foreground;
 	}
 }
 
 
 .rstudio-themes-flat {
   .rstheme_toolbarWrapper {
-    background: $ui-rstudio-toolbar !important;
+    background: $ui_rstudio_toolbar_background !important;
     button, a, div {
-      color: $ui-rstudio-toolbar-color !important;
+      color: $ui_rstudio_toolbar_foreground !important;
     }
   }
 	.rstudio-themes-default {
@@ -301,37 +301,37 @@ table.rstheme_tabLayoutCenter, .rstudio-themes-flat .rstudio-themes-default .gwt
   }
   .search, &.rstudio-themes-default-menus .search {
 	  /* search */
-    background: $ui-rstudio-search !important;
+    background: $ui_rstudio_search !important;
   }
 }
 
 /* pane toolbars */
 .rstheme_secondaryToolbar, .rstudio-themes-flat .dataGridHeader {
-  background: $ui-rstudio-toolbar !important;
+  background: $ui_rstudio_toolbar_background !important;
 }
 /* menu background */
 .rstudio-themes-flat {
   .popupMiddleCenter, .menuPopupMiddleCenter, .suggestPopupMiddleCenter {
-    background: $ui-completions-background !important;
-    color: $ui-completions-color !important;
+    background: $ui_completions_background !important;
+    color: $ui_completions_foreground !important;
 
     .item.item-selected, .item-selected {
-     color: $ui-completions-background !important;
-     background: $ui-completions-color !important;
+     color: $ui_completions_background !important;
+     background: $ui_completions_foreground !important;
     }
   }
   .themedPopupPanel {
-  	border: solid 1px $ui-completions-border;
+  	border: solid 1px $ui_completions_border;
   	& ~ div.popupContent div:nth-child(1) {
-  	  border: solid 1px $ui-completions-border;
+  	  border: solid 1px $ui_completions_border;
   	}
   	& + .rstudio-themes-scrollbars {
-      border-color: $ui-completions-border;
+      border-color: $ui_completions_border;
     }
   }
   .popupContent {
-    background: $ui-completions-background;
-  	color: $ui-completions-color;
+    background: $ui_completions_background;
+  	color: $ui_completions_foreground;
   	&:not(.popupMiddleCenterInner) div div:nth-child(2) {
     	background-color: unset;
     	border: none;
@@ -339,12 +339,12 @@ table.rstheme_tabLayoutCenter, .rstudio-themes-flat .rstudio-themes-default .gwt
   }
   .gwt-PopupPanel .popupContent {
     background: inherit;
-    color: $ui-completions-color;
+    color: $ui_completions_foreground;
   	table {
-      background-color: $ui-completions-color;
+      background-color: $ui_completions_foreground;
       border: 0;
       .gwt-Label {
-        color: $ui-completions-background;
+        color: $ui_completions_background;
       }
     }
   }
@@ -354,25 +354,25 @@ table.rstheme_tabLayoutCenter, .rstudio-themes-flat .rstudio-themes-default .gwt
 .rstudio-themes-flat .rstudio-themes-default {
   /* this next one might not be needed anymore (at least after 1.4+) */
   .windowframe > div:last-child > div > div > div > div > div:not(.gwt-TabLayoutPanelTabs) {
-    background: $ui-rstudio-tabs-inactive !important;
+    background: $ui_rstudio_tabs_inactive_background !important;
   }
   .windowframe > div:last-child > div > div > div:nth-child(3) > div {
-    background: $ui-rstudio-tabs-inactive !important;
+    background: $ui_rstudio_tabs_inactive_background !important;
   }
 }
 
 /* Data Frame Preview */
 .dataTables_wrapper thead th {
-    background-color: $ui-rstudio-tabs-selected !important;
-    color: $ui-rstudio-tabs-selected-color !important;
+    background-color: $ui_rstudio_tabs_active_background !important;
+    color: $ui_rstudio_tabs_active_foreground !important;
 }
 .dataTables_scrollBody table tbody td:first-child {
-    background: $ui-rstudio-tabs-selected !important;
-    color: $ui-rstudio-tabs-selected-color !important;
+    background: $ui_rstudio_tabs_active_background !important;
+    color: $ui_rstudio_tabs_active_foreground !important;
 }
 .dataTables_info {
-    background: $ui-rstudio-tabs-selected !important;
-    color: $ui-rstudio-tabs-selected-color !important;
+    background: $ui_rstudio_tabs_active_background !important;
+    color: $ui_rstudio_tabs_active_foreground !important;
 }
 
 /* scrollbars */
@@ -384,17 +384,18 @@ table.rstheme_tabLayoutCenter, .rstudio-themes-flat .rstudio-themes-default .gwt
 .rstudio-themes-flat .rstudio-themes-default.rstudio-themes-scrollbars::-webkit-scrollbar-corner,
 .rstudio-themes-flat.rstudio-themes-default-menus .rstudio-themes-scrollbars ::-webkit-scrollbar-track,
 .rstudio-themes-flat.rstudio-themes-default-menus .rstudio-themes-scrollbars ::-webkit-scrollbar-corner {
-  background: $ui-rstudio-scrollbar-background;
+  background: $ui_rstudio_scrollbar_background;
 }
 
 .rstudio-themes-flat .rstudio-themes-default.rstudio-themes-scrollbars ::-webkit-scrollbar-thumb,
 .rstudio-themes-flat .rstudio-themes-default.rstudio-themes-scrollbars::-webkit-scrollbar-thumb,
 .rstudio-themes-flat.rstudio-themes-default-menus .rstudio-themes-scrollbars ::-webkit-scrollbar-thumb {
-  background: $ui-rstudio-scrollbar-handle;
-  border: 4px solid $ui-rstudio-scrollbar-background;
+  background: $ui_rstudio_scrollbar_handle;
+  border: 4px solid $ui_rstudio_scrollbar_background;
 }
 
 /* fix overly zealous css rules */
 .gwt-DialogBox-ModalDialog .dialogContent .gwt-Label {
   color: #333333;
 }
+

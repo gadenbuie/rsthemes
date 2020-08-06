@@ -1,24 +1,24 @@
 .terminal {
-  background-color: $ui-background;
-  color: $ui-foreground;
+  background-color: $ui_background;
+  color: $ui_foreground;
   font-feature-settings: "liga" 0;
   position: relative;
   user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
   &.xterm-cursor-style-block.focus:not(.xterm-cursor-blink-on) .terminal-cursor {
-    background-color: $ui-cursor;
-    color: $ui-cursor;
+    background-color: $ui_cursor;
+    color: $ui_cursor;
   }
   &.focus {
     &.xterm-cursor-style-bar:not(.xterm-cursor-blink-on) .terminal-cursor::before, &.xterm-cursor-style-underline:not(.xterm-cursor-blink-on) .terminal-cursor::before {
       content: '';
       position: absolute;
-      background-color: $ui-background;
+      background-color: $ui_background;
     }
   }
   &:not(.focus) .terminal-cursor {
-    outline: 1px solid $ui-foreground;
+    outline: 1px solid $ui_foreground;
     outline-offset: -1px;
   }
   .xterm-selection {
@@ -26,21 +26,21 @@
     z-index: 0 !important;
     div {
       position: absolute;
-      background-color: $ui-console-selection;
+      background-color: $ui_console_selection;
     }
   }
   .xterm-viewport {
-    background-color: $ui-background;
+    background-color: $ui_background;
     overflow-y: scroll;
   }
 }
 
 .xtermInvertColor {
-  color: $ui-foreground;
+  color: $ui_foreground;
 }
 
 .xtermInvertBgColor {
-  background-color: $ui-background;
+  background-color: $ui_background;
 }
 
 .xtermBold { font-weight: bold; }
@@ -561,3 +561,4 @@
 .xtermBgColor254 { background-color: #e4e4e4; }
 .xtermColor255 { color: #eeeeee !important; }
 .xtermBgColor255 { background-color: #eeeeee; }
+

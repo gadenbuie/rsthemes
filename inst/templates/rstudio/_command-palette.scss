@@ -1,43 +1,43 @@
-$ui-command-palette-background: $ui-background !default;
-$ui-command-palette-search-background: $ui-command-palette-background !default;
-$ui-command-palette-border: $ui-command-palette-background !default;
-$ui-command-palette-item-background: $ui-command-palette-background !default;
-$ui-command-palette-item-color: $ui-foreground !default;
-$ui-command-palette-item-hover-background: if($ui-rstudio-is-dark, lighten($ui-command-palette-item-background, 5%), darken($ui-command-palette-item-background, 5%)) !default;
-$ui-command-palette-item-selected-background: if($ui-rstudio-is-dark, lighten($ui-command-palette-item-background, 10%), darken($ui-command-palette-item-background, 10%)) !default;
+$ui_command_palette_background: $ui_background !default;
+$ui_command_palette_search_background: $ui_command_palette_background !default;
+$ui_command_palette_border: $ui_command_palette_background !default;
+$ui_command_palette_item_background: $ui_command_palette_background !default;
+$ui_command_palette_item_color: $ui_foreground !default;
+$ui_command_palette_item_hover_background: if($ui_rstudio_is_dark, lighten($ui_command_palette_item_background, 5%), darken($ui_command_palette_item_background, 5%)) !default;
+$ui_command_palette_item_selected_background: if($ui_rstudio_is_dark, lighten($ui_command_palette_item_background, 10%), darken($ui_command_palette_item_background, 10%)) !default;
 
 #rstudio_command_palette_search,
 #rstudio_command_palette_list [id^="rstudio_command_"],
 input#rstudio_command_palette_search {
-  background-color: $ui-command-palette-search-background;
+  background-color: $ui_command_palette_search_background;
   border: none;
 }
 
 #rstudio_command_palette_list {
-  background-color: $ui-command-palette-search-background;
-  border-color: $ui-command-palette-search-background;
+  background-color: $ui_command_palette_search_background;
+  border-color: $ui_command_palette_search_background;
 }
 
 .rstudio-themes-flat .rstudio-themes-border {
-  border-color: $ui-command-palette-border;
+  border-color: $ui_command_palette_border;
 }
 
 .rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [id*="rstudio_command_"] {
   table .gwt-Label,
   table td {
-    background-color: $ui-command-palette-item-background;
-    color: $ui-command-palette-item-color;
+    background-color: $ui_command_palette_item_background;
+    color: $ui_command_palette_item_color;
   }
   &:hover {
     &, [id^="rstudio_command_entry"], table .gwt-Label, table td {
-      background-color: $ui-command-palette-item-hover-background;
+      background-color: $ui_command_palette_item_hover_background;
     }
   }
 }
 
 .rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [aria-selected="true"] {
   &, [id^="rstudio_command_entry"], table .gwt-Label, table td {
-    background-color: $ui-command-palette-item-selected-background;
+    background-color: $ui_command_palette_item_selected_background;
   }
 }
 
@@ -56,3 +56,4 @@ input#rstudio_command_palette_search {
     border: none;
   }
 }
+
