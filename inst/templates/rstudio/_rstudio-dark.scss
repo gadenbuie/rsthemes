@@ -161,6 +161,10 @@ $ui-rstudio-is-dark: true;
 		color: $rlang-value;
 	}
 }
+.ace_identifier {
+	color: $rlang-identifier;
+	background-color: $rlang-identifier-bg;
+}
 .ace_entity {
 	&.ace_name {
 		&.ace_function {
