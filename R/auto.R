@@ -108,7 +108,9 @@ set_theme_favorite <- function(theme = NULL, append = TRUE) {
 
 get_or_check_theme <- function(theme = NULL, style = NULL) {
   if (is.null(theme)) {
-    if (!in_rstudio()) return(NULL)
+    if (!in_rstudio()) {
+      return(NULL)
+    }
     theme <- get_current_theme_name()
   }
   if (in_rstudio()) {
@@ -141,7 +143,9 @@ use_theme_light <- function(quietly = FALSE) use_theme("light", quietly)
 use_theme_dark <- function(quietly = FALSE) use_theme("dark", quietly)
 
 use_theme <- function(style = c("light", "dark"), quietly = FALSE) {
-  if (!in_rstudio()) return(invisible())
+  if (!in_rstudio()) {
+    return(invisible())
+  }
 
   theme <- switch(
     match.arg(style),
@@ -184,9 +188,18 @@ use_theme_toggle <- function(quietly = FALSE) {
 
 #' @describeIn auto_theme Auto switch between dark and light themes
 #' @export
-use_theme_auto <- function(dark_start = "18:00", dark_end = "6:00", quietly = FALSE) {
-  dark_start <- hms::parse_hm(dark_start)
-  dark_end <- hms::parse_hm(dark_end)
+use_theme_auto <- function(dark_start = NULL, dark_end = NULL,
+                           lat = NULL, lon = NULL, quietly = FALSE) {
+
+  if (!is.null(lat) && !is.null(lon)) {
+    requireNamespace("suncalc", quietly = TRUE)
+    times <- suncalc::getSunlightTimes(lat = lat, lon = lon, date = Sys.Date())
+    dark_end <- hms::as_hms(times$sunrise)
+    dark_start <- hms::as_hms(times$sunset)
+  } else {
+    dark_start <- hms::parse_hm(dark_start)
+    dark_end <- hms::parse_hm(dark_end)
+  }
   now <- hms::as_hms(Sys.time())
 
   pre_start <- use_theme_dark
@@ -258,8 +271,12 @@ stop_if_theme_not_set <- function(theme_opt = NULL, style = c("light", "dark")) 
 }
 
 stop_if_theme_not_valid <- function(theme) {
-  if (!in_rstudio()) return(theme)
-  if (theme %in% get_theme_names()) return(theme)
+  if (!in_rstudio()) {
+    return(theme)
+  }
+  if (theme %in% get_theme_names()) {
+    return(theme)
+  }
   stop("'", theme, '" is not the name of an installed theme.', call. = FALSE)
 }
 
