@@ -30,6 +30,8 @@
 #'   setHook("rstudio.sessionInit", function(isNewSession) {
 #'     # Automatically choose the correct theme based on time of day
 #'     rsthemes::use_theme_auto(dark_start = "18:00", dark_end = "6:00")
+#'     # Alternatively use a dynamic solution based on your location
+#'     # rsthemes::use_theme_auto(lat = 50.30, lon = 9.40)
 #'   }, action = "append")
 #' }
 #' ```
@@ -70,6 +72,8 @@
 #' @param quietly Suppress confirmation messages
 #' @param dark_start Start time of dark mode, in 24-hour `"HH:MM"` format.
 #' @param dark_end End time of dark mode, in 24-hour `"HH:MM"` format.
+#' @param lat Latitude of your current location.
+#' @param lon Longitude of your current location.
 #' @name auto_theme
 NULL
 

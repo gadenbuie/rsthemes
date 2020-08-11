@@ -24,7 +24,13 @@ use_theme_dark(quietly = FALSE)
 
 use_theme_toggle(quietly = FALSE)
 
-use_theme_auto(dark_start = "18:00", dark_end = "6:00", quietly = FALSE)
+use_theme_auto(
+  dark_start = NULL,
+  dark_end = NULL,
+  lat = NULL,
+  lon = NULL,
+  quietly = FALSE
+)
 
 use_theme_favorite(quietly = FALSE)
 }
@@ -40,6 +46,10 @@ favorite themes.}
 \item{dark_start}{Start time of dark mode, in 24-hour \code{"HH:MM"} format.}
 
 \item{dark_end}{End time of dark mode, in 24-hour \code{"HH:MM"} format.}
+
+\item{lat}{Latitude of your current location.}
+
+\item{lon}{Longitude of your current location.}
 }
 \description{
 These functions help manage switching between preferred themes. Use
@@ -90,6 +100,8 @@ declare your default themes:\preformatted{if (interactive() && requireNamespace(
   setHook("rstudio.sessionInit", function(isNewSession) \{
     # Automatically choose the correct theme based on time of day
     rsthemes::use_theme_auto(dark_start = "18:00", dark_end = "6:00")
+    # Alternatively use a dynamic solution based on your location
+    # rsthemes::use_theme_auto(lat = 50.30, lon = 9.40)
   \}, action = "append")
 \}
 }
