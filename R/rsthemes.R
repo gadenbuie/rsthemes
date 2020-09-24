@@ -38,7 +38,7 @@ NULL
 #' @param style Limit to a subgroup of themes, chosen from the options returned
 #'   by [rsthemes_styles()].
 #' @param include_base16 Should the `base16` themes be included?
-#' @param destdir The desination directory for the `.rstheme` files. By default
+#' @param destdir The destination directory for the `.rstheme` files. By default
 #'   uses [rstudioapi::addTheme()] to install themes, but this argument lets
 #'   users install themes to non-standard directories, or in case the location
 #'   of the RStudio theme directory has changed.
