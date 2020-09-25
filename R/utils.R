@@ -40,19 +40,21 @@ cp_to_rstudio <- function(file, overwrite = TRUE) {
   fs::file_copy(file, rstudio_theme_home(), overwrite = overwrite)
 }
 
-ls_theme_templates <- function(base16 = FALSE) {
+ls_theme_templates <- function(path_templates = NULL, base16 = FALSE) {
+  path_templates <- path_templates %||% package_template()
   if (base16) {
-    ls_sass(package_template("palettes", "base16"))
+    ls_sass(fs::path(path_templates, "palettes", "base16"))
   } else {
-    ls_sass(package_template())
+    ls_sass(path_templates)
   }
 }
 
-ls_theme_palettes <- function(base16 = FALSE) {
+ls_theme_palettes <- function(path_palettes = NULL, base16 = FALSE) {
+  path_palettes <- path_palettes %||% package_template("palettes")
   if (base16) {
-    ls_sass(package_template("palettes", "base16"))
+    ls_sass(fs::path("base16"))
   } else {
-    ls_sass(package_template("palettes"))
+    ls_sass(path_templates)
   }
 }
 
