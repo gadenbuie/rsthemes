@@ -2,27 +2,27 @@
 $ui_rstudio_is_dark: false;
 
 .ace_gutter {
-	background: $ui_gutter_background;
-	color: $ui_gutter_foreground;
+  background: $ui_gutter_background;
+  color: $ui_gutter_foreground;
 }
 .ace_print-margin {
-	width: 2px;
-	background: $ui_margin_line;
+  width: 2px;
+  background: $ui_margin_line;
 }
 .ace_editor {
-	background-color: $ui_background;
-	color: $ui_foreground;
+  background-color: $ui_background;
+  color: $ui_foreground;
 }
 .rstudio-themes-flat {
-	&.ace_editor_theme {
-		background-color: $ui_background;
-		color: $ui_foreground;
-		.profvis-flamegraph {
-			background-color: $ui_background;
-			color: $ui_foreground;
-		}
-	}
-	.ace_editor_theme {
+  &.ace_editor_theme {
+    background-color: $ui_background;
+    color: $ui_foreground;
+    .profvis-flamegraph {
+      background-color: $ui_background;
+      color: $ui_foreground;
+    }
+  }
+  .ace_editor_theme {
     background-color: $ui_background !important;
     color: $ui_foreground !important;
     table {
@@ -31,17 +31,17 @@ $ui_rstudio_is_dark: false;
         background-color: $ui_background !important;
       }
     }
-	}
-	&.ace_editor_theme a {
-		color: $ui_foreground !important;
-		font-weight: bold;
-	}
-	.gwt-Label {
-	  color: $ui_foreground;
-	}
+  }
+  &.ace_editor_theme a {
+    color: $ui_foreground !important;
+    font-weight: bold;
+  }
+  .gwt-Label {
+    color: $ui_foreground;
+  }
 }
 .ace_cursor {
-	color: $ui_cursor;
+  color: $ui_cursor;
 }
 .normal-mode .ace_cursor {
   border: 0!important;
@@ -49,195 +49,195 @@ $ui_rstudio_is_dark: false;
   opacity: 0.5;
 }
 .ace_marker-layer {
-	.ace_selection {
-		background: $ui_selection;
-	}
-	.ace_step {
-		background: lighten($code_string, 10%);
-	}
-	.ace_bracket {
-		margin: -1px 0 0 -1px;
-		border: 1px solid $ui_bracket;
-	}
-	.ace_active-line {
-		background: $ui_line_active;
-	}
-	.ace_selected-word {
-		border: 1px solid $ui_selection;
-	}
-	.ace_foreign_line {
-		position: absolute;
-		z-index: -1;
-		background-color: $rmd_chunk_background;
-	}
-	.ace_active_debug_line {
-		position: absolute;
-		z-index: -1;
-		background-color: $ui_debug_background;
-	}
-	.ace_find_line {
-		position: absolute;
-		z-index: -1;
-		background-color: $ui_line_find;
-	}
+  .ace_selection {
+    background: $ui_selection;
+  }
+  .ace_step {
+    background: lighten($code_string, 10%);
+  }
+  .ace_bracket {
+    margin: -1px 0 0 -1px;
+    border: 1px solid $ui_bracket;
+  }
+  .ace_active-line {
+    background: $ui_line_active;
+  }
+  .ace_selected-word {
+    border: 1px solid $ui_selection;
+  }
+  .ace_foreign_line {
+    position: absolute;
+    z-index: -1;
+    background-color: $rmd_chunk_background;
+  }
+  .ace_active_debug_line {
+    position: absolute;
+    z-index: -1;
+    background-color: $ui_debug_background;
+  }
+  .ace_find_line {
+    position: absolute;
+    z-index: -1;
+    background-color: $ui_line_find;
+  }
 }
 .ace_gutter-active-line {
-	background-color: $ui_line_active_gutter;
+  background-color: $ui_line_active_gutter;
 }
 .ace_fold {
-	background-color: $ui_fold_arrows_background;
-	border: 1px solid $ui_fold_arrows_foreground !important;
+  background-color: $ui_fold_arrows_background;
+  border: 1px solid $ui_fold_arrows_foreground !important;
 }
 .ace_indent-guide{
-	border-right: 1px solid $ui_indent_guide;
-	margin-right: -1px;
+  border-right: 1px solid $ui_indent_guide;
+  margin-right: -1px;
 }
 .ace_active-line ~ .ace_selection.ace_start {
-	background-color: $ui_line_active_selection;
+  background-color: $ui_line_active_selection;
 }
 [class="ace_keyword"] {
-	color: $code_reserved;
-	background-color: $code_reserved_background;
+  color: $code_reserved;
+  background-color: $code_reserved_background;
 }
 .ace_keyword {
-	font-style: normal;
-	&.ace_operator {
-		font-style: normal;
-		color: $code_operator;
-		background-color: $code_operator_background;
-	}
-	&.ace_other.ace_unit {
-		font-style: normal;
-		color: $code_value;
-		background-color: $code_value_background;
-	}
+  font-style: normal;
+  &.ace_operator {
+    font-style: normal;
+    color: $code_operator;
+    background-color: $code_operator_background;
+  }
+  &.ace_other.ace_unit {
+    font-style: normal;
+    color: $code_value;
+    background-color: $code_value_background;
+  }
 }
 .ace_constant {
-	&.ace_language {
-		color: $code_message;
-		background-color: $code_message_background;
-	}
-	&.ace_numeric {
-		color: $code_value;
-		background-color: $code_value_background;
-	}
-	&.ace_character {
-		color: $code_value;
-		background-color: $code_value_background;
-	}
-	&.ace_other {
-		color: $ui_foreground;
-	}
+  &.ace_language {
+    color: $code_message;
+    background-color: $code_message_background;
+  }
+  &.ace_numeric {
+    color: $code_value;
+    background-color: $code_value_background;
+  }
+  &.ace_character {
+    color: $code_value;
+    background-color: $code_value_background;
+  }
+  &.ace_other {
+    color: $ui_foreground;
+  }
 }
 .ace_line > .ace_constant.ace_language {
-	color: $code_value;
-	background-color: $code_value_background;
+  color: $code_value;
+  background-color: $code_value_background;
 }
 .ace_identifier.ace_support {
-	&.ace_function {
-		color: $code_function;
-		background-color: $code_function_background;
-	}
-	&.ace_constant {
-		color: $code_value;
-		background-color: $code_value_background;
-	}
-	&.ace_class {
-		font-style: $code_namespace_font_style;
-		color: $code_namespace;
-		background-color: $code_namespace_background;
-	}
-	&.ace_type {
-		color: $code_namespace;
-		background-color: $code_namespace_background;
-	}
+  &.ace_function {
+    color: $code_function;
+    background-color: $code_function_background;
+  }
+  &.ace_constant {
+    color: $code_value;
+    background-color: $code_value_background;
+  }
+  &.ace_class {
+    font-style: $code_namespace_font_style;
+    color: $code_namespace;
+    background-color: $code_namespace_background;
+  }
+  &.ace_type {
+    color: $code_namespace;
+    background-color: $code_namespace_background;
+  }
 }
 .ace_paren {
-	&.ace_keyword.ace_operator {
-		color: $code_bracket;
-		background-color: $code_bracket_background;
-	}
+  &.ace_keyword.ace_operator {
+    color: $code_bracket;
+    background-color: $code_bracket_background;
+  }
 }
 .ace_storage {
-	color: $code_reserved;
-	&.ace_type {
-		color: $code_reserved;
-	}
+  color: $code_reserved;
+  &.ace_type {
+    color: $code_reserved;
+  }
 }
 .ace_invalid {
-	background-color: transparentize($code_variable, 0.5);
-	&.ace_deprecated {
-		background-color: transparentize($code_reserved, 0.5);
-	}
+  background-color: transparentize($code_variable, 0.5);
+  &.ace_deprecated {
+    background-color: transparentize($code_reserved, 0.5);
+  }
 }
 .ace_string {
-	color: $code_string;
-	background-color: $code_string_background;
+  color: $code_string;
+  background-color: $code_string_background;
 }
 .ace_comment {
-	color: $code_comment;
-	background-color: $code_comment_background;
+  color: $code_comment;
+  background-color: $code_comment_background;
 }
 .ace_invisible {
-	color: $ui_invisible;
+  color: $ui_invisible;
 }
 .ace_variable {
-	color: $code_variable;
-	background-color: $code_variable_background;
-	&.ace_parameter {
-		color: $code_value;
-		background-color: $code_value_background;
-	}
+  color: $code_variable;
+  background-color: $code_variable_background;
+  &.ace_parameter {
+    color: $code_value;
+    background-color: $code_value_background;
+  }
 }
 .ace_identifier {
-	color: $code_identifier;
-	background-color: $code_identifier_background;
+  color: $code_identifier;
+  background-color: $code_identifier_background;
 }
 .ace_entity {
-	&.ace_name {
-		&.ace_function {
-			color: $code_function;
-			background-color: $code_function_background;
-		}
-		&.ace_tag {
-			color: $code_other;
-		}
-	}
-	&.ace_other.ace_attribute-name {
-		color: $code_reserved;
-		background-color: $code_reserved_background;
-	}
+  &.ace_name {
+    &.ace_function {
+      color: $code_function;
+      background-color: $code_function_background;
+    }
+    &.ace_tag {
+      color: $code_other;
+    }
+  }
+  &.ace_other.ace_attribute-name {
+    color: $code_reserved;
+    background-color: $code_reserved_background;
+  }
 }
 .ace_bracket {
-	margin: 0 !important;
-	border: 0 !important;
-	background-color: $ui_bracket;
+  margin: 0 !important;
+  border: 0 !important;
+  background-color: $ui_bracket;
 }
 .ace_console_error {
-	background-color: $ui_line_find;
+  background-color: $ui_line_find;
 }
 .ace_layer {
-	z-index: 3;
-	&.ace_print-margin-layer {
-		z-index: 2;
-	}
-	&.ace_marker-layer {
-		z-index: 1;
-	}
+  z-index: 3;
+  &.ace_print-margin-layer {
+    z-index: 2;
+  }
+  &.ace_marker-layer {
+    z-index: 1;
+  }
 }
 .ace_selection.ace_start {
-	box-shadow: 0 0 3px 0 $ui_background;
-	border-radius: 2px;
+  box-shadow: 0 0 3px 0 $ui_background;
+  border-radius: 2px;
 }
 .ace_meta.ace_tag {
-	color: $code_operator;
-	background-color: $code_operator_background;
+  color: $code_operator;
+  background-color: $code_operator_background;
 }
 .ace_markup.ace_heading,
 .ace_markup.ace_heading ~ .ace_heading {
-	font-weight: $rmd_heading_weight;
-	color: $rmd_heading_foreground;
-	background-color: $rmd_heading_background;
+  font-weight: $rmd_heading_weight;
+  color: $rmd_heading_foreground;
+  background-color: $rmd_heading_background;
 }
 .ace_support.ace_function {
   &.ace_codebegin, &.ace_codeend {
@@ -250,8 +250,8 @@ $ui_rstudio_is_dark: false;
   background-color: $rmd_href_background;
 }
 .nocolor.ace_editor .ace_line span {
-	color: $code_reserved !important;
-	background-color: $code_reserved_background !important;
+  color: $code_reserved !important;
+  background-color: $code_reserved_background !important;
 }
 #rstudio_console_input .ace_marker-layer .ace_selection {
   background: $ui_console_selection;
@@ -260,8 +260,8 @@ $ui_rstudio_is_dark: false;
 /* ---- RStudio Theme ---- */
 /* background */
 .rstudio-themes-flat .rstudio-themes-default {
-	background: $ui_rstudio_background !important;
-	color: $ui_rstudio_foreground !important;
+  background: $ui_rstudio_background !important;
+  color: $ui_rstudio_foreground !important;
   .rstudio-themes-background {
     background: $ui_rstudio_background !important;
   }
@@ -269,20 +269,20 @@ $ui_rstudio_is_dark: false;
 
 /* inactive tabs */
 table.rstheme_tabLayoutCenter, .rstudio-themes-flat .rstudio-themes-default .gwt-TabLayoutPanelTabs, .rstheme_multiPodUtilityTabArea {
-	background: $ui_rstudio_tabs_inactive_background !important;
-	.gwt-Label {
-		color: $ui_rstudio_tabs_inactive_foreground;
-	}
+  background: $ui_rstudio_tabs_inactive_background !important;
+  .gwt-Label {
+    color: $ui_rstudio_tabs_inactive_foreground;
+  }
 }
 
 /* toolbar and selected tab */
 .rstudio-themes-flat .rstudio-themes-default {
   .rstheme_center, .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTab-selected table.rstheme_tabLayoutCenter {
-		background: $ui_rstudio_tabs_active_background !important;
+    background: $ui_rstudio_tabs_active_background !important;
   }
-	.gwt-TabLayoutPanelTab-selected .gwt-Label {
-		color: $ui_rstudio_tabs_active_foreground;
-	}
+  .gwt-TabLayoutPanelTab-selected .gwt-Label {
+    color: $ui_rstudio_tabs_active_foreground;
+  }
 }
 
 
@@ -293,14 +293,14 @@ table.rstheme_tabLayoutCenter, .rstudio-themes-flat .rstudio-themes-default .gwt
       color: $ui_rstudio_toolbar_foreground !important;
     }
   }
-	.rstudio-themes-default {
+  .rstudio-themes-default {
     .gwt-SplitLayoutPanel-HDragger, .gwt-SplitLayoutPanel-VDragger {
-		  /* spliters */
+      /* spliters */
       background: transparent !important;
     }
   }
   .search, &.rstudio-themes-default-menus .search {
-	  /* search */
+    /* search */
     background: $ui_rstudio_search !important;
   }
 }
@@ -321,26 +321,26 @@ table.rstheme_tabLayoutCenter, .rstudio-themes-flat .rstudio-themes-default .gwt
     }
   }
   .themedPopupPanel {
-  	border: solid 1px $ui_completions_border;
-  	& ~ div.popupContent div:nth-child(1) {
-  	  border: solid 1px $ui_completions_border;
-  	}
-  	& + .rstudio-themes-scrollbars {
+    border: solid 1px $ui_completions_border;
+    & ~ div.popupContent div:nth-child(1) {
+      border: solid 1px $ui_completions_border;
+    }
+    & + .rstudio-themes-scrollbars {
       border-color: $ui_completions_border;
     }
   }
   .popupContent {
     background: $ui_completions_background;
-  	color: $ui_completions_foreground;
-  	&:not(.popupMiddleCenterInner) div div:nth-child(2) {
-    	background-color: unset;
-    	border: none;
+    color: $ui_completions_foreground;
+    &:not(.popupMiddleCenterInner) div div:nth-child(2) {
+      background-color: unset;
+      border: none;
     }
   }
   .gwt-PopupPanel .popupContent {
     background: inherit;
     color: $ui_completions_foreground;
-  	table {
+    table {
       background-color: $ui_completions_foreground;
       border: 0;
       .gwt-Label {
