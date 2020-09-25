@@ -35,6 +35,7 @@
 #'   applied immediately.
 #' @param ui_rstudio_background Default: `darken($ui_background, 2%)`
 #' @param ui_rstudio_foreground Default: `$ui_foreground`
+#' @param ui_rstudio_border Default: `$ui_background`
 #' @param ui_rstudio_tabs_inactive_background Default: `lighten($ui_rstudio_background, 2%)`
 #' @param ui_rstudio_tabs_inactive_foreground Default: `transparentize($ui_foreground, 0.4)`
 #' @param rmd_chunk_background Default: `darken($ui_background, 5%)`

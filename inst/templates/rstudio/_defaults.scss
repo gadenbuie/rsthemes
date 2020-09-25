@@ -1,42 +1,43 @@
 // primary UI colors
-//$ui_background           : ;
-//$ui_foreground           : ;
+//$ui_background: ;
+//$ui_foreground: ;
 $rmd_chunk_background: darken($ui_background, 5%) !default;
-$ui_selection            : transparentize($rmd_chunk_background, 0.6) !default;
-$ui_cursor               : #FF0000 !default;
-$ui_cursor_normal_mode   : $ui_cursor !default;
-$ui_margin_line          : lighten($ui_selection, 5%) !default;
-$ui_gutter_foreground         : transparentize($ui_foreground, 0.75) !default;
-$ui_gutter_background    : $ui_background !default;
+$ui_selection: transparentize($rmd_chunk_background, 0.6) !default;
+$ui_cursor: #FF0000 !default;
+$ui_cursor_normal_mode: $ui_cursor !default;
+$ui_margin_line: lighten($ui_selection, 5%) !default;
+$ui_gutter_foreground: transparentize($ui_foreground, 0.75) !default;
+$ui_gutter_background: $ui_background !default;
 
 // less common UI colors
-$ui_line_active           : transparentize($rmd_chunk_background, 0.6) !default;
-$ui_line_active_gutter    : $ui_background !default;
-$ui_line_active_selection : opacify($ui_selection, 1) !default;
-$ui_line_find             : $ui_selection !default;
-$ui_bracket               : transparentize($ui_cursor, 0.6) !default;
-$ui_invisible             : transparentize($ui_foreground, 0.7) !default;
-$ui_indent_guide          : $ui_invisible !default;
-$ui_debug_background      : lighten($ui_background, 10%) !default;
-$ui_fold_arrows_foreground     : $ui_cursor !default;
+$ui_line_active: transparentize($rmd_chunk_background, 0.6) !default;
+$ui_line_active_gutter: $ui_background !default;
+$ui_line_active_selection: opacify($ui_selection, 1) !default;
+$ui_line_find: $ui_selection !default;
+$ui_bracket: transparentize($ui_cursor, 0.6) !default;
+$ui_invisible: transparentize($ui_foreground, 0.7) !default;
+$ui_indent_guide: $ui_invisible !default;
+$ui_debug_background: lighten($ui_background, 10%) !default;
+$ui_fold_arrows_foreground: $ui_cursor !default;
 $ui_fold_arrows_background: transparentize($ui_fold_arrows_foreground, 0.5) !default;
-$ui_console_selection     : $ui_selection !default;
+$ui_console_selection: $ui_selection !default;
 
 // rstudio
-$ui_rstudio_background          : darken($ui_background, 2%) !default;
-$ui_rstudio_foreground               : $ui_foreground !default;
-$ui_rstudio_tabs_inactive_background       : lighten($ui_rstudio_background, 2%) !default;
-$ui_rstudio_tabs_inactive_foreground : transparentize($ui_foreground, 0.4) !default;
-$ui_rstudio_tabs_active_background       : $rmd_chunk_background !default;
-$ui_rstudio_tabs_active_foreground : $ui_foreground !default;
-$ui_rstudio_toolbar_background             : $ui_rstudio_tabs_active_background !default;
-$ui_rstudio_toolbar_foreground       : $ui_foreground !default;
-$ui_rstudio_search              : $ui_rstudio_toolbar_background !default;
-$ui_completions_background      : $ui_background !default;
-$ui_completions_foreground           : $ui_foreground !default;
-$ui_completions_border          : $ui_bracket !default;
+$ui_rstudio_background: darken($ui_background, 2%) !default;
+$ui_rstudio_foreground: $ui_foreground !default;
+$ui_rstudio_border: $ui_background !default;
+$ui_rstudio_tabs_inactive_background: lighten($ui_rstudio_background, 2%) !default;
+$ui_rstudio_tabs_inactive_foreground: transparentize($ui_foreground, 0.4) !default;
+$ui_rstudio_tabs_active_background: $rmd_chunk_background !default;
+$ui_rstudio_tabs_active_foreground: $ui_foreground !default;
+$ui_rstudio_toolbar_background: $ui_rstudio_tabs_active_background !default;
+$ui_rstudio_toolbar_foreground: $ui_foreground !default;
+$ui_rstudio_search: $ui_rstudio_toolbar_background !default;
+$ui_completions_background: $ui_background !default;
+$ui_completions_foreground: $ui_foreground !default;
+$ui_completions_border: $ui_bracket !default;
 $ui_rstudio_scrollbar_background: $ui_background !default;
-$ui_rstudio_scrollbar_handle    : $rmd_chunk_background !default;
+$ui_rstudio_scrollbar_handle: $rmd_chunk_background !default;
 
 // R language colors
 // These need to be set...
@@ -45,11 +46,11 @@ $ui_rstudio_scrollbar_handle    : $rmd_chunk_background !default;
 //$code_value: ;
 //$code_variable: ;
 //$code_message: ;
-$code_comment  : transparentize($ui_foreground, 0.5) !default;
+$code_comment: transparentize($ui_foreground, 0.5) !default;
 $code_namespace_font_style: italic !default;
-$code_reserved : $code_string !default;
-$code_operator : $code_value !default;
-$code_bracket  : $code_function !default;
+$code_reserved: $code_string !default;
+$code_operator: $code_value !default;
+$code_bracket: $code_function !default;
 $code_namespace: $code_variable !default;
 $code_identifier: $ui_foreground !default;
 $code_other: $code_string !default;
