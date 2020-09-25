@@ -307,10 +307,20 @@
 .rstudio-themes-flat .rstudio-themes-default {
   background: whitesmoke !important;
   color: #383a42 !important;
+  /* collapsed toolbar on rstudio server */
 }
 
 .rstudio-themes-flat .rstudio-themes-default .rstudio-themes-background {
   background: whitesmoke !important;
+}
+
+.rstudio-themes-flat .rstudio-themes-default [role="banner"] + [role="navigation"] > table > tbody > tr > td {
+  background: whitesmoke;
+  border-color: #fafafa;
+}
+
+.rstudio-themes-flat .rstudio-themes-default .rstudio-themes-border {
+  border-color: #fafafa;
 }
 
 /* inactive tabs */

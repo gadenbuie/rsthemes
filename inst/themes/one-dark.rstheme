@@ -268,10 +268,20 @@
 .rstudio-themes-flat .rstudio-themes-dark-grey {
   background: #21252b !important;
   color: #abb2bf !important;
+  /* collapsed toolbar on rstudio server */
 }
 
 .rstudio-themes-flat .rstudio-themes-dark-grey .rstudio-themes-background {
   background: #21252b !important;
+}
+
+.rstudio-themes-flat .rstudio-themes-dark-grey [role="banner"] + [role="navigation"] > table > tbody > tr > td {
+  background: #21252b;
+  border-color: #282c34;
+}
+
+.rstudio-themes-flat .rstudio-themes-dark-grey .rstudio-themes-border {
+  border-color: #282c34;
 }
 
 /* inactive tabs */
