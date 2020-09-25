@@ -39,7 +39,7 @@ $ui_paren_6: darken(hsl(220, 100%, 73%), 10%); // blue
 
 // rstudio
 $ui_rstudio_background          : $base5;
-$ui_rstudio_foreground               : $base7;
+$ui_rstudio_foreground               : $base1;
 $ui_rstudio_tabs_inactive_background       : $base5;
 $ui_rstudio_tabs_inactive_foreground : $base2;
 $ui_completions_background      : $ui_background;
@@ -69,15 +69,21 @@ $code_identifier_background: inherit;
 $code_message: $accent;
 $code_namespace_font_style: italic;
 
-$other_tag: $base2;
+$code_other: $base2;
 
 // Rmd
-$rmd_heading_color: $blue-text;
-$rmd_heading_color_background: $blue-bg;
+$rmd_heading_foreground: $blue-text;
+$rmd_heading_background: $blue-bg;
 $rmd_chunk_header: $base1;
 $rmd_chunk_header_background: inherit;
 $rmd_href: $green-text;
 $rmd_href_background: $green-bg;
+
+// Dialog menus
+$ui_rstudio_dialog_selected_background: $ui_selection;
+$ui_rstudio_dialog_input_background: $base5;
+$ui_rstudio_dialog_heading_foreground: $accent;
+$ui_rstudio_dialog_help_foreground: $base2;
 
 @import "rstudio/_rstudio-light";
 
@@ -195,5 +201,5 @@ $rmd_href_background: $green-bg;
   background-color: transparentize($accent, 0.9) !important;
 }
 
-@import "rstudio/_components";
+@import "rstudio/_components", "rstudio/_dialog-options", "rstudio/_large-tabs";
 

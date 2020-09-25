@@ -56,7 +56,7 @@ $code_variable : $base09;
 $code_message  : $base0F;
 $code_namespace_font_style: normal;
 
-$other_tag: $base08;
+$code_other: $base08;
 
 // rainbow parens;
 $ui_paren_0: $base0C;
@@ -69,7 +69,7 @@ $ui_paren_6: $base0E;
 
 // R Markdown
 $rmd_heading_weight: 600 !default;
-$rmd_heading_color: $base0F !default;
+$rmd_heading_foreground: $base0F !default;
 $rmd_chunk_header: $blue !default;
 $rmd_href: $base0A !default;
 

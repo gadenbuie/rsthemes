@@ -52,7 +52,7 @@ $code_operator : $code_value !default;
 $code_bracket  : $code_function !default;
 $code_namespace: $code_variable !default;
 $code_identifier: $ui_foreground !default;
-$other_tag: $code_string !default;
+$code_other: $code_string !default;
 
 $code_string_background: inherit !default;
 $code_function_background: inherit !default;
@@ -68,8 +68,8 @@ $code_identifier_background: inherit !default;
 
 // R Markdown
 $rmd_heading_weight: 600 !default;
-$rmd_heading_color: $code_string !default;
-$rmd_heading_color_background: $code_string_background !default;
+$rmd_heading_foreground: $code_string !default;
+$rmd_heading_background: $code_string_background !default;
 $rmd_chunk_header: $code_function !default;
 $rmd_chunk_header_background: $code_function_background !default;
 $rmd_href: $code_reserved !default;

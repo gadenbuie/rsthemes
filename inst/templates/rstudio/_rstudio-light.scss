@@ -200,7 +200,7 @@ $ui_rstudio_is_dark: false;
 			background-color: $code_function_background;
 		}
 		&.ace_tag {
-			color: $other_tag;
+			color: $code_other;
 		}
 	}
 	&.ace_other.ace_attribute-name {
@@ -236,8 +236,8 @@ $ui_rstudio_is_dark: false;
 .ace_markup.ace_heading,
 .ace_markup.ace_heading ~ .ace_heading {
 	font-weight: $rmd_heading_weight;
-	color: $rmd_heading_color;
-	background-color: $rmd_heading_color_background;
+	color: $rmd_heading_foreground;
+	background-color: $rmd_heading_background;
 }
 .ace_support.ace_function {
   &.ace_codebegin, &.ace_codeend {

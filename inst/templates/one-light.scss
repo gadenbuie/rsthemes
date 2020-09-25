@@ -49,7 +49,7 @@ $code_variable : $syntax-color-variable;
 $code_message  : $syntax-color-tag;
 $code_namespace_font_style: normal;
 
-$other_tag: $syntax-color-tag;
+$code_other: $syntax-color-tag;
 
 // Rainbow parens
 $ui_paren_0: $syntax-fg;
@@ -61,7 +61,7 @@ $ui_paren_5: $hue-3;
 $ui_paren_6: $hue-2;
 
 // Rmd
-$rmd_heading_color: $hue-5-2;
+$rmd_heading_foreground: $hue-5-2;
 $rmd_chunk_header: $hue-1;
 $rmd_href: $hue-6-2;
 

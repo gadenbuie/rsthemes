@@ -38,12 +38,12 @@ $code_comment  : #e6c000;
 $code_reserved : #C5A3FF;
 $code_variable : #ff857f;
 $code_bracket  : $ui_foreground;
-$other_tag      : #f8f8f0;
+$code_other      : #f8f8f0;
 $code_namespace_font_style: italic;
 
 // R Markdown
 $rmd_heading_weight: 600;
-$rmd_heading_color: #c2ffdf;
+$rmd_heading_foreground: #c2ffdf;
 $rmd_chunk_header: #fff352;
 $rmd_href: #ae81ff;
 
