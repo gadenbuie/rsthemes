@@ -1,0 +1,122 @@
+/* rs-theme-name: a11y-dark {rsthemes} */
+/* rs-theme-is-dark: TRUE */
+$white: #FEFEFE;
+$black: #2B2B2B;
+$gray1: #dbdbdb;
+$gray2: #a0a0a0;
+$blue: #00e0e0;
+$blue-med: #4254a7;
+$blue-dark: #009DC4;
+$red-bright: #ff0000;
+$red: #ffa07a;
+$red-dark: #E56D75;
+$wasabi: #7d9029;
+$pink: #bb6688;
+$purple: #dcc6e0;
+$green: #abe338;
+$orange: #ffd700;
+$orange-dark: #FFA500;
+$magenta: #E35BD8;
+$ui_background: $black;
+$ui_foreground: $white;
+$code_string: $green;
+$code_function: $blue-dark;
+$code_value: $purple;
+$code_variable: $blue-dark;
+$code_message: $red-dark;
+$ui_rstudio_background: $black;
+$ui_rstudio_foreground: $white;
+$rmd_chunk_background: darken($ui_background, 5%);
+$ui_rstudio_tabs_inactive_background: lighten($ui_rstudio_background, 2%);
+$ui_rstudio_tabs_inactive_foreground: transparentize($ui_foreground, 0.4);
+$ui_rstudio_tabs_active_background: $rmd_chunk_background;
+$ui_rstudio_tabs_active_foreground: $ui_foreground;
+$ui_rstudio_toolbar_background: $ui_rstudio_tabs_active_background;
+$ui_rstudio_toolbar_foreground: $ui_foreground;
+$ui_rstudio_search: $ui_rstudio_toolbar_background;
+$ui_rstudio_scrollbar_background: $ui_background;
+$ui_rstudio_scrollbar_handle: $rmd_chunk_background;
+$ui_cursor: transparentize($blue, 0.5);
+$ui_cursor_normal_mode: $ui_cursor;
+$ui_gutter_foreground: $gray1;
+$ui_gutter_background: $ui_background;
+$ui_line_active: transparentize($white, 0.95);
+$ui_selection: #473245;
+$ui_line_active_selection: $ui_selection;
+$ui_line_active_gutter: $ui_background;
+$ui_bracket: transparentize($blue, 0.75);
+$ui_invisible: transparentize($ui_foreground, 0.7);
+$ui_indent_guide: $ui_invisible;
+$ui_margin_line: #54545444;
+$ui_debug_background: transparentize($orange, 0.75);
+$ui_fold_arrows_foreground: $ui_cursor;
+$ui_fold_arrows_background: transparentize($ui_fold_arrows_foreground, 0.5);
+$ui_line_find: $ui_selection;
+$ui_console_selection: $ui_selection;
+$ui_completions_background: $black;
+$ui_completions_foreground: $white;
+$ui_completions_border: $black;
+$code_comment: $gray2;
+$code_namespace_font_style: italic;
+$code_reserved: $blue;
+$code_operator: $gray2;
+$code_bracket: $gray2;
+$code_namespace: $orange-dark;
+$code_identifier: $white;
+$code_string_background: inherit;
+$code_function_background: inherit;
+$code_value_background: inherit;
+$code_variable_background: inherit;
+$code_message_background: inherit;
+$code_comment_background: inherit;
+$code_reserved_background: inherit;
+$code_operator_background: inherit;
+$code_bracket_background: inherit;
+$code_namespace_background: inherit;
+$code_identifier_background: inherit;
+$code_other: $code_string;
+$rmd_heading_weight: 600;
+$rmd_heading_foreground: $red-dark;
+$rmd_heading_background: $code_string_background;
+$rmd_chunk_header: $purple;
+$rmd_chunk_header_background: $code_function_background;
+$rmd_href: $blue-dark;
+$rmd_href_background: $code_reserved_background;
+@import "/Users/garrick/Repos/rsthemes/inst/templates/rstudio/_rstudio-dark.scss";
+@import "/Users/garrick/Repos/rsthemes/inst/templates/rstudio/_terminal.scss";
+
+[class="ace_keyword"] {
+	font-weight: 600;
+}
+.ace_function {
+  font-weight: 600;
+}
+.rstudio-themes-flat .rstudio-themes-border,
+.rstudio-themes-flat .rstudio-themes-dark-grey .windowframe>div:last-child,
+.rstudio-themes-flat .rstudio-themes-dark-grey .rstudio-themes-background,
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs table.rstheme_tabLayoutCenter,
+.rstudio-themes-flat .rstudio-themes-dark-grey .rstheme_minimizedWindowObject,
+.rstudio-themes-flat .rstudio-themes-dark-grey .rstheme_minimizedWindowObject>div:last-child,
+.rstudio-themes-flat .rstudio-themes-dark-grey .rstheme_minimizedWindowObject table.rstheme_tabLayoutCenter,
+.rstudio-themes-flat .rstudio-themes-dark-grey .rstheme_minimizedWindowObject table.rstheme_center,
+.rstudio-themes-flat .rstudio-themes-dark-grey .rstheme_toolbarWrapper,
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanel>div>div.gwt-TabLayoutPanelTabs {
+  border-color: #454545;
+}
+
+$ui_command_palette_background: $ui_background;
+$ui_command_palette_search_background: $ui_command_palette_background;
+$ui_command_palette_border: $ui_command_palette_background;
+$ui_command_palette_item_background: $ui_command_palette_background;
+$ui_command_palette_item_color: $ui_foreground;
+$ui_command_palette_item_hover_background: if($ui_rstudio_is_dark, lighten($ui_command_palette_item_background, 5%), darken($ui_command_palette_item_background, 5%));
+$ui_command_palette_item_selected_background: if($ui_rstudio_is_dark, lighten($ui_command_palette_item_background, 10%), darken($ui_command_palette_item_background, 10%));
+$ui_paren_0: $gray2;
+$ui_paren_1: $blue-med;
+$ui_paren_2: $red;
+$ui_paren_3: $green;
+$ui_paren_4: $purple;
+$ui_paren_5: $orange;
+$ui_paren_6: $wasabi;
+@import "/Users/garrick/Repos/rsthemes/inst/templates/rstudio/_command-palette.scss";
+@import "/Users/garrick/Repos/rsthemes/inst/templates/rstudio/_rainbow-parens.scss";
