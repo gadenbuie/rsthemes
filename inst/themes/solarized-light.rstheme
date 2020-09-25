@@ -198,6 +198,11 @@
   color: #d33682;
 }
 
+.ace_identifier {
+  color: #657b83;
+  background-color: inherit;
+}
+
 .ace_entity.ace_name.ace_function {
   color: #268bd2;
 }
@@ -361,6 +366,11 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
 
 .rstudio-themes-flat .gwt-PopupPanel .popupContent table .gwt-Label {
   color: #fdf6e3;
+}
+
+.rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected,
+.rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected > table {
+  background: #93a1a1;
 }
 
 /* datagrid */
@@ -4738,4 +4748,3 @@ input#rstudio_command_palette_search {
 .xtermBgColor255 {
   background-color: #eeeeee;
 }
-

@@ -312,7 +312,7 @@
 /* background */
 .rstudio-themes-flat .rstudio-themes-default {
   background: #e4ddd2 !important;
-  color: #f7f3ee !important;
+  color: #605a52 !important;
 }
 
 .rstudio-themes-flat .rstudio-themes-default .rstudio-themes-background {
@@ -2765,3 +2765,142 @@ input#rstudio_command_palette_search {
   background-color: #eeeeee;
 }
 
+.rstudio-themes-flat [id^="rstudio_dialog"],
+.rstudio-themes-flat :not(.gwt-MenuItem-selected) > [id^="rstudio_label"],
+.rstudio-themes-flat .dialogContent > table div,
+.rstudio-themes-flat .dialogContent [id^="rstudio_label_"][id$="_panel"] table td,
+.rstudio-themes-flat .dialogTopCenter,
+.rstudio-themes-flat .dialogTop,
+.rstudio-themes-flat .dialogMiddle,
+.rstudio-themes-flat .dataGridHeader {
+  background: #e4ddd2 !important;
+  color: #605a52 !important;
+}
+
+.rstudio-themes-flat .dialogContent > table:first-child:last-child :not(button) > table, .rstudio-themes-flat .dialogContent > table:first-child:last-child :not(button) > table td {
+  background: #e4ddd2 !important;
+  color: #605a52 !important;
+  border-color: #e4ddd2 !important;
+}
+
+.rstudio-themes-flat .dialogContent label.gwt-Label {
+  color: #93836c !important;
+}
+
+.rstudio-themes-flat .dialogContent .gwt-TabLayoutPanelContent :not(label).gwt-Label {
+  color: #6a4dff !important;
+}
+
+.rstudio-themes-flat [id^="rstudio_dialog"],
+.rstudio-themes-flat .dialogTop .dialogTopCenter,
+.rstudio-themes-flat .gwt-DialogBox-ModalDialog,
+.rstudio-themes-flat .dataGridHeader {
+  /* outer border */
+  border-color: #dbd1c2 !important;
+}
+
+.rstudio-themes-flat .dialogContent > table div,
+.rstudio-themes-flat .dialogContent [id^="rstudio_label_"][id$="_panel"] table tbody td {
+  border-color: #dbd1c2;
+}
+
+.rstudio-themes-flat .dialogContent .gwt-TabLayoutPanelTab {
+  border-color: #dbd1c2 !important;
+}
+
+.rstudio-themes-flat [id^="rstudio_label"][aria-selected="true"],
+.rstudio-themes-flat .dialogContent .gwt-TabLayoutPanelTab-selected {
+  background-color: rgba(106, 77, 255, 0.1) !important;
+  border-color: rgba(106, 77, 255, 0.1) !important;
+  color: #605a52 !important;
+}
+
+.rstudio-themes-flat [id^="rstudio_label"][aria-selected="true"] div,
+.rstudio-themes-flat .dialogContent .gwt-TabLayoutPanelTab-selected div {
+  background-color: transparent !important;
+}
+
+.rstudio-themes-flat .dialogContent .gwt-Button-DialogAction table,
+.rstudio-themes-flat .dialogContent .gwt-Button-DialogAction table td,
+.rstudio-themes-flat .dialogContent button table {
+  background: #e4ddd2 !important;
+  color: #605a52 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.rstudio-themes-flat .dialogContent button {
+  border-width: 2px !important;
+  border-style: solid !important;
+  border-color: #dbd1c2 !important;
+  border-radius: 3px !important;
+}
+
+.rstudio-themes-flat .dialogContent .gwt-Button-DialogAction:hover table,
+.rstudio-themes-flat .dialogContent .gwt-Button-DialogAction:hover table div,
+.rstudio-themes-flat .dialogContent button:hover,
+.rstudio-themes-flat .dialogContent button:hover table,
+.rstudio-themes-flat .dialogContent button:hover table div {
+  color: #7c746a !important;
+  background: #f7f5f2 !important;
+  border-color: #dbd1c2 !important;
+}
+
+.rstudio-themes-flat .dialogContent input {
+  background: #e4ddd2 !important;
+  color: #605a52 !important;
+  border-color: #dbd1c2 !important;
+}
+
+.rstudio-themes-flat .dialogContent input[type="checkbox"][value="on"] {
+  background: #eee9e2 !important;
+  color: #605a52 !important;
+}
+
+.rstudio-themes-flat .dialogContent input[type="checkbox"][value="on"] ::before {
+  content: "\2713";
+}
+
+.rstudio-themes-flat .dialogContent select {
+  background: #eee9e2 !important;
+  color: #605a52 !important;
+}
+
+.rstudio-themes-flat > :not(.gwt-DialogBox-ModalDialog) .gwt-TabLayoutPanel > div[aria-hidden="true"] + div {
+  height: 40px !important;
+  background: #e4ddd2;
+}
+
+.rstudio-themes-flat > :not(.gwt-DialogBox-ModalDialog) .gwt-TabLayoutPanel .gwt-TabLayoutPanelTabs table.rstheme_tabLayoutCenter {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 40px;
+}
+
+.rstudio-themes-flat > :not(.gwt-DialogBox-ModalDialog) .gwt-TabLayoutPanel .gwt-TabLayoutPanelTabs .rstheme_tabLayoutCenter td {
+  vertical-align: middle !important;
+}
+
+.rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars.rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTabInner table.rstheme_tabLayoutCenter tbody > tr > td:last-child > img {
+  display: none;
+}
+
+.rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars.rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTabInner table.rstheme_tabLayoutCenter:hover tbody > tr > td:last-child > img {
+  display: inline-block;
+  position: absolute !important;
+  top: 0 !important;
+  padding-left: 3px;
+}
+
+.rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars.rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs [id^="rstudio_workbench_"] .gwt-TabLayoutPanelTabInner table.rstheme_tabLayoutCenter:hover tbody > tr > td:last-child > img {
+  padding-top: 5px;
+}
+
+.rstudio-themes-flat .windowframe .gwt-TabLayoutPanel > div:last-child,
+.rstudio-themes-flat .gwt-TabLayoutPanel.rstudio_source_panel > div:last-child {
+  top: 38px !important;
+}
+
+.windowframe > div:last-child > div > div > div[aria-hidden="true"] + div + div {
+  height: 40px !important;
+}
