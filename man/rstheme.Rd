@@ -25,6 +25,7 @@ rstheme(
   rmd_chunk_background = "darken($ui_background, 5\%)",
   ui_rstudio_tabs_inactive_background = "lighten($ui_rstudio_background, 2\%)",
   ui_rstudio_tabs_inactive_foreground = "transparentize($ui_foreground, 0.4)",
+  ui_rstudio_tabs_inactive_hover_background = "$ui_rstudio_tabs_inactive_background",
   ui_rstudio_tabs_active_background = "$rmd_chunk_background",
   ui_rstudio_tabs_active_foreground = "$ui_foreground",
   ui_rstudio_toolbar_background = "$ui_rstudio_tabs_active_background",
@@ -127,6 +128,8 @@ applied immediately.}
 \item{ui_rstudio_tabs_inactive_background}{Default: \verb{lighten($ui_rstudio_background, 2\%)}}
 
 \item{ui_rstudio_tabs_inactive_foreground}{Default: \verb{transparentize($ui_foreground, 0.4)}}
+
+\item{ui_rstudio_tabs_inactive_hover_background}{Default: \verb{$ui_rstudio_tabs_inactive_background}}
 
 \item{ui_rstudio_tabs_active_background}{Default: \verb{$rmd_chunk_background}}
 

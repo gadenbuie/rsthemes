@@ -41,6 +41,7 @@
 #' @param rmd_chunk_background Default: `darken($ui_background, 5%)`
 #' @param ui_rstudio_tabs_active_background Default: `$rmd_chunk_background`
 #' @param ui_rstudio_tabs_active_foreground Default: `$ui_foreground`
+#' @param ui_rstudio_tabs_inactive_hover_background Default: `$ui_rstudio_tabs_inactive_background`
 #' @param ui_rstudio_toolbar_background Default: `$ui_rstudio_tabs_active_background`
 #' @param ui_rstudio_toolbar_foreground Default: `$ui_foreground`
 #' @param ui_rstudio_search Default: `$ui_rstudio_toolbar_background`
@@ -122,6 +123,7 @@ rstheme <- function(
   rmd_chunk_background = "darken($ui_background, 5%)",
   ui_rstudio_tabs_inactive_background = "lighten($ui_rstudio_background, 2%)",
   ui_rstudio_tabs_inactive_foreground = "transparentize($ui_foreground, 0.4)",
+  ui_rstudio_tabs_inactive_hover_background = "$ui_rstudio_tabs_inactive_background",
   ui_rstudio_tabs_active_background = "$rmd_chunk_background",
   ui_rstudio_tabs_active_foreground = "$ui_foreground",
   ui_rstudio_toolbar_background = "$ui_rstudio_tabs_active_background",

@@ -28,6 +28,7 @@ $ui_rstudio_foreground: $ui_foreground !default;
 $ui_rstudio_border: $ui_background !default;
 $ui_rstudio_tabs_inactive_background: lighten($ui_rstudio_background, 2%) !default;
 $ui_rstudio_tabs_inactive_foreground: transparentize($ui_foreground, 0.4) !default;
+$ui_rstudio_tabs_inactive_hover_background: $ui_rstudio_tabs_inactive_background !default;
 $ui_rstudio_tabs_active_background: $rmd_chunk_background !default;
 $ui_rstudio_tabs_active_foreground: $ui_foreground !default;
 $ui_rstudio_toolbar_background: $ui_rstudio_tabs_active_background !default;
