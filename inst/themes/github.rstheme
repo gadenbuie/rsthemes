@@ -371,7 +371,7 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
   color: #24292e !important;
 }
 
-.rstudio-themes-flat .popupMiddleCenter .item.item-selected, .rstudio-themes-flat .popupMiddleCenter .item-selected, .rstudio-themes-flat .menuPopupMiddleCenter .item.item-selected, .rstudio-themes-flat .menuPopupMiddleCenter .item-selected, .rstudio-themes-flat .suggestPopupMiddleCenter .item.item-selected, .rstudio-themes-flat .suggestPopupMiddleCenter .item-selected {
+.rstudio-themes-flat .popupMiddleCenter .item.item-selected, .rstudio-themes-flat .menuPopupMiddleCenter .item.item-selected, .rstudio-themes-flat .suggestPopupMiddleCenter .item.item-selected {
   color: #FFFFFF !important;
   background: #24292e !important;
 }
@@ -384,13 +384,10 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
   border: solid 1px #ffeef0;
 }
 
-.rstudio-themes-flat .themedPopupPanel + .rstudio-themes-scrollbars {
-  border-color: #ffeef0;
-}
-
 .rstudio-themes-flat .popupContent {
   background: #FFFFFF;
   color: #24292e;
+  border-color: #ffeef0;
 }
 
 .rstudio-themes-flat .popupContent:not(.popupMiddleCenterInner) div div:nth-child(2) {
@@ -398,18 +395,28 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
   border: none;
 }
 
+.rstudio-themes-flat .popupContent + .rstudio-themes-scrollbars {
+  border-color: #ffeef0;
+}
+
 .rstudio-themes-flat .gwt-PopupPanel .popupContent {
-  background: inherit;
-  color: #24292e;
+  background: #FFFFFF;
+  padding: 2px;
 }
 
 .rstudio-themes-flat .gwt-PopupPanel .popupContent table {
-  background-color: #24292e;
+  background: #24292e;
   border: 0;
 }
 
 .rstudio-themes-flat .gwt-PopupPanel .popupContent table .gwt-Label {
   color: #FFFFFF;
+}
+
+.rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected,
+.rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected > table {
+  background: rgba(3, 102, 214, 0.15);
+  color: #24292e;
 }
 
 /* hacky toolbars section */
