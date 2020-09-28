@@ -35,6 +35,8 @@ $ui_rstudio_toolbar_foreground: $ui_foreground !default;
 $ui_rstudio_search: $ui_rstudio_toolbar_background !default;
 $ui_completions_background: $ui_background !default;
 $ui_completions_foreground: $ui_foreground !default;
+$ui_completions_selected_foreground: $ui_completions_foreground !default;
+$ui_completions_selected_background: $ui_line_active_selection !default;
 $ui_completions_border: $ui_bracket !default;
 $ui_rstudio_scrollbar_background: $ui_background !default;
 $ui_rstudio_scrollbar_handle: $rmd_chunk_background !default;

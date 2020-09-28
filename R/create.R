@@ -66,6 +66,8 @@
 #' @param ui_completions_background Default: `$ui_background`
 #' @param ui_completions_foreground Default: `$ui_foreground`
 #' @param ui_completions_border Default: `$ui_bracket`
+#' @param ui_completions_selected_background Default: `$ui_line_active_selection`
+#' @param ui_completions_selected_foreground Default: `$ui_foreground`
 #' @param code_comment Default: `transparentize($ui_foreground, 0.5)`
 #' @param code_namespace_font_style Default: `italic`
 #' @param code_reserved Default: `$code_string`
@@ -147,6 +149,8 @@ rstheme <- function(
   ui_completions_background = "$ui_background",
   ui_completions_foreground = "$ui_foreground",
   ui_completions_border = "$ui_bracket",
+  ui_completions_selected_background = "$ui_line_active_selection",
+  ui_completions_selected_foreground = "$ui_foreground",
   code_comment = "transparentize($ui_foreground, 0.5)",
   code_namespace_font_style = "italic",
   code_reserved = "$code_string",

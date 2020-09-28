@@ -52,6 +52,8 @@ rstheme(
   ui_completions_background = "$ui_background",
   ui_completions_foreground = "$ui_foreground",
   ui_completions_border = "$ui_bracket",
+  ui_completions_selected_background = "$ui_line_active_selection",
+  ui_completions_selected_foreground = "$ui_foreground",
   code_comment = "transparentize($ui_foreground, 0.5)",
   code_namespace_font_style = "italic",
   code_reserved = "$code_string",
@@ -180,6 +182,10 @@ applied immediately.}
 
 \item{ui_completions_border}{Default: \verb{$ui_bracket}}
 
+\item{ui_completions_selected_background}{Default: \verb{$ui_line_active_selection}}
+
+\item{ui_completions_selected_foreground}{Default: \verb{$ui_foreground}}
+
 \item{code_comment}{Default: \verb{transparentize($ui_foreground, 0.5)}}
 
 \item{code_namespace_font_style}{Default: \code{italic}}
@@ -231,6 +237,8 @@ applied immediately.}
 \item{rmd_href}{Default: \verb{$code_reserved}}
 
 \item{rmd_href_background}{Default: \verb{$code_reserved_background}}
+
+\item{ui_rstudio_border}{Default: \verb{$ui_background}}
 }
 \value{
 Returns the CSS or SCSS (if \code{theme_as_sass} is \code{TRUE}). If

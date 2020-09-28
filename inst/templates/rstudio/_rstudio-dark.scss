@@ -323,7 +323,8 @@ table.rstheme_tabLayoutCenter, .rstudio-themes-flat .rstudio-themes-dark-grey .g
   }
   &.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected,
   &.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected > table {
-    background: $ui_line_active_selection;
+    background: $ui_completions_selected_background;
+    color: $ui_completions_selected_foreground;
   }
 }
 

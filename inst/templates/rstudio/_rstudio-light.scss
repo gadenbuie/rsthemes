@@ -320,41 +320,47 @@ table.rstheme_tabLayoutCenter, .rstudio-themes-flat .rstudio-themes-default .gwt
 /* menu background */
 .rstudio-themes-flat {
   .popupMiddleCenter, .menuPopupMiddleCenter, .suggestPopupMiddleCenter {
-    background: $ui_completions_background !important;
-    color: $ui_completions_foreground !important;
+       background: $ui_completions_background !important;
+       color: $ui_completions_foreground !important;
 
-    .item.item-selected, .item-selected {
-     color: $ui_completions_background !important;
-     background: $ui_completions_foreground !important;
-    }
+       .item.item-selected {
+         color: $ui_completions_background !important;
+         background: $ui_completions_foreground !important;
+       }
   }
   .themedPopupPanel {
     border: solid 1px $ui_completions_border;
     & ~ div.popupContent div:nth-child(1) {
       border: solid 1px $ui_completions_border;
     }
-    & + .rstudio-themes-scrollbars {
-      border-color: $ui_completions_border;
-    }
   }
   .popupContent {
     background: $ui_completions_background;
     color: $ui_completions_foreground;
+    border-color: $ui_completions_border;
     &:not(.popupMiddleCenterInner) div div:nth-child(2) {
       background-color: unset;
       border: none;
     }
+    & + .rstudio-themes-scrollbars {
+      border-color: $ui_completions_border;
+    }
   }
   .gwt-PopupPanel .popupContent {
-    background: inherit;
-    color: $ui_completions_foreground;
+    background: $ui_completions_background;
+    padding: 2px;
     table {
-      background-color: $ui_completions_foreground;
+      background: $ui_completions_foreground;
       border: 0;
       .gwt-Label {
         color: $ui_completions_background;
       }
     }
+  }
+  &.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected,
+  &.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected > table {
+    background: $ui_completions_selected_background;
+    color: $ui_completions_selected_foreground;
   }
 }
 
