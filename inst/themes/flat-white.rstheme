@@ -330,21 +330,30 @@
 }
 
 /* inactive tabs */
-table.rstheme_tabLayoutCenter, .rstudio-themes-flat .rstudio-themes-default .gwt-TabLayoutPanelTabs, .rstheme_multiPodUtilityTabArea {
+table.rstheme_tabLayoutCenter,
+.rstudio-themes-flat .rstudio-themes-default .gwt-TabLayoutPanelTabs,
+.rstheme_multiPodUtilityTabArea {
   background: #e4ddd2 !important;
 }
 
-table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-default .gwt-TabLayoutPanelTabs .gwt-Label, .rstheme_multiPodUtilityTabArea .gwt-Label {
+table.rstheme_tabLayoutCenter .gwt-Label,
+.rstudio-themes-flat .rstudio-themes-default .gwt-TabLayoutPanelTabs .gwt-Label,
+.rstheme_multiPodUtilityTabArea .gwt-Label {
   color: #93836c;
 }
 
 /* toolbar and selected tab */
-.rstudio-themes-flat .rstudio-themes-default .rstheme_center, .rstudio-themes-flat .rstudio-themes-default .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTab-selected table.rstheme_tabLayoutCenter {
+.rstudio-themes-flat .rstudio-themes-default .rstheme_center,
+.rstudio-themes-flat .rstudio-themes-default .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTab-selected table.rstheme_tabLayoutCenter {
   background: #f1ece4 !important;
 }
 
 .rstudio-themes-flat .rstudio-themes-default .gwt-TabLayoutPanelTab-selected .gwt-Label {
   color: #605a52;
+}
+
+.rstudio-themes-flat .rstudio-themes-default .gwt-TabLayoutPanelTab:hover .rstheme_tabLayoutCenter {
+  background: #e4ddd2 !important;
 }
 
 .rstudio-themes-flat .rstheme_toolbarWrapper {
@@ -371,14 +380,18 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
 }
 
 /* menu background */
-.rstudio-themes-flat .popupMiddleCenter, .rstudio-themes-flat .menuPopupMiddleCenter, .rstudio-themes-flat .suggestPopupMiddleCenter {
+.rstudio-themes-flat .popupMiddleCenter,
+.rstudio-themes-flat .menuPopupMiddleCenter,
+.rstudio-themes-flat .suggestPopupMiddleCenter {
   background: #f7f3ee !important;
   color: #605a52 !important;
 }
 
-.rstudio-themes-flat .popupMiddleCenter .item.item-selected, .rstudio-themes-flat .menuPopupMiddleCenter .item.item-selected, .rstudio-themes-flat .suggestPopupMiddleCenter .item.item-selected {
-  color: #f7f3ee !important;
-  background: #605a52 !important;
+.rstudio-themes-flat .popupMiddleCenter .item.item-selected,
+.rstudio-themes-flat .menuPopupMiddleCenter .item.item-selected,
+.rstudio-themes-flat .suggestPopupMiddleCenter .item.item-selected {
+  color: #605a52 !important;
+  background: rgba(106, 77, 255, 0.2) !important;
 }
 
 .rstudio-themes-flat .themedPopupPanel {
@@ -472,9 +485,19 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
   border: 4px solid #f7f3ee;
 }
 
+/* scrollbar on firefox */
+.rstudio-themes-flat .rstudio-themes-default {
+  scrollbar-color: #f1ece4 #f7f3ee;
+}
+
 /* fix overly zealous css rules */
 .gwt-DialogBox-ModalDialog .dialogContent .gwt-Label {
   color: #333333;
+}
+
+/* job progress bar */
+.rstheme_toolbarWrapper [role="progressbar"] > div, .windowframe [role="progressbar"] > div {
+  background-color: #6a4dff;
 }
 
 /* let lines breathe */
@@ -2896,6 +2919,14 @@ input#rstudio_command_palette_search {
 
 .rstudio-themes-flat > :not(.gwt-DialogBox-ModalDialog) .gwt-TabLayoutPanel .gwt-TabLayoutPanelTabs .rstheme_tabLayoutCenter td {
   vertical-align: middle !important;
+}
+
+.rstudio-themes-flat > :not(.gwt-DialogBox-ModalDialog) .gwt-TabLayoutPanel .gwt-TabLayoutPanelTabs > div:empty {
+  height: 40px !important;
+}
+
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanel .gwt-TabLayoutPanelTabs {
+  border-color: #e4ddd2 !important;
 }
 
 .rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars.rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTabInner table.rstheme_tabLayoutCenter tbody > tr > td:last-child > img {

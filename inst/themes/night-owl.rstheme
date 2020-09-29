@@ -285,21 +285,30 @@
 }
 
 /* inactive tabs */
-table.rstheme_tabLayoutCenter, .rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs, .rstheme_multiPodUtilityTabArea {
+table.rstheme_tabLayoutCenter,
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
+.rstheme_multiPodUtilityTabArea {
   background: #011421 !important;
 }
 
-table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs .gwt-Label, .rstheme_multiPodUtilityTabArea .gwt-Label {
+table.rstheme_tabLayoutCenter .gwt-Label,
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs .gwt-Label,
+.rstheme_multiPodUtilityTabArea .gwt-Label {
   color: rgba(214, 222, 235, 0.6);
 }
 
 /* toolbar and selected tab */
-.rstudio-themes-flat .rstudio-themes-dark-grey .rstheme_center, .rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTab-selected table.rstheme_tabLayoutCenter {
+.rstudio-themes-flat .rstudio-themes-dark-grey .rstheme_center,
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTab-selected table.rstheme_tabLayoutCenter {
   background: #162a3a !important;
 }
 
 .rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTab-selected .gwt-Label {
   color: #d6deeb;
+}
+
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTab:hover .rstheme_tabLayoutCenter {
+  background: #010E17 !important;
 }
 
 .rstudio-themes-flat .rstheme_toolbarWrapper {
@@ -326,14 +335,18 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
 }
 
 /* menu background */
-.rstudio-themes-flat .popupMiddleCenter, .rstudio-themes-flat .menuPopupMiddleCenter, .rstudio-themes-flat .suggestPopupMiddleCenter {
+.rstudio-themes-flat .popupMiddleCenter,
+.rstudio-themes-flat .menuPopupMiddleCenter,
+.rstudio-themes-flat .suggestPopupMiddleCenter {
   background: #010E17 !important;
-  color: #6c7a89 !important;
+  color: #d6deeb !important;
 }
 
-.rstudio-themes-flat .popupMiddleCenter .item.item-selected, .rstudio-themes-flat .menuPopupMiddleCenter .item.item-selected, .rstudio-themes-flat .suggestPopupMiddleCenter .item.item-selected {
-  color: #010E17 !important;
-  background: #6c7a89 !important;
+.rstudio-themes-flat .popupMiddleCenter .item.item-selected,
+.rstudio-themes-flat .menuPopupMiddleCenter .item.item-selected,
+.rstudio-themes-flat .suggestPopupMiddleCenter .item.item-selected {
+  color: #d6deeb !important;
+  background: #645081 !important;
 }
 
 .rstudio-themes-flat .themedPopupPanel {
@@ -346,7 +359,7 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
 
 .rstudio-themes-flat .popupContent {
   background: #010E17;
-  color: #6c7a89;
+  color: #d6deeb;
   border-color: #010E17;
 }
 
@@ -365,7 +378,7 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
 }
 
 .rstudio-themes-flat .gwt-PopupPanel .popupContent table {
-  background: #6c7a89;
+  background: #d6deeb;
   border: 0;
 }
 
@@ -435,9 +448,19 @@ table.rstheme_tabLayoutCenter .gwt-Label, .rstudio-themes-flat .rstudio-themes-d
   border: 4px solid #011627;
 }
 
+/* scrollbar on firefox */
+.rstudio-themes-flat .rstudio-themes-dark {
+  scrollbar-color: #162a3a #011627;
+}
+
 /* fix overly zealous css rules */
 .gwt-DialogBox-ModalDialog .dialogContent .gwt-Label {
   color: #333333;
+}
+
+/* job progress bar */
+.rstheme_toolbarWrapper [role="progressbar"] > div, .windowframe [role="progressbar"] > div {
+  background-color: #7fdbca;
 }
 
 /* borders on toolbar under editor */
@@ -2696,6 +2719,14 @@ input#rstudio_command_palette_search {
 
 .rstudio-themes-flat > :not(.gwt-DialogBox-ModalDialog) .gwt-TabLayoutPanel .gwt-TabLayoutPanelTabs .rstheme_tabLayoutCenter td {
   vertical-align: middle !important;
+}
+
+.rstudio-themes-flat > :not(.gwt-DialogBox-ModalDialog) .gwt-TabLayoutPanel .gwt-TabLayoutPanelTabs > div:empty {
+  height: 40px !important;
+}
+
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanel .gwt-TabLayoutPanelTabs {
+  border-color: #011421 !important;
 }
 
 .rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars.rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTabInner table.rstheme_tabLayoutCenter tbody > tr > td:last-child > img {
