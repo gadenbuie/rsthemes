@@ -271,7 +271,7 @@ local_daylight_hours <- function(lat = NULL, lon = NULL, quietly = FALSE) {
     coords <- geolocate(quietly = quietly)
   }
   if (all(is_null(coords))) {
-    return(coords)
+    return(list(end = NULL, start = NULL))
   }
   if (!requireNamespace("suncalc", quietly = TRUE)) {
     stop("`suncalc` is required: install.packages('suncalc')")
