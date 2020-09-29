@@ -2754,7 +2754,7 @@ input#rstudio_command_palette_search {
 }
 
 .rstudio-themes-flat [id^="rstudio_dialog"],
-.rstudio-themes-flat :not(.gwt-MenuItem-selected) > [id^="rstudio_label"],
+.rstudio-themes-flat :not(.gwt-MenuItem-selected):not(.gwt-MenuItem) > [id^="rstudio_label"],
 .rstudio-themes-flat .dialogContent > table div,
 .rstudio-themes-flat .dialogContent [id^="rstudio_label_"][id$="_panel"] table td,
 .rstudio-themes-flat .dialogTopCenter,
@@ -2828,6 +2828,7 @@ input#rstudio_command_palette_search {
 .rstudio-themes-flat .dialogContent .gwt-Button-DialogAction:hover table div,
 .rstudio-themes-flat .dialogContent button:hover,
 .rstudio-themes-flat .dialogContent button:hover table,
+.rstudio-themes-flat .dialogContent .gwt-Button:hover > table > tbody > tr > td,
 .rstudio-themes-flat .dialogContent button:hover table div {
   color: #8794a1 !important;
   background: #032c48 !important;
