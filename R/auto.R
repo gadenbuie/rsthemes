@@ -30,13 +30,28 @@
 #'   setHook("rstudio.sessionInit", function(isNewSession) {
 #'     # Automatically choose the correct theme based on time of day
 #'     rsthemes::use_theme_auto(dark_start = "18:00", dark_end = "6:00")
+#'
+#'     # Alternatively use a dynamic solution based on your location
+#'     # rsthemes::use_theme_auto(lat = 50.30, lon = 9.40)
+#'
+#'     # Or alternatively use {ipapi} to determine your location automatically
+#'     # rsthemes::use_theme_auto()
 #'   }, action = "append")
 #' }
 #' ```
 #'
-#' If you'd rather not use this approach, you can simply declare the global
-#' options that declare the default themes, but you won't be able to use
-#' [use_theme_auto()] at startup.
+#' Note that the fully automated approach will use
+#' [ip-api.com](https://ip-api.com/) to look up your current location using your
+#' IP address (if the \pkg{ipapi} package is available). If you'd like to use
+#' geolocation but without pinging an external server, you can call
+#' `rsthemes:::geolocate()` once to determine your approximate latitude and
+#' longitude, which you can provide to [use_theme_auto()]. Your location
+#' coordinates are cached on a per-project basis and only checked once per day
+#' (per project).
+#'
+#' Here are two other approaches that you can use. Both set the global
+#' options that declare the default themes, but rely on you manually calling
+#' [use_theme_auto()] or the Auto Dark/Light addin.
 #'
 #' ```
 #' # ~/.Rprofile
@@ -70,6 +85,8 @@
 #' @param quietly Suppress confirmation messages
 #' @param dark_start Start time of dark mode, in 24-hour `"HH:MM"` format.
 #' @param dark_end End time of dark mode, in 24-hour `"HH:MM"` format.
+#' @param lat Latitude of your current location.
+#' @param lon Longitude of your current location.
 #' @name auto_theme
 NULL
 
@@ -108,7 +125,9 @@ set_theme_favorite <- function(theme = NULL, append = TRUE) {
 
 get_or_check_theme <- function(theme = NULL, style = NULL) {
   if (is.null(theme)) {
-    if (!in_rstudio()) return(NULL)
+    if (!in_rstudio()) {
+      return(NULL)
+    }
     theme <- get_current_theme_name()
   }
   if (in_rstudio()) {
@@ -141,7 +160,9 @@ use_theme_light <- function(quietly = FALSE) use_theme("light", quietly)
 use_theme_dark <- function(quietly = FALSE) use_theme("dark", quietly)
 
 use_theme <- function(style = c("light", "dark"), quietly = FALSE) {
-  if (!in_rstudio()) return(invisible())
+  if (!in_rstudio()) {
+    return(invisible())
+  }
 
   theme <- switch(
     match.arg(style),
@@ -184,28 +205,144 @@ use_theme_toggle <- function(quietly = FALSE) {
 
 #' @describeIn auto_theme Auto switch between dark and light themes
 #' @export
-use_theme_auto <- function(dark_start = "18:00", dark_end = "6:00", quietly = FALSE) {
-  dark_start <- hms::parse_hm(dark_start)
-  dark_end <- hms::parse_hm(dark_end)
+use_theme_auto <- function(
+  dark_start = NULL,
+  dark_end = NULL,
+  lat = NULL,
+  lon = NULL,
+  quietly = FALSE
+) {
+
+  dark_times <- list(start = dark_start, end = dark_end)
+  coords <- list(lat = lat, lon = lon)
+
+  n_times <- sum(is_null(dark_times))
+  n_coords <- sum(is_null(coords))
+
+  has_times <- n_times == 0
+
+  if (n_times == 1) {
+    cli::cli_alert_warning(
+      "[rsthemes] {.fn use_theme_auto} requires both {.code dark_start} and {.code dark_end} or neither"
+    )
+  }
+  if (n_coords == 1) {
+    cli::cli_alert_warning(
+      "[rsthemes] {.fn use_theme_auto} requires both {.code lat} and {.code lot} or neither"
+    )
+    coords <- list(lat = NULL, lon = NULL)
+  }
+
+  if (!has_times) {
+    dark_times <- local_daylight_hours(coords$lat, coords$lon, quietly = quietly)
+  }
+
+  if (any(is_null(dark_times))) {
+    dark_times <- list(
+      end   = dark_end   %||% dark_times$end   %||% "18:00",
+      start = dark_start %||% dark_times$start %||% "6:00"
+    )
+  }
+
+  dark_times <- lapply(dark_times, hms::as_hms)
   now <- hms::as_hms(Sys.time())
 
   pre_start <- use_theme_dark
 
-  if (dark_end > dark_start) {
+  if (dark_times$end > dark_times$start) {
     # if light mode overnight, swap dark start/end
-    .dark_start <- dark_start
-    dark_start <- dark_end
-    dark_end <- .dark_start
+    .dark_start <- dark_times$start
+    dark_times$start <- dark_times$end
+    dark_times$end <- .dark_start
     pre_start <- use_theme_light
   }
 
-  if (now > dark_start) {
+  if (now > dark_times$start) {
     use_theme_dark(quietly)
-  } else if (now > dark_end) {
+  } else if (now > dark_times$end) {
     use_theme_light(quietly)
   } else {
     pre_start(quietly)
   }
+}
+
+local_daylight_hours <- function(lat = NULL, lon = NULL, quietly = FALSE) {
+  coords <- list(lat = lat, lon = lon)
+  null_times <- list(end = NULL, start = NULL)
+  if (any(is_null(coords))) {
+    coords <- purrr::possibly(geolocate, null_times)(quietly = quietly)
+  }
+  if (all(is_null(coords))) {
+    return(null_times)
+  }
+  if (!requireNamespace("suncalc", quietly = TRUE)) {
+    stop("`suncalc` is required: install.packages('suncalc')")
+  }
+  times <- suncalc::getSunlightTimes(
+    lat = coords$lat,
+    lon = coords$lon,
+    date = Sys.Date(),
+    tz = coords$tz %||% Sys.getenv("TZ")
+  )
+  list(
+    end = times$sunrise,
+    start = times$sunset
+  )
+}
+
+geolocate <- function(quietly = FALSE) {
+  if (!requireNamespace("ipapi", quietly = TRUE)) {
+    stop("`ipapi` is required: devtools::install_github('hrbrmstr/ipapi')")
+  }
+
+  cache <- geolocate_get_cache()
+
+  if (!is.null(cache)) {
+    return(cache)
+  }
+
+  if (!quietly) cli::cli_process_start("[rsthemes] Determining your location from you IP via {.pkg ipapi}")
+  x <- ipapi::geolocate(NA, .progress = FALSE)
+  if (!quietly) cli::cli_process_done()
+
+  if (identical(x$status, "success")) {
+    geolocate_set_cache(x$lat, x$lon, tz = x$timezone)
+    list(lat = x$lat, lon = x$lon, tz = x$timezone)
+  }
+}
+
+geolocate_get_cache <- function() {
+  cache_time <- rstudioapi::getPersistentValue("rsthemes.geolocate.time")
+  cache_invalid <- is.null(cache_time) || identical(cache_time, "")
+
+  if (!cache_invalid) {
+    cache_invalid <- (Sys.time() - as.integer(cache_time)) > 60 * 60 * 24
+  }
+
+  if (cache_invalid) {
+    geolocate_clear_cache()
+    return(NULL)
+  }
+
+  list(
+    lat = as.numeric(rstudioapi::getPersistentValue("rsthemes.geolocate.lat")),
+    lon = as.numeric(rstudioapi::getPersistentValue("rsthemes.geolocate.lon")),
+    tz = rstudioapi::getPersistentValue("rsthemes.geolocate.tz")
+  )
+}
+
+geolocate_set_cache <- function(lat, lon, tz) {
+  rstudioapi::setPersistentValue("rsthemes.geolocate.time", Sys.time())
+  rstudioapi::setPersistentValue("rsthemes.geolocate.lat", lat)
+  rstudioapi::setPersistentValue("rsthemes.geolocate.lon", lon)
+  rstudioapi::setPersistentValue("rsthemes.geolocate.tz",  tz)
+}
+
+geolocate_clear_cache <- function() {
+  rstudioapi::setPersistentValue("rsthemes.geolocate.time", NULL)
+  rstudioapi::setPersistentValue("rsthemes.geolocate.lat", NULL)
+  rstudioapi::setPersistentValue("rsthemes.geolocate.lon", NULL)
+  rstudioapi::setPersistentValue("rsthemes.geolocate.tz", NULL)
 }
 
 #' @describeIn auto_theme Walk through a list of favorite themes
@@ -258,8 +395,12 @@ stop_if_theme_not_set <- function(theme_opt = NULL, style = c("light", "dark")) 
 }
 
 stop_if_theme_not_valid <- function(theme) {
-  if (!in_rstudio()) return(theme)
-  if (theme %in% get_theme_names()) return(theme)
+  if (!in_rstudio()) {
+    return(theme)
+  }
+  if (theme %in% get_theme_names()) {
+    return(theme)
+  }
   stop("'", theme, '" is not the name of an installed theme.', call. = FALSE)
 }
 

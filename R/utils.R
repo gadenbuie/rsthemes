@@ -1,5 +1,9 @@
 `%||%` <- function(x, y) if (is.null(x)) y else x
 
+is_null <- function(x) {
+  vapply(x, is.null, logical(1))
+}
+
 requires_rstudioapi <- function(..., has_fun = "getThemes", version = "1.2.1335") {
   if (!requireNamespace("rstudioapi", quietly = TRUE)) {
     stop("The {rstudioapi} package is required")

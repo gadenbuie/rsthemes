@@ -24,7 +24,13 @@ use_theme_dark(quietly = FALSE)
 
 use_theme_toggle(quietly = FALSE)
 
-use_theme_auto(dark_start = "18:00", dark_end = "6:00", quietly = FALSE)
+use_theme_auto(
+  dark_start = NULL,
+  dark_end = NULL,
+  lat = NULL,
+  lon = NULL,
+  quietly = FALSE
+)
 
 use_theme_favorite(quietly = FALSE)
 }
@@ -40,6 +46,10 @@ favorite themes.}
 \item{dark_start}{Start time of dark mode, in 24-hour \code{"HH:MM"} format.}
 
 \item{dark_end}{End time of dark mode, in 24-hour \code{"HH:MM"} format.}
+
+\item{lat}{Latitude of your current location.}
+
+\item{lon}{Longitude of your current location.}
 }
 \description{
 These functions help manage switching between preferred themes. Use
@@ -90,13 +100,28 @@ declare your default themes:\preformatted{if (interactive() && requireNamespace(
   setHook("rstudio.sessionInit", function(isNewSession) \{
     # Automatically choose the correct theme based on time of day
     rsthemes::use_theme_auto(dark_start = "18:00", dark_end = "6:00")
+
+    # Alternatively use a dynamic solution based on your location
+    # rsthemes::use_theme_auto(lat = 50.30, lon = 9.40)
+
+    # Or alternatively use \{ipapi\} to determine your location automatically
+    # rsthemes::use_theme_auto()
   \}, action = "append")
 \}
 }
 
-If you'd rather not use this approach, you can simply declare the global
-options that declare the default themes, but you won't be able to use
-\code{\link[=use_theme_auto]{use_theme_auto()}} at startup.\preformatted{# ~/.Rprofile
+Note that the fully automated approach will use
+\href{https://ip-api.com/}{ip-api.com} to look up your current location using your
+IP address (if the \pkg{ipapi} package is available). If you'd like to use
+geolocation but without pinging an external server, you can call
+\code{rsthemes:::geolocate()} once to determine your approximate latitude and
+longitude, which you can provide to \code{\link[=use_theme_auto]{use_theme_auto()}}. Your location
+coordinates are cached on a per-project basis and only checked once per day
+(per project).
+
+Here are two other approaches that you can use. Both set the global
+options that declare the default themes, but rely on you manually calling
+\code{\link[=use_theme_auto]{use_theme_auto()}} or the Auto Dark/Light addin.\preformatted{# ~/.Rprofile
 rsthemes::set_theme_light("One Light \{rsthemes\}")
 rsthemes::set_theme_dark("One Dark \{rsthemes\}")
 rsthemes::set_theme_favorite(c(
