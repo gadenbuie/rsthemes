@@ -113,10 +113,11 @@ declare your default themes:\preformatted{if (interactive() && requireNamespace(
 Note that the fully automated approach will use
 \href{https://ip-api.com/}{ip-api.com} to look up your current location using your
 IP address (if the \pkg{ipapi} package is available). If you'd like to use
-geolocation but without pining an external server, you can call
+geolocation but without pinging an external server, you can call
 \code{rsthemes:::geolocate()} once to determine your approximate latitude and
-longitude. Your location coordinates are cached on a per-project basis and
-checked once per day (per project).
+longitude, which you can provide to \code{\link[=use_theme_auto]{use_theme_auto()}}. Your location
+coordinates are cached on a per-project basis and only checked once per day
+(per project).
 
 Here are two other approaches that you can use. Both set the global
 options that declare the default themes, but rely on you manually calling
