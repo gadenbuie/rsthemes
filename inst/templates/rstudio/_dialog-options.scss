@@ -31,7 +31,7 @@ $ui_rstudio_dialog_select_foreground: $ui_rstudio_dialog_foreground !default;
 
 .rstudio-themes-flat {
   [id^="rstudio_dialog"],
-  :not(.gwt-MenuItem-selected) > [id^="rstudio_label"],
+  :not(.gwt-MenuItem-selected):not(.gwt-MenuItem) > [id^="rstudio_label"],
   .dialogContent > table div,
   .dialogContent [id^="rstudio_label_"][id$="_panel"] table td,
   .dialogTopCenter,
