@@ -267,11 +267,12 @@ use_theme_auto <- function(
 
 local_daylight_hours <- function(lat = NULL, lon = NULL, quietly = FALSE) {
   coords <- list(lat = lat, lon = lon)
+  null_times <- list(end = NULL, start = NULL)
   if (any(is_null(coords))) {
-    coords <- geolocate(quietly = quietly)
+    coords <- purrr::possibly(geolocate, null_times)(quietly = quietly)
   }
   if (all(is_null(coords))) {
-    return(list(end = NULL, start = NULL))
+    return(null_times)
   }
   if (!requireNamespace("suncalc", quietly = TRUE)) {
     stop("`suncalc` is required: install.packages('suncalc')")
