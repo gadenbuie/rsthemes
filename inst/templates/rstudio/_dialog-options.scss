@@ -106,6 +106,7 @@ $ui_rstudio_dialog_select_foreground: $ui_rstudio_dialog_foreground !default;
   .dialogContent .gwt-Button-DialogAction:hover table div,
   .dialogContent button:hover,
   .dialogContent button:hover table,
+  .dialogContent .gwt-Button:hover > table > tbody > tr > td ,
   .dialogContent button:hover table div {
     color: $ui_rstudio_dialog_button_hover_foreground !important;
     background: $ui_rstudio_dialog_button_hover_background !important;
