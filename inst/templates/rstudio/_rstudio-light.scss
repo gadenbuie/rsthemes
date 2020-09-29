@@ -426,3 +426,9 @@ table.rstheme_tabLayoutCenter,
   color: #333333;
 }
 
+/* job progress bar */
+.rstheme_toolbarWrapper, .windowframe {
+  [role="progressbar"] > div {
+    background-color: $ui_rstudio_job_progress_bar;
+  }
+}

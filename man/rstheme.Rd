@@ -55,6 +55,7 @@ rstheme(
   ui_completions_border = "$ui_bracket",
   ui_completions_selected_background = "$ui_line_active_selection",
   ui_completions_selected_foreground = "$ui_foreground",
+  ui_rstudio_job_progress_bar = "opacify($ui_selection, 1)",
   code_comment = "transparentize($ui_foreground, 0.5)",
   code_namespace_font_style = "italic",
   code_reserved = "$code_string",
@@ -188,6 +189,8 @@ applied immediately.}
 \item{ui_completions_selected_background}{Default: \verb{$ui_line_active_selection}}
 
 \item{ui_completions_selected_foreground}{Default: \verb{$ui_foreground}}
+
+\item{ui_rstudio_job_progress_bar}{Default: \verb{opacify($ui_selection, 1)}}
 
 \item{code_comment}{Default: \verb{transparentize($ui_foreground, 0.5)}}
 

@@ -34,6 +34,7 @@ $ui_rstudio_tabs_active_foreground: $ui_foreground !default;
 $ui_rstudio_toolbar_background: $ui_rstudio_tabs_active_background !default;
 $ui_rstudio_toolbar_foreground: $ui_foreground !default;
 $ui_rstudio_search: $ui_rstudio_toolbar_background !default;
+$ui_rstudio_job_progress_bar: opacify($ui_selection, 1) !default;
 $ui_completions_background: $ui_background !default;
 $ui_completions_foreground: $ui_foreground !default;
 $ui_completions_selected_foreground: $ui_completions_foreground !default;
