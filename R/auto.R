@@ -281,7 +281,7 @@ local_daylight_hours <- function(lat = NULL, lon = NULL, quietly = FALSE) {
     lat = coords$lat,
     lon = coords$lon,
     date = Sys.Date(),
-    tz = Sys.getenv("TZ")
+    tz = coords$tz %||% Sys.getenv("TZ")
   )
   list(
     end = times$sunrise,
@@ -305,40 +305,43 @@ geolocate <- function(quietly = FALSE) {
   if (!quietly) cli::cli_process_done()
 
   if (identical(x$status, "success")) {
-    geolocate_set_cache(x$lat, x$lon)
-    list(lat = x$lat, lon = x$lon)
+    geolocate_set_cache(x$lat, x$lon, tz = x$timezone)
+    list(lat = x$lat, lon = x$lon, tz = x$timezone)
   }
 }
 
 geolocate_get_cache <- function() {
   cache_time <- rstudioapi::getPersistentValue("rsthemes.geolocate.time")
-  cache_invalid <- is.null(cache_time)
+  cache_invalid <- is.null(cache_time) || identical(cache_time, "")
 
   if (!cache_invalid) {
     cache_invalid <- (Sys.time() - as.integer(cache_time)) > 60 * 60 * 24
   }
 
   if (cache_invalid) {
-    rstudioapi::setPersistentValue("rsthemes.geolocate.time", NULL)
+    geolocate_clear_cache()
     return(NULL)
   }
 
   list(
-    lat = rstudioapi::getPersistentValue("rsthemes.geolocate.lat"),
-    lon = rstudioapi::getPersistentValue("rsthemes.geolocate.lon")
+    lat = as.numeric(rstudioapi::getPersistentValue("rsthemes.geolocate.lat")),
+    lon = as.numeric(rstudioapi::getPersistentValue("rsthemes.geolocate.lon")),
+    tz = rstudioapi::getPersistentValue("rsthemes.geolocate.tz")
   )
 }
 
-geolocate_set_cache <- function(lat, lon) {
+geolocate_set_cache <- function(lat, lon, tz) {
   rstudioapi::setPersistentValue("rsthemes.geolocate.time", Sys.time())
   rstudioapi::setPersistentValue("rsthemes.geolocate.lat", lat)
   rstudioapi::setPersistentValue("rsthemes.geolocate.lon", lon)
+  rstudioapi::setPersistentValue("rsthemes.geolocate.tz",  tz)
 }
 
 geolocate_clear_cache <- function() {
   rstudioapi::setPersistentValue("rsthemes.geolocate.time", NULL)
   rstudioapi::setPersistentValue("rsthemes.geolocate.lat", NULL)
   rstudioapi::setPersistentValue("rsthemes.geolocate.lon", NULL)
+  rstudioapi::setPersistentValue("rsthemes.geolocate.tz", NULL)
 }
 
 #' @describeIn auto_theme Walk through a list of favorite themes
