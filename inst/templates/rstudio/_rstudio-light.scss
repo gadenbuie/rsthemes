@@ -294,7 +294,7 @@ table.rstheme_tabLayoutCenter,
   .gwt-TabLayoutPanelTab-selected .gwt-Label {
     color: $ui_rstudio_tabs_active_foreground;
   }
-  .gwt-TabLayoutPanelTab:hover {
+  .gwt-TabLayoutPanelTab:hover .rstheme_tabLayoutCenter {
     background: $ui_rstudio_tabs_inactive_hover_background !important;
   }
 }
@@ -325,14 +325,16 @@ table.rstheme_tabLayoutCenter,
 }
 /* menu background */
 .rstudio-themes-flat {
-  .popupMiddleCenter, .menuPopupMiddleCenter, .suggestPopupMiddleCenter {
-       background: $ui_completions_background !important;
-       color: $ui_completions_foreground !important;
+  .popupMiddleCenter,
+  .menuPopupMiddleCenter,
+  .suggestPopupMiddleCenter {
+    background: $ui_completions_background !important;
+    color: $ui_completions_foreground !important;
 
-       .item.item-selected {
-         color: $ui_completions_background !important;
-         background: $ui_completions_foreground !important;
-       }
+    .item.item-selected {
+      color: $ui_completions_selected_foreground !important;
+      background: $ui_completions_selected_background !important;
+    }
   }
   .themedPopupPanel {
     border: solid 1px $ui_completions_border;
@@ -412,6 +414,11 @@ table.rstheme_tabLayoutCenter,
 .rstudio-themes-flat.rstudio-themes-default-menus .rstudio-themes-scrollbars ::-webkit-scrollbar-thumb {
   background: $ui_rstudio_scrollbar_handle;
   border: 4px solid $ui_rstudio_scrollbar_background;
+}
+
+/* scrollbar on firefox */
+.rstudio-themes-flat .rstudio-themes-default {
+  scrollbar-color: $ui_rstudio_scrollbar_handle $ui_rstudio_scrollbar_background;
 }
 
 /* fix overly zealous css rules */

@@ -11,6 +11,13 @@
   .gwt-TabLayoutPanelTabs .rstheme_tabLayoutCenter td {
     vertical-align: middle !important;
   }
+  .gwt-TabLayoutPanelTabs > div:empty {
+    height: 40px !important;
+  }
+}
+
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanel .gwt-TabLayoutPanelTabs {
+  border-color: $ui_rstudio_tabs_inactive_background !important;
 }
 
 // FIXME for light themes
