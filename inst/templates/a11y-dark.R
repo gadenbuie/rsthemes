@@ -55,6 +55,7 @@ x <- rstheme(
   ui_completions_background = "$black",
   ui_completions_border     = "$black",
   ui_completions_foreground = "$white",
+  ui_rstudio_job_progress_bar = "$orange-dark",
   rstheme_command_palette(),
   rstheme_rainbow_parentheses(
     "$gray2", "$blue-med", "$red", "$green", "$purple", "$orange", "$wasabi"

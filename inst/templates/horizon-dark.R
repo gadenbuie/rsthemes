@@ -42,6 +42,7 @@ rstheme(
   ui_rstudio_toolbar_foreground     = "$base05",
   ui_rstudio_tabs_active_background = "$base00",
   ui_rstudio_tabs_active_foreground = "$base08",
+  ui_rstudio_job_progress_bar       = "$purple",
   ui_selection                      = "$base00",
   ui_console_selection              = "$base00",
   ui_line_active                    = "$base00",
