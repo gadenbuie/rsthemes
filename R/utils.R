@@ -54,7 +54,7 @@ ls_theme_palettes <- function(path_palettes = NULL, base16 = FALSE) {
   if (base16) {
     ls_sass(fs::path("base16"))
   } else {
-    ls_sass(path_templates)
+    ls_sass(path_palettes)
   }
 }
 
