@@ -75,12 +75,6 @@ $ui_rstudio_dialog_select_foreground: $ui_rstudio_dialog_foreground !default;
     border-color: $ui_rstudio_dialog_border !important;
   }
 
-  [id^="rstudio_label"][aria-selected="true"],
-  .dialogContent .gwt-TabLayoutPanelTab-selected {
-    background-color: $ui_rstudio_dialog_selected_background !important;
-    border-color: $ui_rstudio_dialog_selected_background !important;
-    color: $ui_rstudio_dialog_selected_foreground !important;
-  }
   [id^="rstudio_label"][aria-selected="true"] div,
   .dialogContent .gwt-TabLayoutPanelTab-selected div {
     background-color: transparent !important;
@@ -93,6 +87,23 @@ $ui_rstudio_dialog_select_foreground: $ui_rstudio_dialog_foreground !default;
     color: $ui_rstudio_dialog_button_foreground !important;
     border: none !important;
     box-shadow: none !important;
+  }
+
+  .gwt-DialogBox .dialogContent {
+    [id^="rstudio_label"][aria-selected="true"],
+    [id^="rstudio_label"][aria-selected="true"] td,
+    .gwt-TabLayoutPanelTab-selected {
+      background-color: $ui_rstudio_dialog_selected_background !important;
+      border-color: $ui_rstudio_dialog_selected_background !important;
+      color: $ui_rstudio_dialog_selected_foreground !important;
+    }
+
+    .gwt-TabLayoutPanelTab-selected .gwt-Label {
+      color: $ui_rstudio_dialog_selected_foreground !important;
+    }
+    [id^="rstudio_label"][aria-selected="true"] td .gwt-Label {
+      color: $ui_rstudio_dialog_selected_foreground !important;
+    }
   }
 
   .dialogContent button {
@@ -122,8 +133,12 @@ $ui_rstudio_dialog_select_foreground: $ui_rstudio_dialog_foreground !default;
   .dialogContent input[type="checkbox"][value="on"] {
     background: $ui_rstudio_dialog_checkbox_background !important;
     color: $ui_rstudio_dialog_checkbox_foreground !important;
-    ::before {
-      content: "\2713";
+    &::before {
+      content: "\2713" !important;
+      color: $ui_rstudio_dialog_checkbox_foreground !important;
+      vertical-align: top;
+      line-height: 1;
+      font-weight: 600;
     }
   }
   .dialogContent select {
