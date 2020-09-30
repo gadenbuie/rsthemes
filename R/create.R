@@ -185,7 +185,7 @@ rstheme <- function(
   check_sass_variable_list(theme_palette, "theme_palette")
 
   call_values <- as.list(match.call(expand.dots = FALSE))[-1]
-  call_values <- modifyList(as.list(formals()), call_values, keep.null = TRUE)
+  call_values <- utils::modifyList(as.list(formals()), call_values, keep.null = TRUE)
   fn_args_not_theme <- grep("^theme_", names(formals()), value = TRUE)
   fn_args_not_theme <- c(fn_args_not_theme, "...")
   theme_variables <- call_values[setdiff(names(call_values), fn_args_not_theme)]
