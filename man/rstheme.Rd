@@ -22,6 +22,7 @@ rstheme(
   theme_apply = TRUE,
   ui_rstudio_background = "darken($ui_background, 2\%)",
   ui_rstudio_foreground = "$ui_foreground",
+  ui_rstudio_border = "$ui_background",
   rmd_chunk_background = "darken($ui_background, 5\%)",
   ui_rstudio_tabs_inactive_background = "lighten($ui_rstudio_background, 2\%)",
   ui_rstudio_tabs_inactive_foreground = "transparentize($ui_foreground, 0.4)",
@@ -123,6 +124,8 @@ applied immediately.}
 \item{ui_rstudio_background}{Default: \verb{darken($ui_background, 2\%)}}
 
 \item{ui_rstudio_foreground}{Default: \verb{$ui_foreground}}
+
+\item{ui_rstudio_border}{Default: \verb{$ui_background}}
 
 \item{rmd_chunk_background}{Default: \verb{darken($ui_background, 5\%)}}
 
@@ -243,8 +246,6 @@ applied immediately.}
 \item{rmd_href}{Default: \verb{$code_reserved}}
 
 \item{rmd_href_background}{Default: \verb{$code_reserved_background}}
-
-\item{ui_rstudio_border}{Default: \verb{$ui_background}}
 }
 \value{
 Returns the CSS or SCSS (if \code{theme_as_sass} is \code{TRUE}). If

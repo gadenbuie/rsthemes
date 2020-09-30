@@ -121,6 +121,7 @@ rstheme <- function(
   theme_apply = TRUE,
   ui_rstudio_background = "darken($ui_background, 2%)",
   ui_rstudio_foreground = "$ui_foreground",
+  ui_rstudio_border = "$ui_background",
   rmd_chunk_background = "darken($ui_background, 5%)",
   ui_rstudio_tabs_inactive_background = "lighten($ui_rstudio_background, 2%)",
   ui_rstudio_tabs_inactive_foreground = "transparentize($ui_foreground, 0.4)",
