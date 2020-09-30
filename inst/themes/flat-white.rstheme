@@ -320,7 +320,8 @@
   background: #e4ddd2 !important;
 }
 
-.rstudio-themes-flat .rstudio-themes-default [role="banner"] + [role="navigation"] > table > tbody > tr > td {
+.rstudio-themes-flat .rstudio-themes-default [role="banner"] + [role="navigation"] > table > tbody > tr > td,
+.rstudio-themes-flat .rstudio-themes-default header + [role="navigation"] > table > tbody > tr > td {
   background: #e4ddd2;
   border-color: #f7f3ee;
 }

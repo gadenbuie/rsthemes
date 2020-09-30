@@ -315,7 +315,8 @@
   background: #FFFFFF !important;
 }
 
-.rstudio-themes-flat .rstudio-themes-default [role="banner"] + [role="navigation"] > table > tbody > tr > td {
+.rstudio-themes-flat .rstudio-themes-default [role="banner"] + [role="navigation"] > table > tbody > tr > td,
+.rstudio-themes-flat .rstudio-themes-default header + [role="navigation"] > table > tbody > tr > td {
   background: #FFFFFF;
   border-color: #FFFFFF;
 }
