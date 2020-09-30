@@ -351,8 +351,9 @@ rstheme_large_tabs <- function() {
 }
 
 #' @describeIn rstheme_partial Themes dialog windows, e.g. _Global Options_
-#' @param selected_background,selected_foreground,heading_foreground,help_foreground,button_foreground,button_background,button_border,button_hover_foreground,button_hover_background,button_hover_border,input_foreground,input_background,input_border
-#'   Additional colors for RStudio dialog boxes.
+#' @param selected_background,selected_foreground,heading_foreground,help_foreground,button_foreground,button_background,button_border,button_hover_foreground,button_hover_background,button_hover_border,input_foreground,input_background,input_border,checkbox_background,checkbox_foreground,select_background,select_foreground
+#'   Additional colors for RStudio dialog boxes, setting SCSS variables prefixed
+#'   with `$ui_rstudio_dialog_<argument>`.
 #' @export
 rstheme_dialog_options <- function(
   background = "$ui_rstudio_background",
@@ -370,7 +371,11 @@ rstheme_dialog_options <- function(
   button_hover_border = "$ui_rstudio_dialog_border",
   input_foreground = "$ui_rstudio_dialog_foreground",
   input_background = "$ui_rstudio_dialog_background",
-  input_border = "$ui_rstudio_dialog_border"
+  input_border = "$ui_rstudio_dialog_border",
+  checkbox_background = "lighten($ui_rstudio_dialog_background, 5%)",
+  checkbox_foreground = "$ui_rstudio_dialog_foreground",
+  select_background = "lighten($ui_rstudio_dialog_background, 5%)",
+  select_foreground = "$ui_rstudio_dialog_foreground"
 ) {
   structure(list(
     ui_rstudio_dialog_background = background,
@@ -388,7 +393,11 @@ rstheme_dialog_options <- function(
     ui_rstudio_dialog_button_hover_border = button_hover_border,
     ui_rstudio_dialog_input_foreground = input_foreground,
     ui_rstudio_dialog_input_background = input_background,
-    ui_rstudio_dialog_input_border = input_border
+    ui_rstudio_dialog_input_border = input_border,
+    ui_rstudio_dialog_checkbox_foreground = checkbox_foreground,
+    ui_rstudio_dialog_checkbox_background = checkbox_background,
+    ui_rstudio_dialog_select_background = select_background,
+    ui_rstudio_dialog_select_foreground = select_foreground
   ), class = c("_dialog-options", "rstheme_template", "list"))
 }
 

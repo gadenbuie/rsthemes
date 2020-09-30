@@ -49,7 +49,11 @@ rstheme_dialog_options(
   button_hover_border = "$ui_rstudio_dialog_border",
   input_foreground = "$ui_rstudio_dialog_foreground",
   input_background = "$ui_rstudio_dialog_background",
-  input_border = "$ui_rstudio_dialog_border"
+  input_border = "$ui_rstudio_dialog_border",
+  checkbox_background = "lighten($ui_rstudio_dialog_background, 5\%)",
+  checkbox_foreground = "$ui_rstudio_dialog_foreground",
+  select_background = "lighten($ui_rstudio_dialog_background, 5\%)",
+  select_foreground = "$ui_rstudio_dialog_foreground"
 )
 }
 \arguments{
@@ -61,7 +65,8 @@ rstheme_dialog_options(
 
 \item{foreground, background}{Foreground (text) or background color}
 
-\item{selected_background, selected_foreground, heading_foreground, help_foreground, button_foreground, button_background, button_border, button_hover_foreground, button_hover_background, button_hover_border, input_foreground, input_background, input_border}{Additional colors for RStudio dialog boxes.}
+\item{selected_background, selected_foreground, heading_foreground, help_foreground, button_foreground, button_background, button_border, button_hover_foreground, button_hover_background, button_hover_border, input_foreground, input_background, input_border, checkbox_background, checkbox_foreground, select_background, select_foreground}{Additional colors for RStudio dialog boxes, setting SCSS variables prefixed
+with \verb{$ui_rstudio_dialog_<argument>}.}
 }
 \description{
 Partial themes for RStudio to be included as desired in \code{\link[=rstheme]{rstheme()}}.
