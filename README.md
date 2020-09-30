@@ -167,6 +167,8 @@ rsthemes::remove_rsthemes("base16")
 - [Atom One Dark][one-dark]
 - [Atom One Light][one-light]
 - [Solarized] (Ethan Schoonover)
+- [Horizon Dark][horizon] (Jonathan Olaleye)
+- [a11y-syntax-highlighting][a11y-syntax] ([Eric Bailey](https://ericwbailey.design/))
 
 [base16]: https://github.com/chriskempson/base16
 [fairyfloss]: https://github.com/sailorhg/fairyfloss
@@ -176,6 +178,8 @@ rsthemes::remove_rsthemes("base16")
 [one-light]: https://github.com/atom/atom/tree/master/packages/one-light-syntax
 [one-dark]: https://github.com/atom/atom/tree/master/packages/one-dark-syntax
 [solarized]: https://ethanschoonover.com/solarized
+[horizon]: https://horizontheme.netlify.app/
+[a11y-syntax]: https://github.com/ericwbailey/a11y-syntax-highlighting
 
 ***
 

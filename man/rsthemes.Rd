@@ -48,10 +48,10 @@ IDE and the editor syntax. The themes are built from
 \href{https://sass-lang.org}{sass} templates into \code{.rstheme} files that,
 ultimately, contain the CSS files that provide the themes. The sass templates
 provide an easy-to-extend framework for customizing the look of RStudio. See
-\code{\link[=new_rstheme]{new_rstheme()}} for more information about creating your own theme. I've done
+\code{\link[=rstheme]{rstheme()}} for more information about creating your own theme. I've done
 my best to avoid hacky CSS rules wherever possible, and the themes are tested
 against the current production release of RStudio (version 1.2.1335 through
-1.3+ as of November 1, 2019). Please report any issues you encounter here:
+1.4+ as of September 30, 2020). Please report any issues you encounter here:
 \href{https://github.com/gadenbuie/rsthemes/issues}{github.com/gadenbuie/rsthemes/issues}.
 }
 \section{Functions}{
@@ -79,6 +79,8 @@ following colors palettes.
 \item \emph{\href{https://github.com/atom/atom/tree/master/packages/one-dark-syntax}{Atom One Dark}}
 \item \emph{\href{https://github.com/atom/atom/tree/master/packages/one-light-syntax}{Atom One Light}}
 \item \emph{\href{https://ethanschoonover.com/solarized}{Solarized}} (Ethan Schoonover)
+\item \emph{\href{https://horizontheme.netlify.app/}{Horizon Dark}} (Jonathan Olaleye)
+\item \emph{\href{https://github.com/ericwbailey/a11y-syntax-highlighting}{a11y-syntax-highlighting}} (\href{https://ericwbailey.design/}{Eric Bailey})
 }
 }
 

@@ -5,10 +5,10 @@
 #' [sass](https://sass-lang.org) templates into `.rstheme` files that,
 #' ultimately, contain the CSS files that provide the themes. The sass templates
 #' provide an easy-to-extend framework for customizing the look of RStudio. See
-#' [new_rstheme()] for more information about creating your own theme. I've done
+#' [rstheme()] for more information about creating your own theme. I've done
 #' my best to avoid hacky CSS rules wherever possible, and the themes are tested
 #' against the current production release of RStudio (version 1.2.1335 through
-#' 1.3+ as of November 1, 2019). Please report any issues you encounter here:
+#' 1.4+ as of September 30, 2020). Please report any issues you encounter here:
 #' [github.com/gadenbuie/rsthemes/issues](https://github.com/gadenbuie/rsthemes/issues).
 #'
 #' @section Palettes: \pkg{rsthemes} includes RStudio themes based on the
@@ -22,6 +22,9 @@
 #'   - _[Atom One Dark][one-dark]_
 #'   - _[Atom One Light][one-light]_
 #'   - _[Solarized]_ (Ethan Schoonover)
+#'   - _[Horizon Dark][horizon]_ (Jonathan Olaleye)
+#'   - _[a11y-syntax-highlighting][a11y-syntax]_ ([Eric Bailey](https://ericwbailey.design/))
+#'
 #'
 #'   [base16]: https://github.com/chriskempson/base16
 #'   [fairyfloss]: https://github.com/sailorhg/fairyfloss
@@ -31,6 +34,8 @@
 #'   [one-light]: https://github.com/atom/atom/tree/master/packages/one-light-syntax
 #'   [one-dark]: https://github.com/atom/atom/tree/master/packages/one-dark-syntax
 #'   [solarized]: https://ethanschoonover.com/solarized
+#'   [horizon]: https://horizontheme.netlify.app/
+#'   [a11y-syntax]: https://github.com/ericwbailey/a11y-syntax-highlighting
 #' @name rsthemes
 NULL
 
