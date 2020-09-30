@@ -38,15 +38,15 @@ $ui_paren_6: darken(hsl(220, 100%, 73%), 10%); // blue
 
 
 // rstudio
-$ui_rstudio_background          : $base5;
-$ui_rstudio_foreground               : $base1;
-$ui_rstudio_tabs_inactive_background       : $base5;
-$ui_rstudio_tabs_inactive_foreground : $base2;
-$ui_completions_background      : $ui_background;
-$ui_completions_foreground           : $ui_foreground;
-$ui_completions_border          : $ui_bracket;
+$ui_rstudio_background: $base5;
+$ui_rstudio_foreground: $base1;
+$ui_rstudio_tabs_inactive_background: $base5;
+$ui_rstudio_tabs_inactive_foreground: $base2;
+$ui_completions_background: $ui_background;
+$ui_completions_foreground: $ui_foreground;
+$ui_completions_border: $ui_bracket;
 $ui_rstudio_scrollbar_background: $ui_background;
-$ui_rstudio_scrollbar_handle    : $rmd_chunk_background;
+$ui_rstudio_scrollbar_handle: $rmd_chunk_background;
 
 // R language colors
 $code_comment: $base3;
@@ -80,10 +80,15 @@ $rmd_href: $green-text;
 $rmd_href_background: $green-bg;
 
 // Dialog menus
-$ui_rstudio_dialog_selected_background: $ui_selection;
+$ui_rstudio_dialog_background: $ui_background;
+$ui_rstudio_dialog_foreground: $ui_foreground;
+$ui_rstudio_dialog_selected_background: mix($accent, $ui_background, 10%);
 $ui_rstudio_dialog_input_background: $base5;
 $ui_rstudio_dialog_heading_foreground: $accent;
 $ui_rstudio_dialog_help_foreground: $base2;
+$ui_rstudio_dialog_button_border: $ui_rstudio_background;
+$ui_rstudio_dialog_button_hover_background: $ui_rstudio_background;
+$ui_rstudio_dialog_button_hover_foreground: $ui_rstudio_foreground;
 
 @import "rstudio/_rstudio-light";
 
