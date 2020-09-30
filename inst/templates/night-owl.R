@@ -87,7 +87,16 @@ night_owl <- rstheme(
     item_selected_background = "mix($purple, $dark1, 50%)"
   ),
   rstheme_large_tabs(),
-  rstheme_dialog_options(),
+  rstheme_dialog_options(
+    selected_background = "mix($purple, $dark1, 30%)",
+    selected_foreground = "$light1",
+    input_foreground = "$light1",
+    input_background = "$dark1",
+    checkbox_foreground = "$code_value",
+    checkbox_background = "$dark1",
+    select_foreground = "$light1",
+    help_foreground = "$blue1"
+  ),
   rstheme_rainbow_parentheses(
     "$code_bracket", "$blue2", "$purple", "$orange", "$green-light", "$red", "$teal-light"
   ),
