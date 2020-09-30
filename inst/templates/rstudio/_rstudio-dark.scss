@@ -231,9 +231,12 @@ $ui_rstudio_is_dark: true;
     background: $ui_rstudio_background !important;
   }
   /* collapsed toolbar on rstudio server */
-  [role="banner"] + [role="navigation"] > table > tbody > tr > td {
-    background: $ui_rstudio_background;
-    border-color: $ui_rstudio_border;
+  [role="banner"] + [role="navigation"],
+  header + [role="navigation"] {
+    & > table > tbody > tr > td {
+      background: $ui_rstudio_background;
+      border-color: $ui_rstudio_border;
+    }
   }
   .rstudio-themes-border {
     border-color: $ui_rstudio_border;
