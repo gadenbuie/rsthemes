@@ -58,6 +58,7 @@ rstheme(
   ui_completions_background         = "$base00",
   ui_completions_border             = "$base00",
   ui_completions_foreground         = "$base08",
+  ui_completions_selected_foreground = "$base08",
   rstheme_command_palette(),
   rstheme_large_tabs(),
   rstheme_dialog_options(),
@@ -66,7 +67,7 @@ rstheme(
   ),
   '.rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
     .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
-      box-shadow: 0 2px 0 $red inset;
+      box-shadow: 0 3px 0 $red inset;
       border-radius: 0 !important;
 
       .gwt-Label {
