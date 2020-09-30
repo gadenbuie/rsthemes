@@ -2813,14 +2813,14 @@ input#rstudio_command_palette_search {
 .rstudio-themes-flat .dialogTop,
 .rstudio-themes-flat .dialogMiddle,
 .rstudio-themes-flat .dataGridHeader {
-  background: #e4ddd2 !important;
+  background: #f7f3ee !important;
   color: #605a52 !important;
 }
 
 .rstudio-themes-flat .dialogContent > table:first-child:last-child :not(button) > table, .rstudio-themes-flat .dialogContent > table:first-child:last-child :not(button) > table td {
-  background: #e4ddd2 !important;
+  background: #f7f3ee !important;
   color: #605a52 !important;
-  border-color: #e4ddd2 !important;
+  border-color: #f7f3ee !important;
 }
 
 .rstudio-themes-flat .dialogContent label.gwt-Label {
@@ -2836,23 +2836,16 @@ input#rstudio_command_palette_search {
 .rstudio-themes-flat .gwt-DialogBox-ModalDialog,
 .rstudio-themes-flat .dataGridHeader {
   /* outer border */
-  border-color: #dbd1c2 !important;
+  border-color: #efe7dc !important;
 }
 
 .rstudio-themes-flat .dialogContent > table div,
 .rstudio-themes-flat .dialogContent [id^="rstudio_label_"][id$="_panel"] table tbody td {
-  border-color: #dbd1c2;
+  border-color: #efe7dc;
 }
 
 .rstudio-themes-flat .dialogContent .gwt-TabLayoutPanelTab {
-  border-color: #dbd1c2 !important;
-}
-
-.rstudio-themes-flat [id^="rstudio_label"][aria-selected="true"],
-.rstudio-themes-flat .dialogContent .gwt-TabLayoutPanelTab-selected {
-  background-color: rgba(106, 77, 255, 0.1) !important;
-  border-color: rgba(106, 77, 255, 0.1) !important;
-  color: #605a52 !important;
+  border-color: #efe7dc !important;
 }
 
 .rstudio-themes-flat [id^="rstudio_label"][aria-selected="true"] div,
@@ -2863,16 +2856,32 @@ input#rstudio_command_palette_search {
 .rstudio-themes-flat .dialogContent .gwt-Button-DialogAction table,
 .rstudio-themes-flat .dialogContent .gwt-Button-DialogAction table td,
 .rstudio-themes-flat .dialogContent button table {
-  background: #e4ddd2 !important;
+  background: #f7f3ee !important;
   color: #605a52 !important;
   border: none !important;
   box-shadow: none !important;
 }
 
+.rstudio-themes-flat .gwt-DialogBox .dialogContent [id^="rstudio_label"][aria-selected="true"],
+.rstudio-themes-flat .gwt-DialogBox .dialogContent [id^="rstudio_label"][aria-selected="true"] td,
+.rstudio-themes-flat .gwt-DialogBox .dialogContent .gwt-TabLayoutPanelTab-selected {
+  background-color: #e9e2ef !important;
+  border-color: #e9e2ef !important;
+  color: #605a52 !important;
+}
+
+.rstudio-themes-flat .gwt-DialogBox .dialogContent .gwt-TabLayoutPanelTab-selected .gwt-Label {
+  color: #605a52 !important;
+}
+
+.rstudio-themes-flat .gwt-DialogBox .dialogContent [id^="rstudio_label"][aria-selected="true"] td .gwt-Label {
+  color: #605a52 !important;
+}
+
 .rstudio-themes-flat .dialogContent button {
   border-width: 2px !important;
   border-style: solid !important;
-  border-color: #dbd1c2 !important;
+  border-color: #efe7dc !important;
   border-radius: 3px !important;
 }
 
@@ -2882,28 +2891,32 @@ input#rstudio_command_palette_search {
 .rstudio-themes-flat .dialogContent button:hover table,
 .rstudio-themes-flat .dialogContent .gwt-Button:hover > table > tbody > tr > td,
 .rstudio-themes-flat .dialogContent button:hover table div {
-  color: #7c746a !important;
-  background: #f7f5f2 !important;
-  border-color: #dbd1c2 !important;
+  color: #605a52 !important;
+  background: #e4ddd2 !important;
+  border-color: #efe7dc !important;
 }
 
 .rstudio-themes-flat .dialogContent input {
   background: #e4ddd2 !important;
   color: #605a52 !important;
-  border-color: #dbd1c2 !important;
+  border-color: #efe7dc !important;
 }
 
 .rstudio-themes-flat .dialogContent input[type="checkbox"][value="on"] {
-  background: #eee9e2 !important;
+  background: white !important;
   color: #605a52 !important;
 }
 
-.rstudio-themes-flat .dialogContent input[type="checkbox"][value="on"] ::before {
-  content: "\2713";
+.rstudio-themes-flat .dialogContent input[type="checkbox"][value="on"]::before {
+  content: "\2713" !important;
+  color: #605a52 !important;
+  vertical-align: top;
+  line-height: 1;
+  font-weight: 600;
 }
 
 .rstudio-themes-flat .dialogContent select {
-  background: #eee9e2 !important;
+  background: white !important;
   color: #605a52 !important;
 }
 

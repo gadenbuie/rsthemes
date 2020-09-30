@@ -345,7 +345,7 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 .rstudio-themes-flat .popupMiddleCenter .item.item-selected,
 .rstudio-themes-flat .menuPopupMiddleCenter .item.item-selected,
 .rstudio-themes-flat .suggestPopupMiddleCenter .item.item-selected {
-  color: #8A8CA8 !important;
+  color: #c4c6d4 !important;
   background: #232530 !important;
 }
 
@@ -389,7 +389,7 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 .rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected,
 .rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected > table {
   background: #232530;
-  color: #8A8CA8;
+  color: #c4c6d4;
 }
 
 /* datagrid */
@@ -2654,7 +2654,7 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 .rstudio-themes-flat .gwt-TabLayoutPanelTab-selected .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
-  box-shadow: 0 2px 0 #e95678 inset;
+  box-shadow: 0 3px 0 #e95678 inset;
   border-radius: 0 !important;
 }
 
@@ -2796,13 +2796,6 @@ input#rstudio_command_palette_search {
   border-color: #21212a !important;
 }
 
-.rstudio-themes-flat [id^="rstudio_label"][aria-selected="true"],
-.rstudio-themes-flat .dialogContent .gwt-TabLayoutPanelTab-selected {
-  background-color: #21212a !important;
-  border-color: #21212a !important;
-  color: #acafc3 !important;
-}
-
 .rstudio-themes-flat [id^="rstudio_label"][aria-selected="true"] div,
 .rstudio-themes-flat .dialogContent .gwt-TabLayoutPanelTab-selected div {
   background-color: transparent !important;
@@ -2815,6 +2808,22 @@ input#rstudio_command_palette_search {
   color: #acafc3 !important;
   border: none !important;
   box-shadow: none !important;
+}
+
+.rstudio-themes-flat .gwt-DialogBox .dialogContent [id^="rstudio_label"][aria-selected="true"],
+.rstudio-themes-flat .gwt-DialogBox .dialogContent [id^="rstudio_label"][aria-selected="true"] td,
+.rstudio-themes-flat .gwt-DialogBox .dialogContent .gwt-TabLayoutPanelTab-selected {
+  background-color: #21212a !important;
+  border-color: #21212a !important;
+  color: #acafc3 !important;
+}
+
+.rstudio-themes-flat .gwt-DialogBox .dialogContent .gwt-TabLayoutPanelTab-selected .gwt-Label {
+  color: #acafc3 !important;
+}
+
+.rstudio-themes-flat .gwt-DialogBox .dialogContent [id^="rstudio_label"][aria-selected="true"] td .gwt-Label {
+  color: #acafc3 !important;
 }
 
 .rstudio-themes-flat .dialogContent button {
@@ -2846,8 +2855,12 @@ input#rstudio_command_palette_search {
   color: #acafc3 !important;
 }
 
-.rstudio-themes-flat .dialogContent input[type="checkbox"][value="on"] ::before {
-  content: "\2713";
+.rstudio-themes-flat .dialogContent input[type="checkbox"][value="on"]::before {
+  content: "\2713" !important;
+  color: #acafc3 !important;
+  vertical-align: top;
+  line-height: 1;
+  font-weight: 600;
 }
 
 .rstudio-themes-flat .dialogContent select {

@@ -2772,7 +2772,7 @@ input#rstudio_command_palette_search {
 }
 
 .rstudio-themes-flat .dialogContent label.gwt-Label {
-  color: #addb67 !important;
+  color: #5ca7e4 !important;
 }
 
 .rstudio-themes-flat .dialogContent .gwt-TabLayoutPanelContent :not(label).gwt-Label {
@@ -2796,13 +2796,6 @@ input#rstudio_command_palette_search {
   border-color: #021d2f !important;
 }
 
-.rstudio-themes-flat [id^="rstudio_label"][aria-selected="true"],
-.rstudio-themes-flat .dialogContent .gwt-TabLayoutPanelTab-selected {
-  background-color: #021d2f !important;
-  border-color: #021d2f !important;
-  color: #6c7a89 !important;
-}
-
 .rstudio-themes-flat [id^="rstudio_label"][aria-selected="true"] div,
 .rstudio-themes-flat .dialogContent .gwt-TabLayoutPanelTab-selected div {
   background-color: transparent !important;
@@ -2815,6 +2808,22 @@ input#rstudio_command_palette_search {
   color: #6c7a89 !important;
   border: none !important;
   box-shadow: none !important;
+}
+
+.rstudio-themes-flat .gwt-DialogBox .dialogContent [id^="rstudio_label"][aria-selected="true"],
+.rstudio-themes-flat .gwt-DialogBox .dialogContent [id^="rstudio_label"][aria-selected="true"] td,
+.rstudio-themes-flat .gwt-DialogBox .dialogContent .gwt-TabLayoutPanelTab-selected {
+  background-color: #3c3b62 !important;
+  border-color: #3c3b62 !important;
+  color: #d6deeb !important;
+}
+
+.rstudio-themes-flat .gwt-DialogBox .dialogContent .gwt-TabLayoutPanelTab-selected .gwt-Label {
+  color: #d6deeb !important;
+}
+
+.rstudio-themes-flat .gwt-DialogBox .dialogContent [id^="rstudio_label"][aria-selected="true"] td .gwt-Label {
+  color: #d6deeb !important;
 }
 
 .rstudio-themes-flat .dialogContent button {
@@ -2836,23 +2845,27 @@ input#rstudio_command_palette_search {
 }
 
 .rstudio-themes-flat .dialogContent input {
-  background: #010E17 !important;
-  color: #6c7a89 !important;
+  background: #011627 !important;
+  color: #d6deeb !important;
   border-color: #021d2f !important;
 }
 
 .rstudio-themes-flat .dialogContent input[type="checkbox"][value="on"] {
-  background: #021d2f !important;
-  color: #6c7a89 !important;
+  background: #011627 !important;
+  color: #addb67 !important;
 }
 
-.rstudio-themes-flat .dialogContent input[type="checkbox"][value="on"] ::before {
-  content: "\2713";
+.rstudio-themes-flat .dialogContent input[type="checkbox"][value="on"]::before {
+  content: "\2713" !important;
+  color: #addb67 !important;
+  vertical-align: top;
+  line-height: 1;
+  font-weight: 600;
 }
 
 .rstudio-themes-flat .dialogContent select {
   background: #021d2f !important;
-  color: #6c7a89 !important;
+  color: #d6deeb !important;
 }
 
 /* Rainbow Parenthesis */
