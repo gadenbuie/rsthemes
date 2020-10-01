@@ -1,0 +1,19 @@
+The rsthemes package includes a couple helper functions for exploring the themes.
+
+``` r
+# list installed themes
+rsthemes::list_rsthemes()
+
+# Try all themes
+rsthemes::try_rsthemes()
+
+# Try just the light, dark, or base16 themes, e.g.
+rsthemes::try_rsthemes("light")
+```
+
+Use `rstudioapi::applyTheme()` to activate a theme from the R console, or use *Tools* > *Global Options* > *Appearance* to interactively select a theme. 
+
+``` r
+# Use a theme
+rstudioapi::applyTheme("One Dark {rsthemes}")
+```

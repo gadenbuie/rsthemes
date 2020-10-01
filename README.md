@@ -1,14 +1,22 @@
-<p align=center>
-  <img src="https://raw.githubusercontent.com/gadenbuie/rsthemes/assets/rsthemes.gif">
-  <h1 align="center">{rsthemes}</h1>
+
+<p align="center">
+
+<img src="https://raw.githubusercontent.com/gadenbuie/rsthemes/assets/rsthemes.gif">
+
+<h1 align="center">
+
+{rsthemes}
+
+</h1>
+
 </p>
 
 <!-- badges: start -->
-[![](https://img.shields.io/badge/rstudio->=1.2.1335-%2381A9D7.svg)](https://www.rstudio.com/products/rstudio/)
+
+[![](https://img.shields.io/badge/rstudio-%3E=1.2.1335-%2381A9D7.svg)](https://www.rstudio.com/products/rstudio/)
 ![](https://www.r-pkg.org/badges/version/rsthemes)
 ![](https://img.shields.io/badge/lifecycle-maturing-blue.svg)
 <!-- badges: end -->
-
 
 ## Installation
 
@@ -25,7 +33,8 @@ Then, install the included, hand-crafted themes with:
 rsthemes::install_rsthemes()
 ```
 
-or you can install the themes plus an additional set of [base16-based themes](https://github.com/chriskempson/base16) with
+or you can install the themes plus an additional set of [base16-based
+themes](https://github.com/chriskempson/base16) with
 
 ``` r
 rsthemes::install_rsthemes(include_base16 = TRUE)
@@ -33,7 +42,8 @@ rsthemes::install_rsthemes(include_base16 = TRUE)
 
 ## Usage
 
-The rsthemes package includes a couple helper functions for exploring the themes.
+The rsthemes package includes a couple helper functions for exploring
+the themes.
 
 ``` r
 # list installed themes
@@ -46,7 +56,9 @@ rsthemes::try_rsthemes()
 rsthemes::try_rsthemes("light")
 ```
 
-Use `rstudioapi::applyTheme()` to activate a theme from the R console, or use *Tools* > *Global Options* > *Appearance* to interactively select a theme. 
+Use `rstudioapi::applyTheme()` to activate a theme from the R console,
+or use *Tools* \> *Global Options* \> *Appearance* to interactively
+select a theme.
 
 ``` r
 # Use a theme
@@ -55,17 +67,24 @@ rstudioapi::applyTheme("One Dark {rsthemes}")
 
 ## Easy Theme Switching
 
-**rsthemes** includes RStudio addins and functions to... <a name="automatic--light-and--dark-mode" />
+**rsthemes** includes RStudio addins and functions to…
+<a name="automatic--light-and--dark-mode" />
 
-- &#x1F305; **Toggle Dark Mode**<br>Switch between two preferred dark and light themes
+  - 🌅 **Toggle Dark Mode**<br>Switch between two preferred dark and
+    light themes
 
-- &#x1F303; **Auto Dark Mode**<br>Automatically choose a dark or light theme by time of day
+  - 🌃 **Auto Dark Mode**<br>Automatically choose a dark or light theme
+    by time of day
 
-- &#x2764;&#xFE0F; **Favorite Themes**<br>Switch between a few of your favorite themes
+  - ❤️ **Favorite Themes**<br>Switch between a few of your favorite
+    themes
 
 #### Choose Your Preferred Themes
 
-First, set a default light and dark theme. For your current R sessions, you can use the **Set Default Light Theme to Current** addin (or the corresponding dark theme addin), or you can call the `set_theme_light()` or `set_theme_dark()` functions:
+First, set a default light and dark theme. For your current R sessions,
+you can use the **Set Default Light Theme to Current** addin (or the
+corresponding dark theme addin), or you can call the `set_theme_light()`
+or `set_theme_dark()` functions:
 
 ``` r
 # Set current theme to default light or dark theme
@@ -77,9 +96,10 @@ rsthemes::set_theme_light("One Light {rsthemes}")
 rsthemes::set_theme_dark("One Dark {rsthemes}")
 ```
 
-To create a list of your **favorite** themes, you can use `set_theme_favorite()`.
+To create a list of your **favorite** themes, you can use
+`set_theme_favorite()`.
 
-```r
+``` r
 # Add current theme to your list of favorites
 rsthemes::set_theme_favorite()
 
@@ -89,9 +109,12 @@ rsthemes::set_theme_favorite(
 )
 ```
 
-These functions only save your preferences for the _current_ R session. To set these defaults for all R sessions, add your preferences to your `~/.Rprofile`. (You can use `usethis::edit_r_profile()` to quickly open your `~/.Rprofile` for editing.)
+These functions only save your preferences for the *current* R session.
+To set these defaults for all R sessions, add your preferences to your
+`~/.Rprofile`. (You can use `usethis::edit_r_profile()` to quickly open
+your `~/.Rprofile` for editing.)
 
-```r
+``` r
 # ~/.Rprofile
 if (interactive()) {
   rsthemes::set_theme_light("GitHub {rsthemes}")
@@ -106,7 +129,7 @@ if (interactive()) {
 
 You can also set the following global options directly.
 
-```r
+``` r
 # ~/.Rprofile
 options(
   rsthemes.theme_light = "Nord Snow Storm {rsthemes}",
@@ -117,20 +140,37 @@ options(
 
 ### Toggle Your Favorite Themes
 
-Use the **Next Favorite Theme** addin to walk through your list of favorite themes. Use the _Modify Keyboard Shortcuts..._ dialog in the _Tools_ menu of RStudio to create a keyboard shortcut to make it easy to quickly switch themes — I use <kbd>Ctrl</kbd>+ <kbd>Alt</kbd> + <kbd>N</kbd>. You can also manually call `use_theme_favorite()` to use the next theme in the your favorites list.
+Use the **Next Favorite Theme** addin to walk through your list of
+favorite themes. Use the *Modify Keyboard Shortcuts…* dialog in the
+*Tools* menu of RStudio to create a keyboard shortcut to make it easy to
+quickly switch themes — I use <kbd>Ctrl</kbd>+ <kbd>Alt</kbd> +
+<kbd>N</kbd>. You can also manually call `use_theme_favorite()` to use
+the next theme in the your favorites list.
 
-Each time you run the addin, RStudio switches to the next theme in your favorites list. This is great if you have a few themes that you use in various contexts. For example, I have my personal favorite themes plus a few themes that work well during class or presentation sessions.
-
+Each time you run the addin, RStudio switches to the next theme in your
+favorites list. This is great if you have a few themes that you use in
+various contexts. For example, I have my personal favorite themes plus a
+few themes that work well during class or presentation sessions.
 
 ### Automatic or Manual Light/Dark Mode
 
-Use the **Toggle Dark Mode** addin to switch between your default light and dark themes. You can even set a keyboard shortcut in RStudio — I used <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>D</kbd> — to toggle dark mode.
+Use the **Toggle Dark Mode** addin to switch between your default light
+and dark themes. You can even set a keyboard shortcut in RStudio — I
+used <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>D</kbd> — to toggle dark
+mode.
 
-You can also automatically choose the dark or light theme by time of day, using the included **Auto Choose Dark or Light Theme** addin, which requires that you've set your preferred light/dark themes (see above).
+You can also automatically choose the dark or light theme by time of
+day, using the included **Auto Choose Dark or Light Theme** addin, which
+requires that you’ve set your preferred light/dark themes (see above).
 
-If you would like to automatically choose the dark or light theme by time of day during each new session, you can call `rsthemes::use_theme_auto()` in your `~/.Rprofile`. For best results, use the following template in your `~/.Rprofile` to declare your preferred dark and light themes and to choose the correct style when your R session reloads.
+If you would like to automatically choose the dark or light theme by
+time of day during each new session, you can call
+`rsthemes::use_theme_auto()` in your `~/.Rprofile`. For best results,
+use the following template in your `~/.Rprofile` to declare your
+preferred dark and light themes and to choose the correct style when
+your R session reloads.
 
-```r
+``` r
 if (interactive() && requireNamespace("rsthemes", quietly = TRUE)) {
   # Set preferred themes if not handled elsewhere..
   rsthemes::set_theme_light("One Light {rsthemes}")  # light theme
@@ -159,30 +199,27 @@ rsthemes::remove_rsthemes("base16")
 
 ### Palettes
 
-- [base16] (Various Authors)
-- [Fairyfloss] ([Amy Wibowo (sailorhg)](https://github.com/sailorhg))
-- [Flat White][flat-white] ([Dmitry Biletskyy](https://github.com/biletskyy))
-- [Nord] ([Sven Greb](https://www.svengreb.de/))
-- [Oceanic Plus][oceanic-plus] ([Marco Scannadinari](https://github.com/marcoms))
-- [Atom One Dark][one-dark]
-- [Atom One Light][one-light]
-- [Solarized] (Ethan Schoonover)
-- [Horizon Dark][horizon] (Jonathan Olaleye)
-- [a11y-syntax-highlighting][a11y-syntax] ([Eric Bailey](https://ericwbailey.design/))
+  - [base16](https://github.com/chriskempson/base16) (Various Authors)
+  - [Fairyfloss](https://github.com/sailorhg/fairyfloss) ([Amy Wibowo
+    (sailorhg)](https://github.com/sailorhg))
+  - [Flat White](https://github.com/biletskyy/flatwhite-syntax) ([Dmitry
+    Biletskyy](https://github.com/biletskyy))
+  - [Nord](https://github.com/arcticicestudio/nord) ([Sven
+    Greb](https://www.svengreb.de/))
+  - [Oceanic Plus](https://github.com/marcoms/oceanic-plus) ([Marco
+    Scannadinari](https://github.com/marcoms))
+  - [Atom One
+    Dark](https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
+  - [Atom One
+    Light](https://github.com/atom/atom/tree/master/packages/one-light-syntax)
+  - [Solarized](https://ethanschoonover.com/solarized) (Ethan
+    Schoonover)
+  - [Horizon Dark](https://horizontheme.netlify.app/) (Jonathan Olaleye)
+  - [a11y-syntax-highlighting](https://github.com/ericwbailey/a11y-syntax-highlighting)
+    ([Eric Bailey](https://ericwbailey.design/))
 
-[base16]: https://github.com/chriskempson/base16
-[fairyfloss]: https://github.com/sailorhg/fairyfloss
-[flat-white]: https://github.com/biletskyy/flatwhite-syntax
-[nord]: https://github.com/arcticicestudio/nord
-[oceanic-plus]: https://github.com/marcoms/oceanic-plus
-[one-light]: https://github.com/atom/atom/tree/master/packages/one-light-syntax
-[one-dark]: https://github.com/atom/atom/tree/master/packages/one-dark-syntax
-[solarized]: https://ethanschoonover.com/solarized
-[horizon]: https://horizontheme.netlify.app/
-[a11y-syntax]: https://github.com/ericwbailey/a11y-syntax-highlighting
+-----
 
-***
-
-Please note that the 'rsthemes' project is released with a
-[Contributor Code of Conduct](CODE_OF_CONDUCT.md).
-By contributing to this project, you agree to abide by its terms.
+Please note that the ‘rsthemes’ project is released with a [Contributor
+Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project,
+you agree to abide by its terms.

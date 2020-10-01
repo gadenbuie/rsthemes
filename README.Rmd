@@ -1,0 +1,49 @@
+---
+output: github_document
+---
+
+<p align=center>
+  <img src="https://raw.githubusercontent.com/gadenbuie/rsthemes/assets/rsthemes.gif">
+  <h1 align="center">{rsthemes}</h1>
+</p>
+
+<!-- badges: start -->
+[![](https://img.shields.io/badge/rstudio->=1.2.1335-%2381A9D7.svg)](https://www.rstudio.com/products/rstudio/)
+![](https://www.r-pkg.org/badges/version/rsthemes)
+![](https://img.shields.io/badge/lifecycle-maturing-blue.svg)
+<!-- badges: end -->
+
+
+## Installation
+
+```{r child="man/fragments/installation.Rmd"}
+```
+
+## Usage
+
+```{r child="man/fragments/usage.Rmd"}
+```
+
+## Easy Theme Switching
+
+```{r child="man/fragments/theme-switching.Rmd"}
+```
+
+## Uninstall
+
+```{r child="man/fragments/uninstall.Rmd"}
+```
+
+## Thanks and Theme Credits
+
+### Palettes
+
+```{r child="man/fragments/palettes.Rmd"}
+```
+
+
+***
+
+Please note that the 'rsthemes' project is released with a
+[Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+By contributing to this project, you agree to abide by its terms.
