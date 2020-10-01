@@ -1,3 +1,23 @@
+# rsthemes 0.1.0 (2020-10-01)
+
+* Added `rstheme()`, an R function for creating new themes!
+
+* Three new themes:
+
+  * Horizon Dark ([source](
+[horizon]: https://horizontheme.netlify.app/))
+  * a11y-light and a11y-dark ([source](https://github.com/ericwbailey/a11y-syntax-highlighting))
+  * Night Owl ([source](https://github.com/sdras/night-owl-vscode-theme) and [night-owlish](https://github.com/batpigandme/night-owlish))
+  
+* Added support for automatically choosing light/dark theme by sunrise/sunset
+  times using {suncalc} and {ipapi}. (thanks @pat-s, #33)
+  
+* Added support for full dialog menu theming via `rstheme_dialog_options()`. 
+  Full dialog theming is used in _Flat White_, _Horizon Dark_ and _Night Owl_.
+  
+* Added support for enlarging tabs via `rstheme_large_tabs()`, on display in
+  _Flat White_, _Horizon Dark_ and _Night Owl_.
+
 # rsthemes 0.0.11 (2020-07-28)
 
 * Customized rainbow parenthesis colors for all themes (#28)
