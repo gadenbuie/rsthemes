@@ -1,0 +1,148 @@
+$ui_rstudio_dialog_background: $ui_rstudio_background !default;
+$ui_rstudio_dialog_foreground: $ui_rstudio_foreground !default;
+$ui_rstudio_dialog_border: if($ui_rstudio_is_dark, lighten($ui_rstudio_dialog_background, 5%), darken($ui_rstudio_dialog_background, 5%)) !default;
+
+// selected menu item
+$ui_rstudio_dialog_selected_background: $ui_rstudio_dialog_border !default;
+$ui_rstudio_dialog_selected_foreground: $ui_rstudio_dialog_foreground !default;
+
+// accents
+$ui_rstudio_dialog_heading_foreground: $code_function !default;
+$ui_rstudio_dialog_help_foreground: $code_value !default;
+
+// buttons
+$ui_rstudio_dialog_button_foreground: $ui_rstudio_dialog_foreground !default;
+$ui_rstudio_dialog_button_background: $ui_rstudio_dialog_background !default;
+$ui_rstudio_dialog_button_border: $ui_rstudio_dialog_border !default;
+$ui_rstudio_dialog_button_hover_foreground: lighten($ui_rstudio_dialog_button_foreground, 10%) !default;
+$ui_rstudio_dialog_button_hover_background: lighten($ui_rstudio_dialog_button_background, 10%) !default;
+$ui_rstudio_dialog_button_hover_border: $ui_rstudio_dialog_border !default;
+
+// inputs
+$ui_rstudio_dialog_input_foreground: $ui_rstudio_dialog_foreground !default;
+$ui_rstudio_dialog_input_background: $ui_rstudio_dialog_background !default;
+$ui_rstudio_dialog_input_border: $ui_rstudio_dialog_border !default;
+
+// inputs
+$ui_rstudio_dialog_checkbox_background: lighten($ui_rstudio_dialog_background, 5%) !default;
+$ui_rstudio_dialog_checkbox_foreground: $ui_rstudio_dialog_foreground !default;
+$ui_rstudio_dialog_select_background: lighten($ui_rstudio_dialog_background, 5%) !default;
+$ui_rstudio_dialog_select_foreground: $ui_rstudio_dialog_foreground !default;
+
+.rstudio-themes-flat {
+  [id^="rstudio_dialog"],
+  :not(.gwt-MenuItem-selected):not(.gwt-MenuItem) > [id^="rstudio_label"],
+  .dialogContent > table div,
+  .dialogContent [id^="rstudio_label_"][id$="_panel"] table td,
+  .dialogTopCenter,
+  .dialogTop,
+  .dialogMiddle,
+  .dataGridHeader {
+    background: $ui_rstudio_dialog_background !important;
+    color: $ui_rstudio_dialog_foreground !important;
+  }
+
+  .dialogContent > table:first-child:last-child :not(button) > table {
+    &, td {
+      background: $ui_rstudio_dialog_background !important;
+      color: $ui_rstudio_dialog_foreground !important;
+      border-color: $ui_rstudio_dialog_background !important;
+    }
+  }
+
+  .dialogContent label.gwt-Label {
+    color: $ui_rstudio_dialog_help_foreground !important;
+  }
+
+  .dialogContent .gwt-TabLayoutPanelContent :not(label).gwt-Label {
+    color: $ui_rstudio_dialog_heading_foreground !important;
+  }
+
+  [id^="rstudio_dialog"],
+  .dialogTop .dialogTopCenter,
+  .gwt-DialogBox-ModalDialog,
+  .dataGridHeader {
+    /* outer border */
+    border-color: $ui_rstudio_dialog_border !important;
+  }
+
+  .dialogContent > table div,
+  .dialogContent [id^="rstudio_label_"][id$="_panel"] table tbody td {
+    border-color: $ui_rstudio_dialog_border;
+  }
+
+  .dialogContent .gwt-TabLayoutPanelTab {
+    border-color: $ui_rstudio_dialog_border !important;
+  }
+
+  [id^="rstudio_label"][aria-selected="true"] div,
+  .dialogContent .gwt-TabLayoutPanelTab-selected div {
+    background-color: transparent !important;
+  }
+
+  .dialogContent .gwt-Button-DialogAction table,
+  .dialogContent .gwt-Button-DialogAction table td,
+  .dialogContent button table {
+    background: $ui_rstudio_dialog_button_background !important;
+    color: $ui_rstudio_dialog_button_foreground !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .gwt-DialogBox .dialogContent {
+    [id^="rstudio_label"][aria-selected="true"],
+    [id^="rstudio_label"][aria-selected="true"] td,
+    .gwt-TabLayoutPanelTab-selected {
+      background-color: $ui_rstudio_dialog_selected_background !important;
+      border-color: $ui_rstudio_dialog_selected_background !important;
+      color: $ui_rstudio_dialog_selected_foreground !important;
+    }
+
+    .gwt-TabLayoutPanelTab-selected .gwt-Label {
+      color: $ui_rstudio_dialog_selected_foreground !important;
+    }
+    [id^="rstudio_label"][aria-selected="true"] td .gwt-Label {
+      color: $ui_rstudio_dialog_selected_foreground !important;
+    }
+  }
+
+  .dialogContent button {
+    border-width: 2px !important;
+    border-style: solid !important;
+    border-color: $ui_rstudio_dialog_button_hover_border !important;
+    border-radius: 3px !important;
+  }
+
+  .dialogContent .gwt-Button-DialogAction:hover table,
+  .dialogContent .gwt-Button-DialogAction:hover table div,
+  .dialogContent button:hover,
+  .dialogContent button:hover table,
+  .dialogContent .gwt-Button:hover > table > tbody > tr > td ,
+  .dialogContent button:hover table div {
+    color: $ui_rstudio_dialog_button_hover_foreground !important;
+    background: $ui_rstudio_dialog_button_hover_background !important;
+    border-color: $ui_rstudio_dialog_button_hover_border !important;
+  }
+
+  .dialogContent input {
+    background: $ui_rstudio_dialog_input_background !important;
+    color: $ui_rstudio_dialog_input_foreground !important;
+    border-color: $ui_rstudio_dialog_input_border !important;
+  }
+
+  .dialogContent input[type="checkbox"][value="on"] {
+    background: $ui_rstudio_dialog_checkbox_background !important;
+    color: $ui_rstudio_dialog_checkbox_foreground !important;
+    &::before {
+      content: "\2713" !important;
+      color: $ui_rstudio_dialog_checkbox_foreground !important;
+      vertical-align: top;
+      line-height: 1;
+      font-weight: 600;
+    }
+  }
+  .dialogContent select {
+    background: $ui_rstudio_dialog_select_background !important;
+    color: $ui_rstudio_dialog_select_foreground !important;
+  }
+}

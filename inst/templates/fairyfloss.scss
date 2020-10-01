@@ -4,57 +4,57 @@
 @import "palettes/_fairyfloss.scss";
 
 // primary UI colors
-$ui-background           : $syntax-background-color;
-$ui-foreground           : $syntax-text-color;
-$ui-code-chunk-background: darken($ui-background, 2%);
-$ui-selection            : darken($ui-background, 10%);
-$ui-cursor               : #c2ffdf;
-$ui-cursor-normal-mode   : $ui-cursor;
-$ui-margin-line          : transparentize($ui-selection, 0.5);
-$ui-gutter-color         : transparentize($syntax-gutter-text-color, 0.5);
-$ui-gutter-background    : $syntax-gutter-background-color;
+$ui_background           : $syntax-background-color;
+$ui_foreground           : $syntax-text-color;
+$rmd_chunk_background: darken($ui_background, 2%);
+$ui_selection            : darken($ui_background, 10%);
+$ui_cursor               : #c2ffdf;
+$ui_cursor_normal_mode   : $ui_cursor;
+$ui_margin_line          : transparentize($ui_selection, 0.5);
+$ui_gutter_foreground         : transparentize($syntax-gutter-text-color, 0.5);
+$ui_gutter_background    : $syntax-gutter-background-color;
 
 // less common UI colors
-$ui-line-active           : $ui-code-chunk-background;
-$ui-line-active-gutter    : $syntax-gutter-text-color-selected;
-$ui-fold-arrows-color     : $ui-foreground;
-$ui-fold-arrows-background: #AE81FF;
+$ui_line_active           : $rmd_chunk_background;
+$ui_line_active_gutter    : $syntax-gutter-text-color-selected;
+$ui_fold_arrows_foreground     : $ui_foreground;
+$ui_fold_arrows_background: #AE81FF;
 
 // rstudio
-$ui-rstudio-background   : darken($ui-background, 15%);
-$ui-rstudio-tabs-inactive: darken($ui-background, 10%);
+$ui_rstudio_background   : darken($ui_background, 15%);
+$ui_rstudio_tabs_inactive_background: darken($ui_background, 10%);
 
 .rstudio-themes-dark-grey .rstheme_minimizedWindowObject table.rstheme_center {
-  background-color: $ui-rstudio-tabs-inactive !important;
+  background-color: $ui_rstudio_tabs_inactive_background !important;
 }
 
 // R language colors
-$rlang-string   : #ffea00;
-$rlang-function : #c2ffdf;
-$rlang-value    : #c5a3ff;
-$rlang-operator : #ffb8d1;
-$rlang-message  : #c2ffdf;
-$rlang-comment  : #e6c000;
-$rlang-reserved : #C5A3FF;
-$rlang-variable : #ff857f;
-$rlang-bracket  : $ui-foreground;
-$other-tag      : #f8f8f0;
-$rlang-namespace-font-style: italic;
+$code_string   : #ffea00;
+$code_function : #c2ffdf;
+$code_value    : #c5a3ff;
+$code_operator : #ffb8d1;
+$code_message  : #c2ffdf;
+$code_comment  : #e6c000;
+$code_reserved : #C5A3FF;
+$code_variable : #ff857f;
+$code_bracket  : $ui_foreground;
+$code_other      : #f8f8f0;
+$code_namespace_font_style: italic;
 
 // R Markdown
-$rmd-heading-weight: 600;
-$rmd-heading-color: #c2ffdf;
-$rmd-chunk-header: #fff352;
-$rmd-href: #ae81ff;
+$rmd_heading_weight: 600;
+$rmd_heading_foreground: #c2ffdf;
+$rmd_chunk_header: #fff352;
+$rmd_href: #ae81ff;
 
 // rainbow parens;
-$ui-paren-0: $rlang-message;        // cyan
-$ui-paren-1: $syntax-color-renamed; // blue
-$ui-paren-2: $syntax-color-added;   // green
-$ui-paren-3: $rlang-string;         // yellow
-$ui-paren-4: $rlang-variable;       // red
-$ui-paren-5: $syntax-color-removed; // magenta
-$ui-paren-6: $ui-foreground;        // white
+$ui_paren_0: $code_message;        // cyan
+$ui_paren_1: $syntax-color-renamed; // blue
+$ui_paren_2: $syntax-color-added;   // green
+$ui_paren_3: $code_string;         // yellow
+$ui_paren_4: $code_variable;       // red
+$ui_paren_5: $syntax-color-removed; // magenta
+$ui_paren_6: $ui_foreground;        // white
 
 @import "rstudio/_rstudio-dark", "rstudio/_rstudio-dark-flatter.scss";
 @import "rstudio/_components";
@@ -64,14 +64,14 @@ $ui-paren-6: $ui-foreground;        // white
 .xtermColor0 { color: $syntax-wrap-guide-color !important; }
 .xtermBgColor0 { background-color: $syntax-wrap-guide-color; }
 // red -- 1
-.xtermColor1 { color: $rlang-variable !important; }
-.xtermBgColor1 { background-color: $rlang-variable }
+.xtermColor1 { color: $code_variable !important; }
+.xtermBgColor1 { background-color: $code_variable }
 // green -- 2
 .xtermColor2 { color: $syntax-color-added !important; }
 .xtermBgColor2 { background-color: $syntax-color-added; }
 // yellow -- 3 {
-.xtermColor3 { color: $rlang-string !important; }
-.xtermBgColor3 { background-color: $rlang-string; }
+.xtermColor3 { color: $code_string !important; }
+.xtermBgColor3 { background-color: $code_string; }
 // blue -- 4
 .xtermColor4 { color: $syntax-color-renamed !important; }
 .xtermBgColor4 { background-color: $syntax-color-renamed; }
@@ -79,11 +79,12 @@ $ui-paren-6: $ui-foreground;        // white
 .xtermColor5 { color: $syntax-color-removed !important; }
 .xtermBgColor5 { background-color: $syntax-color-removed; }
 // cyan -- 6
-.xtermColor6 { color: $rlang-message !important; }
-.xtermBgColor6 { background-color: $rlang-message; }
+.xtermColor6 { color: $code_message !important; }
+.xtermBgColor6 { background-color: $code_message; }
 // white -- 7
-.xtermColor7 { color: $ui-foreground !important; }
-.xtermBgColor7 { background-color: $ui-foreground; }
+.xtermColor7 { color: $ui_foreground !important; }
+.xtermBgColor7 { background-color: $ui_foreground; }
 // gray -- 8
 .xtermColor8 { color: $syntax-gutter-text-color !important; }
 .xtermBgColor8 { background-color: $syntax-gutter-text-color; }
+

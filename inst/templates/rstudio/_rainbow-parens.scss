@@ -1,31 +1,32 @@
 /* Rainbow Parenthesis */
-$ui-paren-0: rgb(255, 124, 124) !default;
-$ui-paren-1: rgb(255, 187, 0) !default;
-$ui-paren-2: #00ff1f !default;
-$ui-paren-3: #2bcf2b !default;
-$ui-paren-4: lightskyblue !default;
-$ui-paren-5: rgb(150, 94, 255) !default;
-$ui-paren-6: violet !default;
+$ui_paren_0: rgb(255, 124, 124) !default;
+$ui_paren_1: rgb(255, 187, 0) !default;
+$ui_paren_2: #00ff1f !default;
+$ui_paren_3: #2bcf2b !default;
+$ui_paren_4: lightskyblue !default;
+$ui_paren_5: rgb(150, 94, 255) !default;
+$ui_paren_6: violet !default;
 
 
-@if $ui-rstudio-is-dark {
+@if $ui_rstudio_is_dark {
   .rstudio-themes-dark {
-    .ace_paren_color_0 {color: $ui-paren-0;}
-    .ace_paren_color_1 {color: $ui-paren-1;}
-    .ace_paren_color_2 {color: $ui-paren-2;}
-    .ace_paren_color_3 {color: $ui-paren-3;}
-    .ace_paren_color_4 {color: $ui-paren-4;}
-    .ace_paren_color_5 {color: $ui-paren-5;}
-    .ace_paren_color_6 {color: $ui-paren-6;}
+    .ace_paren_color_0 {color: $ui_paren_0;}
+    .ace_paren_color_1 {color: $ui_paren_1;}
+    .ace_paren_color_2 {color: $ui_paren_2;}
+    .ace_paren_color_3 {color: $ui_paren_3;}
+    .ace_paren_color_4 {color: $ui_paren_4;}
+    .ace_paren_color_5 {color: $ui_paren_5;}
+    .ace_paren_color_6 {color: $ui_paren_6;}
   }
 }
 @else {
-  .ace_paren_color_0 {color: $ui-paren-0;}
-  .ace_paren_color_1 {color: $ui-paren-1;}
-  .ace_paren_color_2 {color: $ui-paren-2;}
-  .ace_paren_color_3 {color: $ui-paren-3;}
-  .ace_paren_color_4 {color: $ui-paren-4;}
-  .ace_paren_color_5 {color: $ui-paren-5;}
-  .ace_paren_color_6 {color: $ui-paren-6;}
+  .ace_paren_color_0 {color: $ui_paren_0;}
+  .ace_paren_color_1 {color: $ui_paren_1;}
+  .ace_paren_color_2 {color: $ui_paren_2;}
+  .ace_paren_color_3 {color: $ui_paren_3;}
+  .ace_paren_color_4 {color: $ui_paren_4;}
+  .ace_paren_color_5 {color: $ui_paren_5;}
+  .ace_paren_color_6 {color: $ui_paren_6;}
 }
+
 

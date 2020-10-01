@@ -4,72 +4,73 @@
 @import "palettes/_nord";
 
 // primary UI colors
-$ui-background           : lighten($nord6, 10%);
-$ui-foreground           : $nord3;
-$ui-code-chunk-background: transparentize($nord6, 0.5);
-$ui-selection            : transparentize($nord4, 0.6);
-$ui-cursor               : $nord12;
-$ui-cursor-normal-mode   : $ui-cursor;
-$ui-margin-line          : lighten($ui-selection, 5%);
-$ui-gutter-color         : transparentize($ui-foreground, 0.75);
-$ui-gutter-background    : $ui-background;
+$ui_background           : lighten($nord6, 10%);
+$ui_foreground           : $nord3;
+$rmd_chunk_background: transparentize($nord6, 0.5);
+$ui_selection            : transparentize($nord4, 0.6);
+$ui_cursor               : $nord12;
+$ui_cursor_normal_mode   : $ui_cursor;
+$ui_margin_line          : lighten($ui_selection, 5%);
+$ui_gutter_foreground         : transparentize($ui_foreground, 0.75);
+$ui_gutter_background    : $ui_background;
 
 // less common UI colors
-$ui-line-active           : transparentize($nord4, 0.6);
-$ui-line-active-gutter    : $ui-background;
-$ui-line-active-selection : opacify($ui-selection, 1);
-$ui-line-find             : $ui-selection;
-$ui-bracket               : transparentize($ui-cursor, 0.6);
-$ui-invisible             : $nord4;
-$ui-indent-guide          : $nord4;
-$ui-debug-background      : lighten($ui-background, 10%);
-$ui-fold-arrows-color     : $nord11;
-$ui-fold-arrows-background: transparentize($ui-fold-arrows-color, 0.5);
+$ui_line_active           : transparentize($nord4, 0.6);
+$ui_line_active_gutter    : $ui_background;
+$ui_line_active_selection : opacify($ui_selection, 1);
+$ui_line_find             : $ui_selection;
+$ui_bracket               : transparentize($ui_cursor, 0.6);
+$ui_invisible             : $nord4;
+$ui_indent_guide          : $nord4;
+$ui_debug_background      : lighten($ui_background, 10%);
+$ui_fold_arrows_foreground     : $nord11;
+$ui_fold_arrows_background: transparentize($ui_fold_arrows_foreground, 0.5);
 
 // rstudio
-$ui-rstudio-background          : darken($ui-background, 2%);
-$ui-rstudio-color               : $ui-foreground;
-$ui-rstudio-tabs-inactive       : $nord4;
-$ui-rstudio-tabs-inactive-color : transparentize($ui-foreground, 0.4);
-$ui-rstudio-tabs-selected       : $nord6;
-$ui-rstudio-tabs-selected-color : $nord2;
-$ui-rstudio-toolbar             : $ui-rstudio-tabs-selected;
-$ui-rstudio-toolbar-color       : $ui-foreground;
-$ui-rstudio-search              : $ui-rstudio-toolbar;
-$ui-completions-background      : $ui-background;
-$ui-completions-color           : $ui-foreground;
-$ui-completions-border          : $ui-bracket;
-$ui-rstudio-scrollbar-background: $ui-background;
-$ui-rstudio-scrollbar-handle    : $nord6;
+$ui_rstudio_background          : darken($ui_background, 2%);
+$ui_rstudio_foreground               : $ui_foreground;
+$ui_rstudio_tabs_inactive_background       : $nord4;
+$ui_rstudio_tabs_inactive_foreground : transparentize($ui_foreground, 0.4);
+$ui_rstudio_tabs_active_background       : $nord6;
+$ui_rstudio_tabs_active_foreground : $nord2;
+$ui_rstudio_toolbar_background             : $ui_rstudio_tabs_active_background;
+$ui_rstudio_toolbar_foreground       : $ui_foreground;
+$ui_rstudio_search              : $ui_rstudio_toolbar_background;
+$ui_completions_background      : $ui_background;
+$ui_completions_foreground           : $ui_foreground;
+$ui_completions_border          : $ui_bracket;
+$ui_rstudio_scrollbar_background: $ui_background;
+$ui_rstudio_scrollbar_handle    : $nord6;
 
 // R language colors
-$rlang-comment  : transparentize($ui-foreground, 0.5);
-$rlang-string   : $nord14;
-$rlang-function : $nord10;
-$rlang-reserved : $nord7;
-$rlang-operator : $nord9;
-$rlang-bracket  : $nord8;
-$rlang-value    : $nord11;
-$rlang-namespace: $nord14;
-$rlang-variable : $nord15;
-$rlang-message  : $nord12;
-$rlang-namespace-font-style: italic;
+$code_comment  : transparentize($ui_foreground, 0.5);
+$code_string   : $nord14;
+$code_function : $nord10;
+$code_reserved : $nord7;
+$code_operator : $nord9;
+$code_bracket  : $nord8;
+$code_value    : $nord11;
+$code_namespace: $nord14;
+$code_variable : $nord15;
+$code_message  : $nord12;
+$code_namespace_font_style: italic;
 
-$other-tag: $nord9;
+$code_other: $nord9;
 
 // Rmd
-$rmd-heading-color: $nord10;
-$rmd-chunk-header: $nord7;
-$rmd-href: $nord9;
+$rmd_heading_foreground: $nord10;
+$rmd_chunk_header: $nord7;
+$rmd_href: $nord9;
 
 // rainbow parens;
-$ui-paren-0: $nord7;  // teal
-$ui-paren-1: $nord10; // blue
-$ui-paren-2: $nord11; // red
-$ui-paren-3: $nord12; // orange
-$ui-paren-4: $nord13; // yellow
-$ui-paren-5: $nord14; // green
-$ui-paren-6: $nord15; // purple
+$ui_paren_0: $nord7;  // teal
+$ui_paren_1: $nord10; // blue
+$ui_paren_2: $nord11; // red
+$ui_paren_3: $nord12; // orange
+$ui_paren_4: $nord13; // yellow
+$ui_paren_5: $nord14; // green
+$ui_paren_6: $nord15; // purple
 
 @import "rstudio/_rstudio-light", "rstudio/_rstudio-light-flatter";
 @import "rstudio/_components";
+

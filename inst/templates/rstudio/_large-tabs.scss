@@ -1,0 +1,48 @@
+.rstudio-themes-flat > :not(.gwt-DialogBox-ModalDialog) .gwt-TabLayoutPanel {
+  & > div[aria-hidden="true"] + div {
+    height: 40px !important;
+    background: $ui_rstudio_tabs_inactive_background;
+  }
+  .gwt-TabLayoutPanelTabs table.rstheme_tabLayoutCenter {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 40px;
+  }
+  .gwt-TabLayoutPanelTabs .rstheme_tabLayoutCenter td {
+    vertical-align: middle !important;
+  }
+  .gwt-TabLayoutPanelTabs > div:empty {
+    height: 40px !important;
+  }
+}
+
+.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanel .gwt-TabLayoutPanelTabs {
+  border-color: $ui_rstudio_tabs_inactive_background !important;
+}
+
+// FIXME for light themes
+.rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars.rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs {
+  .gwt-TabLayoutPanelTabInner table.rstheme_tabLayoutCenter {
+    tbody > tr > td:last-child > img {
+      display: none;
+    }
+    &:hover tbody > tr > td:last-child > img {
+      display: inline-block;
+      position: absolute !important;
+      top: 0 !important;
+      padding-left: 3px;
+    }
+  }
+  [id^="rstudio_workbench_"] {
+    .gwt-TabLayoutPanelTabInner table.rstheme_tabLayoutCenter:hover tbody > tr > td:last-child > img {
+      padding-top: 5px;
+    }
+  }
+}
+.rstudio-themes-flat .windowframe .gwt-TabLayoutPanel > div:last-child,
+.rstudio-themes-flat .gwt-TabLayoutPanel.rstudio_source_panel > div:last-child {
+  top: 38px !important;
+}
+.windowframe > div:last-child > div > div > div[aria-hidden="true"] + div + div {
+  height: 40px!important;
+}

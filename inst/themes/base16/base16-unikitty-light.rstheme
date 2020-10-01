@@ -227,7 +227,7 @@
 }
 
 .ace_identifier {
-  color: #d8137f;
+  color: #322d34;
   background-color: inherit;
 }
 
@@ -2648,4 +2648,3 @@ input#rstudio_command_palette_search {
 .xtermBgColor255 {
   background-color: #eeeeee;
 }
-

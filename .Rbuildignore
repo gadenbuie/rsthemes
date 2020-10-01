@@ -2,3 +2,8 @@
 ^rsthemes\.Rproj$
 ^\.Rproj\.user$
 ^CODE_OF_CONDUCT\.md$
+^\.history$
+^_docs$
+^docs$
+^dev$
+^screenshot_themes.R$

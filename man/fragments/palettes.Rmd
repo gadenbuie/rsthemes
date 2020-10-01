@@ -1,0 +1,27 @@
+- [base16] (Various Authors)
+- [Fairyfloss] ([Amy Wibowo (sailorhg)](https://github.com/sailorhg))
+- [Flat White][flat-white] ([Dmitry Biletskyy](https://github.com/biletskyy))
+- [Nord] ([Sven Greb](https://www.svengreb.de/))
+- [Oceanic Plus][oceanic-plus] ([Marco Scannadinari](https://github.com/marcoms))
+- [Atom One Dark][one-dark]
+- [Atom One Light][one-light]
+- [Solarized] (Ethan Schoonover)
+- [Horizon Dark][horizon] (Jonathan Olaleye)
+- [a11y-syntax-highlighting][a11y-syntax] ([Eric Bailey](https://ericwbailey.design/))
+- [Night Owl][night-owl] ([Sarah Drasner](https://sarah.dev/))
+  - with huge thanks to original [Night Owlish][night-owlish] 
+    implementation in RStudio by [Mara Averick](https://maraaverick.rbind.io/)
+    
+
+[base16]: https://github.com/chriskempson/base16
+[fairyfloss]: https://github.com/sailorhg/fairyfloss
+[flat-white]: https://github.com/biletskyy/flatwhite-syntax
+[nord]: https://github.com/arcticicestudio/nord
+[oceanic-plus]: https://github.com/marcoms/oceanic-plus
+[one-light]: https://github.com/atom/atom/tree/master/packages/one-light-syntax
+[one-dark]: https://github.com/atom/atom/tree/master/packages/one-dark-syntax
+[solarized]: https://ethanschoonover.com/solarized
+[horizon]: https://horizontheme.netlify.app/
+[a11y-syntax]: https://github.com/ericwbailey/a11y-syntax-highlighting
+[night-owl]: https://github.com/sdras/night-owl-vscode-theme
+[night-owlish]: https://github.com/batpigandme/night-owlish

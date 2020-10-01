@@ -1,0 +1,8 @@
+If you want to uninstall all or some of the themes, you can use
+
+``` r
+rsthemes::remove_rsthemes()
+
+# or just the base16 themes, e.g.
+rsthemes::remove_rsthemes("base16")
+```

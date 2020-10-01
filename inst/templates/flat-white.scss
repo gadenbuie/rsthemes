@@ -4,80 +4,91 @@
 @import "palettes/_flat-white";
 
 // primary UI colors
-$ui-background           : $base7;
-$ui-foreground           : $base1;
-$ui-code-chunk-background: $base6;
-$ui-selection            : transparentize($accent, 0.9);
-$ui-cursor               : $accent;
-$ui-cursor-normal-mode   : $ui-cursor;
-$ui-margin-line          : $base6;
-$ui-gutter-color         : $base3;
-$ui-gutter-background    : $ui-background;
+$ui_background           : $base7;
+$ui_foreground           : $base1;
+$rmd_chunk_background: $base6;
+$ui_selection            : transparentize($accent, 0.9);
+$ui_cursor               : $accent;
+$ui_cursor_normal_mode   : $ui_cursor;
+$ui_margin_line          : $base6;
+$ui_gutter_foreground         : $base3;
+$ui_gutter_background    : $ui_background;
 
 // less common UI colors
-$ui-line-active           : transparentize($base5, 0.2);
-$ui-line-active-gutter    : $base6;
-$ui-line-active-selection : transparentize($accent, 0.8);
-$ui-line-find             : $ui-line-active-selection;
-$ui-bracket               : transparentize($ui-cursor, 0.6);
-$ui-invisible             : $base5;
-$ui-indent-guide          : $ui-invisible;
-$ui-debug-background      : lighten($accent, 40%);
-$ui-fold-arrows-color     : $purple-text;
-$ui-fold-arrows-background: $purple-bg;
+$ui_line_active           : transparentize($base5, 0.2);
+$ui_line_active_gutter    : $base6;
+$ui_line_active_selection : transparentize($accent, 0.8);
+$ui_line_find             : $ui_line_active_selection;
+$ui_bracket               : transparentize($ui_cursor, 0.6);
+$ui_invisible             : $base5;
+$ui_indent_guide          : $ui_invisible;
+$ui_debug_background      : lighten($accent, 40%);
+$ui_fold_arrows_foreground     : $purple-text;
+$ui_fold_arrows_background: $purple-bg;
 $ui-rstudio-tabs-active-border-left: #CF9A4F;
 
 // rainbow parens
-$ui-paren-0: $ui-foreground;
-$ui-paren-1: darken(hsl(35, 100%, 47%), 10%);  // orange
-$ui-paren-2: $accent;
-$ui-paren-3: darken(hsl(282, 100%, 68%), 10%); // purple
-$ui-paren-4: darken(hsl(172, 100%, 37%), 10%); // teal
-$ui-paren-5: $accent-red;
-$ui-paren-6: darken(hsl(220, 100%, 73%), 10%); // blue
+$ui_paren_0: $ui_foreground;
+$ui_paren_1: darken(hsl(35, 100%, 47%), 10%);  // orange
+$ui_paren_2: $accent;
+$ui_paren_3: darken(hsl(282, 100%, 68%), 10%); // purple
+$ui_paren_4: darken(hsl(172, 100%, 37%), 10%); // teal
+$ui_paren_5: $accent-red;
+$ui_paren_6: darken(hsl(220, 100%, 73%), 10%); // blue
 
 
 // rstudio
-$ui-rstudio-background          : $base5;
-$ui-rstudio-color               : $base7;
-$ui-rstudio-tabs-inactive       : $base5;
-$ui-rstudio-tabs-inactive-color : $base2;
-$ui-completions-background      : $ui-background;
-$ui-completions-color           : $ui-foreground;
-$ui-completions-border          : $ui-bracket;
-$ui-rstudio-scrollbar-background: $ui-background;
-$ui-rstudio-scrollbar-handle    : $ui-code-chunk-background;
+$ui_rstudio_background: $base5;
+$ui_rstudio_foreground: $base1;
+$ui_rstudio_tabs_inactive_background: $base5;
+$ui_rstudio_tabs_inactive_foreground: $base2;
+$ui_completions_background: $ui_background;
+$ui_completions_foreground: $ui_foreground;
+$ui_completions_border: $ui_bracket;
+$ui_rstudio_scrollbar_background: $ui_background;
+$ui_rstudio_scrollbar_handle: $rmd_chunk_background;
 
 // R language colors
-$rlang-comment: $base3;
-$rlang-string: $green-text; // green
-$rlang-string-bg: $green-bg; // green
-$rlang-function: $purple-text; // purple
-$rlang-function-bg: $purple-bg; // purple
-$rlang-reserved: $blue-text;
-$rlang-reserved-bg: $blue-bg;
-$rlang-operator: $base2;
-$rlang-bracket: $base2;
-$rlang-value: $teal-text; // teal
-$rlang-value-bg: $teal-bg; // teal
-$rlang-namespace: $orange-text; // orange
-$rlang-namespace-bg: $orange-bg; // orange
-$rlang-variable: $purple-text;
-$rlang-variable-bg: inherit;
-$rlang-identifier: $base1;
-$rlang-identifier-bg: inherit;
-$rlang-message: $accent;
-$rlang-namespace-font-style: italic;
+$code_comment: $base3;
+$code_string: $green-text; // green
+$code_string_background: $green-bg; // green
+$code_function: $purple-text; // purple
+$code_function_background: $purple-bg; // purple
+$code_reserved: $blue-text;
+$code_reserved_background: $blue-bg;
+$code_operator: $base2;
+$code_bracket: $base2;
+$code_value: $teal-text; // teal
+$code_value_background: $teal-bg; // teal
+$code_namespace: $orange-text; // orange
+$code_namespace_background: $orange-bg; // orange
+$code_variable: $purple-text;
+$code_variable_background: inherit;
+$code_identifier: $base1;
+$code_identifier_background: inherit;
+$code_message: $accent;
+$code_namespace_font_style: italic;
 
-$other-tag: $base2;
+$code_other: $base2;
 
 // Rmd
-$rmd-heading-color: $blue-text;
-$rmd-heading-color-bg: $blue-bg;
-$rmd-chunk-header: $base1;
-$rmd-chunk-header-bg: inherit;
-$rmd-href: $green-text;
-$rmd-href-bg: $green-bg;
+$rmd_heading_foreground: $blue-text;
+$rmd_heading_background: $blue-bg;
+$rmd_chunk_header: $base1;
+$rmd_chunk_header_background: inherit;
+$rmd_href: $green-text;
+$rmd_href_background: $green-bg;
+
+// Dialog menus
+$ui_rstudio_dialog_background: $ui_background;
+$ui_rstudio_dialog_foreground: $ui_foreground;
+$ui_rstudio_dialog_selected_background: mix($accent, $ui_background, 10%);
+$ui_rstudio_dialog_input_background: $base5;
+$ui_rstudio_dialog_heading_foreground: $accent;
+$ui_rstudio_dialog_help_foreground: $base2;
+$ui_rstudio_dialog_button_border: $ui_rstudio_background;
+$ui_rstudio_dialog_button_hover_background: $ui_rstudio_background;
+$ui_rstudio_dialog_button_hover_foreground: $ui_rstudio_foreground;
 
 @import "rstudio/_rstudio-light";
 
@@ -195,4 +206,5 @@ $rmd-href-bg: $green-bg;
   background-color: transparentize($accent, 0.9) !important;
 }
 
-@import "rstudio/_components";
+@import "rstudio/_components", "rstudio/_dialog-options", "rstudio/_large-tabs";
+

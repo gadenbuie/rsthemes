@@ -1,13 +1,14 @@
 make_rsthemes <- function(
   path_out = fs::path("inst", "themes"),
-  path_template = fs::path("inst", "templates")
+  path_template = NULL
 ) {
   fs::dir_create(fs::path(path_out, "base16"), recurse = TRUE)
   path_out <- fs::path_abs(path_out)
-  owd <- setwd(path_template)
+  path_template <- path_template %||% package_template()
+  owd <- setwd(as.character(path_template))
   on.exit(setwd(owd))
 
-  base16_palettes <- ls_theme_templates(base16 = TRUE)
+  base16_palettes <- ls_theme_templates(path_template, base16 = TRUE)
   for (base16_pal in base16_palettes) {
     base16_sass <- base16_prep_theme(base16_pal)
     base16_outfile <- sub("_base16", "base16", base16_pal)
@@ -15,7 +16,7 @@ make_rsthemes <- function(
     render_sass(base16_sass, base16_outfile, fs::path(path_out, "base16"))
   }
 
-  for (theme_file in ls_theme_templates(base16 = FALSE)) {
+  for (theme_file in ls_theme_templates(path_template, base16 = FALSE)) {
     render_sass(theme_file, outdir = path_out)
   }
 
@@ -43,7 +44,7 @@ render_sass <- function(
   if (input_is_text) {
     sass::sass(file, output = outfile)
   } else {
-    sass::sass(sass::sass_file(file), output = outfile)
+    sass::sass(sass::sass_file(file), output = outfile, cache = NULL)
   }
   invisible(TRUE)
 }
