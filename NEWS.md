@@ -4,8 +4,7 @@
 
 * Three new themes:
 
-  * Horizon Dark ([source](
-[horizon]: https://horizontheme.netlify.app/))
+  * Horizon Dark ([source](https://horizontheme.netlify.app/))
   * a11y-light and a11y-dark ([source](https://github.com/ericwbailey/a11y-syntax-highlighting))
   * Night Owl ([source](https://github.com/sdras/night-owl-vscode-theme) and [night-owlish](https://github.com/batpigandme/night-owlish))
   
