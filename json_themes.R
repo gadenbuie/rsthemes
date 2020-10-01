@@ -14,4 +14,4 @@ theme_info <- lapply(theme_info, function(thm) {
 })
 
 
-jsonlite::write_json(theme_info, "rsthemes.json")
+jsonlite::write_json(theme_info, "rsthemes.json", auto_unbox = TRUE)
