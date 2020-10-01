@@ -1,4 +1,4 @@
-**rsthemes** includes RStudio addins and functions to... <a name="automatic--light-and--dark-mode" />
+**rsthemes** includes RStudio addins and functions to... <a name="automatic--light-and--dark-mode"></a>
 
 - &#x1F305; **Toggle Dark Mode**<br>Switch between two preferred dark and light themes
 
