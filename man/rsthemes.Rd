@@ -81,6 +81,7 @@ following colors palettes.
 \item \emph{\href{https://ethanschoonover.com/solarized}{Solarized}} (Ethan Schoonover)
 \item \emph{\href{https://horizontheme.netlify.app/}{Horizon Dark}} (Jonathan Olaleye)
 \item \emph{\href{https://github.com/ericwbailey/a11y-syntax-highlighting}{a11y-syntax-highlighting}} (\href{https://ericwbailey.design/}{Eric Bailey})
+\item \emph{\href{https://github.com/sdras/night-owl-vscode-theme}{Night Owl}} (\href{https://sarah.dev/}{Sarah Drasner})
 }
 }
 

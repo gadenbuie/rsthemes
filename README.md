@@ -217,6 +217,12 @@ rsthemes::remove_rsthemes("base16")
   - [Horizon Dark](https://horizontheme.netlify.app/) (Jonathan Olaleye)
   - [a11y-syntax-highlighting](https://github.com/ericwbailey/a11y-syntax-highlighting)
     ([Eric Bailey](https://ericwbailey.design/))
+  - [Night Owl](https://github.com/sdras/night-owl-vscode-theme) ([Sarah
+    Drasner](https://sarah.dev/)
+      - with huge thanks to original [Night
+        Owlish](https://github.com/batpigandme/night-owlish)
+        implementation in RStudio by [Mara
+        Averick](https://maraaverick.rbind.io/)
 
 -----
 

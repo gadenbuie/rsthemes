@@ -24,7 +24,7 @@
 #'   - _[Solarized]_ (Ethan Schoonover)
 #'   - _[Horizon Dark][horizon]_ (Jonathan Olaleye)
 #'   - _[a11y-syntax-highlighting][a11y-syntax]_ ([Eric Bailey](https://ericwbailey.design/))
-#'
+#'   - _[Night Owl][night-owl]_ ([Sarah Drasner](https://sarah.dev/))
 #'
 #'   [base16]: https://github.com/chriskempson/base16
 #'   [fairyfloss]: https://github.com/sailorhg/fairyfloss
@@ -36,6 +36,8 @@
 #'   [solarized]: https://ethanschoonover.com/solarized
 #'   [horizon]: https://horizontheme.netlify.app/
 #'   [a11y-syntax]: https://github.com/ericwbailey/a11y-syntax-highlighting
+#'   [night-owl]: https://github.com/sdras/night-owl-vscode-theme
+#'
 #' @name rsthemes
 NULL
 
