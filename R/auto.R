@@ -267,6 +267,13 @@ use_theme_auto <- function(
 }
 
 local_daylight_hours <- function(lat = NULL, lon = NULL, quietly = FALSE) {
+
+  if (!requireNamespace("suncalc", quietly = TRUE)) {
+    cli::cli_alert_warning("{.fun rsthemes::use_theme_auto}: To use automatic
+      theme switching based on location, please install package
+      {.pkg suncalc}.", wrap = TRUE)
+  }
+
   coords <- list(lat = lat, lon = lon)
   null_times <- list(end = NULL, start = NULL)
   if (any(is_null(coords))) {
