@@ -269,15 +269,42 @@ use_theme_auto <- function(
 local_daylight_hours <- function(lat = NULL, lon = NULL, quietly = FALSE) {
   coords <- list(lat = lat, lon = lon)
   null_times <- list(end = NULL, start = NULL)
+
+  has_suncalc <- requireNamespace("suncalc", quietly = TRUE)
+  has_ipapi   <- requireNamespace("ipapi", quietly = TRUE)
+
   if (any(is_null(coords))) {
+    if (!has_ipapi) {
+      cli::cli_alert_warning(
+        "[rsthemes] {.fun use_theme_auto} requires {.pkg ipapi} to determine
+        your location. Suppress this warning by providing {.arg lat} and
+        {.arg lon} or by installing {.pkg api}:
+        {.code devtools::install_github(\"hrbrmstr/ipapi\")}
+        ",
+        wrap = TRUE
+      )
+      return(null_times)
+    }
     coords <- purrr::possibly(geolocate, null_times)(quietly = quietly)
   }
+
   if (all(is_null(coords))) {
     return(null_times)
   }
-  if (!requireNamespace("suncalc", quietly = TRUE)) {
-    stop("`suncalc` is required: install.packages('suncalc')")
+
+  if (!has_suncalc) {
+    cli::cli_alert_warning(
+      "[rsthemes] {.fun use_theme_auto} requires {.pkg suncalc} to determine
+      your sunrise/sunset times in your location. Suppress this warning by
+      providing explicit {.arg dark_start} and {.arg dark_end} times or by
+      installing {.pkg suncalc}:
+      {.code install.packages(\"suncalc\")}
+      ",
+      wrap = TRUE
+    )
+    return(null_times)
   }
+
   times <- suncalc::getSunlightTimes(
     lat = coords$lat,
     lon = coords$lon,
