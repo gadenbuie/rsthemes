@@ -333,8 +333,8 @@ geolocate <- function(quietly = FALSE) {
   if (!quietly) cli::cli_process_done()
 
   if (identical(as.character(x$status), "success")) {
-    geolocate_set_cache(x$lat, x$lon, tz = x$timezone)
-    list(lat = x$lat, lon = x$lon, tz = x$timezone)
+    geolocate_set_cache(x$lat, x$lon, tz = as.character(x$timezone))
+    list(lat = x$lat, lon = x$lon, tz = as.character(x$timezone))
   }
 }
 
