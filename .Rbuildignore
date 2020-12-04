@@ -7,3 +7,4 @@
 ^docs$
 ^dev$
 ^screenshot_themes.R$
+^README\.Rmd$
