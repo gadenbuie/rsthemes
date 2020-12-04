@@ -328,11 +328,11 @@ geolocate <- function(quietly = FALSE) {
     return(cache)
   }
 
-  if (!quietly) cli::cli_process_start("[rsthemes] Determining your location from you IP via {.pkg ipapi}")
+  if (!quietly) cli::cli_process_start("[rsthemes] Determining your location from your IP via {.pkg ipapi}")
   x <- ipapi::geolocate(NA, .progress = FALSE)
   if (!quietly) cli::cli_process_done()
 
-  if (identical(x$status, "success")) {
+  if (identical(as.character(x$status), "success")) {
     geolocate_set_cache(x$lat, x$lon, tz = x$timezone)
     list(lat = x$lat, lon = x$lon, tz = x$timezone)
   }
