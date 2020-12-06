@@ -1,4 +1,4 @@
-/* rs-theme-name: Yule RStudio {rsthemes} {rsthemes} */
+/* rs-theme-name: Yule RStudio (Reduced Motion) {rsthemes} {rsthemes} */
 /* rs-theme-is-dark: TRUE */
 .ace_gutter {
   background: #1b1f24;
@@ -2587,65 +2587,6 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 
 .ace_marker-layer .ace_active-line {
   background: repeating-linear-gradient(-45deg, #262c33, #262c33 15px, #2e343a 15px, #2e343a 25px);
-}
-
-.normal-mode .ace_cursor {
-  border: 0 !important;
-  animation-name: xmas-background-colors;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: steps;
-  opacity: 0.75;
-}
-
-.ace_cursor {
-  color: #ff0010;
-  animation-name: xmas-colors;
-  animation-duration: 30s;
-  animation-iteration-count: infinite;
-  animation-timing-function: steps;
-}
-
-@keyframes xmas-background-colors {
-  0% {
-    background-color: #ff00a9;
-  }
-  20% {
-    background-color: #7c3eff;
-  }
-  40% {
-    background-color: #64f3f0;
-  }
-  60% {
-    background-color: #4fe818;
-  }
-  80% {
-    background-color: #ffc400;
-  }
-  100 {
-    background-color: #ff0010;
-  }
-}
-
-@keyframes xmas-colors {
-  0% {
-    color: #ff00a9;
-  }
-  20% {
-    color: #7c3eff;
-  }
-  40% {
-    color: #64f3f0;
-  }
-  60% {
-    color: #4fe818;
-  }
-  80% {
-    color: #ffc400;
-  }
-  100 {
-    color: #ff0010;
-  }
 }
 
 #rstudio_command_palette_search,
