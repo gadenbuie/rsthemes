@@ -14,10 +14,10 @@ striped_hover <- '
 .ace_marker-layer .ace_active-line {
   background: repeating-linear-gradient(
     -45deg,
-    #262c33,
-    #262c33 15px,
-    #2e343a 15px,
-    #2e343a 25px
+    #262c3300,
+    #262c3300 15px,
+    #FFFFFF08 15px,
+    #FFFFFF08 25px
   );
 }
 '
@@ -89,12 +89,12 @@ yule_rstudio <- function(
   theme_path = "yule-rstudio-rsthemes.scss"
 ) {
   theme_path <- here::here("inst/templates", theme_path)
-  theme_name <- paste0(theme_name, "{rsthemes}")
+  theme_name <- paste(theme_name, "{rsthemes}")
   rstheme(
     theme_name,
     theme_dark    = TRUE,
     theme_flat    = FALSE,
-    theme_path    = theme_name,
+    theme_path    = theme_path,
     theme_apply   = TRUE,
     theme_as_sass = TRUE,
     theme_palette = list(
@@ -125,12 +125,12 @@ yule_rstudio <- function(
     ui_foreground   = "$white",
     code_string     = "$yellow",
     code_function   = "$red",
-    code_value      = "#96B482",
+    code_operator   = "#96B482",
     code_comment    = "$brown",
     code_variable   = "$yellow",
-    code_message    = "$teal",
+    code_message    = "mix($teal, $black, 80%)",
     code_reserved   = "$red",
-    code_operator   = "$green",
+    code_value      = "$green",
     code_namespace  = "$green",
     code_identifier = "$white",
     code_bracket    = "$slate",
@@ -155,7 +155,7 @@ yule_rstudio <- function(
       item_selected_background = "mix($teal, $black, 35%)"
     ),
     rstheme_rainbow_parentheses(
-      "$code_comment", "$teal", "#yellow-bright", "#red-bright", "#green-bright", "#purple"
+      "$code_operator", "$teal", "$pink", "$red-bright", "$green-bright", "$yellow-bright"
     ),
     ...
   )

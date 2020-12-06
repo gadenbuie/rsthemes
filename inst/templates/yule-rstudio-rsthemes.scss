@@ -25,9 +25,9 @@ $ui_background: $black;
 $ui_foreground: $white;
 $code_string: $yellow;
 $code_function: $red;
-$code_value: #96B482;
+$code_value: $green;
 $code_variable: $yellow;
-$code_message: $teal;
+$code_message: mix($teal, $black, 80%);
 $ui_rstudio_background: darken($black, 5%);
 $ui_rstudio_foreground: $ivory;
 $ui_rstudio_border: $ui_background;
@@ -68,7 +68,7 @@ $ui_rstudio_job_progress_bar: opacify($ui_selection, 1);
 $code_comment: $brown;
 $code_namespace_font_style: italic;
 $code_reserved: $red;
-$code_operator: $green;
+$code_operator: #96B482;
 $code_bracket: $slate;
 $code_namespace: $green;
 $code_identifier: $white;
@@ -97,10 +97,10 @@ $rmd_href_background: $code_reserved_background;
 .ace_marker-layer .ace_active-line {
   background: repeating-linear-gradient(
     -45deg,
-    #262c33,
-    #262c33 15px,
-    #2e343a 15px,
-    #2e343a 25px
+    #262c3300,
+    #262c3300 15px,
+    #FFFFFF08 15px,
+    #FFFFFF08 25px
   );
 }
 
@@ -171,12 +171,12 @@ $ui_command_palette_item_background: $ui_command_palette_background;
 $ui_command_palette_item_color: $ui_foreground;
 $ui_command_palette_item_hover_background: mix($teal, $black, 25%);
 $ui_command_palette_item_selected_background: mix($teal, $black, 35%);
-$ui_paren_0: $code_comment;
+$ui_paren_0: $code_operator;
 $ui_paren_1: $teal;
-$ui_paren_2: #yellow-bright;
-$ui_paren_3: #red-bright;
-$ui_paren_4: #green-bright;
-$ui_paren_5: #purple;
+$ui_paren_2: $pink;
+$ui_paren_3: $red-bright;
+$ui_paren_4: $green-bright;
+$ui_paren_5: $yellow-bright;
 $ui_paren_6: violet;
 @import "/Users/garrick/Repos/rsthemes/inst/templates/rstudio/_command-palette.scss";
 @import "/Users/garrick/Repos/rsthemes/inst/templates/rstudio/_rainbow-parens.scss";

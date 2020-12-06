@@ -112,24 +112,24 @@
 
 .ace_keyword.ace_operator {
   font-style: normal;
-  color: #39b81f;
+  color: #96B482;
 }
 
 .ace_keyword.ace_other.ace_unit {
   font-style: normal;
-  color: #96B482;
+  color: #39b81f;
 }
 
 .ace_constant.ace_language {
-  color: #64f3f0;
+  color: #58cbca;
 }
 
 .ace_constant.ace_numeric {
-  color: #96B482;
+  color: #39b81f;
 }
 
 .ace_constant.ace_character {
-  color: #96B482;
+  color: #39b81f;
 }
 
 .ace_constant.ace_other {
@@ -141,7 +141,7 @@
 }
 
 .ace_support.ace_constant {
-  color: #96B482;
+  color: #39b81f;
 }
 
 .ace_support.ace_class {
@@ -190,7 +190,7 @@
 }
 
 .ace_variable.ace_parameter {
-  color: #96B482;
+  color: #39b81f;
 }
 
 .ace_identifier {
@@ -238,7 +238,7 @@
 }
 
 .ace_meta.ace_tag {
-  color: #39b81f;
+  color: #96B482;
 }
 
 .ace_markup.ace_heading,
@@ -2586,7 +2586,7 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 .ace_marker-layer .ace_active-line {
-  background: repeating-linear-gradient(-45deg, #262c33, #262c33 15px, #2e343a 15px, #2e343a 25px);
+  background: repeating-linear-gradient(-45deg, #262c3300, #262c3300 15px, #FFFFFF08 15px, #FFFFFF08 25px);
 }
 
 #rstudio_command_palette_search,
@@ -2635,7 +2635,7 @@ input#rstudio_command_palette_search {
 
 /* Rainbow Parenthesis */
 .rstudio-themes-dark .ace_paren_color_0 {
-  color: #847d73;
+  color: #96B482;
 }
 
 .rstudio-themes-dark .ace_paren_color_1 {
@@ -2643,19 +2643,19 @@ input#rstudio_command_palette_search {
 }
 
 .rstudio-themes-dark .ace_paren_color_2 {
-  color: #yellow-bright;
+  color: #ff00a9;
 }
 
 .rstudio-themes-dark .ace_paren_color_3 {
-  color: #red-bright;
+  color: #ff0010;
 }
 
 .rstudio-themes-dark .ace_paren_color_4 {
-  color: #green-bright;
+  color: #4fe818;
 }
 
 .rstudio-themes-dark .ace_paren_color_5 {
-  color: #purple;
+  color: #ffc400;
 }
 
 .rstudio-themes-dark .ace_paren_color_6 {
