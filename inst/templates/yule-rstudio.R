@@ -25,39 +25,94 @@ striped_hover <- '
 animated_cursor_color <- '
 .normal-mode .ace_cursor {
   border: 0 !important;
-  animation-name: xmas-background-colors;
-  animation-duration: 10s;
+  animation-name: xmas-background-colors !important;
+  animation-duration: 5s !important;
   animation-iteration-count: infinite;
-  animation-timing-function: steps;
+  animation-timing-function: steps !important;
   opacity: 0.75;
 }
 
 .ace_cursor {
   color: #ff0010;
-  animation-name: xmas-colors;
-  animation-duration: 30s;
+  animation-name: xmas-colors !important;
+  animation-duration: 5s !important;
   animation-iteration-count: infinite;
   animation-timing-function: steps;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
 }
 
 @keyframes xmas-background-colors {
   0% {
     background-color: #ff00a9;
+    opacity: 0.66;
+  }
+  10% {
+    background-color: #ff00a9;
+    opacity: 0.66;
+  }
+  18% {
+    background-color: #ff00a9;
+    opacity: 0;
   }
   20% {
     background-color: #7c3eff;
+    opacity: 0.66;
+  }
+  30% {
+    background-color: #7c3eff;
+    opacity: 0.66;
+  }
+  38% {
+    background-color: #7c3eff;
+    opacity: 0;
   }
   40% {
     background-color: #64f3f0;
+    opacity: 0.66;
+  }
+  50% {
+    background-color: #64f3f0;
+    opacity: 0.66;
+  }
+  58% {
+    background-color: #64f3f0;
+    opacity: 0;
   }
   60% {
     background-color: #4fe818;
+    opacity: 0.66;
+  }
+  70% {
+    background-color: #4fe818;
+    opacity: 0.66;
+  }
+  78% {
+    background-color: #4fe818;
+    opacity: 0;
   }
   80% {
     background-color: #ffc400;
+    opacity: 0.66;
   }
-  100 {
-    background-color: #ff0010;
+  90% {
+    background-color: #ffc400;
+    opacity: 0.66;
+  }
+  98% {
+    background-color: #ffc400;
+    opacity: 0;
+  }
+  100% {
+    background-color: #ff00a9;
+    opacity: 0.66;
   }
 }
 
@@ -89,7 +144,6 @@ yule_rstudio <- function(
   theme_path = "yule-rstudio-rsthemes.scss"
 ) {
   theme_path <- here::here("inst/templates", theme_path)
-  theme_name <- paste(theme_name, "{rsthemes}")
   rstheme(
     theme_name,
     theme_dark    = TRUE,
