@@ -205,6 +205,7 @@ yule_rstudio <- function(
     ui_fold_arrows_background = "$teal",
     ui_fold_arrows_foreground = "$slate",
     rmd_heading_foreground = "$yellow-bright",
+    rmd_chunk_background = "mix($ui_background, $ui_rstudio_background, 50%)",
     rstheme_command_palette(
       item_hover_background = "mix($teal, $black, 25%)",
       item_selected_background = "mix($teal, $black, 35%)"

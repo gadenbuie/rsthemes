@@ -62,7 +62,7 @@
 }
 
 .ace_marker-layer .ace_active-line {
-  background: rgba(27, 31, 36, 0.4);
+  background: rgba(33, 38, 44, 0.4);
 }
 
 .ace_marker-layer .ace_selected-word {
@@ -72,7 +72,7 @@
 .ace_marker-layer .ace_foreign_line {
   position: absolute;
   z-index: -1;
-  background-color: #1b1f24;
+  background-color: #21262c;
 }
 
 .ace_marker-layer .ace_active_debug_line {
@@ -445,13 +445,13 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 .rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars ::-webkit-scrollbar-thumb,
 .rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-thumb,
 .rstudio-themes-flat.rstudio-themes-dark-menus .rstudio-themes-scrollbars ::-webkit-scrollbar-thumb {
-  background: #1b1f24;
+  background: #21262c;
   border: 4px solid #262c33;
 }
 
 /* scrollbar on firefox */
 .rstudio-themes-flat .rstudio-themes-dark {
-  scrollbar-color: #1b1f24 #262c33;
+  scrollbar-color: #21262c #262c33;
 }
 
 /* fix overly zealous css rules */
