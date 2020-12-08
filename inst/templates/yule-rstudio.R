@@ -176,17 +176,17 @@ yule_rstudio <- function(
     ),
 
     ui_background   = "$black",
-    ui_foreground   = "$white",
+    ui_foreground   = "$ivory",
     code_string     = "$yellow",
     code_function   = "$red",
-    code_operator   = "#96B482",
+    code_operator   = "mix($ivory, $ui_background, 80%)",
     code_comment    = "$brown",
     code_variable   = "$yellow",
     code_message    = "mix($teal, $black, 80%)",
-    code_reserved   = "$red",
+    code_reserved   = "$green",
     code_value      = "$green",
     code_namespace  = "$green",
-    code_identifier = "$white",
+    code_identifier = "$ivory",
     code_bracket    = "$slate",
 
     ui_rstudio_background     = "darken($black, 5%)",
@@ -206,12 +206,18 @@ yule_rstudio <- function(
     ui_fold_arrows_foreground = "$slate",
     rmd_heading_foreground = "$yellow-bright",
     rmd_chunk_background = "mix($ui_background, $ui_rstudio_background, 50%)",
+    rmd_href = "$red",
     rstheme_command_palette(
       item_hover_background = "mix($teal, $black, 25%)",
       item_selected_background = "mix($teal, $black, 35%)"
     ),
     rstheme_rainbow_parentheses(
-      "$code_operator", "$teal", "$pink", "$red-bright", "$green-bright", "$yellow-bright"
+      "$code_operator",
+      "#3B8EA5",
+      "#FFD791",
+      "#6B7FD7",
+      "#E83151",
+      "#43AA8B"
     ),
     '
 #rstudio_workbench_panel_environment > div:last-child .ace_editor_theme {

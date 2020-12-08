@@ -221,7 +221,7 @@ rsthemes::remove_rsthemes("base16")
     -   Based on the [Yule
         tmTheme](https://tmtheme-editor.herokuapp.com/#!/editor/theme/Yule)
     -   Ported from
-        [gadenbuie/yul-rstudio](https://github.com/gadenbuie/yule-rstudio)
+        [gadenbuie/yule-rstudio](https://github.com/gadenbuie/yule-rstudio)
     -   Featuring a background image by [Joanna
         Kosinska](https://unsplash.com/@joannakosinska)
 

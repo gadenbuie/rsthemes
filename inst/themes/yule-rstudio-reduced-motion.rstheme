@@ -12,22 +12,22 @@
 
 .ace_editor {
   background-color: #262c33;
-  color: #e8e8e8;
+  color: #ede0ce;
 }
 
 .rstudio-themes-flat.ace_editor_theme {
   background-color: #262c33;
-  color: #e8e8e8;
+  color: #ede0ce;
 }
 
 .rstudio-themes-flat.ace_editor_theme .profvis-flamegraph {
   background-color: #262c33;
-  color: #e8e8e8;
+  color: #ede0ce;
 }
 
 .rstudio-themes-flat .ace_editor_theme {
   background-color: #262c33;
-  color: #e8e8e8;
+  color: #ede0ce;
 }
 
 .rstudio-themes-flat.editor_dark.ace_editor_theme a {
@@ -35,7 +35,7 @@
 }
 
 .rstudio-themes-flat .gwt-Label {
-  color: #e8e8e8;
+  color: #ede0ce;
 }
 
 .ace_cursor {
@@ -97,7 +97,7 @@
 }
 
 .ace_indent-guide {
-  border-right: 1px solid rgba(232, 232, 232, 0.3);
+  border-right: 1px solid rgba(237, 224, 206, 0.3);
   margin-right: -1px;
 }
 
@@ -107,12 +107,12 @@
 
 .ace_keyword {
   font-style: normal;
-  color: #de6262;
+  color: #39b81f;
 }
 
 .ace_keyword.ace_operator {
   font-style: normal;
-  color: #96B482;
+  color: #c5bcaf;
 }
 
 .ace_keyword.ace_other.ace_unit {
@@ -133,7 +133,7 @@
 }
 
 .ace_constant.ace_other {
-  color: #e8e8e8;
+  color: #ede0ce;
 }
 
 .ace_support.ace_function {
@@ -158,11 +158,11 @@
 }
 
 .ace_storage {
-  color: #de6262;
+  color: #39b81f;
 }
 
 .ace_storage.ace_type {
-  color: #de6262;
+  color: #39b81f;
 }
 
 .ace_invalid {
@@ -170,7 +170,7 @@
 }
 
 .ace_invalid.ace_deprecated {
-  background-color: rgba(222, 98, 98, 0.5);
+  background-color: rgba(57, 184, 31, 0.5);
 }
 
 .ace_string {
@@ -182,7 +182,7 @@
 }
 
 .ace_invisible {
-  color: rgba(232, 232, 232, 0.3);
+  color: rgba(237, 224, 206, 0.3);
 }
 
 .ace_variable {
@@ -194,7 +194,7 @@
 }
 
 .ace_identifier {
-  color: #e8e8e8;
+  color: #ede0ce;
   background-color: inherit;
 }
 
@@ -207,7 +207,7 @@
 }
 
 .ace_entity.ace_other.ace_attribute-name {
-  color: #de6262;
+  color: #39b81f;
 }
 
 .ace_bracket {
@@ -238,7 +238,7 @@
 }
 
 .ace_meta.ace_tag {
-  color: #96B482;
+  color: #c5bcaf;
 }
 
 .ace_markup.ace_heading,
@@ -256,7 +256,7 @@
 }
 
 .nocolor.ace_editor .ace_line span {
-  color: #de6262 !important;
+  color: #39b81f !important;
 }
 
 #rstudio_console_input .ace_marker-layer .ace_selection {
@@ -295,7 +295,7 @@ table.rstheme_tabLayoutCenter,
 table.rstheme_tabLayoutCenter .gwt-Label,
 .rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs .gwt-Label,
 .rstheme_multiPodUtilityTabArea .gwt-Label {
-  color: rgba(232, 232, 232, 0.6);
+  color: rgba(237, 224, 206, 0.6);
 }
 
 /* toolbar and selected tab */
@@ -317,7 +317,7 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 .rstudio-themes-flat .rstheme_toolbarWrapper button, .rstudio-themes-flat .rstheme_toolbarWrapper a, .rstudio-themes-flat .rstheme_toolbarWrapper div {
-  color: #e8e8e8 !important;
+  color: #ede0ce !important;
 }
 
 .rstudio-themes-flat .rstudio-themes-dark-grey .gwt-SplitLayoutPanel-HDragger, .rstudio-themes-flat .rstudio-themes-dark-grey .gwt-SplitLayoutPanel-VDragger {
@@ -340,13 +340,13 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 .rstudio-themes-flat .menuPopupMiddleCenter,
 .rstudio-themes-flat .suggestPopupMiddleCenter {
   background: #262c33 !important;
-  color: #e8e8e8 !important;
+  color: #ede0ce !important;
 }
 
 .rstudio-themes-flat .popupMiddleCenter .item.item-selected,
 .rstudio-themes-flat .menuPopupMiddleCenter .item.item-selected,
 .rstudio-themes-flat .suggestPopupMiddleCenter .item.item-selected {
-  color: #e8e8e8 !important;
+  color: #ede0ce !important;
   background: #3f7c7f !important;
 }
 
@@ -360,7 +360,7 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 
 .rstudio-themes-flat .popupContent {
   background: #262c33;
-  color: #e8e8e8;
+  color: #ede0ce;
   border-color: #808080;
 }
 
@@ -379,7 +379,7 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 .rstudio-themes-flat .gwt-PopupPanel .popupContent table {
-  background: #e8e8e8;
+  background: #ede0ce;
   border: 0;
 }
 
@@ -390,7 +390,7 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 .rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected,
 .rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected > table {
   background: #3f7c7f;
-  color: #e8e8e8;
+  color: #ede0ce;
 }
 
 /* datagrid */
@@ -466,7 +466,7 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 
 .terminal {
   background-color: #262c33;
-  color: #e8e8e8;
+  color: #ede0ce;
   font-feature-settings: "liga" 0;
   position: relative;
   user-select: none;
@@ -486,7 +486,7 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 .terminal:not(.focus) .terminal-cursor {
-  outline: 1px solid #e8e8e8;
+  outline: 1px solid #ede0ce;
   outline-offset: -1px;
 }
 
@@ -506,7 +506,7 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 .xtermInvertColor {
-  color: #e8e8e8;
+  color: #ede0ce;
 }
 
 .xtermInvertBgColor {
@@ -2614,7 +2614,7 @@ input#rstudio_command_palette_search {
 .rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [id*="rstudio_command_"] table .gwt-Label,
 .rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [id*="rstudio_command_"] table td {
   background-color: #262c33;
-  color: #e8e8e8;
+  color: #ede0ce;
 }
 
 .rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [id*="rstudio_command_"]:hover, .rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [id*="rstudio_command_"]:hover [id^="rstudio_command_entry"], .rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [id*="rstudio_command_"]:hover table .gwt-Label, .rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [id*="rstudio_command_"]:hover table td {
@@ -2641,27 +2641,27 @@ input#rstudio_command_palette_search {
 
 /* Rainbow Parenthesis */
 .rstudio-themes-dark .ace_paren_color_0 {
-  color: #96B482;
+  color: #c5bcaf;
 }
 
 .rstudio-themes-dark .ace_paren_color_1 {
-  color: #64f3f0;
+  color: #3B8EA5;
 }
 
 .rstudio-themes-dark .ace_paren_color_2 {
-  color: #ff00a9;
+  color: #FFD791;
 }
 
 .rstudio-themes-dark .ace_paren_color_3 {
-  color: #ff0010;
+  color: #6B7FD7;
 }
 
 .rstudio-themes-dark .ace_paren_color_4 {
-  color: #4fe818;
+  color: #E83151;
 }
 
 .rstudio-themes-dark .ace_paren_color_5 {
-  color: #ffc400;
+  color: #43AA8B;
 }
 
 .rstudio-themes-dark .ace_paren_color_6 {

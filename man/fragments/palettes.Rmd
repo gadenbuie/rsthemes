@@ -13,7 +13,7 @@
     implementation in RStudio by [Mara Averick](https://maraaverick.rbind.io/)
 - Yule RStudio
   - Based on the [Yule tmTheme](https://tmtheme-editor.herokuapp.com/#!/editor/theme/Yule)
-  - Ported from [gadenbuie/yul-rstudio](https://github.com/gadenbuie/yule-rstudio)
+  - Ported from [gadenbuie/yule-rstudio](https://github.com/gadenbuie/yule-rstudio)
   - Featuring a background image by [Joanna Kosinska](https://unsplash.com/@joannakosinska)
 
 [base16]: https://github.com/chriskempson/base16
