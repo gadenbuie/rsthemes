@@ -1,16 +1,10 @@
 
 <p align="center">
-
 <img src="https://raw.githubusercontent.com/gadenbuie/rsthemes/assets/rsthemes.gif">
-
 <h1 align="center">
-
 {rsthemes}
-
 </h1>
-
 </p>
-
 <!-- badges: start -->
 
 [![](https://img.shields.io/badge/rstudio-%3E=1.2.1335-%2381A9D7.svg)](https://www.rstudio.com/products/rstudio/)
@@ -57,7 +51,7 @@ rsthemes::try_rsthemes("light")
 ```
 
 Use `rstudioapi::applyTheme()` to activate a theme from the R console,
-or use *Tools* \> *Global Options* \> *Appearance* to interactively
+or use *Tools* &gt; *Global Options* &gt; *Appearance* to interactively
 select a theme.
 
 ``` r
@@ -70,13 +64,13 @@ rstudioapi::applyTheme("One Dark {rsthemes}")
 **rsthemes** includes RStudio addins and functions to…
 <a name="automatic--light-and--dark-mode"></a>
 
-  - 🌅 **Toggle Dark Mode**<br>Switch between two preferred dark and
+-   🌅 **Toggle Dark Mode**<br>Switch between two preferred dark and
     light themes
 
-  - 🌃 **Auto Dark Mode**<br>Automatically choose a dark or light theme
+-   🌃 **Auto Dark Mode**<br>Automatically choose a dark or light theme
     by time of day
 
-  - ❤️ **Favorite Themes**<br>Switch between a few of your favorite
+-   ❤️ **Favorite Themes**<br>Switch between a few of your favorite
     themes
 
 #### Choose Your Preferred Themes
@@ -199,32 +193,39 @@ rsthemes::remove_rsthemes("base16")
 
 ### Palettes
 
-  - [base16](https://github.com/chriskempson/base16) (Various Authors)
-  - [Fairyfloss](https://github.com/sailorhg/fairyfloss) ([Amy Wibowo
+-   [base16](https://github.com/chriskempson/base16) (Various Authors)
+-   [Fairyfloss](https://github.com/sailorhg/fairyfloss) ([Amy Wibowo
     (sailorhg)](https://github.com/sailorhg))
-  - [Flat White](https://github.com/biletskyy/flatwhite-syntax) ([Dmitry
+-   [Flat White](https://github.com/biletskyy/flatwhite-syntax) ([Dmitry
     Biletskyy](https://github.com/biletskyy))
-  - [Nord](https://github.com/arcticicestudio/nord) ([Sven
+-   [Nord](https://github.com/arcticicestudio/nord) ([Sven
     Greb](https://www.svengreb.de/))
-  - [Oceanic Plus](https://github.com/marcoms/oceanic-plus) ([Marco
+-   [Oceanic Plus](https://github.com/marcoms/oceanic-plus) ([Marco
     Scannadinari](https://github.com/marcoms))
-  - [Atom One
+-   [Atom One
     Dark](https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
-  - [Atom One
+-   [Atom One
     Light](https://github.com/atom/atom/tree/master/packages/one-light-syntax)
-  - [Solarized](https://ethanschoonover.com/solarized) (Ethan
+-   [Solarized](https://ethanschoonover.com/solarized) (Ethan
     Schoonover)
-  - [Horizon Dark](https://horizontheme.netlify.app/) (Jonathan Olaleye)
-  - [a11y-syntax-highlighting](https://github.com/ericwbailey/a11y-syntax-highlighting)
+-   [Horizon Dark](https://horizontheme.netlify.app/) (Jonathan Olaleye)
+-   [a11y-syntax-highlighting](https://github.com/ericwbailey/a11y-syntax-highlighting)
     ([Eric Bailey](https://ericwbailey.design/))
-  - [Night Owl](https://github.com/sdras/night-owl-vscode-theme) ([Sarah
+-   [Night Owl](https://github.com/sdras/night-owl-vscode-theme) ([Sarah
     Drasner](https://sarah.dev/))
-      - with huge thanks to original [Night
+    -   with huge thanks to original [Night
         Owlish](https://github.com/batpigandme/night-owlish)
         implementation in RStudio by [Mara
         Averick](https://maraaverick.rbind.io/)
+-   Yule RStudio
+    -   Based on the [Yule
+        tmTheme](https://tmtheme-editor.herokuapp.com/#!/editor/theme/Yule)
+    -   Ported from
+        [gadenbuie/yul-rstudio](https://github.com/gadenbuie/yule-rstudio)
+    -   Featuring a background image by [Joanna
+        Kosinska](https://unsplash.com/@joannakosinska)
 
------
+------------------------------------------------------------------------
 
 Please note that the ‘rsthemes’ project is released with a [Contributor
 Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project,
