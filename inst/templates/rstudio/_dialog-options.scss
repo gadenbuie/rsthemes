@@ -156,4 +156,22 @@ $ui_rstudio_dialog_select_foreground: $ui_rstudio_dialog_foreground !default;
     background: $ui_rstudio_dialog_select_background !important;
     color: $ui_rstudio_dialog_select_foreground !important;
   }
+
+  /* code search */
+  .search .rstheme_center {
+    img {
+      display: none;
+    }
+    &::before {
+      content: '\27a0';
+      color: $ui_rstudio_foreground;
+    }
+    & > button::before {
+      content: '\2297';
+      color: $ui_rstudio_foreground;
+      position: relative;
+      top: -3px;
+      font-size: 1.25em;
+    }
+  }
 }
