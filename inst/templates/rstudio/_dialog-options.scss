@@ -157,6 +157,10 @@ $ui_rstudio_dialog_select_foreground: $ui_rstudio_dialog_foreground !default;
     color: $ui_rstudio_dialog_select_foreground !important;
   }
 
+  .rstudio-HyperlinkLabel {
+    color: $ui_rstudio_dialog_heading_foreground;
+  }
+
   .search {
     /* code search */
     background-color: $ui_rstudio_dialog_background;

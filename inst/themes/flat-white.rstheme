@@ -2936,6 +2936,10 @@ input#rstudio_command_palette_search {
   color: #605a52 !important;
 }
 
+.rstudio-themes-flat .rstudio-HyperlinkLabel {
+  color: #6a4dff;
+}
+
 .rstudio-themes-flat .search {
   /* code search */
   background-color: #f7f3ee;

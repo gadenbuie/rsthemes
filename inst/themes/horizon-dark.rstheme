@@ -2884,6 +2884,10 @@ input#rstudio_command_palette_search {
   color: #acafc3 !important;
 }
 
+.rstudio-themes-flat .rstudio-HyperlinkLabel {
+  color: #b877db;
+}
+
 .rstudio-themes-flat .search {
   /* code search */
   background-color: #16161c;
