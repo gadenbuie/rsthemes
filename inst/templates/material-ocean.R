@@ -10,10 +10,10 @@ rstheme(
     base01 = "#0F121C",
     base02 = "#1c1e26",
     base03 = "#232530",
-    base04 = "#2e303e",
+    base04 = "#242937",
     base05 = "#6c6f93",
     base06 = "#A5ABD0",
-    base07 = "#acafc3",
+    base07 = "#1F2233",
     base08 = "#ffffff",
     purple = "#C792E9",
     blue   = "#81AAFF",
@@ -45,18 +45,18 @@ rstheme(
   ui_rstudio_tabs_inactive_background = "$base00",
   ui_rstudio_tabs_inactive_foreground = "$base06",
   ui_rstudio_job_progress_bar       = "$blue",
-  ui_selection                      = "#1F2233",
+  ui_selection                      = "$base07",
   ui_console_selection              = "$base00",
   ui_line_active                    = "$base00",
   ui_line_active_selection          = "$base03",
   ui_margin_line                    = "$base03",
   rmd_chunk_background              = "$base00",
   ui_cursor                         = "$gold",
-  ui_gutter_foreground              = "#242937",
+  ui_gutter_foreground              = "$base04",
   ui_debug_background               = "$base03",
   rmd_chunk_header                  = "$teal",
   rmd_heading_foreground            = "$gold",
-  rmd_href                          = "#e9436f",
+  rmd_href                          = "$red",
   ui_completions_background         = "$base00",
   ui_completions_border             = "$base00",
   ui_completions_foreground         = "$base08",
@@ -67,7 +67,14 @@ rstheme(
     item_hover_background = "mix($teal, $ui_rstudio_background, 20%)"
   ),
   rstheme_large_tabs(),
-  rstheme_dialog_options(),
+  rstheme_dialog_options(
+    selected_foreground = "$base08",
+    help_foreground = "$base08",
+    input_foreground = "$orange",
+    input_background = "$base01",
+    select_foreground = "$base06",
+    select_background = "$base01"
+  ),
   rstheme_rainbow_parentheses(
     "$gold", "$red", "$purple", "$green", "$blue", "$orange", "$teal"
   ),
@@ -76,6 +83,11 @@ rstheme(
       box-shadow: 0 -2px 0 $aqua inset;
       border-radius: 0 !important;
     }
+  }
+  ',
+  '.rstudio-themes-dark .dataGridHeader, .rstudio-themes-dark tr[__gwt_header_row] > :-webkit-any(td, th), .rstudio-themes-dark .dataTables_info {
+    background-color: $base00 !important;
+      border-color: $base00 !important;
   }
   '
 )
