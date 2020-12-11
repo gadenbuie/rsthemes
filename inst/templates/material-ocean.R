@@ -2,7 +2,7 @@ rstheme(
   "Material Ocean",
   theme_dark    = TRUE,
   theme_flat    = TRUE,
-  theme_path    = here::here("rsthemes-main/inst/templates/material-ocean.scss"),
+  theme_path    = here::here("inst/templates/material-ocean.scss"),
   theme_apply   = TRUE,
   theme_as_sass = TRUE,
   theme_palette = list(
@@ -22,7 +22,7 @@ rstheme(
     teal   = "#81D4CC",
     green  = "#C3E88D",
     gold   = "#FFC956",
-    orange = "#F88C6C",    
+    orange = "#F88C6C",
     red    = "#F07178"
   ),
   ui_background   = "$base01",
