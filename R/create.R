@@ -229,18 +229,25 @@ rstheme <- function(
     theme_name, theme_dark
   ))
 
+  path_rel_theme <- function(path) {
+    if (!theme_as_sass || is.null(theme_path)) return(path)
+    fs::path_rel(path, fs::path_dir(theme_path))
+  }
+
   sass_stack <- list(theme_name, theme_palette, dots_vars)
 
   sass_stack <- c(
     sass_stack,
     list(theme_variables),
-    sass::sass_file(
-      package_template("rstudio", paste0(theme_rstudio, ".scss"))
+    sass::sass_import(
+      path_rel_theme(package_template("rstudio", paste0(theme_rstudio, ".scss")))
     ),
-    if (theme_flat) sass::sass_file(
-      package_template("rstudio", paste0(theme_rstudio, "-flatter.scss"))
+    if (theme_flat) sass::sass_import(
+      path_rel_theme(package_template("rstudio", paste0(theme_rstudio, "-flatter.scss")))
     ),
-    sass::sass_file(package_template("rstudio", "_terminal.scss")),
+    sass::sass_import(
+      path_rel_theme(package_template("rstudio", "_terminal.scss"))
+    ),
     list(paste(unlist(dots_sass), collapse = "\n"))
   )
 
@@ -277,7 +284,7 @@ rstheme <- function(
     theme_path <- sub("sass$", "scss", theme_path)
     writeLines(x, theme_path)
   } else {
-    x <- sass::sass(sass_stack, output = theme_path)
+    x <- sass::sass(sass_stack, output = theme_path, cache = NULL)
   }
 
   if (isTRUE(theme_apply)) {

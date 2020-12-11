@@ -320,6 +320,10 @@ table.rstheme_tabLayoutCenter,
     /* search */
     background: $ui_rstudio_search !important;
   }
+  #rstudio_workbench_panel_find_in_files td[colspan="2"] {
+    /* file name in Find in Files */
+    color: $code_message;
+  }
 }
 
 /* pane toolbars */

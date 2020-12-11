@@ -1,3 +1,24 @@
+# rsthemes (development version)
+
+* Improved dialog styles (#43):
+    * Checkboxes now show correct status (thanks @etiennebacher #39)
+    * Code snippet editor is now visible (thanks @etiennebacher #37)
+    * Fixed button and code search styles that result from dialog styles
+    
+* File name in _Find all Files_ is now styled (#36, #43)
+
+# rsthemes 0.2.0 (2020-12-07)
+
+## New Themes
+
+* Yule RStudio (#40)
+
+## Bug Fixes
+
+* `use_theme_auto()` gives better warnings if suncalc or ipapi packages are not
+  installed (@pat-s #38)
+* Caching of geolocation was fixed for older versions of R prior to 4.0
+
 # rsthemes 0.1.0 (2020-10-01)
 
 * Added `rstheme()`, an R function for creating new themes!
