@@ -61,7 +61,11 @@ rstheme(
   ui_completions_border             = "$base00",
   ui_completions_foreground         = "$base08",
   ui_completions_selected_foreground = "$base08",
-  rstheme_command_palette(),
+  ui_completions_selected_background = "mix($teal, $ui_rstudio_background, 40%)",
+  rstheme_command_palette(
+    item_selected_background = "mix($teal, $ui_rstudio_background, 40%)",
+    item_hover_background = "mix($teal, $ui_rstudio_background, 20%)"
+  ),
   rstheme_large_tabs(),
   rstheme_dialog_options(),
   rstheme_rainbow_parentheses(
