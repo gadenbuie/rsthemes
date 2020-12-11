@@ -130,10 +130,10 @@ $ui_rstudio_dialog_select_foreground: $ui_rstudio_dialog_foreground !default;
     border-color: $ui_rstudio_dialog_input_border !important;
   }
 
-  .dialogContent input[type="checkbox"][value="on"] {
+  .dialogContent input[type="checkbox"] {
     background: $ui_rstudio_dialog_checkbox_background !important;
     color: $ui_rstudio_dialog_checkbox_foreground !important;
-    &::before {
+    &:checked::before {
       content: "\2713" !important;
       color: $ui_rstudio_dialog_checkbox_foreground !important;
       vertical-align: top;
