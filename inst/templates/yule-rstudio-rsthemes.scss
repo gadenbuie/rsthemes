@@ -91,8 +91,8 @@ $rmd_chunk_header: $code_function;
 $rmd_chunk_header_background: $code_function_background;
 $rmd_href: $red;
 $rmd_href_background: $code_reserved_background;
-@import "/Users/garrick/Repos/rsthemes/inst/templates/rstudio/_rstudio-dark.scss";
-@import "/Users/garrick/Repos/rsthemes/inst/templates/rstudio/_terminal.scss";
+@import "rstudio/_rstudio-dark.scss";
+@import "rstudio/_terminal.scss";
 
 #rstudio_workbench_panel_environment > div:last-child .ace_editor_theme {
   background-size: cover;
@@ -240,5 +240,5 @@ $ui_paren_3: #6B7FD7;
 $ui_paren_4: #E83151;
 $ui_paren_5: #43AA8B;
 $ui_paren_6: violet;
-@import "/Users/garrick/Repos/rsthemes/inst/templates/rstudio/_command-palette.scss";
-@import "/Users/garrick/Repos/rsthemes/inst/templates/rstudio/_rainbow-parens.scss";
+@import "/Users/garrick/play/rsthemes/inst/templates/rstudio/_command-palette.scss";
+@import "/Users/garrick/play/rsthemes/inst/templates/rstudio/_rainbow-parens.scss";
