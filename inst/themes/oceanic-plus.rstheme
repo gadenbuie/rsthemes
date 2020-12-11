@@ -331,6 +331,11 @@ table.rstheme_tabLayoutCenter .gwt-Label,
   background: #4F5B66 !important;
 }
 
+.rstudio-themes-flat #rstudio_workbench_panel_find_in_files td[colspan="2"] {
+  /* file name in Find in Files */
+  color: #AB7967;
+}
+
 /* pane toolbars */
 .rstheme_secondaryToolbar, .rstudio-themes-flat .rstudio-themes-dark-grey .dataGridHeader {
   background: #4F5B66 !important;
@@ -388,8 +393,7 @@ table.rstheme_tabLayoutCenter .gwt-Label,
   color: #1B2B34;
 }
 
-.rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected,
-.rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected > table {
+.rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected, .rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected > table {
   background: #4F5B66;
   color: #D8DEE9;
 }

@@ -388,8 +388,7 @@ table.rstheme_tabLayoutCenter .gwt-Label,
   color: #2E3440;
 }
 
-.rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected,
-.rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected > table {
+.rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected, .rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected > table {
   background: #434C5E;
   color: #8FBCBB;
 }

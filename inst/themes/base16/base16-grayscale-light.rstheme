@@ -427,8 +427,7 @@ table.rstheme_tabLayoutCenter .gwt-Label,
   color: #f7f7f7;
 }
 
-.rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected,
-.rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected > table {
+.rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected, .rstudio-themes-flat.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected > table {
   background: #b9b9b9;
   color: #101010;
 }

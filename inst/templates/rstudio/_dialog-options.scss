@@ -32,8 +32,7 @@ $ui_rstudio_dialog_select_foreground: $ui_rstudio_dialog_foreground !default;
 .rstudio-themes-flat {
   [id^="rstudio_dialog"],
   :not(.gwt-MenuItem-selected):not(.gwt-MenuItem) > [id^="rstudio_label"],
-  .dialogContent > table div,
-  .dialogContent [id^="rstudio_label_"][id$="_panel"] table td,
+  .dialogContent [id^="rstudio_label_"][id$="_panel"] :not(button) > table > tbody > td,
   .dialogTopCenter,
   .dialogTop,
   .dialogMiddle,
@@ -43,7 +42,7 @@ $ui_rstudio_dialog_select_foreground: $ui_rstudio_dialog_foreground !default;
   }
 
   .dialogContent > table:first-child:last-child :not(button) > table {
-    &, td {
+    &, & > tbody > td {
       background: $ui_rstudio_dialog_background !important;
       color: $ui_rstudio_dialog_foreground !important;
       border-color: $ui_rstudio_dialog_background !important;
@@ -82,7 +81,8 @@ $ui_rstudio_dialog_select_foreground: $ui_rstudio_dialog_foreground !default;
 
   .dialogContent .gwt-Button-DialogAction table,
   .dialogContent .gwt-Button-DialogAction table td,
-  .dialogContent button table {
+  .dialogContent button table,
+  .dialogContent button:not(:hover) table > tbody > tr > td > div {
     background: $ui_rstudio_dialog_button_background !important;
     color: $ui_rstudio_dialog_button_foreground !important;
     border: none !important;
@@ -90,6 +90,17 @@ $ui_rstudio_dialog_select_foreground: $ui_rstudio_dialog_foreground !default;
   }
 
   .gwt-DialogBox .dialogContent {
+    [role="listbox"] > div,
+    [role="listbox"] [role="option"],
+    [role="listbox"] [role="option"] .gwt-Label,
+    [role="tablist"],
+    [role="tablist"] [role="tab"]:not([aria-selected="true"]) .gwt-Label,
+    .gwt-TabLayoutPanelTab {
+      /* Dialog options lists and tabs */
+      background: $ui_rstudio_dialog_background !important;
+      color: $ui_rstudio_dialog_foreground !important;
+    }
+
     [id^="rstudio_label"][aria-selected="true"],
     [id^="rstudio_label"][aria-selected="true"] td,
     .gwt-TabLayoutPanelTab-selected {
@@ -118,7 +129,7 @@ $ui_rstudio_dialog_select_foreground: $ui_rstudio_dialog_foreground !default;
   .dialogContent button:hover,
   .dialogContent button:hover table,
   .dialogContent .gwt-Button:hover > table > tbody > tr > td ,
-  .dialogContent button:hover table div {
+  .dialogContent button:hover table > tbody > tr > td > div {
     color: $ui_rstudio_dialog_button_hover_foreground !important;
     background: $ui_rstudio_dialog_button_hover_background !important;
     border-color: $ui_rstudio_dialog_button_hover_border !important;
@@ -130,10 +141,10 @@ $ui_rstudio_dialog_select_foreground: $ui_rstudio_dialog_foreground !default;
     border-color: $ui_rstudio_dialog_input_border !important;
   }
 
-  .dialogContent input[type="checkbox"][value="on"] {
+  .dialogContent input[type="checkbox"] {
     background: $ui_rstudio_dialog_checkbox_background !important;
     color: $ui_rstudio_dialog_checkbox_foreground !important;
-    &::before {
+    &:checked::before {
       content: "\2713" !important;
       color: $ui_rstudio_dialog_checkbox_foreground !important;
       vertical-align: top;
@@ -144,5 +155,35 @@ $ui_rstudio_dialog_select_foreground: $ui_rstudio_dialog_foreground !default;
   .dialogContent select {
     background: $ui_rstudio_dialog_select_background !important;
     color: $ui_rstudio_dialog_select_foreground !important;
+  }
+
+  .rstudio-HyperlinkLabel {
+    color: $ui_rstudio_dialog_heading_foreground;
+  }
+
+  .search {
+    /* code search */
+    background-color: $ui_rstudio_dialog_background;
+    color: $ui_rstudio_dialog_foreground;
+    .rstheme_center {
+      img {
+        display: none;
+      }
+      &::before {
+        content: '\27a0';
+        color: $ui_rstudio_foreground;
+      }
+      & > button::before {
+        content: '\2297';
+        color: $ui_rstudio_foreground;
+        position: relative;
+        top: -3px;
+        font-size: 1.25em;
+      }
+      & > button:hover {
+        background: unset !important;
+        border: unset !important;
+      }
+    }
   }
 }
