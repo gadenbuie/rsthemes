@@ -73,11 +73,8 @@ rstheme(
   ),
   '.rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
     .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
-      box-shadow: 0 3px 0 $aqua inset;
+      box-shadow: 0 -2px 0 $aqua inset;
       border-radius: 0 !important;
-      .gwt-Label {
-        font-weight: 600;
-      }
     }
   }
   '
