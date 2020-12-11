@@ -284,7 +284,7 @@ rstheme <- function(
     theme_path <- sub("sass$", "scss", theme_path)
     writeLines(x, theme_path)
   } else {
-    x <- sass::sass(sass_stack, output = theme_path)
+    x <- sass::sass(sass_stack, output = theme_path, cache = NULL)
   }
 
   if (isTRUE(theme_apply)) {
