@@ -331,6 +331,11 @@ table.rstheme_tabLayoutCenter .gwt-Label,
   background: #3e4451 !important;
 }
 
+.rstudio-themes-flat #rstudio_workbench_panel_find_in_files td[colspan="2"] {
+  /* file name in Find in Files */
+  color: #be5046;
+}
+
 /* pane toolbars */
 .rstheme_secondaryToolbar, .rstudio-themes-flat .rstudio-themes-dark-grey .dataGridHeader {
   background: #3e4451 !important;
@@ -431,27 +436,29 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 /* scrollbars */
-.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
-.rstudio-themes-flat .rstudio-themes-dark-grey .rstheme_minimizedWindowObject .rstheme_center,
-.rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars ::-webkit-scrollbar-track,
-.rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars ::-webkit-scrollbar-corner,
-.rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-track,
-.rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-corner,
-.rstudio-themes-flat.rstudio-themes-dark-menus .rstudio-themes-scrollbars ::-webkit-scrollbar-track,
-.rstudio-themes-flat.rstudio-themes-dark-menus .rstudio-themes-scrollbars ::-webkit-scrollbar-corner {
+.rstudio-themes-flat {
+  /* Works on Firefox */
+  scrollbar-width: 12px;
+  scrollbar-color: #353b45 #282c34;
+  /* Works on Chrome, Edge, and Safari */
+}
+
+.rstudio-themes-flat ::-webkit-scrollbar {
+  width: 12px;
+}
+
+.rstudio-themes-flat *::-webkit-scrollbar-track {
   background: #282c34;
 }
 
-.rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars ::-webkit-scrollbar-thumb,
-.rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar-thumb,
-.rstudio-themes-flat.rstudio-themes-dark-menus .rstudio-themes-scrollbars ::-webkit-scrollbar-thumb {
-  background: #353b45;
-  border: 4px solid #282c34;
+.rstudio-themes-flat *::-webkit-scrollbar-thumb {
+  background-color: #353b45;
+  border-radius: 0px;
+  border: 2px solid #282c34;
 }
 
-/* scrollbar on firefox */
-.rstudio-themes-flat .rstudio-themes-dark {
-  scrollbar-color: #353b45 #282c34;
+.rstudio-themes-flat *::-webkit-scrollbar-thumb:hover {
+  background-color: #404753;
 }
 
 /* fix overly zealous css rules */
