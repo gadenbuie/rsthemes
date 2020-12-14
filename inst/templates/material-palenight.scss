@@ -40,7 +40,7 @@ $ui_rstudio_scrollbar_background: $ui_background;
 $ui_rstudio_scrollbar_handle: $rmd_chunk_background;
 $ui_cursor: $gold;
 $ui_cursor_normal_mode: $ui_cursor;
-$ui_gutter_foreground: $base04;
+$ui_gutter_foreground: mix($base05, $base01, 40%);
 $ui_gutter_background: $ui_background;
 $ui_line_active: $base00;
 $ui_selection: transparentize($base06, 0.8);
