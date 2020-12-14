@@ -51,7 +51,7 @@ rstheme(
   ui_margin_line                    = "$base03",
   rmd_chunk_background              = "$base00",
   ui_cursor                         = "$gold",
-  ui_gutter_foreground              = "$base04",
+  ui_gutter_foreground              = "mix($base05, $base01, 40%)",
   ui_debug_background               = "$base03",
   rmd_chunk_header                  = "$teal",
   rmd_heading_foreground            = "$gold",
