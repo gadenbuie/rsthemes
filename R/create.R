@@ -191,6 +191,10 @@ rstheme <- function(
   fn_args_not_theme <- c(fn_args_not_theme, "...")
   theme_variables <- call_values[setdiff(names(call_values), fn_args_not_theme)]
 
+  path_rel_theme <- function(path) {
+    if (!theme_as_sass || is.null(theme_path)) return(path)
+    fs::path_rel(path, fs::path_dir(theme_path))
+  }
 
   theme_rstudio <- if (theme_dark) "_rstudio-dark" else "_rstudio-light"
 
@@ -200,8 +204,8 @@ rstheme <- function(
   idx_rm <- c()
   for (i in seq_along(dots)) {
     if (inherits(dots[[i]], "rstheme_template")) {
-      templates <- c(templates, sass::sass_file(
-        package_template("rstudio", paste0(class(dots[[i]])[1], ".scss"))
+      templates <- c(templates, sass::sass_import(
+        path_rel_theme(package_template("rstudio", paste0(class(dots[[i]])[1], ".scss")))
       ))
       templates_variables <- c(templates_variables, dots[i])
       idx_rm <- c(idx_rm, i)
@@ -228,11 +232,6 @@ rstheme <- function(
     "/* rs-theme-name: %s {rsthemes} */\n/* rs-theme-is-dark: %s */",
     theme_name, theme_dark
   ))
-
-  path_rel_theme <- function(path) {
-    if (!theme_as_sass || is.null(theme_path)) return(path)
-    fs::path_rel(path, fs::path_dir(theme_path))
-  }
 
   sass_stack <- list(theme_name, theme_palette, dots_vars)
 
@@ -355,7 +354,7 @@ rstheme_rainbow_parentheses <- function(
 #' @describeIn rstheme_partial Enlarges the tabs
 #' @export
 rstheme_large_tabs <- function() {
-  sass::sass_file(package_template("rstudio", "_large-tabs.scss"))
+  structure(list(), class = c("_large-tabs", "rstheme_template", "list"))
 }
 
 #' @describeIn rstheme_partial Themes dialog windows, e.g. _Global Options_
