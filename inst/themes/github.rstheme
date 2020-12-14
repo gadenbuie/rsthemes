@@ -335,7 +335,7 @@ table.rstheme_tabLayoutCenter,
 table.rstheme_tabLayoutCenter .gwt-Label,
 .rstudio-themes-flat .rstudio-themes-default .gwt-TabLayoutPanelTabs .gwt-Label,
 .rstheme_multiPodUtilityTabArea .gwt-Label {
-  color: #C6CBD1;
+  color: #959da5;
 }
 
 /* toolbar and selected tab */

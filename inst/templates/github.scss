@@ -4,56 +4,56 @@
 @import "palettes/_github.scss";
 
 // primary UI colors
-$ui_background           : #FFFFFF;
-$ui_foreground           : $base07;
+$ui_background: #FFFFFF;
+$ui_foreground: $base07;
 $rmd_chunk_background: $base01;
-$ui_selection            : transparentize($blue, 0.85);
-$ui_cursor               : $base0C;
-$ui_cursor_normal_mode   : $ui_cursor;
-$ui_margin_line          : $base02;
-$ui_gutter_foreground         : $base03;
-$ui_gutter_background    : $ui_background;
+$ui_selection: transparentize($blue, 0.85);
+$ui_cursor: $base0C;
+$ui_cursor_normal_mode: $ui_cursor;
+$ui_margin_line: $base02;
+$ui_gutter_foreground: $base03;
+$ui_gutter_background: $ui_background;
 
 // less common UI colors
-//$ui_line_active           : transparentize(darken($ui_background, 10%), 0.5);
-$ui_line_active           : $light-blue;
-$ui_line_active_gutter    : $light-blue;
-$ui_line_active_selection : transparentize($blue, 0.85);
-$ui_line_find             : $light-green;
-$ui_bracket               : $light-red;
-$ui_invisible             : $base03;
-$ui_indent_guide          : $base02;
-$ui_debug_background      : $light-red;
+//$ui_line_active: transparentize(darken($ui_background, 10%), 0.5);
+$ui_line_active: $light-blue;
+$ui_line_active_gutter: $light-blue;
+$ui_line_active_selection: transparentize($blue, 0.85);
+$ui_line_find: $light-green;
+$ui_bracket: $light-red;
+$ui_invisible: $base03;
+$ui_indent_guide: $base02;
+$ui_debug_background: $light-red;
 $ui_fold_arrows_background: $base08;
-$ui_fold_arrows_foreground     : $light-red;
+$ui_fold_arrows_foreground: $light-red;
 
 // rstudio
-$ui_rstudio_background          : $ui_background;
-$ui_rstudio_foreground               : $ui_foreground;
-$ui_rstudio_tabs_inactive_background       : $base00;
-$ui_rstudio_tabs_inactive_foreground : $base03;
-$ui_rstudio_tabs_active_background       : $base02;
-$ui_rstudio_tabs_active_foreground : $blue;
-$ui_rstudio_toolbar_background             : $base02;
-$ui_rstudio_toolbar_foreground       : $base05;
-$ui_rstudio_search              : $ui_rstudio_toolbar_background;
-$ui_completions_background      : $ui_background;
-$ui_completions_foreground           : $ui_foreground;
-$ui_completions_border          : $ui_bracket;
+$ui_rstudio_background: $ui_background;
+$ui_rstudio_foreground: $ui_foreground;
+$ui_rstudio_tabs_inactive_background: $base00;
+$ui_rstudio_tabs_inactive_foreground: $base04;
+$ui_rstudio_tabs_active_background: $base02;
+$ui_rstudio_tabs_active_foreground: $blue;
+$ui_rstudio_toolbar_background: $base02;
+$ui_rstudio_toolbar_foreground: $base05;
+$ui_rstudio_search: $ui_rstudio_toolbar_background;
+$ui_completions_background: $ui_background;
+$ui_completions_foreground: $ui_foreground;
+$ui_completions_border: $ui_bracket;
 $ui_rstudio_scrollbar_background: $ui_background;
-$ui_rstudio_scrollbar_handle    : $rmd_chunk_background;
+$ui_rstudio_scrollbar_handle: $rmd_chunk_background;
 
 // R language colors
-$code_comment  : $base04;
-$code_string   : $base0B;
-$code_function : $base0D;
-$code_reserved : $base0E;
-$code_operator : $ui_foreground;
-$code_bracket  : $ui_foreground;
-$code_value    : $base0C;
+$code_comment: $base04;
+$code_string: $base0B;
+$code_function: $base0D;
+$code_reserved: $base0E;
+$code_operator: $ui_foreground;
+$code_bracket: $ui_foreground;
+$code_value: $base0C;
 $code_namespace: $base0A;
-$code_variable : $base09;
-$code_message  : $base0F;
+$code_variable: $base09;
+$code_message: $base0F;
 $code_namespace_font_style: normal;
 
 $code_other: $base08;
