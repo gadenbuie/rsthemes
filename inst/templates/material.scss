@@ -1,11 +1,12 @@
-/* rs-theme-name: Material Palenight {rsthemes} */
+/* rs-theme-name: Material {rsthemes} */
 /* rs-theme-is-dark: TRUE */
-$base00: #222736;
-$base01: #282E3F;
+$base00: #162327;
+$base01: #233338;
 $base02: #232530;
-$base03: #6C6F93;
-$base04: #A5ABD0;
+$base03: #4D707B;
+$base04: #EAFFFF;
 $base05: #ffffff;
+$base06: #577C88;
 $purple: #C792E9;
 $blue: #81AAFF;
 $sky: #88DDFE;
@@ -16,7 +17,7 @@ $gold: #FDCA68;
 $orange: #F88C6C;
 $red: #F07178;
 $ui_background: $base01;
-$ui_foreground: $base04;
+$ui_foreground: $base06;
 $code_string: $green;
 $code_function: $blue;
 $code_value: $orange;
@@ -27,7 +28,7 @@ $ui_rstudio_foreground: $base04;
 $ui_rstudio_border: $ui_background;
 $rmd_chunk_background: $base00;
 $ui_rstudio_tabs_inactive_background: $base00;
-$ui_rstudio_tabs_inactive_foreground: $base04;
+$ui_rstudio_tabs_inactive_foreground: $base06;
 $ui_rstudio_tabs_inactive_hover_background: $ui_rstudio_tabs_inactive_background;
 $ui_rstudio_tabs_active_background: $base00;
 $ui_rstudio_tabs_active_foreground: $base05;
@@ -58,14 +59,14 @@ $ui_completions_foreground: $base05;
 $ui_completions_border: $base00;
 $ui_completions_selected_background: $ui_line_active_selection;
 $ui_completions_selected_foreground: $base05;
-$ui_rstudio_job_progress_bar: $blue;
+$ui_rstudio_job_progress_bar: $teal;
 $code_comment: $base03;
 $code_namespace_font_style: italic;
 $code_reserved: $purple;
 $code_operator: $sky;
 $code_bracket: $sky;
 $code_namespace: $red;
-$code_identifier: $base04;
+$code_identifier: $base05;
 $code_string_background: inherit;
 $code_function_background: inherit;
 $code_value_background: inherit;
@@ -90,7 +91,7 @@ $rmd_href_background: $code_reserved_background;
 @import "../../../../../../../../Library/Frameworks/R.framework/Versions/3.6/Resources/library/rsthemes/templates/rstudio/_terminal.scss";
 .rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
     .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
-      box-shadow: 0 -2px 0 $purple inset;
+      box-shadow: 0 -2px 0 $teal inset;
       border-radius: 0 !important;
     }
   }
@@ -108,11 +109,11 @@ $ui_command_palette_item_color: $ui_foreground;
 $ui_command_palette_item_hover_background: if($ui_rstudio_is_dark, lighten($ui_command_palette_item_background, 5%), darken($ui_command_palette_item_background, 5%));
 $ui_command_palette_item_selected_background: if($ui_rstudio_is_dark, lighten($ui_command_palette_item_background, 10%), darken($ui_command_palette_item_background, 10%));
 $ui_rstudio_dialog_background: $ui_rstudio_background;
-$ui_rstudio_dialog_foreground: $ui_rstudio_foreground;
+$ui_rstudio_dialog_foreground: $base06;
 $ui_rstudio_dialog_border: if($ui_rstudio_is_dark, lighten($ui_rstudio_dialog_background, 5%), darken($ui_rstudio_dialog_background, 5%));
 $ui_rstudio_dialog_selected_background: $ui_rstudio_dialog_border;
 $ui_rstudio_dialog_selected_foreground: $base05;
-$ui_rstudio_dialog_heading_foreground: $purple;
+$ui_rstudio_dialog_heading_foreground: $teal;
 $ui_rstudio_dialog_help_foreground: $base05;
 $ui_rstudio_dialog_button_foreground: $ui_rstudio_dialog_foreground;
 $ui_rstudio_dialog_button_background: $ui_rstudio_dialog_background;
