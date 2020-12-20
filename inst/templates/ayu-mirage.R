@@ -68,8 +68,9 @@ rstheme(
     help_foreground = "$base05",
     input_foreground = "$code_value",
     input_background = "$base01",
-    select_foreground = "$base06",
-    select_background = "$base01"
+    select_foreground = "$base05",
+    select_background = "$base01",
+    button_hover_foreground = "$base05"
   ),
   rstheme_rainbow_parentheses(
     "$teal", "$pink", "$base05", "$purple", "$blue", "$green"

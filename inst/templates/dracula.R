@@ -10,7 +10,6 @@ rstheme(
     base01 = "#282A36",
     base02 = "#44475A",
     base03 = "#6272A4",
-    base04 = "#6071A8",
     white = "#F8F8F2",
     yellow = "#F1FA8C",
     cyan   = "#8BE9FD",
@@ -31,7 +30,7 @@ rstheme(
   code_reserved   = "$cyan",
   code_operator   = "$pink",
   code_bracket    = "$white",
-  code_namespace  = "$pink",
+  code_namespace  = "$orange",
   code_identifier = "$white",
   ui_rstudio_background             = "$base00",
   ui_rstudio_foreground             = "mix($base03, $white, 70%)",
@@ -47,7 +46,7 @@ rstheme(
   ui_margin_line                    = "$base03",
   rmd_chunk_background              = "$base00",
   ui_cursor                         = "transparentize($white, 0.25)",
-  ui_gutter_foreground              = "$base04",
+  ui_gutter_foreground              = "$base03",
   ui_debug_background               = "$base03",
   rmd_chunk_header                  = "$orange",
   rmd_heading_foreground            = "$purple",
@@ -60,11 +59,13 @@ rstheme(
   rstheme_large_tabs(),
   rstheme_dialog_options(
     selected_foreground = "$white",
+    heading_foreground = "$orange",
     help_foreground = "$white",
     input_foreground = "$code_value",
     input_background = "$base01",
-    select_foreground = "$base03",
-    select_background = "$base01"
+    select_foreground = "$white",
+    select_background = "$base01",
+    button_hover_foreground = "$white"
   ),
   rstheme_rainbow_parentheses(
     "$cyan", "$pink", "$white", "$yellow", "$red", "$green"

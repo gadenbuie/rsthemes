@@ -1,17 +1,18 @@
 rstheme(
-  "Material Ocean",
+  "Material",
   theme_dark    = TRUE,
   theme_flat    = TRUE,
-  theme_path    = here::here("inst/templates/material-ocean.scss"),
+  theme_path    = here::here("inst/templates/material.scss"),
   theme_apply   = TRUE,
   theme_as_sass = TRUE,
   theme_palette = list(
-    base00 = "#090D14",
-    base01 = "#0F121C",
+    base00 = "#162327",
+    base01 = "#233338",
     base02 = "#232530",
-    base03 = "#6C6F93",
-    base04 = "#A5ABD0",
+    base03 = "#4D707B",
+    base04 = "#EAFFFF",
     base05 = "#ffffff",
+    base06 = "#577C88",
     purple = "#C792E9",
     blue   = "#81AAFF",
     sky    = "#88DDFE",
@@ -23,7 +24,7 @@ rstheme(
     red    = "#F07178"
   ),
   ui_background   = "$base01",
-  ui_foreground   = "$base04",
+  ui_foreground   = "$base06",
   code_string     = "$green",
   code_function   = "$blue",
   code_value      = "$orange",
@@ -32,17 +33,17 @@ rstheme(
   code_message    = "$sky",
   code_reserved   = "$purple",
   code_operator   = "$sky",
-  code_bracket    = "$sky",
+  code_bracket = "$sky",
   code_namespace  = "$red",
-  code_identifier = "$base04",
+  code_identifier = "$base05",
   ui_rstudio_background             = "$base00",
   ui_rstudio_foreground             = "$base04",
   ui_rstudio_toolbar_foreground     = "$base03",
   ui_rstudio_tabs_active_background = "$base00",
   ui_rstudio_tabs_active_foreground = "$base05",
   ui_rstudio_tabs_inactive_background = "$base00",
-  ui_rstudio_tabs_inactive_foreground = "$base04",
-  ui_rstudio_job_progress_bar       = "$aqua",
+  ui_rstudio_tabs_inactive_foreground = "$base06",
+  ui_rstudio_job_progress_bar       = "$teal",
   ui_selection                      = "mix($base04, $base01, 10%)",
   ui_console_selection              = "$base00",
   ui_line_active                    = "$base00",
@@ -62,9 +63,10 @@ rstheme(
   rstheme_command_palette(),
   rstheme_large_tabs(),
   rstheme_dialog_options(
-    heading_foreground = "$aqua",
+    heading_foreground = "$teal",
     help_foreground = "$base05",
     selected_foreground = "$base05",
+    foreground = "$base06",
     input_foreground = "$gold",
     button_hover_foreground = "$base05"
   ),
@@ -73,7 +75,7 @@ rstheme(
   ),
   '.rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
     .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
-      box-shadow: 0 -2px 0 $aqua inset;
+      box-shadow: 0 -2px 0 $teal inset;
       border-radius: 0 !important;
     }
   }

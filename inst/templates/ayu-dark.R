@@ -15,7 +15,7 @@ rstheme(
     base06 = "#626A73",
     base07 = "#4D556699",
     base08 = "#c4c6d4",
-    yelpur = "#FFEE99",
+    yellow = "#FFEE99",
     blue   = "#59C2FF",
     teal   = "#95E6CB",
     green  = "#C2D94C",
@@ -40,10 +40,10 @@ rstheme(
   code_namespace  = "$pink",
   code_identifier = "$base05",
   ui_rstudio_background             = "$base00",
-  ui_rstudio_foreground             = "$base02", #options menu text
-  ui_rstudio_toolbar_foreground     = "$base02", #ui text on toolbar. Go to VSCode for better example
+  ui_rstudio_foreground             = "$base02",
+  ui_rstudio_toolbar_foreground     = "$base02",
   ui_rstudio_tabs_active_background = "$base00",
-  ui_rstudio_tabs_active_foreground = "$base05",  #selected tab text
+  ui_rstudio_tabs_active_foreground = "$base05",
   ui_rstudio_tabs_inactive_background = "$base00",
   ui_rstudio_job_progress_bar       = "$teal",
   ui_selection                      = "$base04",
@@ -55,7 +55,7 @@ rstheme(
   ui_cursor                         = "$orange01",
   ui_gutter_foreground              = "$base07",
   ui_debug_background               = "$base03",
-  rmd_chunk_header                  = "$green",
+  rmd_chunk_header                  = "$yellow",
   rmd_heading_foreground            = "$pink",
   rmd_href                          = "$pink",
   ui_completions_background         = "$base00",
@@ -69,11 +69,12 @@ rstheme(
     help_foreground = "$base08",
     input_foreground = "$code_value",
     input_background = "$base01",
-    select_foreground = "$base06",
-    select_background = "$base01"
+    select_foreground = "$base08",
+    select_background = "$base01",
+    button_hover_foreground = "$base08"
   ),
   rstheme_rainbow_parentheses(
-    "$teal", "$pink", "$base05", "$yelpur", "$blue", "$green"
+    "$teal", "$pink", "$base05", "$yellow", "$blue", "$green"
   ),
   '.rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
     .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
