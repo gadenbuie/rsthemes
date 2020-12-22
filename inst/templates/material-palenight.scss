@@ -85,9 +85,9 @@ $rmd_chunk_header: $teal;
 $rmd_chunk_header_background: $code_function_background;
 $rmd_href: $red;
 $rmd_href_background: $code_reserved_background;
-@import "../../../../../../../../Library/Frameworks/R.framework/Versions/3.6/Resources/library/rsthemes/templates/rstudio/_rstudio-dark.scss";
-@import "../../../../../../../../Library/Frameworks/R.framework/Versions/3.6/Resources/library/rsthemes/templates/rstudio/_rstudio-dark-flatter.scss";
-@import "../../../../../../../../Library/Frameworks/R.framework/Versions/3.6/Resources/library/rsthemes/templates/rstudio/_terminal.scss";
+@import "rstudio/_rstudio-dark.scss";
+@import "rstudio/_rstudio-dark-flatter.scss";
+@import "rstudio/_terminal.scss";
 .rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
     .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
       box-shadow: 0 -2px 0 $purple inset;
@@ -134,7 +134,7 @@ $ui_paren_3: $purple;
 $ui_paren_4: $green;
 $ui_paren_5: $orange;
 $ui_paren_6: $teal;
-@import "../../../../../../../../Library/Frameworks/R.framework/Versions/3.6/Resources/library/rsthemes/templates/rstudio/_command-palette.scss";
-@import "../../../../../../../../Library/Frameworks/R.framework/Versions/3.6/Resources/library/rsthemes/templates/rstudio/_large-tabs.scss";
-@import "../../../../../../../../Library/Frameworks/R.framework/Versions/3.6/Resources/library/rsthemes/templates/rstudio/_dialog-options.scss";
-@import "../../../../../../../../Library/Frameworks/R.framework/Versions/3.6/Resources/library/rsthemes/templates/rstudio/_rainbow-parens.scss";
+@import "rstudio/_command-palette.scss";
+@import "rstudio/_large-tabs.scss";
+@import "rstudio/_dialog-options.scss";
+@import "rstudio/_rainbow-parens.scss";

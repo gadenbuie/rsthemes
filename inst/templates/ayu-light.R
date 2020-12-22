@@ -22,7 +22,7 @@ rstheme(
     orange02 = "#F2AE49",
     orange03 = "#FA8D3E",
     orange04 = "#E6BA7E",
-    orange05 = "#ED9366",    
+    orange05 = "#ED9366",
     pink     = "#F07171"
   ),
   ui_background   = "$base01",
