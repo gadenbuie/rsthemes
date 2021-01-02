@@ -16,12 +16,11 @@
   }
 }
 
-.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanel .gwt-TabLayoutPanelTabs {
+.rstudio-themes-flat .gwt-TabLayoutPanel .gwt-TabLayoutPanelTabs {
   border-color: $ui_rstudio_tabs_inactive_background !important;
 }
 
-// FIXME for light themes
-.rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs {
+.rstudio-themes-flat .gwt-TabLayoutPanelTabs {
   .gwt-TabLayoutPanelTabInner table.rstheme_tabLayoutCenter {
     tbody > tr > td:last-child > img {
       display: none;

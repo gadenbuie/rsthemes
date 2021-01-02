@@ -2732,22 +2732,22 @@ input#rstudio_command_palette_search {
   height: 40px !important;
 }
 
-.rstudio-themes-flat .rstudio-themes-dark-grey .gwt-TabLayoutPanel .gwt-TabLayoutPanelTabs {
+.rstudio-themes-flat .gwt-TabLayoutPanel .gwt-TabLayoutPanelTabs {
   border-color: #011421 !important;
 }
 
-.rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTabInner table.rstheme_tabLayoutCenter tbody > tr > td:last-child > img {
+.rstudio-themes-flat .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTabInner table.rstheme_tabLayoutCenter tbody > tr > td:last-child > img {
   display: none;
 }
 
-.rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTabInner table.rstheme_tabLayoutCenter:hover tbody > tr > td:last-child > img {
+.rstudio-themes-flat .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTabInner table.rstheme_tabLayoutCenter:hover tbody > tr > td:last-child > img {
   display: inline-block;
   position: absolute !important;
   top: 0 !important;
   padding-left: 3px;
 }
 
-.rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs [id^="rstudio_workbench_"] .gwt-TabLayoutPanelTabInner table.rstheme_tabLayoutCenter:hover tbody > tr > td:last-child > img {
+.rstudio-themes-flat .gwt-TabLayoutPanelTabs [id^="rstudio_workbench_"] .gwt-TabLayoutPanelTabInner table.rstheme_tabLayoutCenter:hover tbody > tr > td:last-child > img {
   padding-top: 5px;
 }
 
