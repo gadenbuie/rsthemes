@@ -217,12 +217,15 @@ $ui_rstudio_is_dark: false;
   background-color: $ui_line_find;
 }
 .ace_layer {
-  z-index: 3;
+  z-index: 4;
   &.ace_print-margin-layer {
     z-index: 2;
   }
   &.ace_marker-layer {
     z-index: 1;
+  }
+  &.ace_cursor-layer {
+    z-index: 3;
   }
 }
 .ace_selection.ace_start {
