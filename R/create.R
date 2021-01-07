@@ -190,6 +190,8 @@ rstheme <- function(
   fn_args_not_theme <- grep("^theme_", names(formals()), value = TRUE)
   fn_args_not_theme <- c(fn_args_not_theme, "...")
   theme_variables <- call_values[setdiff(names(call_values), fn_args_not_theme)]
+  # force evaluatation of all theme_variables now
+  theme_variables <- lapply(theme_variables, eval, envir = new.env())
 
   path_rel_theme <- function(path) {
     if (!theme_as_sass || is.null(theme_path)) return(path)
