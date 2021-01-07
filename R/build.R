@@ -42,7 +42,7 @@ render_sass <- function(
 
   outfile <- fs::path(outdir, outfile)
   if (input_is_text) {
-    sass::sass(file, output = outfile)
+    sass::sass(file, output = outfile, cache = NULL)
   } else {
     sass::sass(sass::sass_file(file), output = outfile, cache = NULL)
   }
