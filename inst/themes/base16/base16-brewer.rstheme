@@ -47,7 +47,6 @@
 .normal-mode .ace_cursor {
   border: 0 !important;
   background-color: #dca060;
-  opacity: 0.5;
 }
 
 .ace_marker-layer .ace_selection {
@@ -223,7 +222,7 @@
 }
 
 .ace_layer {
-  z-index: 3;
+  z-index: 4;
 }
 
 .ace_layer.ace_print-margin-layer {
@@ -232,6 +231,10 @@
 
 .ace_layer.ace_marker-layer {
   z-index: 1;
+}
+
+.ace_layer.ace_cursor-layer {
+  z-index: 3;
 }
 
 .ace_selection.ace_start {
@@ -439,13 +442,13 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 /* scrollbars */
 .rstudio-themes-flat {
   /* Works on Firefox */
-  scrollbar-width: 12px;
+  scrollbar-width: auto;
   scrollbar-color: #2e2f30 #0c0d0e;
   /* Works on Chrome, Edge, and Safari */
 }
 
 .rstudio-themes-flat ::-webkit-scrollbar {
-  width: 12px;
+  width: auto;
 }
 
 .rstudio-themes-flat *::-webkit-scrollbar-track {
