@@ -49,8 +49,7 @@
 
 .normal-mode .ace_cursor {
   border: 0 !important;
-  background-color: #dc322f;
-  opacity: 0.5;
+  background-color: rgba(220, 50, 47, 0.5);
 }
 
 .ace_marker-layer .ace_selection {
