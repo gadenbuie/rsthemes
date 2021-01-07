@@ -151,11 +151,12 @@ material_rstheme <- function(
     }
   }
   ", dialog_heading_foreground),
-    ".rstudio-themes-dark .dataGridHeader, .rstudio-themes-dark tr[__gwt_header_row] > :-webkit-any(td, th), .rstudio-themes-dark .dataTables_info {
-    background-color: $base00 !important;
-      border-color: $base00 !important;
-  }
-  "
+    "/* remove border from panes */
+    .rstudio-themes-flat
+    :-webkit-any(.windowframe, .rstheme_minimizedWindowObject)
+    > div:last-child {
+      border-color: $ui_rstudio_background !important;
+    }"
   )
 
   theme_args <- modifyList(theme_args, list(...))
