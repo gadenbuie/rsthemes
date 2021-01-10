@@ -62,13 +62,13 @@ material_base <- list(
     base06 = "#ffffff"
   ),
   palenight = list(
-    base00 = "#222736",
-    base01 = "#282E3F",
-    base02 = "#232530",
-    base03 = "#6C6F93",
-    base04 = "#A5ABD0",
-    base05 = "#ffffff",
-    base06 = "#ffffff"
+    base00 = "#292D3E",
+    base01 = "#333747",
+    base02 = "#3A3F58",
+    base03 = "#4E5579",
+    base04 = "#676E95",
+    base05 = "#A6ACCD",
+    base06 = "#FFFFFF"
   )
 )
 
@@ -193,17 +193,20 @@ material_rstheme(
   dialog_heading_foreground = "$aqua",
   ui_foreground = "$base05",
   ui_rstudio_job_progress_bar = "$purple"
-  # ui_rstudio_tabs_inactive_foreground = "$base04"
 )
 
 material_rstheme(
   "Palenight",
   material_base$palenight,
   material_accents$base,
-  ui_rstudio_job_progress_bar = "$blue",
   dialog_foreground = "$ui_rstudio_foreground",
   dialog_heading_foreground = "$purple",
-  ui_foreground = "$base04",
-  ui_rstudio_tabs_inactive_foreground = "$base04",
-  code_identifier = "$base04"
+  ui_rstudio_job_progress_bar = "$blue"
 )
+
+# make_rsthemes()
+# hotload_rstheme("inst/themes/material.rstheme")
+# hotload_rstheme("inst/themes/material-darker.rstheme")
+# hotload_rstheme("inst/themes/material-lighter.rstheme")
+# hotload_rstheme("inst/themes/material-ocean.rstheme")
+# hotload_rstheme("inst/themes/material-palenight.rstheme")
