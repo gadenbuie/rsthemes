@@ -123,7 +123,7 @@ material_rstheme <- function(
     ui_cursor                = "$gold",
     ui_gutter_foreground     = "$base03",
     ui_debug_background      = "$base02",
-    rmd_chunk_background     = "$base00",
+    rmd_chunk_background     = "darken($base00, 2%)",
     rmd_chunk_header         = "$teal",
     rmd_heading_foreground   = "$gold",
     rmd_href                 = "$red",
