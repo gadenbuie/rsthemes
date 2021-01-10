@@ -115,7 +115,7 @@ material_rstheme <- function(
     ui_completions_border               = "$base00",
     ui_completions_foreground           = "$base06",
     ui_completions_selected_foreground  = "$base06",
-    ui_console_selection     = "$base00",
+    ui_console_selection     = "$ui_selection",
     ui_selection             = "mix($base04, $base01, 10%)",
     ui_line_active           = "darken($base00, 5%)",
     ui_line_active_selection = "$base02",
