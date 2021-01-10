@@ -54,7 +54,7 @@ $ui_debug_background: $base02;
 $ui_fold_arrows_foreground: $ui_cursor;
 $ui_fold_arrows_background: transparentize($ui_fold_arrows_foreground, 0.5);
 $ui_line_find: $ui_selection;
-$ui_console_selection: $base00;
+$ui_console_selection: $ui_selection;
 $ui_completions_background: $base01;
 $ui_completions_foreground: $base06;
 $ui_completions_border: $base00;
