@@ -1,13 +1,13 @@
 material_accents <- list(
   base = list(
-    purple = "#C792E9",
+    purple = "#C792EA",
     blue   = "#81AAFF",
-    sky    = "#88DDFE",
-    aqua   = "#84ffff",
-    teal   = "#81D4CC",
+    sky    = "#89DDFF",
+    aqua   = "#84FFFF",
+    teal   = "#80CBC4",
     green  = "#C3E88D",
-    gold   = "#FDCA68",
-    orange = "#F88C6C",
+    gold   = "#FFCB6B",
+    orange = "#F78C6C",
     red    = "#F07178"
   ),
   lighter = list(
@@ -25,13 +25,13 @@ material_accents <- list(
 
 material_base <- list(
   base = list(
-    base00 = "#162327",
-    base01 = "#233338",
-    base02 = "#232530",
-    base03 = "#4D707B",
-    base04 = "#EAFFFF",
-    base05 = "#ffffff",
-    base06 = "#577C88"
+    base00 = "#263238",
+    base01 = "#303C41",
+    base02 = "#37474F",
+    base03 = "#546E7A",
+    base04 = "#607A86",
+    base05 = "#B2CCD6",
+    base06 = "#EEFFFF"
   ),
   darker = list(
     base00 = "#1B1B1B",
@@ -58,7 +58,8 @@ material_base <- list(
     base02 = "#232530",
     base03 = "#6C6F93",
     base04 = "#A5ABD0",
-    base05 = "#ffffff"
+    base05 = "#ffffff",
+    base06 = "#ffffff"
   ),
   palenight = list(
     base00 = "#222736",
@@ -66,7 +67,8 @@ material_base <- list(
     base02 = "#232530",
     base03 = "#6C6F93",
     base04 = "#A5ABD0",
-    base05 = "#ffffff"
+    base05 = "#ffffff",
+    base06 = "#ffffff"
   )
 )
 
@@ -74,7 +76,7 @@ material_rstheme <- function(
   style = NULL,
   base = material_base$base,
   accents = material_accents$base,
-  dialog_foreground = "$base06",
+  dialog_foreground = "$ui_foreground",
   dialog_heading_foreground = "$teal",
   ...
 ) {
@@ -88,38 +90,38 @@ material_rstheme <- function(
     theme_apply     = TRUE,
     theme_as_sass   = TRUE,
     theme_palette   = c(base, accents),
-    ui_background   = "$base01",
+    ui_background   = "$base00",
     ui_foreground   = "$base06",
     code_string     = "$green",
     code_function   = "$blue",
     code_value      = "$orange",
-    code_comment    = "$base03",
+    code_comment    = "$base04",
     code_variable   = "$gold",
-    code_message    = "$sky",
+    code_message    = "$aqua",
     code_reserved   = "$purple",
     code_operator   = "$sky",
-    code_bracket    = "$sky",
+    code_bracket    = "$teal",
     code_namespace  = "$red",
-    code_identifier = "$base05",
+    code_identifier = "$base06",
     ui_rstudio_background               = "$base00",
-    ui_rstudio_foreground               = "$base04",
+    ui_rstudio_foreground               = "$base06",
     ui_rstudio_toolbar_foreground       = "$base03",
     ui_rstudio_tabs_active_background   = "$base00",
-    ui_rstudio_tabs_active_foreground   = "$base05",
+    ui_rstudio_tabs_active_foreground   = "$base06",
     ui_rstudio_tabs_inactive_background = "$base00",
-    ui_rstudio_tabs_inactive_foreground = "$base06",
+    ui_rstudio_tabs_inactive_foreground = "$base04",
     ui_rstudio_job_progress_bar         = "$teal",
     ui_completions_background           = "$base01",
     ui_completions_border               = "$base00",
-    ui_completions_foreground           = "$base05",
-    ui_completions_selected_foreground  = "$base05",
+    ui_completions_foreground           = "$base06",
+    ui_completions_selected_foreground  = "$base06",
     ui_console_selection     = "$base00",
     ui_selection             = "mix($base04, $base01, 10%)",
-    ui_line_active           = "$base00",
+    ui_line_active           = "darken($base00, 5%)",
     ui_line_active_selection = "$base02",
-    ui_margin_line           = "$base02",
+    ui_margin_line           = "$base01",
     ui_cursor                = "$gold",
-    ui_gutter_foreground     = "mix($base03, $base01, 50%)",
+    ui_gutter_foreground     = "$base03",
     ui_debug_background      = "$base02",
     rmd_chunk_background     = "$base00",
     rmd_chunk_header         = "$teal",
@@ -156,7 +158,8 @@ material_rstheme <- function(
     :-webkit-any(.windowframe, .rstheme_minimizedWindowObject)
     > div:last-child {
       border-color: $ui_rstudio_background !important;
-    }"
+    }
+    "
   )
 
   theme_args <- modifyList(theme_args, list(...))
@@ -169,7 +172,7 @@ material_rstheme()
 material_rstheme(
   "Darker",
   material_base$darker,
-  dialog_heading_foreground = "$orange",
+  dialog_heading_foreground = "$aqua",
   ui_rstudio_job_progress_bar = "$orange"
 )
 
@@ -209,6 +212,3 @@ material_rstheme(
   ui_rstudio_tabs_inactive_foreground = "$base04",
   code_identifier = "$base04"
 )
-
-make_rsthemes()
-hotload_rstheme("inst/themes/material.rstheme")
