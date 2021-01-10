@@ -14,7 +14,7 @@ rstheme(
     base05 = "#575F66",
     base06 = "#ABB0B6",
     base07 = "#8A919966",
-    purple = "#A37ACC",
+    purple = "#9e75c7",
     blue   = "#399EE6",
     teal   = "#4CBF99",
     green  = "#86B300",
@@ -25,7 +25,7 @@ rstheme(
     orange05 = "#ED9366",
     pink     = "#F07171"
   ),
-  ui_background   = "$base01",
+  ui_background   = "$base00",
   ui_foreground   = "$base05",
   code_string     = "$green",
   code_function   = "$orange02",
@@ -34,7 +34,7 @@ rstheme(
   code_variable   = "$blue",
   code_message    = "$teal",
   code_reserved   = "$orange03",
-  code_operator   = "$orange01",
+  code_operator   = "$orange02",
   code_bracket    = "$base05",
   code_namespace  = "$pink",
   code_identifier = "$base05",
@@ -49,17 +49,17 @@ rstheme(
   ui_console_selection              = "$base04",
   ui_line_active                    = "$base00",
   ui_line_active_selection          = "$base03",
-  ui_margin_line                    = "$base03",
-  rmd_chunk_background              = "$base00",
+  ui_margin_line                    = "$base01",
+  rmd_chunk_background              = "$base01",
   ui_cursor                         = "$orange01",
   ui_gutter_foreground              = "$base07",
   ui_debug_background               = "$base03",
-  rmd_chunk_header                  = "$green",
+  rmd_chunk_header                  = "$purple",
   rmd_heading_foreground            = "$green",
-  rmd_href                          = "$pink",
+  rmd_href                          = "$blue",
   ui_completions_background         = "$base00",
   ui_completions_border             = "$base00",
-  ui_completions_foreground         = "$base03",
+  ui_completions_foreground         = "$base05",
   ui_completions_selected_foreground = "$base03",
   rstheme_command_palette(),
   rstheme_large_tabs(),
@@ -70,15 +70,17 @@ rstheme(
     input_background = "$base01",
     select_foreground = "$base06",
     select_background = "$base01",
-    button_hover_background = "$base01",
-    button_hover_foreground = "$base05"
+    button_background = "$orange02",
+    button_foreground = "$base01",
+    button_hover_background = "$orange04",
+    button_hover_foreground = "$base00"
   ),
   rstheme_rainbow_parentheses(
     "$teal", "$pink", "$base05", "$purple", "$blue", "$green"
   ),
   '.rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
     .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
-      box-shadow: 0 -2px 0 $teal inset;
+      box-shadow: 0 -2px 0 $orange01 inset;
       border-radius: 0 !important;
     }
   }
@@ -89,3 +91,6 @@ rstheme(
   }
   '
 )
+
+# make_rsthemes()
+# hotload_rstheme("inst/themes/ayu-light.rstheme")
