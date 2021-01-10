@@ -34,13 +34,13 @@ material_base <- list(
     base06 = "#EEFFFF"
   ),
   darker = list(
-    base00 = "#1B1B1B",
-    base01 = "#222222",
-    base02 = "#232530",
-    base03 = "#616161",
-    base04 = "#EAFFFF",
-    base05 = "#ffffff",
-    base06 = "#848484"
+    base00 = "#212121",
+    base01 = "#2b2b2b",
+    base02 = "#424242",
+    base03 = "#545454",
+    base04 = "#616161",
+    base05 = "#65737E",
+    base06 = "#EEFFFF"
   ),
   lighter = list(
     base00 = "#F3F4F5",
