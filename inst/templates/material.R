@@ -53,12 +53,12 @@ material_base <- list(
     base07 = "#DAF3F0"
   ),
   ocean = list(
-    base00 = "#090D14",
-    base01 = "#0F121C",
-    base02 = "#232530",
-    base03 = "#6C6F93",
-    base04 = "#A5ABD0",
-    base05 = "#ffffff",
+    base00 = "#0F111A",
+    base01 = "#1A1C25",
+    base02 = "#3B3F51",
+    base03 = "#464B5D",
+    base04 = "#4B526D",
+    base05 = "#8F93A2",
     base06 = "#ffffff"
   ),
   palenight = list(
@@ -191,10 +191,9 @@ material_rstheme(
   material_accents$base,
   dialog_foreground = "$ui_rstudio_foreground",
   dialog_heading_foreground = "$aqua",
-  ui_rstudio_job_progress_bar = "$aqua",
-  ui_foreground = "$base04",
-  ui_rstudio_tabs_inactive_foreground = "$base04",
-  code_identifier = "$base04"
+  ui_foreground = "$base05",
+  ui_rstudio_job_progress_bar = "$purple"
+  # ui_rstudio_tabs_inactive_foreground = "$base04"
 )
 
 material_rstheme(
