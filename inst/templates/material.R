@@ -11,15 +11,15 @@ material_accents <- list(
     red    = "#F07178"
   ),
   lighter = list(
-    purple = "#AA2DE2",
-    blue   = "#5A82BC",
-    sky    = "#88DDFE",
-    aqua   = "#84ffff",
-    teal   = "#00B0B7",
-    green  = "#87BA48",
-    gold   = "#EE8F00",
-    orange = "#FF6337",
-    red    = "#F91A27"
+    purple = "#7C4DFF",
+    blue   = "#6182b8",
+    sky    = "#80CBC4",
+    teal   = "#39ADB5",
+    green  = "#91B859",
+    gold   = "#FFB62C",
+    orange = "#F76D47",
+    red    = "#E53935",
+    pink   = "#FF5370"
   )
 )
 
@@ -43,13 +43,13 @@ material_base <- list(
     base06 = "#EEFFFF"
   ),
   lighter = list(
-    base00 = "#F3F4F5",
-    base01 = "#FFFFFF",
-    base02 = "#232530",
-    base03 = "#4D707B",
-    base04 = "#EAFFFF",
-    base05 = "#000000",
-    base06 = "#8BA4AF",
+    base00 = "#FAFAFA",
+    base01 = "#E7EAEC",
+    base02 = "#CFD8DC",
+    base03 = "#B0BEC5",
+    base04 = "#90A4AE",
+    base05 = "#7E939E",
+    base06 = "#272727",
     base07 = "#DAF3F0"
   ),
   ocean = list(
@@ -181,12 +181,8 @@ material_rstheme(
   material_base$lighter,
   material_accents$lighter,
   dialog_heading_foreground = "$sky",
-  code_operator = "$teal",
-  code_bracket = "$teal",
-  ui_rstudio_job_progress_bar = "$sky",
-  ui_selection = "$base07",
-  ui_line_active_selection = "$base07",
-  ui_console_selection = "$base07"
+  code_message = "$pink",
+  code_operator = "$base05"
 )
 
 material_rstheme(
