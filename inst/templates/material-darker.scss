@@ -26,7 +26,7 @@ $code_message: $aqua;
 $ui_rstudio_background: $base00;
 $ui_rstudio_foreground: $base06;
 $ui_rstudio_border: $ui_background;
-$rmd_chunk_background: $base00;
+$rmd_chunk_background: darken($base00, 2%);
 $ui_rstudio_tabs_inactive_background: $base00;
 $ui_rstudio_tabs_inactive_foreground: $base04;
 $ui_rstudio_tabs_inactive_hover_background: $ui_rstudio_tabs_inactive_background;
