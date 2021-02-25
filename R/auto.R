@@ -244,26 +244,44 @@ use_theme_auto <- function(
     )
   }
 
-  dark_times <- lapply(dark_times, hms::as_hms)
-  now <- hms::as_hms(Sys.time())
-
-  pre_start <- use_theme_dark
-
-  if (dark_times$end > dark_times$start) {
-    # if light mode overnight, swap dark start/end
-    .dark_start <- dark_times$start
-    dark_times$start <- dark_times$end
-    dark_times$end <- .dark_start
-    pre_start <- use_theme_light
-  }
-
-  if (now > dark_times$start) {
-    use_theme_dark(quietly)
-  } else if (now > dark_times$end) {
+  switch(
+    choose_theme(dark_times),
+    dark = use_theme_dark(quietly),
+    light = use_theme_light(quietly),
     use_theme_light(quietly)
-  } else {
-    pre_start(quietly)
+  )
+}
+
+choose_theme <- function(dark, now = hms::as_hms(Sys.time())) {
+  dark <- lapply(dark, parse_hm)
+
+  if (dark$start == dark$end) return("light")
+
+  if (dark$start < dark$end) {
+    if (now >= dark$start && now < dark$end) {
+      return("dark")
+    } else {
+      return("light")
+    }
   }
+
+  if (now < dark$end || now > dark$start) {
+    return("dark")
+  }
+
+  "light"
+}
+
+parse_hm <- function(x) {
+  if (hms::is.hms(x)) return(x)
+  if (is.character(x)) {
+    x <- hms::parse_hm(x)
+    if (is.na(x)) {
+      stop("Please specify the times in the format HH:MM.", call. = FALSE)
+    }
+    return(x)
+  }
+  hms::as.hms(x)
 }
 
 local_daylight_hours <- function(lat = NULL, lon = NULL, quietly = FALSE) {
