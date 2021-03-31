@@ -3,10 +3,10 @@
 \name{rstheme_partial}
 \alias{rstheme_partial}
 \alias{rstheme_command_palette}
-\alias{rstheme_terminal_colors}
 \alias{rstheme_rainbow_parentheses}
 \alias{rstheme_large_tabs}
 \alias{rstheme_dialog_options}
+\alias{rstheme_terminal_colors}
 \title{RStudio Partial Themes}
 \usage{
 rstheme_command_palette(
@@ -19,25 +19,6 @@ rstheme_command_palette(
     item_hover_background = "if($ui_rstudio_is_dark, lighten($ui_command_palette_item_background, 5\%), darken($ui_command_palette_item_background, 5\%))",
  
     item_selected_background = "if($ui_rstudio_is_dark, lighten($ui_command_palette_item_background, 10\%), darken($ui_command_palette_item_background, 10\%))"
-)
-
-rstheme_terminal_colors(
-  black = "#2e3436",
-  black_bright = "#555753",
-  red = "#cc0000",
-  red_bright = "#ef2929",
-  green = "#4e9a06",
-  green_bright = "#8ae234",
-  yellow = "#c4a000",
-  yellow_bright = "#fce94f",
-  blue = "#3465a4",
-  blue_bright = "#729fcf",
-  magenta = "#75507b",
-  magenta_bright = "#ad7fa8",
-  cyan = "#06989a",
-  cyan_bright = "#34e2e2",
-  white = "#d3d7cf",
-  white_bright = "#eeeeec"
 )
 
 rstheme_rainbow_parentheses(
@@ -75,13 +56,30 @@ rstheme_dialog_options(
   select_background = "lighten($ui_rstudio_dialog_background, 5\%)",
   select_foreground = "$ui_rstudio_dialog_foreground"
 )
+
+rstheme_terminal_colors(
+  black = "#2e3436",
+  black_bright = "#555753",
+  red = "#cc0000",
+  red_bright = "#ef2929",
+  green = "#4e9a06",
+  green_bright = "#8ae234",
+  yellow = "#c4a000",
+  yellow_bright = "#fce94f",
+  blue = "#3465a4",
+  blue_bright = "#729fcf",
+  magenta = "#75507b",
+  magenta_bright = "#ad7fa8",
+  cyan = "#06989a",
+  cyan_bright = "#34e2e2",
+  white = "#d3d7cf",
+  white_bright = "#eeeeec"
+)
 }
 \arguments{
 \item{search_background, item_background, item_color, item_hover_background, item_selected_background}{Additional color options for the command palette.}
 
 \item{border}{Border color}
-
-\item{black, black_bright, red, red_bright, green, green_bright, yellow, yellow_bright, blue, blue_bright, magenta, magenta_bright, cyan, cyan_bright, white, white_bright}{Terminal colors, 8 normal and 8 bright.}
 
 \item{ui_paren_0, ui_paren_1, ui_paren_2, ui_paren_3, ui_paren_4, ui_paren_5, ui_paren_6}{Parentheses colors 0 through 6.}
 
@@ -89,6 +87,8 @@ rstheme_dialog_options(
 
 \item{selected_background, selected_foreground, heading_foreground, help_foreground, button_foreground, button_background, button_border, button_hover_foreground, button_hover_background, button_hover_border, input_foreground, input_background, input_border, checkbox_background, checkbox_foreground, select_background, select_foreground}{Additional colors for RStudio dialog boxes, setting SCSS variables prefixed
 with \verb{$ui_rstudio_dialog_<argument>}.}
+
+\item{black, black_bright, red, red_bright, green, green_bright, yellow, yellow_bright, blue, blue_bright, magenta, magenta_bright, cyan, cyan_bright, white, white_bright}{Terminal colors, 8 normal and 8 bright.}
 }
 \description{
 Partial themes for RStudio to be included as desired in \code{\link[=rstheme]{rstheme()}}.
@@ -97,12 +97,12 @@ Partial themes for RStudio to be included as desired in \code{\link[=rstheme]{rs
 \itemize{
 \item \code{rstheme_command_palette}: Theme the RStudio Command Palette
 
-\item \code{rstheme_terminal_colors}: Theme the terminal colors
-
 \item \code{rstheme_rainbow_parentheses}: Theme the rainbow parentheses colors
 
 \item \code{rstheme_large_tabs}: Enlarges the tabs
 
 \item \code{rstheme_dialog_options}: Themes dialog windows, e.g. \emph{Global Options}
+
+\item \code{rstheme_terminal_colors}: Theme the terminal colors
 }}
 

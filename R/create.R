@@ -328,48 +328,6 @@ rstheme_command_palette <- function(
   ), class = c("_command-palette", "rstheme_template", "list"))
 }
 
-#' @describeIn rstheme_partial Theme the terminal colors
-#' @param black,black_bright,red,red_bright,green,green_bright,yellow,yellow_bright,blue,blue_bright,magenta,magenta_bright,cyan,cyan_bright,white,white_bright
-#'   Terminal colors, 8 normal and 8 bright.
-#' @export
-rstheme_terminal_colors <- function(
-  black = "#2e3436",
-  black_bright = "#555753",
-  red = "#cc0000",
-  red_bright = "#ef2929",
-  green = "#4e9a06",
-  green_bright = "#8ae234",
-  yellow = "#c4a000",
-  yellow_bright = "#fce94f",
-  blue = "#3465a4",
-  blue_bright = "#729fcf",
-  magenta = "#75507b",
-  magenta_bright = "#ad7fa8",
-  cyan = "#06989a",
-  cyan_bright = "#34e2e2",
-  white = "#d3d7cf",
-  white_bright = "#eeeeec"
-) {
-  structure(list(
-    terminal_color_black = black,
-    terminal_color_black_bright = black_bright,
-    terminal_color_red = red,
-    terminal_color_red_bright = red_bright,
-    terminal_color_green = green,
-    terminal_color_green_bright = green_bright,
-    terminal_color_yellow = yellow,
-    terminal_color_yellow_bright = yellow_bright,
-    terminal_color_blue = blue,
-    terminal_color_blue_bright = blue_bright,
-    terminal_color_magenta = magenta,
-    terminal_color_magenta_bright = magenta_bright,
-    terminal_color_cyan = cyan,
-    termianl_color_cyan_bright = cyan_bright,
-    terminal_color_white = white,
-    terminal_color_white_bright = white_bright
-  ), class = c("_terminal", "rstheme_template", "list"))
-}
-
 #' @describeIn rstheme_partial Theme the rainbow parentheses colors
 #' @param ui_paren_0,ui_paren_1,ui_paren_2,ui_paren_3,ui_paren_4,ui_paren_5,ui_paren_6
 #'   Parentheses colors 0 through 6.
@@ -451,6 +409,47 @@ rstheme_dialog_options <- function(
   ), class = c("_dialog-options", "rstheme_template", "list"))
 }
 
+#' @describeIn rstheme_partial Theme the terminal colors
+#' @param black,black_bright,red,red_bright,green,green_bright,yellow,yellow_bright,blue,blue_bright,magenta,magenta_bright,cyan,cyan_bright,white,white_bright
+#'   Terminal colors, 8 normal and 8 bright.
+#' @export
+rstheme_terminal_colors <- function(
+  black = "#2e3436",
+  black_bright = "#555753",
+  red = "#cc0000",
+  red_bright = "#ef2929",
+  green = "#4e9a06",
+  green_bright = "#8ae234",
+  yellow = "#c4a000",
+  yellow_bright = "#fce94f",
+  blue = "#3465a4",
+  blue_bright = "#729fcf",
+  magenta = "#75507b",
+  magenta_bright = "#ad7fa8",
+  cyan = "#06989a",
+  cyan_bright = "#34e2e2",
+  white = "#d3d7cf",
+  white_bright = "#eeeeec"
+) {
+  structure(list(
+    terminal_color_black = black,
+    terminal_color_black_bright = black_bright,
+    terminal_color_red = red,
+    terminal_color_red_bright = red_bright,
+    terminal_color_green = green,
+    terminal_color_green_bright = green_bright,
+    terminal_color_yellow = yellow,
+    terminal_color_yellow_bright = yellow_bright,
+    terminal_color_blue = blue,
+    terminal_color_blue_bright = blue_bright,
+    terminal_color_magenta = magenta,
+    terminal_color_magenta_bright = magenta_bright,
+    terminal_color_cyan = cyan,
+    termianl_color_cyan_bright = cyan_bright,
+    terminal_color_white = white,
+    terminal_color_white_bright = white_bright
+  ), class = c("_terminal", "rstheme_template", "list"))
+}
 
 hotload_rstheme <- function(path) {
   if(theme_is_dark(path)) {
