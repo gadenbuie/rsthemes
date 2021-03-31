@@ -3,6 +3,7 @@
 \name{rstheme_partial}
 \alias{rstheme_partial}
 \alias{rstheme_command_palette}
+\alias{rstheme_terminal_colors}
 \alias{rstheme_rainbow_parentheses}
 \alias{rstheme_large_tabs}
 \alias{rstheme_dialog_options}
@@ -18,6 +19,25 @@ rstheme_command_palette(
     item_hover_background = "if($ui_rstudio_is_dark, lighten($ui_command_palette_item_background, 5\%), darken($ui_command_palette_item_background, 5\%))",
  
     item_selected_background = "if($ui_rstudio_is_dark, lighten($ui_command_palette_item_background, 10\%), darken($ui_command_palette_item_background, 10\%))"
+)
+
+rstheme_terminal_colors(
+  black = "#2e3436",
+  black_bright = "#555753",
+  red = "#cc0000",
+  red_bright = "#ef2929",
+  green = "#4e9a06",
+  green_bright = "#8ae234",
+  yellow = "#c4a000",
+  yellow_bright = "#fce94f",
+  blue = "#3465a4",
+  blue_bright = "#729fcf",
+  magenta = "#75507b",
+  magenta_bright = "#ad7fa8",
+  cyan = "#06989a",
+  cyan_bright = "#34e2e2",
+  white = "#d3d7cf",
+  white_bright = "#eeeeec"
 )
 
 rstheme_rainbow_parentheses(
@@ -61,6 +81,8 @@ rstheme_dialog_options(
 
 \item{border}{Border color}
 
+\item{black, black_bright, red, red_bright, green, green_bright, yellow, yellow_bright, blue, blue_bright, magenta, magenta_bright, cyan, cyan_bright, white, white_bright}{Terminal colors, 8 normal and 8 bright.}
+
 \item{ui_paren_0, ui_paren_1, ui_paren_2, ui_paren_3, ui_paren_4, ui_paren_5, ui_paren_6}{Parentheses colors 0 through 6.}
 
 \item{foreground, background}{Foreground (text) or background color}
@@ -74,6 +96,8 @@ Partial themes for RStudio to be included as desired in \code{\link[=rstheme]{rs
 \section{Functions}{
 \itemize{
 \item \code{rstheme_command_palette}: Theme the RStudio Command Palette
+
+\item \code{rstheme_terminal_colors}: Theme the terminal colors
 
 \item \code{rstheme_rainbow_parentheses}: Theme the rainbow parentheses colors
 
