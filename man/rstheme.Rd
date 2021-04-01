@@ -100,6 +100,7 @@ rstheme(
 \item \code{\link[=rstheme_rainbow_parentheses]{rstheme_rainbow_parentheses()}}
 \item \code{\link[=rstheme_large_tabs]{rstheme_large_tabs()}}
 \item \code{\link[=rstheme_dialog_options]{rstheme_dialog_options()}}
+\item \code{\link[=rstheme_terminal_colors]{rstheme_terminal_colors()}}
 }}
 
 \item{theme_path}{Path for output theme}
