@@ -51,7 +51,7 @@ provide an easy-to-extend framework for customizing the look of RStudio. See
 \code{\link[=rstheme]{rstheme()}} for more information about creating your own theme. I've done
 my best to avoid hacky CSS rules wherever possible, and the themes are tested
 against the current production release of RStudio (version 1.2.1335 through
-1.4+ as of September 30, 2020). Please report any issues you encounter here:
+1.4+ as of April 01, 2021). Please report any issues you encounter here:
 \href{https://github.com/gadenbuie/rsthemes/issues}{github.com/gadenbuie/rsthemes/issues}.
 }
 \section{Functions}{
@@ -82,6 +82,7 @@ following colors palettes.
 \item \emph{\href{https://horizontheme.netlify.app/}{Horizon Dark}} (Jonathan Olaleye)
 \item \emph{\href{https://github.com/ericwbailey/a11y-syntax-highlighting}{a11y-syntax-highlighting}} (\href{https://ericwbailey.design/}{Eric Bailey})
 \item \emph{\href{https://github.com/sdras/night-owl-vscode-theme}{Night Owl}} (\href{https://sarah.dev/}{Sarah Drasner})
+\item \emph{\href{https://material-theme.site/}{Material Themes}}
 }
 }
 

@@ -49,7 +49,8 @@ $ui_rstudio_dialog_select_foreground: $ui_rstudio_dialog_foreground !default;
     }
   }
 
-  .dialogContent label.gwt-Label {
+  .dialogContent label.gwt-Label,
+  .dialogContent .gwt-RadioButton ~ * {
     color: $ui_rstudio_dialog_help_foreground !important;
   }
 
@@ -101,6 +102,8 @@ $ui_rstudio_dialog_select_foreground: $ui_rstudio_dialog_foreground !default;
       color: $ui_rstudio_dialog_foreground !important;
     }
 
+    [role="listbox"] [role="option"][aria-selected="true"],
+    [role="listbox"] [role="option"][aria-selected="true"] .gwt-Label,
     [id^="rstudio_label"][aria-selected="true"],
     [id^="rstudio_label"][aria-selected="true"] td,
     .gwt-TabLayoutPanelTab-selected {

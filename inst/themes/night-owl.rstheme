@@ -1,3 +1,5 @@
+/* rsthemes 0.2.1.9000 */
+/* https://github.com/gadenbuie/rsthemes */
 /* rs-theme-name: Night Owl {rsthemes} */
 /* rs-theme-is-dark: TRUE */
 .ace_gutter {
@@ -2780,7 +2782,8 @@ input#rstudio_command_palette_search {
   border-color: #010E17 !important;
 }
 
-.rstudio-themes-flat .dialogContent label.gwt-Label {
+.rstudio-themes-flat .dialogContent label.gwt-Label,
+.rstudio-themes-flat .dialogContent .gwt-RadioButton ~ * {
   color: #5ca7e4 !important;
 }
 
@@ -2831,6 +2834,8 @@ input#rstudio_command_palette_search {
   color: #6c7a89 !important;
 }
 
+.rstudio-themes-flat .gwt-DialogBox .dialogContent [role="listbox"] [role="option"][aria-selected="true"],
+.rstudio-themes-flat .gwt-DialogBox .dialogContent [role="listbox"] [role="option"][aria-selected="true"] .gwt-Label,
 .rstudio-themes-flat .gwt-DialogBox .dialogContent [id^="rstudio_label"][aria-selected="true"],
 .rstudio-themes-flat .gwt-DialogBox .dialogContent [id^="rstudio_label"][aria-selected="true"] td,
 .rstudio-themes-flat .gwt-DialogBox .dialogContent .gwt-TabLayoutPanelTab-selected {
