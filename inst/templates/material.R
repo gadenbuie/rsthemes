@@ -103,7 +103,7 @@ material_rstheme <- function(
     code_bracket    = "$teal",
     code_namespace  = "$red",
     code_identifier = "$base06",
-    ui_rstudio_background               = "$base00",
+    ui_rstudio_background               = "darken($ui_background, 1%)",
     ui_rstudio_foreground               = "$base06",
     ui_rstudio_toolbar_foreground       = "$base03",
     ui_rstudio_tabs_active_background   = "$base00",
@@ -182,7 +182,8 @@ material_rstheme(
   material_accents$lighter,
   dialog_heading_foreground = "$sky",
   code_message = "$pink",
-  code_operator = "$base05"
+  code_operator = "$base05",
+  ui_rstudio_background = "darken($ui_background, 4%)"
 )
 
 material_rstheme(
@@ -192,7 +193,8 @@ material_rstheme(
   dialog_foreground = "$ui_rstudio_foreground",
   dialog_heading_foreground = "$aqua",
   ui_foreground = "$base05",
-  ui_rstudio_job_progress_bar = "$purple"
+  ui_rstudio_job_progress_bar = "$purple",
+  ui_rstudio_background = "lighten($ui_background, 3%)"
 )
 
 material_rstheme(
@@ -201,10 +203,11 @@ material_rstheme(
   material_accents$base,
   dialog_foreground = "$ui_rstudio_foreground",
   dialog_heading_foreground = "$purple",
-  ui_rstudio_job_progress_bar = "$blue"
+  ui_rstudio_job_progress_bar = "$blue",
+  ui_rstudio_background = "darken($ui_background, 3%)"
 )
 
-# make_rsthemes()
+make_rsthemes()
 # hotload_rstheme("inst/themes/material.rstheme")
 # hotload_rstheme("inst/themes/material-darker.rstheme")
 # hotload_rstheme("inst/themes/material-lighter.rstheme")
