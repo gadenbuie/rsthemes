@@ -8,7 +8,7 @@
 #' [rstheme()] for more information about creating your own theme. I've done
 #' my best to avoid hacky CSS rules wherever possible, and the themes are tested
 #' against the current production release of RStudio (version 1.2.1335 through
-#' 1.4+ as of September 30, 2020). Please report any issues you encounter here:
+#' 1.4+ as of April 01, 2021). Please report any issues you encounter here:
 #' [github.com/gadenbuie/rsthemes/issues](https://github.com/gadenbuie/rsthemes/issues).
 #'
 #' @section Palettes: \pkg{rsthemes} includes RStudio themes based on the
@@ -25,6 +25,7 @@
 #'   - _[Horizon Dark][horizon]_ (Jonathan Olaleye)
 #'   - _[a11y-syntax-highlighting][a11y-syntax]_ ([Eric Bailey](https://ericwbailey.design/))
 #'   - _[Night Owl][night-owl]_ ([Sarah Drasner](https://sarah.dev/))
+#'   - _[Material Themes][material]_
 #'
 #'   [base16]: https://github.com/chriskempson/base16
 #'   [fairyfloss]: https://github.com/sailorhg/fairyfloss
@@ -37,6 +38,7 @@
 #'   [horizon]: https://horizontheme.netlify.app/
 #'   [a11y-syntax]: https://github.com/ericwbailey/a11y-syntax-highlighting
 #'   [night-owl]: https://github.com/sdras/night-owl-vscode-theme
+#'   [material]: https://material-theme.site/
 #'
 #' @name rsthemes
 NULL

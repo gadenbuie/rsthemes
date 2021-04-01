@@ -1,3 +1,5 @@
+/* rsthemes 0.2.1.9000 */
+/* https://github.com/gadenbuie/rsthemes */
 /* rs-theme-name: One Light {rsthemes} */
 /* rs-theme-is-dark: FALSE */
 .ace_gutter {
@@ -54,7 +56,6 @@
 .normal-mode .ace_cursor {
   border: 0 !important;
   background-color: #526fff;
-  opacity: 0.5;
 }
 
 .ace_marker-layer .ace_selection {
@@ -255,7 +256,7 @@
 }
 
 .ace_layer {
-  z-index: 3;
+  z-index: 4;
 }
 
 .ace_layer.ace_print-margin-layer {
@@ -264,6 +265,10 @@
 
 .ace_layer.ace_marker-layer {
   z-index: 1;
+}
+
+.ace_layer.ace_cursor-layer {
+  z-index: 3;
 }
 
 .ace_selection.ace_start {

@@ -1,3 +1,5 @@
+/* rsthemes 0.2.1.9000 */
+/* https://github.com/gadenbuie/rsthemes */
 /* rs-theme-name: Flat White {rsthemes} */
 /* rs-theme-is-dark: FALSE */
 /* Flat White
@@ -60,7 +62,6 @@
 .normal-mode .ace_cursor {
   border: 0 !important;
   background-color: #6a4dff;
-  opacity: 0.5;
 }
 
 .ace_marker-layer .ace_selection {
@@ -261,7 +262,7 @@
 }
 
 .ace_layer {
-  z-index: 3;
+  z-index: 4;
 }
 
 .ace_layer.ace_print-margin-layer {
@@ -270,6 +271,10 @@
 
 .ace_layer.ace_marker-layer {
   z-index: 1;
+}
+
+.ace_layer.ace_cursor-layer {
+  z-index: 3;
 }
 
 .ace_selection.ace_start {
@@ -2829,7 +2834,8 @@ input#rstudio_command_palette_search {
   border-color: #f7f3ee !important;
 }
 
-.rstudio-themes-flat .dialogContent label.gwt-Label {
+.rstudio-themes-flat .dialogContent label.gwt-Label,
+.rstudio-themes-flat .dialogContent .gwt-RadioButton ~ * {
   color: #93836c !important;
 }
 
@@ -2880,6 +2886,8 @@ input#rstudio_command_palette_search {
   color: #605a52 !important;
 }
 
+.rstudio-themes-flat .gwt-DialogBox .dialogContent [role="listbox"] [role="option"][aria-selected="true"],
+.rstudio-themes-flat .gwt-DialogBox .dialogContent [role="listbox"] [role="option"][aria-selected="true"] .gwt-Label,
 .rstudio-themes-flat .gwt-DialogBox .dialogContent [id^="rstudio_label"][aria-selected="true"],
 .rstudio-themes-flat .gwt-DialogBox .dialogContent [id^="rstudio_label"][aria-selected="true"] td,
 .rstudio-themes-flat .gwt-DialogBox .dialogContent .gwt-TabLayoutPanelTab-selected {

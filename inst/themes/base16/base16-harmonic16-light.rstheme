@@ -1,3 +1,5 @@
+/* rsthemes 0.2.1.9000 */
+/* https://github.com/gadenbuie/rsthemes */
 /* rs-theme-name: base16 Harmonic16 Light {rsthemes} */
 /* Harmonic16 Light by Jannik Siebert (https://github.com/janniks) */
 /* rs-theme-is-dark: FALSE */
@@ -55,7 +57,6 @@
 .normal-mode .ace_cursor {
   border: 0 !important;
   background-color: #8bbf56;
-  opacity: 0.5;
 }
 
 .ace_marker-layer .ace_selection {
@@ -256,7 +257,7 @@
 }
 
 .ace_layer {
-  z-index: 3;
+  z-index: 4;
 }
 
 .ace_layer.ace_print-margin-layer {
@@ -265,6 +266,10 @@
 
 .ace_layer.ace_marker-layer {
   z-index: 1;
+}
+
+.ace_layer.ace_cursor-layer {
+  z-index: 3;
 }
 
 .ace_selection.ace_start {
@@ -469,13 +474,13 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 /* scrollbars */
 .rstudio-themes-flat {
   /* Works on Firefox */
-  scrollbar-width: 12px;
+  scrollbar-width: auto;
   scrollbar-color: #e5ebf1 #f7f9fb;
   /* Works on Chrome, Edge, and Safari */
 }
 
 .rstudio-themes-flat ::-webkit-scrollbar {
-  width: 12px;
+  width: auto;
 }
 
 .rstudio-themes-flat *::-webkit-scrollbar-track {

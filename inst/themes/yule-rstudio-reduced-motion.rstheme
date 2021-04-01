@@ -1,3 +1,5 @@
+/* rsthemes 0.2.1.9000 */
+/* https://github.com/gadenbuie/rsthemes */
 /* rs-theme-name: Yule RStudio (Reduced Motion) {rsthemes} */
 /* rs-theme-is-dark: TRUE */
 .ace_gutter {
@@ -45,7 +47,6 @@
 .normal-mode .ace_cursor {
   border: 0 !important;
   background-color: rgba(100, 243, 240, 0.6);
-  opacity: 0.5;
 }
 
 .ace_marker-layer .ace_selection {
@@ -221,7 +222,7 @@
 }
 
 .ace_layer {
-  z-index: 3;
+  z-index: 4;
 }
 
 .ace_layer.ace_print-margin-layer {
@@ -230,6 +231,10 @@
 
 .ace_layer.ace_marker-layer {
   z-index: 1;
+}
+
+.ace_layer.ace_cursor-layer {
+  z-index: 3;
 }
 
 .ace_selection.ace_start {
