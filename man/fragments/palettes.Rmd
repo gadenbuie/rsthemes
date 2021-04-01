@@ -15,6 +15,8 @@
   - Based on the [Yule tmTheme](https://tmtheme-editor.herokuapp.com/#!/editor/theme/Yule)
   - Ported from [gadenbuie/yule-rstudio](https://github.com/gadenbuie/yule-rstudio)
   - Featuring a background image by [Joanna Kosinska](https://unsplash.com/@joannakosinska)
+- [Material Theme][material]
+  - Contributed to rsthemes by [Zac de Lusignan](https://www.zacdelusignan.com/)
 
 [base16]: https://github.com/chriskempson/base16
 [fairyfloss]: https://github.com/sailorhg/fairyfloss
@@ -28,3 +30,4 @@
 [a11y-syntax]: https://github.com/ericwbailey/a11y-syntax-highlighting
 [night-owl]: https://github.com/sdras/night-owl-vscode-theme
 [night-owlish]: https://github.com/batpigandme/night-owlish
+[material]: https://material-theme.site/
