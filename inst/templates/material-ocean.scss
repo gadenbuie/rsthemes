@@ -23,7 +23,7 @@ $code_function: $blue;
 $code_value: $orange;
 $code_variable: $gold;
 $code_message: $aqua;
-$ui_rstudio_background: $base00;
+$ui_rstudio_background: lighten($ui_background, 3%);
 $ui_rstudio_foreground: $base06;
 $ui_rstudio_border: $ui_background;
 $rmd_chunk_background: darken($base00, 2%);
