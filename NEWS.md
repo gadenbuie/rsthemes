@@ -7,7 +7,7 @@
     
 * File name in _Find all Files_ is now styled (#36, #43)
 
-* Added support for terminal color theming via `rsthemes_terminal_colors()` (#63)
+* Added support for terminal color theming via `rsthemes_terminal_colors()` (@nsgrantham #63)
 
 # rsthemes 0.2.0 (2020-12-07)
 
