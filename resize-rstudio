@@ -1,0 +1,5 @@
+#!/usr/bin/osascript
+
+tell application "System Events"
+  set size of window "rsthemes - assets - RStudio" of application process "RStudio" to {1600, 900}
+end tell
