@@ -1,4 +1,4 @@
-theme_names <- rsthemes::list_rsthemes()
+theme_names <- rsthemes::list_rsthemes(list_installed = FALSE)
 
 theme_info <- lapply(theme_names, rsthemes:::get_theme_info)
 
