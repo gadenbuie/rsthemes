@@ -407,7 +407,7 @@ table.rstheme_tabLayoutCenter,
 }
 
 /* scrollbars */
-.rstudio-themes-flat {
+.rstudio-themes-flat, .rstudio-themes-flat .rstudio-themes-scrollbars {
   /* Works on Firefox */
   scrollbar-width: auto;
   scrollbar-color: $ui_rstudio_scrollbar_handle $ui_rstudio_scrollbar_background;
