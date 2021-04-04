@@ -16,7 +16,7 @@ for (theme in themes) {
   rstudioapi::applyTheme(theme)
   Sys.sleep(1)
   theme_file <- sub(" {rsthemes}", "", theme, fixed = TRUE)
-  theme_file <- gsub("[ ,;-]", "_", theme_file)
+  theme_file <- gsub("[ ,;()-]", "_", theme_file)
   theme_file <- tolower(theme_file)
   theme_file <- here::here("themes", theme_file)
   cmd <- glue::glue(
