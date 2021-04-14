@@ -18,7 +18,7 @@ You can install rsthemes from GitHub with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("gadenbuie/rsthemes")
+devtools::install_github("gadenbuie/rsthemes@main")
 ```
 
 Then, install the included, hand-crafted themes with:
