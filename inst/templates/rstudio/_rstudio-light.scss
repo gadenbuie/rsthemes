@@ -88,8 +88,9 @@ $ui_rstudio_is_dark: false;
   border: 1px solid $ui_fold_arrows_foreground !important;
 }
 .ace_indent-guide{
-  border-right: 1px solid $ui_indent_guide;
-  margin-right: -1px;
+  display: inline-block;
+  height: 100%;
+  box-shadow: 1px 0 0 $ui_indent_guide;
 }
 .ace_active-line ~ .ace_selection.ace_start {
   background-color: $ui_line_active_selection;
