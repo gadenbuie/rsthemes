@@ -224,6 +224,9 @@ rsthemes::remove_rsthemes("base16")
         [gadenbuie/yule-rstudio](https://github.com/gadenbuie/yule-rstudio)
     -   Featuring a background image by [Joanna
         Kosinska](https://unsplash.com/@joannakosinska)
+-   [Material Theme](https://material-theme.site/)
+    -   Contributed to rsthemes by [Zac de
+        Lusignan](https://www.zacdelusignan.com/)
 
 ------------------------------------------------------------------------
 

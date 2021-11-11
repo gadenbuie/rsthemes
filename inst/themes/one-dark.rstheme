@@ -1,3 +1,5 @@
+/* rsthemes 0.2.1.9000 */
+/* https://github.com/gadenbuie/rsthemes */
 /* rs-theme-name: One Dark {rsthemes} */
 /* rs-theme-is-dark: TRUE */
 .ace_gutter {
@@ -438,28 +440,28 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 /* scrollbars */
-.rstudio-themes-flat {
+.rstudio-themes-flat, .rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars {
   /* Works on Firefox */
   scrollbar-width: auto;
   scrollbar-color: #24272e #282c34;
   /* Works on Chrome, Edge, and Safari */
 }
 
-.rstudio-themes-flat ::-webkit-scrollbar {
+.rstudio-themes-flat ::-webkit-scrollbar, .rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars ::-webkit-scrollbar {
   width: auto;
 }
 
-.rstudio-themes-flat *::-webkit-scrollbar-track {
+.rstudio-themes-flat *::-webkit-scrollbar-track, .rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars *::-webkit-scrollbar-track {
   background: #282c34;
 }
 
-.rstudio-themes-flat *::-webkit-scrollbar-thumb {
+.rstudio-themes-flat *::-webkit-scrollbar-thumb, .rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars *::-webkit-scrollbar-thumb {
   background-color: #24272e;
   border-radius: 0px;
   border: 2px solid #282c34;
 }
 
-.rstudio-themes-flat *::-webkit-scrollbar-thumb:hover {
+.rstudio-themes-flat *::-webkit-scrollbar-thumb:hover, .rstudio-themes-flat .rstudio-themes-dark.rstudio-themes-scrollbars *::-webkit-scrollbar-thumb:hover {
   background-color: #2f333d;
 }
 

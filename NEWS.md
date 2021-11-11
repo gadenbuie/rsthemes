@@ -7,7 +7,15 @@
     
 * File name in _Find all Files_ is now styled (#36, #43)
 
-* Added support for terminal color theming via `rsthemes_terminal_colors()` (@nsgrantham #63)
+* Added 4 new Material Themes: Dark, Lighter, Ocean, and Palenight 
+  (@lusignan, @grrrck #64, #49, #47)
+  
+* Fixed menu item hover and selected colors in complete menu themes
+
+* Added {rsthemes} version and header to final `.rstheme` files
+
+* Added support for terminal color theming via `rsthemes_terminal_colors()` 
+  (@nsgrantham #63)
 
 # rsthemes 0.2.0 (2020-12-07)
 

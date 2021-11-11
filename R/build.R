@@ -46,6 +46,15 @@ render_sass <- function(
   } else {
     sass::sass(sass::sass_file(file), output = outfile, cache = NULL)
   }
+  x <- readLines(outfile, warn = FALSE)
+  writeLines(
+    c(
+      sprintf("/* rsthemes %s */", utils::packageVersion("rsthemes")),
+      "/* https://github.com/gadenbuie/rsthemes */",
+      x
+    ),
+    outfile
+  )
   invisible(TRUE)
 }
 

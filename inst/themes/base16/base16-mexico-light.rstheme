@@ -1,3 +1,5 @@
+/* rsthemes 0.2.1.9000 */
+/* https://github.com/gadenbuie/rsthemes */
 /* rs-theme-name: base16 Mexico Light {rsthemes} */
 /* Mexico Light by Sheldon Johnson */
 /* rs-theme-is-dark: FALSE */
@@ -470,28 +472,28 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 /* scrollbars */
-.rstudio-themes-flat {
+.rstudio-themes-flat, .rstudio-themes-flat .rstudio-themes-scrollbars {
   /* Works on Firefox */
   scrollbar-width: auto;
   scrollbar-color: #e8e8e8 #f8f8f8;
   /* Works on Chrome, Edge, and Safari */
 }
 
-.rstudio-themes-flat ::-webkit-scrollbar {
+.rstudio-themes-flat ::-webkit-scrollbar, .rstudio-themes-flat .rstudio-themes-scrollbars ::-webkit-scrollbar {
   width: auto;
 }
 
-.rstudio-themes-flat *::-webkit-scrollbar-track {
+.rstudio-themes-flat *::-webkit-scrollbar-track, .rstudio-themes-flat .rstudio-themes-scrollbars *::-webkit-scrollbar-track {
   background: #f8f8f8;
 }
 
-.rstudio-themes-flat *::-webkit-scrollbar-thumb {
+.rstudio-themes-flat *::-webkit-scrollbar-thumb, .rstudio-themes-flat .rstudio-themes-scrollbars *::-webkit-scrollbar-thumb {
   background-color: #e8e8e8;
   border-radius: 0px;
   border: 2px solid #f8f8f8;
 }
 
-.rstudio-themes-flat *::-webkit-scrollbar-thumb:hover {
+.rstudio-themes-flat *::-webkit-scrollbar-thumb:hover, .rstudio-themes-flat .rstudio-themes-scrollbars *::-webkit-scrollbar-thumb:hover {
   background-color: #dbdbdb;
 }
 

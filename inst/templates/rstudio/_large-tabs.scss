@@ -1,18 +1,21 @@
+$large-tabs-height: 40px !default;
+$large-tabs-width: 65px !default;
+
 .rstudio-themes-flat > :not(.gwt-DialogBox-ModalDialog) .gwt-TabLayoutPanel {
   & > div[aria-hidden="true"] + div {
-    height: 40px !important;
+    height: $large-tabs-height !important;
     background: $ui_rstudio_tabs_inactive_background;
   }
   .gwt-TabLayoutPanelTabs table.rstheme_tabLayoutCenter {
     padding-left: 20px;
     padding-right: 20px;
-    height: 40px;
+    height: $large-tabs-height;
   }
   .gwt-TabLayoutPanelTabs .rstheme_tabLayoutCenter td {
     vertical-align: middle !important;
   }
   .gwt-TabLayoutPanelTabs > div:empty {
-    height: 40px !important;
+    height: $large-tabs-height !important;
   }
 }
 
@@ -43,5 +46,5 @@
   top: 38px !important;
 }
 .windowframe > div:last-child > div > div > div[aria-hidden="true"] + div + div {
-  height: 40px!important;
+  height: $large-tabs-height!important;
 }
