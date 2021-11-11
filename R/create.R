@@ -247,10 +247,10 @@ rstheme <- function(
     if (theme_flat) sass::sass_import(
       path_rel_theme(package_template("rstudio", paste0(theme_rstudio, "-flatter.scss")))
     ),
+    list(paste(unlist(dots_sass), collapse = "\n")),
     sass::sass_import(
       path_rel_theme(package_template("rstudio", "_terminal.scss"))
-    ),
-    list(paste(unlist(dots_sass), collapse = "\n"))
+    )
   )
 
   if (length(templates_variables)) {
@@ -433,7 +433,7 @@ rstheme_terminal_colors <- function(
   white = "#d3d7cf",
   white_bright = "#eeeeec"
 ) {
-  structure(list(
+  sass::as_sass(list(
     terminal_color_black = black,
     terminal_color_black_bright = black_bright,
     terminal_color_red = red,
@@ -450,7 +450,7 @@ rstheme_terminal_colors <- function(
     termianl_color_cyan_bright = cyan_bright,
     terminal_color_white = white,
     terminal_color_white_bright = white_bright
-  ), class = c("_terminal", "rstheme_template", "list"))
+  ))
 }
 
 hotload_rstheme <- function(path) {
