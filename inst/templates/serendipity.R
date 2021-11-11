@@ -5,11 +5,11 @@ serendipity <- list(
     "gray-light" = "#f0f0f0",
     gray = "#abb0b6",
     "gray-dark" = "#898f93",
-    red = "#f07171",
-    orange = "#ed9366",
+    red = "#ED5A5A",    # modified for contrast
+    orange = "#E77136", # modified for contrast
     pink = "#f06897",
     purple = "#a173ff",
-    green = "#13b8a6",
+    green = "#109484",  # modified for contrast
     teal = "#399ee6",
     blue = "#4589ff",
     yellow = "#ffd806",
@@ -34,6 +34,8 @@ serendipity <- list(
     blue2 = "#86cefa"
   )
 )
+
+# Serendipity Dark --------------------------------------------------------
 
 rstheme(
   "Serendipity Dark",
@@ -62,7 +64,7 @@ rstheme(
   code_namespace  = "$orange",
   code_identifier = "$foreground",
   code_bracket    = "$gray",
-  ui_rstudio_background     = "$background",
+  ui_rstudio_background     = "darken($background, 2.5%)",
   ui_rstudio_foreground     = "$foreground",
   ui_selection              = "transparentize($green, 0.90)",
   ui_line_active_selection  = "$ui_selection",
@@ -76,9 +78,12 @@ rstheme(
   rmd_heading_foreground    = "$teal",
   rmd_href                  = "$green",
   rmd_chunk_background      = "#1f2430",
-  ui_completions_background = "$background",
+  ui_completions_background = "$ui_rstudio_background",
   ui_completions_border     = "#ededed",
   ui_completions_foreground = "$foreground",
+  ui_completions_selected_background = "mix($blue2, $ui_rstudio_background, 25%)",
+  ui_fold_arrows_foreground = "$foreground",
+  ui_fold_arrows_background = "$blue2",
   code_namespace_font_style = "italic",
   rstheme_command_palette(
     item_hover_background = "mix($blue2, $ui_command_palette_item_background, 15%)",
@@ -106,6 +111,8 @@ rstheme(
   }'
 )
 
+# Serendipity Light -------------------------------------------------------
+
 rstheme(
   "Serendipity Light",
   theme_dark    = FALSE,
@@ -132,7 +139,7 @@ rstheme(
   code_namespace  = "$teal",
   code_identifier = "$foreground",
   code_bracket    = "$gray",
-  ui_rstudio_background     = "$background",
+  ui_rstudio_background     = "darken($background, 2.5%)",
   ui_rstudio_foreground     = "$foreground",
   ui_selection              = "transparentize($green, 0.85)",
   ui_line_active_selection  = "$ui_selection",
@@ -148,6 +155,9 @@ rstheme(
   ui_completions_background = "$background",
   ui_completions_border     = "#ededed",
   ui_completions_foreground = "$foreground",
+  ui_completions_selected_background = "mix($blue2, $ui_rstudio_background, 25%)",
+  ui_fold_arrows_foreground = "$foreground",
+  ui_fold_arrows_background = "$blue2",
   code_namespace_font_style = "italic",
   rstheme_command_palette(
     item_hover_background = "mix($blue2, $ui_command_palette_item_background)",
@@ -169,7 +179,7 @@ rstheme(
   }
   .rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
     .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
-      box-shadow: 0 2px 0 $orange inset;
+      box-shadow: 0 2px 0 $red inset;
       border-radius: 0 !important;
     }
   }'

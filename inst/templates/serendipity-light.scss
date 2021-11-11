@@ -5,11 +5,11 @@ $foreground: #576067;
 $gray-light: #f0f0f0;
 $gray: #abb0b6;
 $gray-dark: #898f93;
-$red: #f07171;
-$orange: #ed9366;
+$red: #ED5A5A;
+$orange: #E77136;
 $pink: #f06897;
 $purple: #a173ff;
-$green: #13b8a6;
+$green: #109484;
 $teal: #399ee6;
 $blue: #4589ff;
 $yellow: #ffd806;
@@ -22,7 +22,7 @@ $code_function: $green;
 $code_value: $red;
 $code_variable: $blue;
 $code_message: $purple;
-$ui_rstudio_background: $background;
+$ui_rstudio_background: darken($background, 2.5%);
 $ui_rstudio_foreground: $foreground;
 $ui_rstudio_border: $ui_background;
 $rmd_chunk_background: darken($ui_background, 5%);
@@ -49,14 +49,14 @@ $ui_invisible: transparentize($ui_foreground, 0.7);
 $ui_indent_guide: $ui_invisible;
 $ui_margin_line: #edeef0;
 $ui_debug_background: transparentize($yellow, 0.75);
-$ui_fold_arrows_foreground: $ui_cursor;
-$ui_fold_arrows_background: transparentize($ui_fold_arrows_foreground, 0.5);
+$ui_fold_arrows_foreground: $foreground;
+$ui_fold_arrows_background: $blue2;
 $ui_line_find: $ui_selection;
 $ui_console_selection: $ui_selection;
 $ui_completions_background: $background;
 $ui_completions_foreground: $foreground;
 $ui_completions_border: #ededed;
-$ui_completions_selected_background: $ui_line_active_selection;
+$ui_completions_selected_background: mix($blue2, $ui_rstudio_background, 25%);
 $ui_completions_selected_foreground: $ui_foreground;
 $ui_rstudio_job_progress_bar: opacify($ui_selection, 1);
 $code_comment: $gray;
@@ -99,7 +99,7 @@ $rmd_href_background: $code_reserved_background;
   }
   .rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
     .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
-      box-shadow: 0 2px 0 $orange inset;
+      box-shadow: 0 2px 0 $red inset;
       border-radius: 0 !important;
     }
   }
