@@ -416,24 +416,24 @@ rstheme_dialog_options <- function(
 #'   Terminal colors, 8 normal and 8 bright.
 #' @export
 rstheme_terminal_colors <- function(
-  black = "#2e3436",
-  black_bright = "#555753",
-  red = "#cc0000",
-  red_bright = "#ef2929",
-  green = "#4e9a06",
-  green_bright = "#8ae234",
-  yellow = "#c4a000",
-  yellow_bright = "#fce94f",
-  blue = "#3465a4",
-  blue_bright = "#729fcf",
-  magenta = "#75507b",
-  magenta_bright = "#ad7fa8",
-  cyan = "#06989a",
-  cyan_bright = "#34e2e2",
-  white = "#d3d7cf",
-  white_bright = "#eeeeec"
+  black = NULL,
+  black_bright = black,
+  red = NULL,
+  red_bright = red,
+  green = NULL,
+  green_bright = green,
+  yellow = NULL,
+  yellow_bright = yellow,
+  blue = NULL,
+  blue_bright = blue,
+  magenta = NULL,
+  magenta_bright = magenta,
+  cyan = NULL,
+  cyan_bright = cyan,
+  white = NULL,
+  white_bright = white
 ) {
-  sass::as_sass(list(
+  terminal_colors <- list(
     terminal_color_black = black,
     terminal_color_black_bright = black_bright,
     terminal_color_red = red,
@@ -450,7 +450,13 @@ rstheme_terminal_colors <- function(
     termianl_color_cyan_bright = cyan_bright,
     terminal_color_white = white,
     terminal_color_white_bright = white_bright
-  ))
+  )
+
+  terminal_colors <- purrr::compact(terminal_colors)
+
+  if (length(terminal_colors)) {
+    sass::as_sass(terminal_colors)
+  }
 }
 
 hotload_rstheme <- function(path) {
