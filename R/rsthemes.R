@@ -14,31 +14,8 @@
 #' @section Palettes: \pkg{rsthemes} includes RStudio themes based on the
 #'   following colors palettes.
 #'
-#'   - _[base16]_ (Various Authors)
-#'   - _[Fairyfloss]_ ([Amy Wibowo (sailorhg)](https://github.com/sailorhg))
-#'   - _[Flat White][flat-white]_ ([Dmitry Biletskyy](https://github.com/biletskyy))
-#'   - _[Nord]_ ([Sven Greb](https://www.svengreb.de/))
-#'   - _[Oceanic Plus][oceanic-plus]_ ([Marco Scannadinari](https://github.com/marcoms))
-#'   - _[Atom One Dark][one-dark]_
-#'   - _[Atom One Light][one-light]_
-#'   - _[Solarized]_ (Ethan Schoonover)
-#'   - _[Horizon Dark][horizon]_ (Jonathan Olaleye)
-#'   - _[a11y-syntax-highlighting][a11y-syntax]_ ([Eric Bailey](https://ericwbailey.design/))
-#'   - _[Night Owl][night-owl]_ ([Sarah Drasner](https://sarah.dev/))
-#'   - _[Material Themes][material]_
-#'
-#'   [base16]: https://github.com/chriskempson/base16
-#'   [fairyfloss]: https://github.com/sailorhg/fairyfloss
-#'   [flat-white]: https://github.com/biletskyy/flatwhite-syntax
-#'   [nord]: https://github.com/arcticicestudio/nord
-#'   [oceanic-plus]: https://github.com/marcoms/oceanic-plus
-#'   [one-light]: https://github.com/atom/atom/tree/master/packages/one-light-syntax
-#'   [one-dark]: https://github.com/atom/atom/tree/master/packages/one-dark-syntax
-#'   [solarized]: https://ethanschoonover.com/solarized
-#'   [horizon]: https://horizontheme.netlify.app/
-#'   [a11y-syntax]: https://github.com/ericwbailey/a11y-syntax-highlighting
-#'   [night-owl]: https://github.com/sdras/night-owl-vscode-theme
-#'   [material]: https://material-theme.site/
+#'   ```{r child="man/fragments/palettes.Rmd"}
+#'   ```
 #'
 #' @name rsthemes
 NULL

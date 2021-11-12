@@ -17,6 +17,7 @@
   - Featuring a background image by [Joanna Kosinska](https://unsplash.com/@joannakosinska)
 - [Material Theme][material]
   - Contributed to rsthemes by [Zac de Lusignan](https://www.zacdelusignan.com/)
+- [Serendipity][serendipity] ([wickedtemplates](https://www.wickedtemplates.com/))
 
 [base16]: https://github.com/chriskempson/base16
 [fairyfloss]: https://github.com/sailorhg/fairyfloss
@@ -31,3 +32,4 @@
 [night-owl]: https://github.com/sdras/night-owl-vscode-theme
 [night-owlish]: https://github.com/batpigandme/night-owlish
 [material]: https://material-theme.site/
+[serendipity]: https://wvsc.dev/
