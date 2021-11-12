@@ -1,4 +1,16 @@
-# rsthemes (development version)
+<!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
+
+# rsthemes 0.3.0 (2021-11-12)
+
+## New Themes
+
+* Four new Material Themes: Dark, Lighter, Ocean, and Palenight 
+  (@lusignan, @grrrck #64, #49, #47)
+  
+* New theme: Serendipity Dark and Light, based on the 
+  [VS Code theme from wickedtemplates](https://wvsc.dev) (#73).
+
+## Improvements and Fixes
 
 * Improved dialog styles (#43):
     * Checkboxes now show correct status (thanks @etiennebacher #39)
@@ -7,22 +19,17 @@
     
 * File name in _Find all Files_ is now styled (#36, #43)
 
-* Added 4 new Material Themes: Dark, Lighter, Ocean, and Palenight 
-  (@lusignan, @grrrck #64, #49, #47)
-  
-* Fixed menu item hover and selected colors in complete menu themes
-
-* Added {rsthemes} version and header to final `.rstheme` files
-
 * Added support for terminal color theming via `rsthemes_terminal_colors()` 
   (@nsgrantham #63). Most themes now set the first eight terminal colors
   (black, red, green, yellow, blue, magenta, cyan, white).
   
 * Added `use_theme_rstudio_default()` and corresponding RStudio addin
   _Use Default RStudio Theme_ (thanks @dragosmg, #71).
-  
-* New theme: Serendipity Dark and Light, based on the 
-  [VS Code theme from wickedtemplates](https://wvsc.dev) (#73).
+
+* Fixed menu item hover and selected colors in complete menu themes
+
+* Added {rsthemes} version and header to final `.rstheme` files
+
   
 * Backgrounds of scrollbars are now transparent and don't hide the code
   underneath the scrollbar (thanks @dragosmg, #75).
