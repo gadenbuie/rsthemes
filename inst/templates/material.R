@@ -82,12 +82,13 @@ material_rstheme <- function(
 ) {
   name <- paste0("Material", if (!is.null(style)) " ", style)
   path <- paste0("material", if (!is.null(style)) "-", tolower(style), ".scss")
+  is_dark <- !identical(style, "Lighter")
   theme_args <- list(
     theme_name      = name,
-    theme_dark      = !identical(style, "Lighter"),
+    theme_dark      = is_dark,
     theme_flat      = TRUE,
     theme_path      = here::here("inst", "templates", path),
-    theme_apply     = TRUE,
+    theme_apply     = FALSE,
     theme_as_sass   = TRUE,
     theme_palette   = c(base, accents),
     ui_background   = "$base00",
@@ -127,6 +128,24 @@ material_rstheme <- function(
     rmd_chunk_header         = "$teal",
     rmd_heading_foreground   = "$gold",
     rmd_href                 = "$red",
+    rstheme_terminal_colors(
+      black = "$ui_background",
+      black_bright = "lighten($ui_background, 5%)",
+      white = "lighten($ui_foreground, 10%)",
+      white_bright = "lighten($ui_foreground, 15%)",
+      red = accents$red,
+      red_bright = accents$red,
+      green = accents$green,
+      green_bright = accents$green,
+      yellow = accents$gold,
+      yellow_bright = accents$gold,
+      blue = accents$blue,
+      blue_bright = accents$sky,
+      magenta = accents$purple,
+      magenta_bright = accents$purple,
+      cyan = accents$aqua,
+      cyan_bright = accents$teal
+    ),
     rstheme_command_palette(),
     rstheme_large_tabs(),
     rstheme_dialog_options(
