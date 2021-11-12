@@ -7,14 +7,25 @@
 </p>
 <!-- badges: start -->
 
-[![](https://img.shields.io/badge/rstudio-%3E=1.2.1335-%2381A9D7.svg)](https://www.rstudio.com/products/rstudio/)
+[![rsthemes status
+badge](https://gadenbuie.r-universe.dev/badges/rsthemes)](https://gadenbuie.r-universe.dev)
 ![](https://www.r-pkg.org/badges/version/rsthemes)
-![](https://img.shields.io/badge/lifecycle-maturing-blue.svg)
+![](https://lifecycle.r-lib.org/articles/figures/lifecycle-stable.svg)
 <!-- badges: end -->
 
 ## Installation
 
-You can install rsthemes from GitHub with:
+You can install rsthemes from my
+[r-universe](https://gadenbuie.r-universe.dev) with:
+
+``` r
+install.packages(
+  "rsthemes",
+  repos = c(gadenbuie = 'https://gadenbuie.r-universe.dev', getOption("repos"))
+)
+```
+
+Or you can install rsthemes from GitHub with:
 
 ``` r
 # install.packages("devtools")
@@ -51,7 +62,7 @@ rsthemes::try_rsthemes("light")
 ```
 
 Use `rstudioapi::applyTheme()` to activate a theme from the R console,
-or use *Tools* &gt; *Global Options* &gt; *Appearance* to interactively
+or use *Tools* \> *Global Options* \> *Appearance* to interactively
 select a theme.
 
 ``` r

@@ -1,4 +1,13 @@
-You can install rsthemes from GitHub with:
+You can install rsthemes from my [r-universe](https://gadenbuie.r-universe.dev) with:
+
+``` r
+install.packages(
+  "rsthemes",
+  repos = c(gadenbuie = 'https://gadenbuie.r-universe.dev', getOption("repos"))
+)
+```
+
+Or you can install rsthemes from GitHub with:
 
 ``` r
 # install.packages("devtools")

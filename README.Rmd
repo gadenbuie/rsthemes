@@ -8,9 +8,9 @@ output: github_document
 </p>
 
 <!-- badges: start -->
-[![](https://img.shields.io/badge/rstudio->=1.2.1335-%2381A9D7.svg)](https://www.rstudio.com/products/rstudio/)
+[![rsthemes status badge](https://gadenbuie.r-universe.dev/badges/rsthemes)](https://gadenbuie.r-universe.dev)
 ![](https://www.r-pkg.org/badges/version/rsthemes)
-![](https://img.shields.io/badge/lifecycle-maturing-blue.svg)
+![](https://lifecycle.r-lib.org/articles/figures/lifecycle-stable.svg)
 <!-- badges: end -->
 
 
