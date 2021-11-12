@@ -772,11 +772,11 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 .xtermColor14 {
-  color: #34e2e2 !important;
+  color: #39ADB5 !important;
 }
 
 .xtermBgColor14 {
-  background-color: #34e2e2;
+  background-color: #39ADB5;
 }
 
 .xtermColor15 {

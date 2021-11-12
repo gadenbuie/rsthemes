@@ -448,7 +448,7 @@ rstheme_terminal_colors <- function(
     terminal_color_magenta = magenta,
     terminal_color_magenta_bright = magenta_bright,
     terminal_color_cyan = cyan,
-    termianl_color_cyan_bright = cyan_bright,
+    terminal_color_cyan_bright = cyan_bright,
     terminal_color_white = white,
     terminal_color_white_bright = white_bright
   )
