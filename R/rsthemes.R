@@ -1,12 +1,4 @@
-#' Full RStudio Themes
-#'
-#' This package provides a set of complete RStudio themes that restyle the
-#' IDE and the editor syntax. The themes are built from
-#' [sass](https://sass-lang.org) templates into `.rstheme` files that,
-#' ultimately, contain the CSS files that provide the themes. The sass templates
-#' provide an easy-to-extend framework for customizing the look of RStudio. If
-#' you would like to create your own theme, [rstheme()] is designed to help you
-#' get started quickly.
+#' Install, List, Try or Remove RStudio Themes
 #'
 #' @section Palettes: \pkg{rsthemes} includes RStudio themes based on the
 #'   following colors palettes.
@@ -14,10 +6,10 @@
 #'   ```{r child="man/fragments/palettes.Rmd"}
 #'   ```
 #'
-#' @name rsthemes
+#' @name rsthemes-actions
 NULL
 
-#' @describeIn rsthemes Install RStudio themes
+#' @describeIn rsthemes-actions Install RStudio themes
 #' @param style Limit to a subgroup of themes, chosen from the options returned
 #'   by [rsthemes_styles()].
 #' @param include_base16 Should the `base16` themes be included?
@@ -54,7 +46,7 @@ install_rsthemes <- function(style = "all", include_base16 = FALSE, destdir = NU
   cli::cli_alert_info("Use {.code rsthemes::try_rsthemes()} to try all installed themes")
 }
 
-#' @describeIn rsthemes Remove rsthemes from RStudio
+#' @describeIn rsthemes-actions Remove rsthemes from RStudio
 #' @export
 remove_rsthemes <- function(style = rsthemes_styles(), include_base16 = TRUE) {
   requires_rstudioapi()
@@ -79,7 +71,7 @@ cli_how2install <- function() {
   )
 }
 
-#' @describeIn rsthemes List installed themes (default) or available themes
+#' @describeIn rsthemes-actions List installed themes (default) or available themes
 #' @param list_installed Should the installed \pkg{rsthemes} themes be listed
 #'   (default). If `FALSE`, the available themes in the \pkg{rsthemes} package
 #'   are listed instead.
@@ -134,7 +126,7 @@ list_pkg_rsthemes <- function(style = "all", include_base16 = TRUE) {
   theme_files
 }
 
-#' @describeIn rsthemes Try each rsthemes RStudio theme
+#' @describeIn rsthemes-actions Try each rsthemes RStudio theme
 #' @param delay Number of seconds to wait between themes. Set to 0 to be
 #'   prompted to continue after each theme.
 #' @export
@@ -172,7 +164,7 @@ try_rsthemes <- function(
   rstudioapi::applyTheme(current_theme$editor)
 }
 
-#' @describeIn rsthemes List style options
+#' @describeIn rsthemes-actions List style options
 #' @param validate If provided to `rsthemes_styles()`, checks that the
 #'   specified style is valid.
 #' @param ... Ignored.
