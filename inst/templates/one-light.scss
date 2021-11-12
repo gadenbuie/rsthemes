@@ -33,7 +33,6 @@ $ui_rstudio_tabs_inactive_background       : $ui_background;
 $ui_completions_background      : $ui_background;
 $ui_completions_foreground           : $ui_foreground;
 $ui_completions_border          : $ui_bracket;
-$ui_rstudio_scrollbar_background: $ui_background;
 $ui_rstudio_scrollbar_handle    : $rmd_chunk_background;
 
 // R language colors
@@ -65,6 +64,7 @@ $rmd_heading_foreground: $hue-5-2;
 $rmd_chunk_header: $hue-1;
 $rmd_href: $hue-6-2;
 
+@import "rstudio/_defaults";
 @import "rstudio/_rstudio-light", "rstudio/_rstudio-light-flatter";
 @import "rstudio/_components";
 

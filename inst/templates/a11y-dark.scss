@@ -36,7 +36,7 @@ $ui_rstudio_tabs_active_foreground: $ui_foreground;
 $ui_rstudio_toolbar_background: $ui_rstudio_tabs_active_background;
 $ui_rstudio_toolbar_foreground: $ui_foreground;
 $ui_rstudio_search: $ui_rstudio_toolbar_background;
-$ui_rstudio_scrollbar_background: $ui_background;
+$ui_rstudio_scrollbar_background: transparentize($ui_background, 0.5);
 $ui_rstudio_scrollbar_handle: $rmd_chunk_background;
 $ui_cursor: transparentize($blue, 0.5);
 $ui_cursor_normal_mode: $ui_cursor;
@@ -88,7 +88,6 @@ $rmd_chunk_header_background: $code_function_background;
 $rmd_href: $blue-dark;
 $rmd_href_background: $code_reserved_background;
 @import "rstudio/_rstudio-dark.scss";
-@import "rstudio/_terminal.scss";
 
 [class="ace_keyword"] {
 	font-weight: 600;
@@ -109,6 +108,7 @@ $rmd_href_background: $code_reserved_background;
   border-color: #454545;
 }
 
+@import "rstudio/_terminal.scss";
 $ui_command_palette_background: $ui_background;
 $ui_command_palette_search_background: $ui_command_palette_background;
 $ui_command_palette_border: $ui_command_palette_background;

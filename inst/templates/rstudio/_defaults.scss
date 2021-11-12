@@ -40,7 +40,7 @@ $ui_completions_foreground: $ui_foreground !default;
 $ui_completions_selected_foreground: $ui_completions_foreground !default;
 $ui_completions_selected_background: $ui_line_active_selection !default;
 $ui_completions_border: $ui_bracket !default;
-$ui_rstudio_scrollbar_background: transparent !default;
+$ui_rstudio_scrollbar_background: transparentize($ui_background, 0.5) !default;
 $ui_rstudio_scrollbar_handle: $rmd_chunk_background !default;
 $ui_rstudio_scrollbar_handle_border: $ui_background !default;
 

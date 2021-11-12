@@ -35,7 +35,7 @@ $ui_rstudio_tabs_active_foreground: $base06;
 $ui_rstudio_toolbar_background: $ui_rstudio_tabs_active_background;
 $ui_rstudio_toolbar_foreground: $base03;
 $ui_rstudio_search: $ui_rstudio_toolbar_background;
-$ui_rstudio_scrollbar_background: $ui_background;
+$ui_rstudio_scrollbar_background: transparentize($ui_background, 0.5);
 $ui_rstudio_scrollbar_handle: $rmd_chunk_background;
 $ui_cursor: $gold;
 $ui_cursor_normal_mode: $ui_cursor;

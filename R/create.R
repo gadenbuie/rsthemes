@@ -46,7 +46,7 @@
 #' @param ui_rstudio_toolbar_background Default: `$ui_rstudio_tabs_active_background`
 #' @param ui_rstudio_toolbar_foreground Default: `$ui_foreground`
 #' @param ui_rstudio_search Default: `$ui_rstudio_toolbar_background`
-#' @param ui_rstudio_scrollbar_background Default: `$ui_background`
+#' @param ui_rstudio_scrollbar_background Default: `transparentize($ui_background, 0.5)`
 #' @param ui_rstudio_scrollbar_handle Default: `$rmd_chunk_background`
 #' @param ui_cursor Default: `#FF0000`
 #' @param ui_cursor_normal_mode Default: `$ui_cursor`
@@ -132,7 +132,7 @@ rstheme <- function(
   ui_rstudio_toolbar_background = "$ui_rstudio_tabs_active_background",
   ui_rstudio_toolbar_foreground = "$ui_foreground",
   ui_rstudio_search = "$ui_rstudio_toolbar_background",
-  ui_rstudio_scrollbar_background = "$ui_background",
+  ui_rstudio_scrollbar_background = "transparentize($ui_background, 0.5)",
   ui_rstudio_scrollbar_handle = "$rmd_chunk_background",
   ui_cursor = "#FF0000",
   ui_cursor_normal_mode = "$ui_cursor",

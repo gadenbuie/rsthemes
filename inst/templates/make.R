@@ -5,5 +5,7 @@ r_files <- r_files[!grepl("make[.]R", r_files)]
 
 purrr::walk(r_files, source)
 
-make_rsthemes()
-install_rsthemes()
+withr::with_dir(here::here(), {
+  make_rsthemes()
+  install_rsthemes()
+})

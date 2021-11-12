@@ -108,8 +108,9 @@
 }
 
 .ace_indent-guide {
-  border-right: 1px solid #c4c3c5;
-  margin-right: -1px;
+  display: inline-block;
+  height: 100%;
+  box-shadow: 1px 0 0 #c4c3c5;
 }
 
 .ace_active-line ~ .ace_selection.ace_start {
@@ -472,10 +473,19 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 /* scrollbars */
+/* reset scrollbar background color */
+.rstudio-themes-flat .rstudio-themes-scrollbars ::-webkit-scrollbar {
+  background-color: unset;
+}
+
+.rstudio-themes-flat .ace_scroller {
+  overflow: visible;
+}
+
 .rstudio-themes-flat, .rstudio-themes-flat .rstudio-themes-scrollbars {
   /* Works on Firefox */
   scrollbar-width: auto;
-  scrollbar-color: #e1e1e2 #ffffff;
+  scrollbar-color: #e1e1e2 rgba(255, 255, 255, 0.5);
   /* Works on Chrome, Edge, and Safari */
 }
 
@@ -484,7 +494,7 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 .rstudio-themes-flat *::-webkit-scrollbar-track, .rstudio-themes-flat .rstudio-themes-scrollbars *::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .rstudio-themes-flat *::-webkit-scrollbar-thumb, .rstudio-themes-flat .rstudio-themes-scrollbars *::-webkit-scrollbar-thumb {
