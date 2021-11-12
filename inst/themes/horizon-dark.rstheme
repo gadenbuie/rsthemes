@@ -683,19 +683,19 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 .xtermColor7 {
-  color: #8A8CA8 !important;
+  color: #7b7e9d !important;
 }
 
 .xtermBgColor7 {
-  background-color: #8A8CA8;
+  background-color: #7b7e9d;
 }
 
 .xtermColor8 {
-  color: #1a1c23 !important;
+  color: #303340 !important;
 }
 
 .xtermBgColor8 {
-  background-color: #1a1c23;
+  background-color: #303340;
 }
 
 .xtermColor9 {

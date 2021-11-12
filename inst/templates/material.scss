@@ -89,7 +89,7 @@ $rmd_href_background: $code_reserved_background;
 @import "rstudio/_rstudio-dark.scss";
 @import "rstudio/_rstudio-dark-flatter.scss";
 $terminal_color_black: $ui_background;
-$terminal_color_black_bright: lighten($ui_background, 5%);
+$terminal_color_black_bright: lighten($terminal_color_black, 10%);
 $terminal_color_red: #F07178;
 $terminal_color_red_bright: #F07178;
 $terminal_color_green: #C3E88D;
@@ -102,8 +102,8 @@ $terminal_color_magenta: #C792EA;
 $terminal_color_magenta_bright: #C792EA;
 $terminal_color_cyan: #84FFFF;
 $termianl_color_cyan_bright: #80CBC4;
-$terminal_color_white: lighten($ui_foreground, 10%);
-$terminal_color_white_bright: lighten($ui_foreground, 15%);
+$terminal_color_white: darken($ui_foreground, 5%);
+$terminal_color_white_bright: $ui_foreground;
 .rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
     .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
       box-shadow: 0 -2px 0 $teal inset;

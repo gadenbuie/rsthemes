@@ -65,8 +65,6 @@ rstheme(
     "$code_comment", "#21bfc2", "#fab795", "#f43e5c", "#07da8c", "#b877db"
   ),
   rstheme_terminal_colors(
-    black = "$ui_background",
-    white = "$ui_foreground",
     red = "$red",
     green = "$green2",
     green_bright = "$green1",
