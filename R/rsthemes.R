@@ -140,17 +140,24 @@ try_rsthemes <- function(
   current_theme <- rstudioapi::getThemeInfo()
   themes <- list_rsthemes(style, include_base16)
   favorites <- c()
+  cli::cli_alert(c(
+    "Trying {.strong {length(themes)}} {if (style != 'all') style}",
+    "{cli::qty(length(themes))} theme{?s} from {.pkg rsthemes}"
+  ))
+  cli::cli_alert("At the prompt, choose from:")
+  cli::cli_bullets(c(
+    "*" = "{.kbd n} or {.kbd {' '}} (empty) to try the {.strong next} theme",
+    "*" = "{.kbd k} to {.strong keep} that theme",
+    "*" = "{.kbd f} to {.strong favorite} that theme",
+    "*" = "{.kbd q} to {.strong quit} and restore your original theme"
+  ))
   for (theme in themes) {
     cat("\u2022", theme, "\n")
     rstudioapi::applyTheme(theme)
     if (delay > 0) {
       Sys.sleep(delay)
     } else {
-      res <- if (theme != themes[length(themes)]) {
-        readline("Enter [blank] for next, [k] to keep, [f] to favorite, [q] to quit: ")
-      } else {
-        readline("Enter [blank] or [q] to quit, [k] to keep, [f] to favorite: ")
-      }
+      res <- readline("[n,k,f,q]: ")
       if (tolower(res) == "k") {
         instruct_favorites(favorites)
         return(invisible())
