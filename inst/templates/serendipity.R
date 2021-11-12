@@ -94,6 +94,17 @@ rstheme(
   rstheme_rainbow_parentheses(
     "$gray-dark", "$pink2", "$blue2", "$yellow", "$pink2", "$blue2"
   ),
+  rstheme_terminal_colors(
+    theme_dark = TRUE,
+    red = "$red",
+    red_bright = "$pink",
+    green = "$green",
+    yellow = "$yellow",
+    blue = "$blue",
+    blue_bright = "$blue2",
+    magenta = "$purple",
+    cyan = "$teal"
+  ),
   '#rstudio_command_palette_list [id^="rstudio_command_entry_"] > :first-child:not([id]) {
     background-color: $red;
     .gwt-Label {
@@ -168,6 +179,17 @@ rstheme(
   rstheme_rainbow_parentheses(
     "$gray-dark", "$pink2", "$blue2", "$yellow", "$pink2", "$blue2"
   ),
+  rstheme_terminal_colors(
+    theme_dark = FALSE,
+    red = "$red",
+    red_bright = "$pink",
+    green = "$green",
+    yellow = "$yellow",
+    blue = "$blue",
+    blue_bright = "$blue2",
+    magenta = "$purple",
+    cyan = "$teal"
+  ),
   '#rstudio_command_palette_list [id^="rstudio_command_entry_"] > :first-child:not([id]) {
     background-color: $red;
     .gwt-Label {
@@ -184,3 +206,10 @@ rstheme(
     }
   }'
 )
+
+
+# Live Testing ------------------------------------------------------------
+
+# make_rsthemes()
+# hotload_rstheme("inst/themes/serendipity-dark.rstheme")
+# hotload_rstheme("inst/themes/serendipity-light.rstheme")
