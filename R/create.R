@@ -423,7 +423,7 @@ rstheme_terminal_colors <- function(
   magenta = NULL,
   cyan    = NULL,
   black = "$ui_background",
-  white = "$ui_foreground",
+  white = "darken($ui_foreground, 5%)",
   red_bright     = red,
   green_bright   = green,
   yellow_bright  = yellow,
@@ -431,7 +431,7 @@ rstheme_terminal_colors <- function(
   magenta_bright = magenta,
   cyan_bright    = cyan,
   black_bright   = "lighten($terminal_color_black, 10%)",
-  white_bright   = "lighten($terminal_color_white, 10%)"
+  white_bright   = "$ui_foreground"
 ) {
   terminal_colors <- list(
     terminal_color_black = black,
