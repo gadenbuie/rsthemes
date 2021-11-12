@@ -472,10 +472,19 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 /* scrollbars */
+/* reset scrollbar background color */
+.rstudio-themes-flat .rstudio-themes-scrollbars ::-webkit-scrollbar {
+  background-color: unset;
+}
+
+.rstudio-themes-flat .ace_scroller {
+  overflow: visible;
+}
+
 .rstudio-themes-flat, .rstudio-themes-flat .rstudio-themes-scrollbars {
   /* Works on Firefox */
   scrollbar-width: auto;
-  scrollbar-color: #ededed #fafafa;
+  scrollbar-color: #ededed rgba(250, 250, 250, 0.5);
   /* Works on Chrome, Edge, and Safari */
 }
 
@@ -484,7 +493,7 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 .rstudio-themes-flat *::-webkit-scrollbar-track, .rstudio-themes-flat .rstudio-themes-scrollbars *::-webkit-scrollbar-track {
-  background: #fafafa;
+  background: rgba(250, 250, 250, 0.5);
 }
 
 .rstudio-themes-flat *::-webkit-scrollbar-thumb, .rstudio-themes-flat .rstudio-themes-scrollbars *::-webkit-scrollbar-thumb {
