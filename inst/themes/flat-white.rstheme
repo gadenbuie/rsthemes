@@ -770,51 +770,51 @@ input#rstudio_command_palette_search {
 }
 
 .xtermColor0 {
-  color: #2e3436 !important;
+  color: #534e46 !important;
 }
 
 .xtermBgColor0 {
-  background-color: #2e3436;
+  background-color: #534e46;
 }
 
 .xtermColor1 {
-  color: #cc0000 !important;
+  color: #e23232 !important;
 }
 
 .xtermBgColor1 {
-  background-color: #cc0000;
+  background-color: #e23232;
 }
 
 .xtermColor2 {
-  color: #4e9a06 !important;
+  color: #289f40 !important;
 }
 
 .xtermBgColor2 {
-  background-color: #4e9a06;
+  background-color: #289f40;
 }
 
 .xtermColor3 {
-  color: #c4a000 !important;
+  color: #da950b !important;
 }
 
 .xtermBgColor3 {
-  background-color: #c4a000;
+  background-color: #da950b;
 }
 
 .xtermColor4 {
-  color: #3465a4 !important;
+  color: #058aff !important;
 }
 
 .xtermBgColor4 {
-  background-color: #3465a4;
+  background-color: #058aff;
 }
 
 .xtermColor5 {
-  color: #75507b !important;
+  color: #8f668f !important;
 }
 
 .xtermBgColor5 {
-  background-color: #75507b;
+  background-color: #8f668f;
 }
 
 .xtermColor6 {
@@ -826,59 +826,59 @@ input#rstudio_command_palette_search {
 }
 
 .xtermColor7 {
-  color: #d3d7cf !important;
+  color: #efe7dc !important;
 }
 
 .xtermBgColor7 {
-  background-color: #d3d7cf;
+  background-color: #efe7dc;
 }
 
 .xtermColor8 {
-  color: #555753 !important;
+  color: #6e675e !important;
 }
 
 .xtermBgColor8 {
-  background-color: #555753;
+  background-color: #6e675e;
 }
 
 .xtermColor9 {
-  color: #ef2929 !important;
+  color: #ff1414 !important;
 }
 
 .xtermBgColor9 {
-  background-color: #ef2929;
+  background-color: #ff1414;
 }
 
 .xtermColor10 {
-  color: #8ae234 !important;
+  color: #2db448 !important;
 }
 
 .xtermBgColor10 {
-  background-color: #8ae234;
+  background-color: #2db448;
 }
 
 .xtermColor11 {
-  color: #fce94f !important;
+  color: #f2a60d !important;
 }
 
 .xtermBgColor11 {
-  background-color: #fce94f;
+  background-color: #f2a60d;
 }
 
 .xtermColor12 {
-  color: #729fcf !important;
+  color: #52aeff !important;
 }
 
 .xtermBgColor12 {
-  background-color: #729fcf;
+  background-color: #52aeff;
 }
 
 .xtermColor13 {
-  color: #ad7fa8 !important;
+  color: #9c739c !important;
 }
 
 .xtermBgColor13 {
-  background-color: #ad7fa8;
+  background-color: #9c739c;
 }
 
 .xtermColor14 {
@@ -890,11 +890,11 @@ input#rstudio_command_palette_search {
 }
 
 .xtermColor15 {
-  color: #eeeeec !important;
+  color: white !important;
 }
 
 .xtermBgColor15 {
-  background-color: #eeeeec;
+  background-color: white;
 }
 
 .xtermColor16 {
