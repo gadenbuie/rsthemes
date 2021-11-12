@@ -455,6 +455,8 @@ rstheme_terminal_colors <- function(
   terminal_colors <- purrr::compact(terminal_colors)
 
   if (length(terminal_colors)) {
+    # the _terminal.scss partial is always included in the RStudio theme,
+    # so we only need to return the SASS variables set in this function.
     sass::as_sass(terminal_colors)
   }
 }
