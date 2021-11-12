@@ -39,7 +39,6 @@ $ui_rstudio_search              : $ui_rstudio_toolbar_background;
 $ui_completions_background      : $ui_background;
 $ui_completions_foreground           : $ui_foreground;
 $ui_completions_border          : $ui_bracket;
-$ui_rstudio_scrollbar_background: $ui_background;
 $ui_rstudio_scrollbar_handle    : $nord6;
 
 // R language colors
@@ -71,6 +70,7 @@ $ui_paren_4: $nord13; // yellow
 $ui_paren_5: $nord14; // green
 $ui_paren_6: $nord15; // purple
 
+@import "rstudio/_defaults";
 @import "rstudio/_rstudio-light", "rstudio/_rstudio-light-flatter";
 @import "rstudio/_components";
 

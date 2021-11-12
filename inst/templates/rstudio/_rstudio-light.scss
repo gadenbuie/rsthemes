@@ -408,6 +408,15 @@ table.rstheme_tabLayoutCenter,
 }
 
 /* scrollbars */
+/* reset scrollbar background color */
+.rstudio-themes-flat {
+  .rstudio-themes-scrollbars ::-webkit-scrollbar {
+    background-color: unset;
+  }
+  .ace_scroller {
+    overflow: visible;
+  }
+}
 .rstudio-themes-flat, .rstudio-themes-flat .rstudio-themes-scrollbars {
   /* Works on Firefox */
   scrollbar-width: auto;

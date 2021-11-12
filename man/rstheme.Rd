@@ -32,7 +32,7 @@ rstheme(
   ui_rstudio_toolbar_background = "$ui_rstudio_tabs_active_background",
   ui_rstudio_toolbar_foreground = "$ui_foreground",
   ui_rstudio_search = "$ui_rstudio_toolbar_background",
-  ui_rstudio_scrollbar_background = "$ui_background",
+  ui_rstudio_scrollbar_background = "transparentize($ui_background, 0.5)",
   ui_rstudio_scrollbar_handle = "$rmd_chunk_background",
   ui_cursor = "#FF0000",
   ui_cursor_normal_mode = "$ui_cursor",
@@ -146,7 +146,7 @@ applied immediately.}
 
 \item{ui_rstudio_search}{Default: \verb{$ui_rstudio_toolbar_background}}
 
-\item{ui_rstudio_scrollbar_background}{Default: \verb{$ui_background}}
+\item{ui_rstudio_scrollbar_background}{Default: \verb{transparentize($ui_background, 0.5)}}
 
 \item{ui_rstudio_scrollbar_handle}{Default: \verb{$rmd_chunk_background}}
 

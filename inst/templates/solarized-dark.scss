@@ -39,7 +39,6 @@ $ui_rstudio_search              : $ui_rstudio_toolbar_background;
 $ui_completions_background      : $ui_background;
 $ui_completions_foreground           : $ui_foreground;
 $ui_completions_border          : $ui_bracket;
-$ui_rstudio_scrollbar_background: $ui_background;
 $ui_rstudio_scrollbar_handle    : $base02;
 
 // R language colors
@@ -61,5 +60,6 @@ $code_other: $code_variable;
   font-style: italic;
 }
 
+@import "rstudio/_defaults";
 @import "rstudio/_rstudio-dark", "rstudio/_terminal", "rstudio/_components";
 

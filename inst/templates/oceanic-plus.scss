@@ -39,7 +39,6 @@ $ui_rstudio_search              : $ui_rstudio_toolbar_background;
 $ui_completions_background      : $ui_background;
 $ui_completions_foreground           : $ui_foreground;
 $ui_completions_border          : $ui_bracket;
-$ui_rstudio_scrollbar_background: $ui_background;
 $ui_rstudio_scrollbar_handle    : $rmd_chunk_background;
 
 // R language colors
@@ -84,6 +83,7 @@ $terminal_color_cyan_bright: $base0C;
 $terminal_color_white: darken($ui_foreground, 5%);
 $terminal_color_white_bright: lighten($terminal_color_white, 10%);
 
+@import "rstudio/_defaults";
 @import "rstudio/_rstudio-dark", "rstudio/_rstudio-dark-flatter";
 @import "rstudio/_components";
 
