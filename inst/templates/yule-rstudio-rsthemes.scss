@@ -92,7 +92,7 @@ $rmd_chunk_header_background: $code_function_background;
 $rmd_href: $red;
 $rmd_href_background: $code_reserved_background;
 @import "rstudio/_rstudio-dark.scss";
-$terminal_color_black: $ui_background;
+$terminal_color_black: darken($ui_background, 5%);
 $terminal_color_black_bright: $gray-dark;
 $terminal_color_red: $red;
 $terminal_color_red_bright: $red-bright;

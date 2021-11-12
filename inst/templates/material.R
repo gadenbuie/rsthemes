@@ -136,7 +136,8 @@ material_rstheme <- function(
       blue_bright = accents$sky,
       magenta = accents$purple,
       cyan = accents$aqua,
-      cyan_bright = accents$teal
+      cyan_bright = accents$teal,
+      theme_dark = is_dark
     ),
     rstheme_command_palette(),
     rstheme_large_tabs(),

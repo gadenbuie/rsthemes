@@ -630,11 +630,11 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 .xtermColor0 {
-  color: #212121 !important;
+  color: #141414 !important;
 }
 
 .xtermBgColor0 {
-  background-color: #212121;
+  background-color: #141414;
 }
 
 .xtermColor1 {
@@ -694,11 +694,11 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 .xtermColor8 {
-  color: #3b3b3b !important;
+  color: #2e2e2e !important;
 }
 
 .xtermBgColor8 {
-  background-color: #3b3b3b;
+  background-color: #2e2e2e;
 }
 
 .xtermColor9 {
@@ -750,11 +750,11 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 .xtermColor15 {
-  color: #EEFFFF !important;
+  color: white !important;
 }
 
 .xtermBgColor15 {
-  background-color: #EEFFFF;
+  background-color: white;
 }
 
 .xtermColor16 {
