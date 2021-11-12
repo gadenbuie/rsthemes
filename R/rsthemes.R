@@ -4,12 +4,9 @@
 #' IDE and the editor syntax. The themes are built from
 #' [sass](https://sass-lang.org) templates into `.rstheme` files that,
 #' ultimately, contain the CSS files that provide the themes. The sass templates
-#' provide an easy-to-extend framework for customizing the look of RStudio. See
-#' [rstheme()] for more information about creating your own theme. I've done
-#' my best to avoid hacky CSS rules wherever possible, and the themes are tested
-#' against the current production release of RStudio (version 1.2.1335 through
-#' 1.4+ as of April 01, 2021). Please report any issues you encounter here:
-#' [github.com/gadenbuie/rsthemes/issues](https://github.com/gadenbuie/rsthemes/issues).
+#' provide an easy-to-extend framework for customizing the look of RStudio. If
+#' you would like to create your own theme, [rstheme()] is designed to help you
+#' get started quickly.
 #'
 #' @section Palettes: \pkg{rsthemes} includes RStudio themes based on the
 #'   following colors palettes.
