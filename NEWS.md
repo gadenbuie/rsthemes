@@ -23,6 +23,9 @@
   
 * New theme: Serendipity Dark and Light, based on the 
   [VS Code theme from wickedtemplates](https://wvsc.dev) (#73).
+  
+* Backgrounds of scrollbars are now transparent and don't hide the code
+  underneath the scrollbar (thanks @dragosmg, #75).
 
 # rsthemes 0.2.0 (2020-12-07)
 
