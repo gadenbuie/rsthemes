@@ -6,6 +6,7 @@
 \alias{rstheme_rainbow_parentheses}
 \alias{rstheme_large_tabs}
 \alias{rstheme_dialog_options}
+\alias{rstheme_terminal_colors}
 \title{RStudio Partial Themes}
 \usage{
 rstheme_command_palette(
@@ -55,6 +56,28 @@ rstheme_dialog_options(
   select_background = "lighten($ui_rstudio_dialog_background, 5\%)",
   select_foreground = "$ui_rstudio_dialog_foreground"
 )
+
+rstheme_terminal_colors(
+  theme_dark = TRUE,
+  red = NULL,
+  green = NULL,
+  yellow = NULL,
+  blue = NULL,
+  magenta = NULL,
+  cyan = NULL,
+  black = if (theme_dark) "darken($ui_background, 5\%)" else
+    "darken($ui_foreground, 5\%)",
+  white = if (theme_dark) "darken($ui_foreground, 5\%)" else
+    "darken($ui_background, 5\%)",
+  red_bright = red,
+  green_bright = green,
+  yellow_bright = yellow,
+  blue_bright = blue,
+  magenta_bright = magenta,
+  cyan_bright = cyan,
+  black_bright = "lighten($terminal_color_black, 10\%)",
+  white_bright = "lighten($terminal_color_white, 10\%)"
+)
 }
 \arguments{
 \item{search_background, item_background, item_color, item_hover_background, item_selected_background}{Additional color options for the command palette.}
@@ -67,6 +90,12 @@ rstheme_dialog_options(
 
 \item{selected_background, selected_foreground, heading_foreground, help_foreground, button_foreground, button_background, button_border, button_hover_foreground, button_hover_background, button_hover_border, input_foreground, input_background, input_border, checkbox_background, checkbox_foreground, select_background, select_foreground}{Additional colors for RStudio dialog boxes, setting SCSS variables prefixed
 with \verb{$ui_rstudio_dialog_<argument>}.}
+
+\item{theme_dark}{Is the theme dark (otherwise light). Used to set the
+default terminal colors for black and white based on the theme's foreground
+and background colors.}
+
+\item{black, black_bright, red, red_bright, green, green_bright, yellow, yellow_bright, blue, blue_bright, magenta, magenta_bright, cyan, cyan_bright, white, white_bright}{Terminal colors, 8 normal and 8 bright.}
 }
 \description{
 Partial themes for RStudio to be included as desired in \code{\link[=rstheme]{rstheme()}}.
@@ -80,5 +109,7 @@ Partial themes for RStudio to be included as desired in \code{\link[=rstheme]{rs
 \item \code{rstheme_large_tabs}: Enlarges the tabs
 
 \item \code{rstheme_dialog_options}: Themes dialog windows, e.g. \emph{Global Options}
+
+\item \code{rstheme_terminal_colors}: Theme the terminal colors
 }}
 

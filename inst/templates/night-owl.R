@@ -100,6 +100,20 @@ night_owl <- rstheme(
   rstheme_rainbow_parentheses(
     "$code_bracket", "$blue2", "$purple", "$orange", "$green-light", "$red", "$teal-light"
   ),
+  rstheme_terminal_colors(
+    blue = "$blue2",
+    blue_bright = "$blue1",
+    red = "$red",
+    red_bright = "$pink",
+    green = "$green-dark",
+    green_bright = "$green-light",
+    cyan = "$teal-dark",
+    cyan_bright = "$teal-light",
+    magenta = "$purple2",
+    magenta_bright = "$purple",
+    yellow = "$orange-light",
+    yellow_bright = "$yellow-light"
+  ),
   '.rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
     .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
       box-shadow: 0 4px 0 $blue2 inset;

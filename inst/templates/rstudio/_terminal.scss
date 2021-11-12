@@ -1,3 +1,20 @@
+$terminal_color_black: #2e3436 !default;
+$terminal_color_black_bright: #555753 !default;
+$terminal_color_red: #cc0000 !default;
+$terminal_color_red_bright: #ef2929 !default;
+$terminal_color_green: #4e9a06 !default;
+$terminal_color_green_bright: #8ae234 !default;
+$terminal_color_yellow: #c4a000 !default;
+$terminal_color_yellow_bright: #fce94f !default;
+$terminal_color_blue: #3465a4 !default;
+$terminal_color_blue_bright: #729fcf !default;
+$terminal_color_magenta: #75507b !default;
+$terminal_color_magenta_bright: #ad7fa8 !default;
+$terminal_color_cyan: #06989a !default;
+$terminal_color_cyan_bright: #34e2e2 !default;
+$terminal_color_white: #d3d7cf !default;
+$terminal_color_white_bright: #eeeeec !default;
+
 .terminal {
   background-color: $ui_background;
   color: $ui_foreground;
@@ -49,38 +66,38 @@
 .xtermHidden { visibility: hidden; }
 .xtermItalic { font-style: italic; }
 .xtermStrike { text-decoration: line-through; }
-.xtermColor0 { color: #2e3436 !important; }
-.xtermBgColor0 { background-color: #2e3436; }
-.xtermColor1 { color: #cc0000 !important; }
-.xtermBgColor1 { background-color: #cc0000; }
-.xtermColor2 { color: #4e9a06 !important; }
-.xtermBgColor2 { background-color: #4e9a06; }
-.xtermColor3 { color: #c4a000 !important; }
-.xtermBgColor3 { background-color: #c4a000; }
-.xtermColor4 { color: #3465a4 !important; }
-.xtermBgColor4 { background-color: #3465a4; }
-.xtermColor5 { color: #75507b !important; }
-.xtermBgColor5 { background-color: #75507b; }
-.xtermColor6 { color: #06989a !important; }
-.xtermBgColor6 { background-color: #06989a; }
-.xtermColor7 { color: #d3d7cf !important; }
-.xtermBgColor7 { background-color: #d3d7cf; }
-.xtermColor8 { color: #555753 !important; }
-.xtermBgColor8 { background-color: #555753; }
-.xtermColor9 { color: #ef2929 !important; }
-.xtermBgColor9 { background-color: #ef2929; }
-.xtermColor10 { color: #8ae234 !important; }
-.xtermBgColor10 { background-color: #8ae234; }
-.xtermColor11 { color: #fce94f !important; }
-.xtermBgColor11 { background-color: #fce94f; }
-.xtermColor12 { color: #729fcf !important; }
-.xtermBgColor12 { background-color: #729fcf; }
-.xtermColor13 { color: #ad7fa8 !important; }
-.xtermBgColor13 { background-color: #ad7fa8; }
-.xtermColor14 { color: #34e2e2 !important; }
-.xtermBgColor14 { background-color: #34e2e2; }
-.xtermColor15 { color: #eeeeec !important; }
-.xtermBgColor15 { background-color: #eeeeec; }
+.xtermColor0 { color: $terminal_color_black !important; }
+.xtermBgColor0 { background-color: $terminal_color_black; }
+.xtermColor1 { color: $terminal_color_red !important; }
+.xtermBgColor1 { background-color: $terminal_color_red; }
+.xtermColor2 { color: $terminal_color_green !important; }
+.xtermBgColor2 { background-color: $terminal_color_green; }
+.xtermColor3 { color: $terminal_color_yellow !important; }
+.xtermBgColor3 { background-color: $terminal_color_yellow; }
+.xtermColor4 { color: $terminal_color_blue !important; }
+.xtermBgColor4 { background-color: $terminal_color_blue; }
+.xtermColor5 { color: $terminal_color_magenta !important; }
+.xtermBgColor5 { background-color: $terminal_color_magenta; }
+.xtermColor6 { color: $terminal_color_cyan !important; }
+.xtermBgColor6 { background-color: $terminal_color_cyan; }
+.xtermColor7 { color: $terminal_color_white !important; }
+.xtermBgColor7 { background-color: $terminal_color_white; }
+.xtermColor8 { color: $terminal_color_black_bright !important; }
+.xtermBgColor8 { background-color: $terminal_color_black_bright; }
+.xtermColor9 { color: $terminal_color_red_bright !important; }
+.xtermBgColor9 { background-color: $terminal_color_red_bright; }
+.xtermColor10 { color: $terminal_color_green_bright !important; }
+.xtermBgColor10 { background-color: $terminal_color_green_bright; }
+.xtermColor11 { color: $terminal_color_yellow_bright !important; }
+.xtermBgColor11 { background-color: $terminal_color_yellow_bright; }
+.xtermColor12 { color: $terminal_color_blue_bright !important; }
+.xtermBgColor12 { background-color: $terminal_color_blue_bright; }
+.xtermColor13 { color: $terminal_color_magenta_bright !important; }
+.xtermBgColor13 { background-color: $terminal_color_magenta_bright; }
+.xtermColor14 { color: $terminal_color_cyan_bright !important; }
+.xtermBgColor14 { background-color: $terminal_color_cyan_bright; }
+.xtermColor15 { color: $terminal_color_white_bright !important; }
+.xtermBgColor15 { background-color: $terminal_color_white_bright; }
 .xtermColor16 { color: #000000 !important; }
 .xtermBgColor16 { background-color: #000000; }
 .xtermColor17 { color: #00005f !important; }
