@@ -7,6 +7,7 @@
 \alias{set_theme_favorite}
 \alias{use_theme_light}
 \alias{use_theme_dark}
+\alias{use_theme_rstudio_default}
 \alias{use_theme_toggle}
 \alias{use_theme_auto}
 \alias{use_theme_favorite}
@@ -21,6 +22,8 @@ set_theme_favorite(theme = NULL, append = TRUE)
 use_theme_light(quietly = FALSE)
 
 use_theme_dark(quietly = FALSE)
+
+use_theme_rstudio_default(quietly = FALSE)
 
 use_theme_toggle(quietly = FALSE)
 
@@ -75,6 +78,8 @@ instructions in the section below.
 \item \code{use_theme_light}: Use default light theme
 
 \item \code{use_theme_dark}: Use default dark theme
+
+\item \code{use_theme_rstudio_default}: Use the RStudio default theme (Textmate)
 
 \item \code{use_theme_toggle}: Toggle between dark and light themes
 
@@ -146,5 +151,10 @@ to the automatically chosen light/dark theme based on time of day. You can
 set a keyboard shortcut to \strong{Toggle Dark Mode}, \strong{Next Favorite Theme}, or
 \strong{Auto Choose Dark or Light Theme} from the \emph{Modify Keyboard Shortcuts...}
 window under the RStudio \emph{Tools} menu.
+
+\pkg{rsthemes} also includes \strong{Use Default RStudio Theme}, powered by
+\code{use_theme_rstudio_default()}. This addin and function reverts RStudio back
+to the default theme, Textmate. This can be useful when teaching or
+demonstrating RStudio feature when you want RStudio to look like new.
 }
 

@@ -20,6 +20,7 @@
 #'   - [rstheme_rainbow_parentheses()]
 #'   - [rstheme_large_tabs()]
 #'   - [rstheme_dialog_options()]
+#'   - [rstheme_terminal_colors()]
 #' @param theme_path Path for output theme
 #' @param theme_dark `TRUE` if the theme is a darke theme, `FALSE` otherwise
 #'   (default)
@@ -246,10 +247,10 @@ rstheme <- function(
     if (theme_flat) sass::sass_import(
       path_rel_theme(package_template("rstudio", paste0(theme_rstudio, "-flatter.scss")))
     ),
+    list(paste(unlist(dots_sass), collapse = "\n")),
     sass::sass_import(
       path_rel_theme(package_template("rstudio", "_terminal.scss"))
-    ),
-    list(paste(unlist(dots_sass), collapse = "\n"))
+    )
   )
 
   if (length(templates_variables)) {
@@ -410,6 +411,59 @@ rstheme_dialog_options <- function(
   ), class = c("_dialog-options", "rstheme_template", "list"))
 }
 
+#' @describeIn rstheme_partial Theme the terminal colors
+#' @param theme_dark Is the theme dark (otherwise light). Used to set the
+#'   default terminal colors for black and white based on the theme's foreground
+#'   and background colors.
+#' @param black,black_bright,red,red_bright,green,green_bright,yellow,yellow_bright,blue,blue_bright,magenta,magenta_bright,cyan,cyan_bright,white,white_bright
+#'   Terminal colors, 8 normal and 8 bright.
+#' @export
+rstheme_terminal_colors <- function(
+  theme_dark = TRUE,
+  red     = NULL,
+  green   = NULL,
+  yellow  = NULL,
+  blue    = NULL,
+  magenta = NULL,
+  cyan    = NULL,
+  black = if (theme_dark) "darken($ui_background, 5%)" else "darken($ui_foreground, 5%)",
+  white = if (theme_dark) "darken($ui_foreground, 5%)" else "darken($ui_background, 5%)",
+  red_bright     = red,
+  green_bright   = green,
+  yellow_bright  = yellow,
+  blue_bright    = blue,
+  magenta_bright = magenta,
+  cyan_bright    = cyan,
+  black_bright   = "lighten($terminal_color_black, 10%)",
+  white_bright   = "lighten($terminal_color_white, 10%)"
+) {
+  terminal_colors <- list(
+    terminal_color_black = black,
+    terminal_color_black_bright = black_bright,
+    terminal_color_red = red,
+    terminal_color_red_bright = red_bright,
+    terminal_color_green = green,
+    terminal_color_green_bright = green_bright,
+    terminal_color_yellow = yellow,
+    terminal_color_yellow_bright = yellow_bright,
+    terminal_color_blue = blue,
+    terminal_color_blue_bright = blue_bright,
+    terminal_color_magenta = magenta,
+    terminal_color_magenta_bright = magenta_bright,
+    terminal_color_cyan = cyan,
+    terminal_color_cyan_bright = cyan_bright,
+    terminal_color_white = white,
+    terminal_color_white_bright = white_bright
+  )
+
+  terminal_colors <- purrr::compact(terminal_colors)
+
+  if (length(terminal_colors)) {
+    # the _terminal.scss partial is always included in the RStudio theme,
+    # so we only need to return the SASS variables set in this function.
+    sass::as_sass(terminal_colors)
+  }
+}
 
 hotload_rstheme <- function(path) {
   if(theme_is_dark(path)) {

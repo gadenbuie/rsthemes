@@ -14,6 +14,13 @@
 
 * Added {rsthemes} version and header to final `.rstheme` files
 
+* Added support for terminal color theming via `rsthemes_terminal_colors()` 
+  (@nsgrantham #63). Most themes now set the first eight terminal colors
+  (black, red, green, yellow, blue, magenta, cyan, white).
+  
+* Added `use_theme_rstudio_default()` and corresponding RStudio addin
+  (_Use Default RStudio Theme_). (thanks @dragosmg, #71)
+
 # rsthemes 0.2.0 (2020-12-07)
 
 ## New Themes

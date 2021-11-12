@@ -206,5 +206,19 @@ $ui_rstudio_dialog_button_hover_foreground: $ui_rstudio_foreground;
   background-color: transparentize($accent, 0.9) !important;
 }
 
-@import "rstudio/_components", "rstudio/_dialog-options", "rstudio/_large-tabs";
+$terminal_color_black: darken($ui_foreground, 5%);
+$terminal_color_black_bright: lighten($terminal_color_black, 10%);
+$terminal_color_white: darken($ui_background, 5%);
+$terminal_color_white_bright: lighten($terminal_color_white, 10%);
+$terminal_color_red: desaturate($accent-red, 25%);
+$terminal_color_red_bright: $accent-red;
+$terminal_color_green: darken($accent-green, 5%);
+$terminal_color_green_bright: $accent-green;
+$terminal_color_yellow: darken($accent-orange, 5%);
+$terminal_color_yellow_bright: $accent-orange;
+$terminal_color_blue: darken($accent-blue, 15%);
+$terminal_color_blue_bright: $accent-blue;
+$terminal_color_magenta: darken($purple-text-sec, 5%);
+$terminal_color_magenta_bright: $purple-text-sec;
 
+@import "rstudio/_components", "rstudio/_dialog-options", "rstudio/_large-tabs";

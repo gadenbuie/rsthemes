@@ -23,3 +23,7 @@ Description: Use the next Favorite Theme (see rsthemes::set_theme_favorite())
 Binding: use_theme_favorite
 Interactive: false
 
+Name: Use Default RStudio Theme
+Description: Switch to Textmate, the default RStudio theme
+Binding: use_theme_rstudio_default
+Interactive: false

@@ -574,6 +574,18 @@ table.rstheme_tabLayoutCenter .gwt-Label,
   border: none;
 }
 
+.rstudio-themes-flat .gwt-TabLayoutPanelTab-selected .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
+  box-shadow: 0 -2px 0 #80CBC4 inset;
+  border-radius: 0 !important;
+}
+
+/* remove border from panes */
+.rstudio-themes-flat
+:-webkit-any(.windowframe, .rstheme_minimizedWindowObject)
+> div:last-child {
+  border-color: #f0f0f0 !important;
+}
+
 .terminal {
   background-color: #FAFAFA;
   color: #272727;
@@ -648,51 +660,51 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 .xtermColor0 {
-  color: #2e3436 !important;
+  color: #1a1a1a !important;
 }
 
 .xtermBgColor0 {
-  background-color: #2e3436;
+  background-color: #1a1a1a;
 }
 
 .xtermColor1 {
-  color: #cc0000 !important;
+  color: #E53935 !important;
 }
 
 .xtermBgColor1 {
-  background-color: #cc0000;
+  background-color: #E53935;
 }
 
 .xtermColor2 {
-  color: #4e9a06 !important;
+  color: #91B859 !important;
 }
 
 .xtermBgColor2 {
-  background-color: #4e9a06;
+  background-color: #91B859;
 }
 
 .xtermColor3 {
-  color: #c4a000 !important;
+  color: #FFB62C !important;
 }
 
 .xtermBgColor3 {
-  background-color: #c4a000;
+  background-color: #FFB62C;
 }
 
 .xtermColor4 {
-  color: #3465a4 !important;
+  color: #6182b8 !important;
 }
 
 .xtermBgColor4 {
-  background-color: #3465a4;
+  background-color: #6182b8;
 }
 
 .xtermColor5 {
-  color: #75507b !important;
+  color: #7C4DFF !important;
 }
 
 .xtermBgColor5 {
-  background-color: #75507b;
+  background-color: #7C4DFF;
 }
 
 .xtermColor6 {
@@ -704,75 +716,75 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 .xtermColor7 {
-  color: #d3d7cf !important;
+  color: #ededed !important;
 }
 
 .xtermBgColor7 {
-  background-color: #d3d7cf;
+  background-color: #ededed;
 }
 
 .xtermColor8 {
-  color: #555753 !important;
+  color: #343434 !important;
 }
 
 .xtermBgColor8 {
-  background-color: #555753;
+  background-color: #343434;
 }
 
 .xtermColor9 {
-  color: #ef2929 !important;
+  color: #E53935 !important;
 }
 
 .xtermBgColor9 {
-  background-color: #ef2929;
+  background-color: #E53935;
 }
 
 .xtermColor10 {
-  color: #8ae234 !important;
+  color: #91B859 !important;
 }
 
 .xtermBgColor10 {
-  background-color: #8ae234;
+  background-color: #91B859;
 }
 
 .xtermColor11 {
-  color: #fce94f !important;
+  color: #FFB62C !important;
 }
 
 .xtermBgColor11 {
-  background-color: #fce94f;
+  background-color: #FFB62C;
 }
 
 .xtermColor12 {
-  color: #729fcf !important;
+  color: #80CBC4 !important;
 }
 
 .xtermBgColor12 {
-  background-color: #729fcf;
+  background-color: #80CBC4;
 }
 
 .xtermColor13 {
-  color: #ad7fa8 !important;
+  color: #7C4DFF !important;
 }
 
 .xtermBgColor13 {
-  background-color: #ad7fa8;
+  background-color: #7C4DFF;
 }
 
 .xtermColor14 {
-  color: #34e2e2 !important;
+  color: #39ADB5 !important;
 }
 
 .xtermBgColor14 {
-  background-color: #34e2e2;
+  background-color: #39ADB5;
 }
 
 .xtermColor15 {
-  color: #eeeeec !important;
+  color: white !important;
 }
 
 .xtermBgColor15 {
-  background-color: #eeeeec;
+  background-color: white;
 }
 
 .xtermColor16 {
@@ -2693,18 +2705,6 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 
 .xtermBgColor255 {
   background-color: #eeeeee;
-}
-
-.rstudio-themes-flat .gwt-TabLayoutPanelTab-selected .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
-  box-shadow: 0 -2px 0 #80CBC4 inset;
-  border-radius: 0 !important;
-}
-
-/* remove border from panes */
-.rstudio-themes-flat
-:-webkit-any(.windowframe, .rstheme_minimizedWindowObject)
-> div:last-child {
-  border-color: #f0f0f0 !important;
 }
 
 #rstudio_command_palette_search,

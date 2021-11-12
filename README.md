@@ -7,14 +7,25 @@
 </p>
 <!-- badges: start -->
 
-[![](https://img.shields.io/badge/rstudio-%3E=1.2.1335-%2381A9D7.svg)](https://www.rstudio.com/products/rstudio/)
+[![rsthemes status
+badge](https://gadenbuie.r-universe.dev/badges/rsthemes)](https://gadenbuie.r-universe.dev)
 ![](https://www.r-pkg.org/badges/version/rsthemes)
-![](https://img.shields.io/badge/lifecycle-maturing-blue.svg)
+![](https://lifecycle.r-lib.org/articles/figures/lifecycle-stable.svg)
 <!-- badges: end -->
 
 ## Installation
 
-You can install rsthemes from GitHub with:
+You can install rsthemes from my
+[r-universe](https://gadenbuie.r-universe.dev) with:
+
+``` r
+install.packages(
+  "rsthemes",
+  repos = c(gadenbuie = 'https://gadenbuie.r-universe.dev', getOption("repos"))
+)
+```
+
+Or you can install rsthemes from GitHub with:
 
 ``` r
 # install.packages("devtools")
@@ -51,7 +62,7 @@ rsthemes::try_rsthemes("light")
 ```
 
 Use `rstudioapi::applyTheme()` to activate a theme from the R console,
-or use *Tools* &gt; *Global Options* &gt; *Appearance* to interactively
+or use *Tools* \> *Global Options* \> *Appearance* to interactively
 select a theme.
 
 ``` r
@@ -72,6 +83,9 @@ rstudioapi::applyTheme("One Dark {rsthemes}")
 
 -   ❤️ **Favorite Themes**<br>Switch between a few of your favorite
     themes
+
+-   🥱 **Use Default RStudio Theme**<br>Switch back to RStudio’s default
+    theme
 
 #### Choose Your Preferred Themes
 
@@ -177,6 +191,18 @@ if (interactive() && requireNamespace("rsthemes", quietly = TRUE)) {
   }, action = "append")
 }
 ```
+
+### Go Back to the Default
+
+Sometimes when you’re teaching or demonstrating RStudio features, you’d
+like to have your IDE match the appearance of your learners, or at least
+the basic theme that everyone starts out with when they install RStudio
+for the first time.
+
+Use the **Use Default RStudio Theme** to quickly switch back to
+RStudio’s default theme, Textmate. Or, you can use
+`rsthemes::use_default_rstudio_theme()` to initiate the switch, perhaps
+from within the `.Rprofile` file of your teaching project.
 
 ## Uninstall
 
