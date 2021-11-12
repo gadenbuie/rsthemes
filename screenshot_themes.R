@@ -5,11 +5,11 @@
 
 # Resize RStudio window to 1920 x 1600
 windows <- system("getwindowid RStudio --list", intern = TRUE)
-window <- grep("rsthemes - assets", window, value = TRUE)
+window <- grep("rsthemes - assets", windows, value = TRUE)
 rstudio_window <- strsplit(window, "id=")[[1]][2] # replace with window id found above
 themes <- rsthemes::list_rsthemes(list_installed = FALSE)
 
-system("resize-rstudio", wait = TRUE)
+system("./resize-rstudio", wait = TRUE)
 rstudioapi::executeCommand("activateConsole")
 rstudioapi::executeCommand("consoleClear")
 rstudioapi::sendToConsole('remotes::install_github("gadenbuie/rsthemes")\nrsthemes::install_rsthemes()', execute = FALSE)
