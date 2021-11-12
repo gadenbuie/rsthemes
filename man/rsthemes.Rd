@@ -47,12 +47,9 @@ This package provides a set of complete RStudio themes that restyle the
 IDE and the editor syntax. The themes are built from
 \href{https://sass-lang.org}{sass} templates into \code{.rstheme} files that,
 ultimately, contain the CSS files that provide the themes. The sass templates
-provide an easy-to-extend framework for customizing the look of RStudio. See
-\code{\link[=rstheme]{rstheme()}} for more information about creating your own theme. I've done
-my best to avoid hacky CSS rules wherever possible, and the themes are tested
-against the current production release of RStudio (version 1.2.1335 through
-1.4+ as of April 01, 2021). Please report any issues you encounter here:
-\href{https://github.com/gadenbuie/rsthemes/issues}{github.com/gadenbuie/rsthemes/issues}.
+provide an easy-to-extend framework for customizing the look of RStudio. If
+you would like to create your own theme, \code{\link[=rstheme]{rstheme()}} is designed to help you
+get started quickly.
 }
 \section{Functions}{
 \itemize{
@@ -71,18 +68,32 @@ against the current production release of RStudio (version 1.2.1335 through
  \pkg{rsthemes} includes RStudio themes based on the
 following colors palettes.
 \itemize{
-\item \emph{\href{https://github.com/chriskempson/base16}{base16}} (Various Authors)
-\item \emph{\href{https://github.com/sailorhg/fairyfloss}{Fairyfloss}} (\href{https://github.com/sailorhg}{Amy Wibowo (sailorhg)})
-\item \emph{\href{https://github.com/biletskyy/flatwhite-syntax}{Flat White}} (\href{https://github.com/biletskyy}{Dmitry Biletskyy})
-\item \emph{\href{https://github.com/arcticicestudio/nord}{Nord}} (\href{https://www.svengreb.de/}{Sven Greb})
-\item \emph{\href{https://github.com/marcoms/oceanic-plus}{Oceanic Plus}} (\href{https://github.com/marcoms}{Marco Scannadinari})
-\item \emph{\href{https://github.com/atom/atom/tree/master/packages/one-dark-syntax}{Atom One Dark}}
-\item \emph{\href{https://github.com/atom/atom/tree/master/packages/one-light-syntax}{Atom One Light}}
-\item \emph{\href{https://ethanschoonover.com/solarized}{Solarized}} (Ethan Schoonover)
-\item \emph{\href{https://horizontheme.netlify.app/}{Horizon Dark}} (Jonathan Olaleye)
-\item \emph{\href{https://github.com/ericwbailey/a11y-syntax-highlighting}{a11y-syntax-highlighting}} (\href{https://ericwbailey.design/}{Eric Bailey})
-\item \emph{\href{https://github.com/sdras/night-owl-vscode-theme}{Night Owl}} (\href{https://sarah.dev/}{Sarah Drasner})
-\item \emph{\href{https://material-theme.site/}{Material Themes}}
+\item \href{https://github.com/chriskempson/base16}{base16} (Various Authors)
+\item \href{https://github.com/sailorhg/fairyfloss}{Fairyfloss} (\href{https://github.com/sailorhg}{Amy Wibowo (sailorhg)})
+\item \href{https://github.com/biletskyy/flatwhite-syntax}{Flat White} (\href{https://github.com/biletskyy}{Dmitry Biletskyy})
+\item \href{https://github.com/arcticicestudio/nord}{Nord} (\href{https://www.svengreb.de/}{Sven Greb})
+\item \href{https://github.com/marcoms/oceanic-plus}{Oceanic Plus} (\href{https://github.com/marcoms}{Marco Scannadinari})
+\item \href{https://github.com/atom/atom/tree/master/packages/one-dark-syntax}{Atom One Dark}
+\item \href{https://github.com/atom/atom/tree/master/packages/one-light-syntax}{Atom One Light}
+\item \href{https://ethanschoonover.com/solarized}{Solarized} (Ethan Schoonover)
+\item \href{https://horizontheme.netlify.app/}{Horizon Dark} (Jonathan Olaleye)
+\item \href{https://github.com/ericwbailey/a11y-syntax-highlighting}{a11y-syntax-highlighting} (\href{https://ericwbailey.design/}{Eric Bailey})
+\item \href{https://github.com/sdras/night-owl-vscode-theme}{Night Owl} (\href{https://sarah.dev/}{Sarah Drasner})
+\itemize{
+\item with huge thanks to original \href{https://github.com/batpigandme/night-owlish}{Night Owlish}
+implementation in RStudio by \href{https://maraaverick.rbind.io/}{Mara Averick}
+}
+\item Yule RStudio
+\itemize{
+\item Based on the \href{https://tmtheme-editor.herokuapp.com/#!/editor/theme/Yule}{Yule tmTheme}
+\item Ported from \href{https://github.com/gadenbuie/yule-rstudio}{gadenbuie/yule-rstudio}
+\item Featuring a background image by \href{https://unsplash.com/@joannakosinska}{Joanna Kosinska}
+}
+\item \href{https://material-theme.site/}{Material Theme}
+\itemize{
+\item Contributed to rsthemes by \href{https://www.zacdelusignan.com/}{Zac de Lusignan}
+}
+\item \href{https://wvsc.dev/}{Serendipity} (\href{https://www.wickedtemplates.com/}{wickedtemplates})
 }
 }
 
