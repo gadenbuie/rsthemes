@@ -219,6 +219,21 @@ yule_rstudio <- function(
       "#E83151",
       "#43AA8B"
     ),
+    rstheme_terminal_colors(
+      red = "$red",
+      red_bright = "$red-bright",
+      green = "$green",
+      green_bright = "$green-bright",
+      yellow = "$yellow",
+      yellow_bright = "$yellow-bright",
+      blue = "$blue",
+      magenta = "#8d58ff",
+      magenta_bright = "$purple",
+      cyan = "$teal",
+      white = "$ivory",
+      white_bright = "$white",
+      black_bright = "$gray-dark"
+    ),
     '
 #rstudio_workbench_panel_environment > div:last-child .ace_editor_theme {
   background-size: cover;
