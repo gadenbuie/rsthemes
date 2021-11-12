@@ -81,6 +81,11 @@
 #' **Auto Choose Dark or Light Theme** from the _Modify Keyboard Shortcuts..._
 #' window under the RStudio _Tools_ menu.
 #'
+#' \pkg{rsthemes} also includes **Use Default RStudio Theme**, powered by
+#' `use_theme_rstudio_default()`. This addin and function reverts RStudio back
+#' to the default theme, Textmate. This can be useful when teaching or
+#' demonstrating RStudio feature when you want RStudio to look like new.
+#'
 #' @param theme The name of the theme, or `NULL` to use current theme.
 #' @param quietly Suppress confirmation messages
 #' @param dark_start Start time of dark mode, in 24-hour `"HH:MM"` format.
@@ -158,6 +163,12 @@ use_theme_light <- function(quietly = FALSE) use_theme("light", quietly)
 #' @describeIn auto_theme Use default dark theme
 #' @export
 use_theme_dark <- function(quietly = FALSE) use_theme("dark", quietly)
+
+#' @describeIn auto_theme Use the RStudio default theme (Textmate)
+#' @export
+use_theme_rstudio_default <- function(quietly = FALSE) {
+  apply_theme("Textmate (default)")
+}
 
 use_theme <- function(style = c("light", "dark"), quietly = FALSE) {
   if (!in_rstudio()) {

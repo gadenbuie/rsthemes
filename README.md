@@ -84,6 +84,9 @@ rstudioapi::applyTheme("One Dark {rsthemes}")
 -   ❤️ **Favorite Themes**<br>Switch between a few of your favorite
     themes
 
+-   🥱 **Use Default RStudio Theme**<br>Switch back to RStudio’s default
+    theme
+
 #### Choose Your Preferred Themes
 
 First, set a default light and dark theme. For your current R sessions,
@@ -188,6 +191,18 @@ if (interactive() && requireNamespace("rsthemes", quietly = TRUE)) {
   }, action = "append")
 }
 ```
+
+### Go Back to the Default
+
+Sometimes when you’re teaching or demonstrating RStudio features, you’d
+like to have your IDE match the appearance of your learners, or at least
+the basic theme that everyone starts out with when they install RStudio
+for the first time.
+
+Use the **Use Default RStudio Theme** to quickly switch back to
+RStudio’s default theme, Textmate. Or, you can use
+`rsthemes::use_default_rstudio_theme()` to initiate the switch, perhaps
+from within the `.Rprofile` file of your teaching project.
 
 ## Uninstall
 
