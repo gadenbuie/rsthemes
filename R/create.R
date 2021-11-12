@@ -416,22 +416,22 @@ rstheme_dialog_options <- function(
 #'   Terminal colors, 8 normal and 8 bright.
 #' @export
 rstheme_terminal_colors <- function(
-  black = NULL,
-  black_bright = black,
-  red = NULL,
-  red_bright = red,
-  green = NULL,
-  green_bright = green,
-  yellow = NULL,
-  yellow_bright = yellow,
-  blue = NULL,
-  blue_bright = blue,
+  red     = NULL,
+  green   = NULL,
+  yellow  = NULL,
+  blue    = NULL,
   magenta = NULL,
+  cyan    = NULL,
+  black = "$ui_background",
+  white = "$ui_foreground",
+  red_bright     = red,
+  green_bright   = green,
+  yellow_bright  = yellow,
+  blue_bright    = blue,
   magenta_bright = magenta,
-  cyan = NULL,
-  cyan_bright = cyan,
-  white = NULL,
-  white_bright = white
+  cyan_bright    = cyan,
+  black_bright   = "lighten($terminal_color_black, 10%)",
+  white_bright   = "lighten($terminal_color_white, 10%)"
 ) {
   terminal_colors <- list(
     terminal_color_black = black,
