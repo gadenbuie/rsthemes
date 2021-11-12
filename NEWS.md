@@ -19,7 +19,10 @@
   (black, red, green, yellow, blue, magenta, cyan, white).
   
 * Added `use_theme_rstudio_default()` and corresponding RStudio addin
-  (_Use Default RStudio Theme_). (thanks @dragosmg, #71)
+  _Use Default RStudio Theme_ (thanks @dragosmg, #71).
+  
+* New theme: Serendipity Dark and Light, based on the 
+  [VS Code theme from wickedtemplates](https://wvsc.dev) (#73).
 
 # rsthemes 0.2.0 (2020-12-07)
 
