@@ -58,22 +58,25 @@ rstheme_dialog_options(
 )
 
 rstheme_terminal_colors(
-  black = "#2e3436",
-  black_bright = "#555753",
-  red = "#cc0000",
-  red_bright = "#ef2929",
-  green = "#4e9a06",
-  green_bright = "#8ae234",
-  yellow = "#c4a000",
-  yellow_bright = "#fce94f",
-  blue = "#3465a4",
-  blue_bright = "#729fcf",
-  magenta = "#75507b",
-  magenta_bright = "#ad7fa8",
-  cyan = "#06989a",
-  cyan_bright = "#34e2e2",
-  white = "#d3d7cf",
-  white_bright = "#eeeeec"
+  theme_dark = TRUE,
+  red = NULL,
+  green = NULL,
+  yellow = NULL,
+  blue = NULL,
+  magenta = NULL,
+  cyan = NULL,
+  black = if (theme_dark) "darken($ui_background, 5\%)" else
+    "darken($ui_foreground, 5\%)",
+  white = if (theme_dark) "darken($ui_foreground, 5\%)" else
+    "darken($ui_background, 5\%)",
+  red_bright = red,
+  green_bright = green,
+  yellow_bright = yellow,
+  blue_bright = blue,
+  magenta_bright = magenta,
+  cyan_bright = cyan,
+  black_bright = "lighten($terminal_color_black, 10\%)",
+  white_bright = "lighten($terminal_color_white, 10\%)"
 )
 }
 \arguments{
@@ -87,6 +90,10 @@ rstheme_terminal_colors(
 
 \item{selected_background, selected_foreground, heading_foreground, help_foreground, button_foreground, button_background, button_border, button_hover_foreground, button_hover_background, button_hover_border, input_foreground, input_background, input_border, checkbox_background, checkbox_foreground, select_background, select_foreground}{Additional colors for RStudio dialog boxes, setting SCSS variables prefixed
 with \verb{$ui_rstudio_dialog_<argument>}.}
+
+\item{theme_dark}{Is the theme dark (otherwise light). Used to set the
+default terminal colors for black and white based on the theme's foreground
+and background colors.}
 
 \item{black, black_bright, red, red_bright, green, green_bright, yellow, yellow_bright, blue, blue_bright, magenta, magenta_bright, cyan, cyan_bright, white, white_bright}{Terminal colors, 8 normal and 8 bright.}
 }

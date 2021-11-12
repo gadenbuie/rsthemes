@@ -412,17 +412,20 @@ rstheme_dialog_options <- function(
 }
 
 #' @describeIn rstheme_partial Theme the terminal colors
+#' @param theme_dark Is the theme dark (otherwise light). Used to set the
+#'   default terminal colors for black and white based on the theme's foreground
+#'   and background colors.
 #' @param black,black_bright,red,red_bright,green,green_bright,yellow,yellow_bright,blue,blue_bright,magenta,magenta_bright,cyan,cyan_bright,white,white_bright
 #'   Terminal colors, 8 normal and 8 bright.
 #' @export
 rstheme_terminal_colors <- function(
+  theme_dark = TRUE,
   red     = NULL,
   green   = NULL,
   yellow  = NULL,
   blue    = NULL,
   magenta = NULL,
   cyan    = NULL,
-  theme_dark = TRUE,
   black = if (theme_dark) "darken($ui_background, 5%)" else "darken($ui_foreground, 5%)",
   white = if (theme_dark) "darken($ui_foreground, 5%)" else "darken($ui_background, 5%)",
   red_bright     = red,
