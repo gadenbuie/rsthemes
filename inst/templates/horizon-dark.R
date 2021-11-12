@@ -29,7 +29,6 @@ rstheme(
   code_string     = "$orange",
   code_function   = "$purple",
   code_value      = "$orange",
-  # how do we feel about this?
   code_comment    = "$base05",
   code_variable   = "$green2",
   code_message    = "$yellow",
@@ -64,6 +63,18 @@ rstheme(
   rstheme_dialog_options(),
   rstheme_rainbow_parentheses(
     "$code_comment", "#21bfc2", "#fab795", "#f43e5c", "#07da8c", "#b877db"
+  ),
+  rstheme_terminal_colors(
+    black = "$ui_background",
+    white = "$ui_foreground",
+    red = "$red",
+    green = "$green2",
+    green_bright = "$green1",
+    yellow = "$gold",
+    yellow_bright = "$yellow",
+    cyan = "$teal",
+    magenta = "$purple",
+    blue = "#0F6DD2"
   ),
   '.rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
     .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
