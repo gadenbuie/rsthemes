@@ -1,4 +1,4 @@
-/* rsthemes 0.2.1.9000 */
+/* rsthemes 0.3.0 */
 /* https://github.com/gadenbuie/rsthemes */
 /* rs-theme-name: Flat White {rsthemes} */
 /* rs-theme-is-dark: FALSE */
@@ -844,11 +844,11 @@ input#rstudio_command_palette_search {
 }
 
 .xtermColor8 {
-  color: #6e675e !important;
+  color: #b0aaa0 !important;
 }
 
 .xtermBgColor8 {
-  background-color: #6e675e;
+  background-color: #b0aaa0;
 }
 
 .xtermColor9 {

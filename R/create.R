@@ -434,25 +434,25 @@ rstheme_terminal_colors <- function(
   blue_bright    = blue,
   magenta_bright = magenta,
   cyan_bright    = cyan,
-  black_bright   = "lighten($terminal_color_black, 10%)",
+  black_bright   = "mix($terminal_color_black, $terminal_color_white, 40%)",
   white_bright   = "lighten($terminal_color_white, 10%)"
 ) {
   terminal_colors <- list(
     terminal_color_black = black,
-    terminal_color_black_bright = black_bright,
     terminal_color_red = red,
-    terminal_color_red_bright = red_bright,
     terminal_color_green = green,
-    terminal_color_green_bright = green_bright,
     terminal_color_yellow = yellow,
-    terminal_color_yellow_bright = yellow_bright,
     terminal_color_blue = blue,
-    terminal_color_blue_bright = blue_bright,
     terminal_color_magenta = magenta,
-    terminal_color_magenta_bright = magenta_bright,
     terminal_color_cyan = cyan,
-    terminal_color_cyan_bright = cyan_bright,
     terminal_color_white = white,
+    terminal_color_black_bright = black_bright,
+    terminal_color_red_bright = red_bright,
+    terminal_color_green_bright = green_bright,
+    terminal_color_yellow_bright = yellow_bright,
+    terminal_color_blue_bright = blue_bright,
+    terminal_color_magenta_bright = magenta_bright,
+    terminal_color_cyan_bright = cyan_bright,
     terminal_color_white_bright = white_bright
   )
 

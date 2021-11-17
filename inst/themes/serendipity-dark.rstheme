@@ -1,4 +1,4 @@
-/* rsthemes 0.2.1.9000 */
+/* rsthemes 0.3.0 */
 /* https://github.com/gadenbuie/rsthemes */
 /* rs-theme-name: Serendipity Dark {rsthemes} */
 /* rs-theme-is-dark: TRUE */
@@ -710,11 +710,11 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 .xtermColor8 {
-  color: #2c3342 !important;
+  color: #7c7e7d !important;
 }
 
 .xtermBgColor8 {
-  background-color: #2c3342;
+  background-color: #7c7e7d;
 }
 
 .xtermColor9 {

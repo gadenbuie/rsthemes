@@ -93,20 +93,20 @@ $rmd_href: $red;
 $rmd_href_background: $code_reserved_background;
 @import "rstudio/_rstudio-dark.scss";
 $terminal_color_black: darken($ui_background, 5%);
-$terminal_color_black_bright: $gray-dark;
 $terminal_color_red: $red;
-$terminal_color_red_bright: $red-bright;
 $terminal_color_green: $green;
-$terminal_color_green_bright: $green-bright;
 $terminal_color_yellow: $yellow;
-$terminal_color_yellow_bright: $yellow-bright;
 $terminal_color_blue: $blue;
-$terminal_color_blue_bright: $blue;
 $terminal_color_magenta: #8d58ff;
-$terminal_color_magenta_bright: $purple;
 $terminal_color_cyan: $teal;
-$terminal_color_cyan_bright: $teal;
 $terminal_color_white: $ivory;
+$terminal_color_black_bright: $gray-dark;
+$terminal_color_red_bright: $red-bright;
+$terminal_color_green_bright: $green-bright;
+$terminal_color_yellow_bright: $yellow-bright;
+$terminal_color_blue_bright: $blue;
+$terminal_color_magenta_bright: $purple;
+$terminal_color_cyan_bright: $teal;
 $terminal_color_white_bright: $white;
 
 #rstudio_workbench_panel_environment > div:last-child .ace_editor_theme {

@@ -1,4 +1,4 @@
-/* rsthemes 0.2.1.9000 */
+/* rsthemes 0.3.0 */
 /* https://github.com/gadenbuie/rsthemes */
 /* rs-theme-name: Material {rsthemes} */
 /* rs-theme-is-dark: TRUE */
@@ -705,11 +705,11 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 .xtermColor8 {
-  color: #304047 !important;
+  color: #8ba8a9 !important;
 }
 
 .xtermBgColor8 {
-  background-color: #304047;
+  background-color: #8ba8a9;
 }
 
 .xtermColor9 {

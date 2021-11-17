@@ -67,20 +67,20 @@ $ui_paren_6: $base0E;
 
 // terminal colors
 $terminal_color_black: darken($ui_background, 5%);
-$terminal_color_black_bright: lighten($terminal_color_black, 10%);
 $terminal_color_red: $base08;
-$terminal_color_red_bright: $base08;
 $terminal_color_green: $base0B;
-$terminal_color_green_bright: $base0B;
 $terminal_color_yellow: $base09;
-$terminal_color_yellow_bright: $base0A;
 $terminal_color_blue: $base0D;
-$terminal_color_blue_bright: $base0D;
 $terminal_color_magenta: $base0E;
-$terminal_color_magenta_bright: $base0E;
 $terminal_color_cyan: $base0C;
-$terminal_color_cyan_bright: $base0C;
 $terminal_color_white: darken($ui_foreground, 5%);
+$terminal_color_black_bright: mix($terminal_color_black, $terminal_color_white, 40%);
+$terminal_color_red_bright: $base08;
+$terminal_color_green_bright: $base0B;
+$terminal_color_yellow_bright: $base0A;
+$terminal_color_blue_bright: $base0D;
+$terminal_color_magenta_bright: $base0E;
+$terminal_color_cyan_bright: $base0C;
 $terminal_color_white_bright: lighten($terminal_color_white, 10%);
 
 @import "rstudio/_defaults";
