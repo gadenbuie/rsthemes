@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# rsthemes 0.3.1 (2021-11-17)
+
+* Lighten the "black bright" terminal color across all themes since it's used for `crayon::silver()` and was hard to see with the previous default.
+
+
 # rsthemes 0.3.0 (2021-11-12)
 
 ## New Themes
@@ -29,7 +34,6 @@
 * Fixed menu item hover and selected colors in complete menu themes
 
 * Added {rsthemes} version and header to final `.rstheme` files
-
   
 * Backgrounds of scrollbars are now transparent and don't hide the code
   underneath the scrollbar (thanks @dragosmg, #75).
