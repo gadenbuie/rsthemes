@@ -1,27 +1,27 @@
 // Flatter RStudio Dark
 
 /* borders on toolbar under editor */
-.rstudio-themes-flat .rstudio-themes-dark table.rstudio-themes-background td > div:first-child {
+.rstudio-themes-dark-menus .rstudio-themes-dark table.rstudio-themes-background td > div:first-child {
   border-color: $ui_rstudio_background !important;
 }
 
 /* Borrowed from https://github.com/anthonynorth/rscodeio */
 
 /* splitters */
-.rstudio-themes-flat > .rstudio-themes-dark .gwt-SplitLayoutPanel-HDragger {
+.rstudio-themes-dark-menus > .rstudio-themes-dark .gwt-SplitLayoutPanel-HDragger {
   border-color: $ui_rstudio_background;
 }
 
-.rstudio-themes-flat > .rstudio-themes-dark .gwt-SplitLayoutPanel-VDragger {
+.rstudio-themes-dark-menus > .rstudio-themes-dark .gwt-SplitLayoutPanel-VDragger {
   border-color: $ui_rstudio_background;
 }
 
-.rstudio-themes-flat > .rstudio-themes-dark .gwt-SplitLayoutPanel td {
+.rstudio-themes-dark-menus > .rstudio-themes-dark .gwt-SplitLayoutPanel td {
   border-color: $ui_background !important;
 }
 
 /* window containers */
-.rstudio-themes-flat
+.rstudio-themes-dark-menus
   > .rstudio-themes-dark
   :-webkit-any(.windowframe, .rstheme_minimizedWindowObject)
   > div:last-child {

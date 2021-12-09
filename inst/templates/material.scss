@@ -104,20 +104,17 @@ $terminal_color_blue_bright: #89DDFF;
 $terminal_color_magenta_bright: #C792EA;
 $terminal_color_cyan_bright: #80CBC4;
 $terminal_color_white_bright: lighten($terminal_color_white, 10%);
-.rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
+.rstudio-themes-dark-menus .gwt-TabLayoutPanelTab-selected {
     .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
       box-shadow: 0 -2px 0 $teal inset;
       border-radius: 0 !important;
     }
-  }
-  
-/* remove border from panes */
-    .rstudio-themes-flat
-    :-webkit-any(.windowframe, .rstheme_minimizedWindowObject)
-    > div:last-child {
+    /* remove border from panes */
+    .rstudio-themes-dark-menus :-webkit-any(.windowframe, .rstheme_minimizedWindowObject) > div:last-child {
       border-color: $ui_rstudio_background !important;
     }
-    
+  }
+  
 @import "rstudio/_terminal.scss";
 $ui_command_palette_background: $ui_background;
 $ui_command_palette_search_background: $ui_command_palette_background;

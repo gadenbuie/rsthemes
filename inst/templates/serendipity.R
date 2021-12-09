@@ -114,7 +114,7 @@ rstheme(
   .ace_comment {
     font-style: italic;
   }
-  .rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
+  .rstudio-themes-dark-menus .gwt-TabLayoutPanelTab-selected {
     .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
       box-shadow: 0 2px 0 $red inset;
       border-radius: 0 !important;
@@ -199,7 +199,7 @@ rstheme(
   .ace_comment {
     font-style: italic;
   }
-  .rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
+  .rstudio-themes-light-menus .gwt-TabLayoutPanelTab-selected {
     .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
       box-shadow: 0 2px 0 $red inset;
       border-radius: 0 !important;

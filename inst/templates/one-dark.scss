@@ -72,7 +72,7 @@ $ui_paren_6: $hue-2;
 @import "rstudio/_components";
 
 /* window containers */
-.rstudio-themes-flat
+.rstudio-themes-dark-menus
   > .rstudio-themes-dark
   :-webkit-any(.windowframe, .rstheme_minimizedWindowObject)
   > div:last-child {

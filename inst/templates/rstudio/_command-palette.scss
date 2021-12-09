@@ -18,42 +18,45 @@ input#rstudio_command_palette_search {
   border-color: $ui_command_palette_search_background;
 }
 
-.rstudio-themes-flat .rstudio-themes-border {
-  border-color: $ui_command_palette_border;
-}
-
-.rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [id*="rstudio_command_"] {
-  table .gwt-Label,
-  table td {
-    background-color: $ui_command_palette_item_background;
-    color: $ui_command_palette_item_color;
+.rstudio-themes-light-menus,
+.rstudio-themes-dark-menus {
+  .rstudio-themes-border {
+    border-color: $ui_command_palette_border;
   }
-  &:hover {
-    &, [id^="rstudio_command_entry"], table .gwt-Label, table td {
-      background-color: $ui_command_palette_item_hover_background;
+
+  .gwt-PopupPanel .popupContent #rstudio_command_palette_list [id*="rstudio_command_"] {
+    table .gwt-Label,
+    table td {
+      background-color: $ui_command_palette_item_background;
+      color: $ui_command_palette_item_color;
+    }
+    &:hover {
+      &, [id^="rstudio_command_entry"], table .gwt-Label, table td {
+        background-color: $ui_command_palette_item_hover_background;
+      }
     }
   }
-}
 
-.rstudio-themes-flat .gwt-PopupPanel .popupContent #rstudio_command_palette_list [aria-selected="true"] {
-  &, [id^="rstudio_command_entry"], table .gwt-Label, table td {
-    background-color: $ui_command_palette_item_selected_background;
+  .gwt-PopupPanel .popupContent #rstudio_command_palette_list [aria-selected="true"] {
+    &, [id^="rstudio_command_entry"], table .gwt-Label, table td {
+      background-color: $ui_command_palette_item_selected_background;
+    }
   }
-}
 
-input#rstudio_command_palette_search {
-  padding: 10px 0;
-  width: 580px;
-  border: none;
-  .js-focus-visible & {
-    outline-offset: 5px !important;
-  }
-}
-
-// Fix labels colliding with other CSS rules for popups
-.rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rstudio_command_entry_"] .gwt-Label {
-  &, & span {
+  input#rstudio_command_palette_search {
+    padding: 10px 0;
+    width: 580px;
     border: none;
+    .js-focus-visible & {
+      outline-offset: 5px !important;
+    }
+  }
+
+  // Fix labels colliding with other CSS rules for popups
+  .popupContent [id^="rstudio_command"] [id^="rstudio_command_entry_"] .gwt-Label {
+    &, & span {
+      border: none;
+    }
   }
 }
 

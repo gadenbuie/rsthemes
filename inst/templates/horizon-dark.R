@@ -74,7 +74,7 @@ rstheme(
     magenta = "$purple",
     blue = "#0F6DD2"
   ),
-  '.rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
+  '.rstudio-themes-dark-menus .gwt-TabLayoutPanelTab-selected {
     .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
       box-shadow: 0 3px 0 $red inset;
       border-radius: 0 !important;

@@ -158,20 +158,21 @@ material_rstheme <- function(
       "$orange",
       "$teal"
     ),
-    sprintf(".rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
+    sprintf(".rstudio-themes-%s-menus .gwt-TabLayoutPanelTab-selected {
     .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
       box-shadow: 0 -2px 0 %s inset;
       border-radius: 0 !important;
     }
-  }
-  ", dialog_heading_foreground),
-    "/* remove border from panes */
-    .rstudio-themes-flat
-    :-webkit-any(.windowframe, .rstheme_minimizedWindowObject)
-    > div:last-child {
+    /* remove border from panes */
+    .rstudio-themes-%s-menus :-webkit-any(.windowframe, .rstheme_minimizedWindowObject) > div:last-child {
       border-color: $ui_rstudio_background !important;
     }
-    "
+  }
+  ",
+      if (is_dark) "dark" else "light",
+      dialog_heading_foreground,
+      if (is_dark) "dark" else "light"
+    )
   )
 
   theme_args <- modifyList(theme_args, list(...))

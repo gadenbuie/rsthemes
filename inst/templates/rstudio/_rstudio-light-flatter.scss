@@ -3,27 +3,27 @@
 // custom flatter styles
 
 /* borders on toolbar under editor */
-.rstudio-themes-flat table.rstudio-themes-background td > div:first-child {
+.rstudio-themes-light-menus table.rstudio-themes-background td > div:first-child {
   border-color: $ui_rstudio_background !important;
 }
 
 /* Borrowed from https://github.com/anthonynorth/rscodeio */
 
 /* splitters */
-.rstudio-themes-flat > .rstudio-themes-default .gwt-SplitLayoutPanel-HDragger {
+.rstudio-themes-light-menus > .rstudio-themes-default .gwt-SplitLayoutPanel-HDragger {
   border-color: $ui_rstudio_background;
 }
 
-.rstudio-themes-flat > .rstudio-themes-default .gwt-SplitLayoutPanel-VDragger {
+.rstudio-themes-light-menus > .rstudio-themes-default .gwt-SplitLayoutPanel-VDragger {
   border-color: $ui_rstudio_background;
 }
 
-.rstudio-themes-flat > .rstudio-themes-default .gwt-SplitLayoutPanel td {
+.rstudio-themes-light-menus > .rstudio-themes-default .gwt-SplitLayoutPanel td {
   border-color: $ui_background !important;
 }
 
 /* window containers */
-.rstudio-themes-flat
+.rstudio-themes-light-menus
   > .rstudio-themes-default
   :-webkit-any(.windowframe, .rstheme_minimizedWindowObject)
   > div:last-child {
