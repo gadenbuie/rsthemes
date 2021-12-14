@@ -1,8 +1,8 @@
 $large-tabs-height: 40px !default;
 $large-tabs-width: 65px !default;
 
-.rstudio-themes-light-menus,
-.rstudio-themes-dark-menus {
+body,
+body {
   & > :not(.gwt-DialogBox-ModalDialog) .gwt-TabLayoutPanel {
     & > div[aria-hidden="true"] + div {
       height: $large-tabs-height !important;

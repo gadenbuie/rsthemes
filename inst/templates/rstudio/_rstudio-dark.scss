@@ -13,7 +13,7 @@ $ui_rstudio_is_dark: true;
   background-color: $ui_background;
   color: $ui_foreground;
 }
-.rstudio-themes-dark-menus {
+body {
   &.ace_editor_theme {
     background-color: $ui_background;
     color: $ui_foreground;
@@ -248,7 +248,7 @@ $ui_rstudio_is_dark: true;
 
 /* inactive tabs */
 table.rstheme_tabLayoutCenter,
-.rstudio-themes-dark-menus .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
+body .rstudio-themes-dark-grey .gwt-TabLayoutPanelTabs,
 .rstheme_multiPodUtilityTabArea {
   background: $ui_rstudio_tabs_inactive_background !important;
   .gwt-Label {
@@ -257,7 +257,7 @@ table.rstheme_tabLayoutCenter,
 }
 
 /* toolbar and selected tab */
-.rstudio-themes-dark-menus .rstudio-themes-dark-grey {
+body .rstudio-themes-dark-grey {
   .rstheme_center,
   .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTab-selected table.rstheme_tabLayoutCenter {
     background: $ui_rstudio_tabs_active_background !important;
@@ -270,7 +270,7 @@ table.rstheme_tabLayoutCenter,
   }
 }
 
-.rstudio-themes-dark-menus {
+body {
   .rstheme_toolbarWrapper {
     background: $ui_rstudio_toolbar_background !important;
     button, a, div {
@@ -283,7 +283,7 @@ table.rstheme_tabLayoutCenter,
       background: transparent !important;
     }
   }
-  .rstudio-themes-dark .search, &.rstudio-themes-dark-menus .search {
+  .rstudio-themes-dark .search, &body .search {
     /* search */
     background: $ui_rstudio_search !important;
   }
@@ -294,11 +294,11 @@ table.rstheme_tabLayoutCenter,
 }
 
 /* pane toolbars */
-.rstheme_secondaryToolbar, .rstudio-themes-dark-menus .rstudio-themes-dark-grey .dataGridHeader {
+.rstheme_secondaryToolbar, body .rstudio-themes-dark-grey .dataGridHeader {
      background: $ui_rstudio_toolbar_background !important;
 }
 /* menu background */
-.rstudio-themes-dark-menus {
+body {
   .popupMiddleCenter,
   .menuPopupMiddleCenter,
   .suggestPopupMiddleCenter {
@@ -339,8 +339,8 @@ table.rstheme_tabLayoutCenter,
       }
     }
   }
-  &.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected,
-  &.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected > table {
+  &body .gwt-MenuItem.gwt-MenuItem-selected,
+  &body .gwt-MenuItem.gwt-MenuItem-selected > table {
     background: $ui_completions_selected_background;
     color: $ui_completions_selected_foreground;
   }
@@ -355,7 +355,7 @@ table.rstheme_tabLayoutCenter,
 }
 
 /* hacky toolbars section */
-.rstudio-themes-dark-menus .rstudio-themes-dark-grey {
+body .rstudio-themes-dark-grey {
   /* this next one might not be needed anymore (at least after 1.4+) */
   .windowframe > div:last-child > div > div > div > div > div:not(.gwt-TabLayoutPanelTabs) {
     background: $ui_rstudio_tabs_inactive_background !important;
@@ -380,17 +380,17 @@ table.rstheme_tabLayoutCenter,
 
 /* scrollbars */
 /* reset scrollbar background color */
-.rstudio-themes-dark-menus {
+body {
   .rstudio-themes-dark.rstudio-themes-scrollbars ::-webkit-scrollbar,
-  .rstudio-themes-dark-menus .rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar,
-  &.rstudio-themes-dark-menus .rstudio-themes-scrollbars ::-webkit-scrollbar {
+  body .rstudio-themes-dark.rstudio-themes-scrollbars::-webkit-scrollbar,
+  &body .rstudio-themes-scrollbars ::-webkit-scrollbar {
     background-color: unset;
   }
   .ace_scroller {
     overflow: visible;
   }
 }
-.rstudio-themes-dark-menus, .rstudio-themes-dark-menus .rstudio-themes-dark.rstudio-themes-scrollbars {
+body, body .rstudio-themes-dark.rstudio-themes-scrollbars {
   /* Works on Firefox */
   scrollbar-width: auto;
   scrollbar-color: $ui_rstudio_scrollbar_handle $ui_rstudio_scrollbar_background;

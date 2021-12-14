@@ -29,8 +29,8 @@ $ui_rstudio_dialog_checkbox_foreground: $ui_rstudio_dialog_foreground !default;
 $ui_rstudio_dialog_select_background: lighten($ui_rstudio_dialog_background, 5%) !default;
 $ui_rstudio_dialog_select_foreground: $ui_rstudio_dialog_foreground !default;
 
-.rstudio-themes-light-menus,
-.rstudio-themes-dark-menus {
+body,
+body {
   [id^="rstudio_dialog"],
   :not(.gwt-MenuItem-selected):not(.gwt-MenuItem) > [id^="rstudio_label"],
   .dialogContent [id^="rstudio_label_"][id$="_panel"] :not(button) > table > tbody > td,

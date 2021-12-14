@@ -13,7 +13,7 @@ $ui_rstudio_is_dark: false;
   background-color: $ui_background;
   color: $ui_foreground;
 }
-.rstudio-themes-light-menus {
+body {
   &.ace_editor_theme {
     background-color: $ui_background;
     color: $ui_foreground;
@@ -262,7 +262,7 @@ $ui_rstudio_is_dark: false;
 
 /* ---- RStudio Theme ---- */
 /* background */
-.rstudio-themes-light-menus .rstudio-themes-default {
+body .rstudio-themes-default {
   background: $ui_rstudio_background !important;
   color: $ui_rstudio_foreground !important;
   .rstudio-themes-background {
@@ -283,7 +283,7 @@ $ui_rstudio_is_dark: false;
 
 /* inactive tabs */
 table.rstheme_tabLayoutCenter,
-.rstudio-themes-light-menus .rstudio-themes-default .gwt-TabLayoutPanelTabs,
+body .rstudio-themes-default .gwt-TabLayoutPanelTabs,
 .rstheme_multiPodUtilityTabArea {
   background: $ui_rstudio_tabs_inactive_background !important;
   .gwt-Label {
@@ -292,7 +292,7 @@ table.rstheme_tabLayoutCenter,
 }
 
 /* toolbar and selected tab */
-.rstudio-themes-light-menus .rstudio-themes-default {
+body .rstudio-themes-default {
   .rstheme_center,
   .gwt-TabLayoutPanelTabs .gwt-TabLayoutPanelTab-selected table.rstheme_tabLayoutCenter {
     background: $ui_rstudio_tabs_active_background !important;
@@ -306,7 +306,7 @@ table.rstheme_tabLayoutCenter,
 }
 
 
-.rstudio-themes-light-menus {
+body {
   .rstheme_toolbarWrapper {
     background: $ui_rstudio_toolbar_background !important;
     button, a, div {
@@ -330,11 +330,11 @@ table.rstheme_tabLayoutCenter,
 }
 
 /* pane toolbars */
-.rstheme_secondaryToolbar, .rstudio-themes-light-menus .dataGridHeader {
+.rstheme_secondaryToolbar, body .dataGridHeader {
   background: $ui_rstudio_toolbar_background !important;
 }
 /* menu background */
-.rstudio-themes-light-menus {
+body {
   .popupMiddleCenter,
   .menuPopupMiddleCenter,
   .suggestPopupMiddleCenter {
@@ -375,15 +375,15 @@ table.rstheme_tabLayoutCenter,
       }
     }
   }
-  &.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected,
-  &.rstudio-themes-dark-menus .gwt-MenuItem.gwt-MenuItem-selected > table {
+  &body .gwt-MenuItem.gwt-MenuItem-selected,
+  &body .gwt-MenuItem.gwt-MenuItem-selected > table {
     background: $ui_completions_selected_background;
     color: $ui_completions_selected_foreground;
   }
 }
 
 /* hacky toolbars section */
-.rstudio-themes-light-menus .rstudio-themes-default {
+body .rstudio-themes-default {
   /* this next one might not be needed anymore (at least after 1.4+) */
   .windowframe > div:last-child > div > div > div > div > div:not(.gwt-TabLayoutPanelTabs) {
     background: $ui_rstudio_tabs_inactive_background !important;
@@ -409,7 +409,7 @@ table.rstheme_tabLayoutCenter,
 
 /* scrollbars */
 /* reset scrollbar background color */
-.rstudio-themes-light-menus {
+body {
   .rstudio-themes-scrollbars ::-webkit-scrollbar {
     background-color: unset;
   }
@@ -417,7 +417,7 @@ table.rstheme_tabLayoutCenter,
     overflow: visible;
   }
 }
-.rstudio-themes-light-menus, .rstudio-themes-light-menus .rstudio-themes-scrollbars {
+body, body .rstudio-themes-scrollbars {
   /* Works on Firefox */
   scrollbar-width: auto;
   scrollbar-color: $ui_rstudio_scrollbar_handle $ui_rstudio_scrollbar_background;

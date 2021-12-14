@@ -114,7 +114,7 @@ night_owl <- rstheme(
     yellow = "$orange-light",
     yellow_bright = "$yellow-light"
   ),
-  '.rstudio-themes-dark-menus .gwt-TabLayoutPanelTab-selected {
+  'body .gwt-TabLayoutPanelTab-selected {
     .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
       box-shadow: 0 4px 0 $blue2 inset;
       border-radius: 0 !important;

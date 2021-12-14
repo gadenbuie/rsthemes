@@ -149,42 +149,42 @@ $ui_rstudio_dialog_button_hover_foreground: $ui_rstudio_foreground;
     background-color: $base4;
   }
 }
-.rstudio-themes-light-menus .rstudio-themes-default .rstudio-themes-border,
-.rstudio-themes-light-menus .windowframe>div:last-child,
-.rstudio-themes-light-menus .rstudio-themes-default .rstheme_toolbarWrapper,
-.rstudio-themes-light-menus .rstudio-themes-default .rstheme_secondaryToolbar,
-.rstudio-themes-light-menus .rstudio-themes-default .gwt-TabLayoutPanel>div>div.gwt-TabLayoutPanelTabs {
+body .rstudio-themes-default .rstudio-themes-border,
+body .windowframe>div:last-child,
+body .rstudio-themes-default .rstheme_toolbarWrapper,
+body .rstudio-themes-default .rstheme_secondaryToolbar,
+body .rstudio-themes-default .gwt-TabLayoutPanel>div>div.gwt-TabLayoutPanelTabs {
   border-color: $base5 !important;
 }
 
-.rstudio-themes-light-menus .rstudio-themes-default .rstheme_toolbarWrapper {
+body .rstudio-themes-default .rstheme_toolbarWrapper {
 }
 
 /* splitters */
-.rstudio-themes-light-menus > .rstudio-themes-default .gwt-SplitLayoutPanel-HDragger {
+body > .rstudio-themes-default .gwt-SplitLayoutPanel-HDragger {
   border-color: transparent;
 }
 
-.rstudio-themes-light-menus > .rstudio-themes-default .gwt-SplitLayoutPanel-VDragger {
+body > .rstudio-themes-default .gwt-SplitLayoutPanel-VDragger {
   border-color: transparent;
 }
 
-.rstudio-themes-light-menus > .rstudio-themes-default .gwt-SplitLayoutPanel td {
+body > .rstudio-themes-default .gwt-SplitLayoutPanel td {
   border-color: transparent;
 }
 
-.rstudio-themes-light-menus .rstudio-themes-default .gwt-TabLayoutPanel>div>div.gwt-TabLayoutPanelTabs {
+body .rstudio-themes-default .gwt-TabLayoutPanel>div>div.gwt-TabLayoutPanelTabs {
   border-color: $base4;
 }
 
-.rstudio-themes-light-menus .rstheme_tabLayoutCenter,
-.rstudio-themes-light-menus .rstheme_tabLayoutCenter {
+body .rstheme_tabLayoutCenter,
+body .rstheme_tabLayoutCenter {
   border-color: $base5 !important;
   margin-left: 1px;
   margin-top: 1px;
 }
 
-.rstudio-themes-light-menus .gwt-TabLayoutPanelTab-selected .rstheme_tabLayoutCenter {
+body .gwt-TabLayoutPanelTab-selected .rstheme_tabLayoutCenter {
   box-shadow: 2px 0 0 $ui-rstudio-tabs-active-border-left inset;
   border-radius: 0 !important;
   border-top: solid 1px $base4 !important;
@@ -193,11 +193,11 @@ $ui_rstudio_dialog_button_hover_foreground: $ui_rstudio_foreground;
   margin-left: 0!important;
 }
 
-.rstudio-themes-light-menus .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected) .rstheme_tabLayoutCenter {
+body .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected) .rstheme_tabLayoutCenter {
   border-bottom: solid 2px $base4 !important;
 }
 
-.rstudio-themes-light-menus .gwt-TabLayoutPanel > div:last-child {
+body .gwt-TabLayoutPanel > div:last-child {
   border-left: solid 1px $base4 !important;
   border-right: solid 1px $base4 !important;
 }

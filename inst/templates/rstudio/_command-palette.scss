@@ -18,8 +18,8 @@ input#rstudio_command_palette_search {
   border-color: $ui_command_palette_search_background;
 }
 
-.rstudio-themes-light-menus,
-.rstudio-themes-dark-menus {
+body,
+body {
   .rstudio-themes-border {
     border-color: $ui_command_palette_border;
   }

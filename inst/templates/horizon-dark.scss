@@ -105,7 +105,7 @@ $terminal_color_blue_bright: #0F6DD2;
 $terminal_color_magenta_bright: $purple;
 $terminal_color_cyan_bright: $teal;
 $terminal_color_white_bright: lighten($terminal_color_white, 10%);
-.rstudio-themes-dark-menus .gwt-TabLayoutPanelTab-selected {
+body .gwt-TabLayoutPanelTab-selected {
     .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
       box-shadow: 0 3px 0 $red inset;
       border-radius: 0 !important;
