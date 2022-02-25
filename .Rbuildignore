@@ -8,3 +8,4 @@
 ^dev$
 ^screenshot_themes.R$
 ^README\.Rmd$
+^data-raw$

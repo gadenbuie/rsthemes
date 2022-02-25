@@ -75,7 +75,7 @@ rstheme_terminal_colors(
   blue_bright = blue,
   magenta_bright = magenta,
   cyan_bright = cyan,
-  black_bright = "lighten($terminal_color_black, 10\%)",
+  black_bright = "mix($terminal_color_black, $terminal_color_white, 40\%)",
   white_bright = "lighten($terminal_color_white, 10\%)"
 )
 }

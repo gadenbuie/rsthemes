@@ -8,10 +8,11 @@ requires_rstudioapi <- function(..., has_fun = "getThemes", version = "1.2.1335"
   if (!requireNamespace("rstudioapi", quietly = TRUE)) {
     stop("The {rstudioapi} package is required")
   }
+
   rstudio_version <- rstudioapi::versionInfo()$version
   if (rstudio_version < version) {
     stop("RStudio version ", version, " is required, but ",
-         rstudio_version, " is installed.")
+      rstudio_version, " is installed.")
   }
 
   if (!rstudioapi::hasFun(has_fun, ...)) {
