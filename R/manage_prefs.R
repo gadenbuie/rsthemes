@@ -65,6 +65,7 @@ rs_prefs_snapshot <- function(
   }
 
   prefs_snap <- rs_prefs_rstudio_read(include, exclude, include_os_settings)
+  prefs_snap[["$rstudio_version"]] <- as.character(rstudioapi::versionInfo()$version)
 
   snaps_all[[name]] <- prefs_snap
   rs_prefs_user_write(snaps_all, path = path)
@@ -88,7 +89,20 @@ rs_prefs_restore <- function(name = NULL, path = NULL, verbose = FALSE) {
     ))
   }
 
-  rs_prefs_rstudio_write(snaps[[name]], verbose = verbose)
+  snap <- snaps[[name]]
+  this_version <- as.character(rstudioapi::versionInfo()$version)
+  snap_version <- snap[["$rstudio_version"]] %||% "unknown version"
+  if (!identical(snap_version, this_version)) {
+    cli::cli_warn(c(
+      "Snapshot {.field {name}} is for a different version of RStudio",
+      "*" = "Snapshot: {snap_version}",
+      "*" = "Current: {this_version}"
+    ))
+  }
+
+  snap <- snap[!grepl("^[$]", names(snap))]
+
+  rs_prefs_rstudio_write(snap, verbose = verbose)
 }
 
 rs_prefs_restore_defaults <- function(verbose = FALSE) {
