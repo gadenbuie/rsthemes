@@ -98,7 +98,7 @@ rs_prefs_restore_defaults <- function(verbose = FALSE) {
 
   defaults <- purrr::map(
     purrr::set_names(names(old)),
-    ~ rstudio_prefs_schema[[.x]]$default
+    ~ rs_prefs_schema()[[.x]]$default
   )
 
   defaults <- purrr::compact(defaults)
@@ -117,7 +117,7 @@ rs_prefs_rstudio_read <- function(
 
   missing_pref <- structure(NA, class = "missing_pref")
 
-  all_pref_names <- names(rstudio_prefs_schema)
+  all_pref_names <- names(rs_prefs_schema())
   if (!is.null(include)) {
     checkmate::assert_character(include, min.len = 1, any.missing = FALSE)
     all_pref_names <- intersect(all_pref_names, include)
@@ -138,10 +138,10 @@ rs_prefs_rstudio_read <- function(
   all_prefs <- purrr::keep(all_prefs, function(x) !identical(x, missing_pref))
 
   is_default <- purrr::imap_lgl(all_prefs, function(pref, name) {
-    if (!'default' %in% names(rstudio_prefs_schema[[name]])) {
+    if (!'default' %in% names(rs_prefs_schema()[[name]])) {
       return(FALSE)
     }
-    isTRUE(all.equal(rstudio_prefs_schema[[name]]$default, pref))
+    isTRUE(all.equal(rs_prefs_schema()[[name]]$default, pref))
   })
 
   all_prefs[!is_default]
@@ -154,7 +154,7 @@ rs_prefs_rstudio_write <- function(prefs, verbose = FALSE) {
 
   updated <- 0
   for (name in names(prefs)) {
-    if (!name %in% names(rstudio_prefs_schema)) {
+    if (!name %in% names(rs_prefs_schema())) {
       cli::cli_alert_warning("{.strong {name}} is not a known RStudio preference")
     }
     if (verbose) id <- cli::cli_process_start("{name}")
@@ -180,7 +180,7 @@ rs_prefs_rstudio_write <- function(prefs, verbose = FALSE) {
 
 rs_write_rstudio_preference <- function(name, value, type = NULL) {
   cast <- switch(
-    type %||% rstudio_prefs_schema[[name]][["type"]],
+    type %||% rs_prefs_schema()[[name]][["type"]],
     integer = as.integer,
     real = ,
     number = as.double,
@@ -223,6 +223,66 @@ rs_prefs_remove_os_settings <- function(pref_names) {
     "python_path"
   )
   setdiff(pref_names, ignored)
+}
+
+rs_prefs_schema <- function(version = NULL) {
+  rs_version <- rstudioapi::versionInfo()
+  version <- version %||% rs_version$long_version %||% as.character(rs_version$version)
+
+  cache_dir <- rappdirs::user_data_dir("rsthemes")
+  path <- fs::path(cache_dir, version, ext = "rds")
+  if (fs::file_exists(path)) {
+    return(readRDS(path))
+  }
+
+  url <- sprintf(
+    "https://github.com/rstudio/rstudio/raw/v%s/src/cpp/session/resources/schema/user-prefs-schema.json",
+    URLencode(version, reserved = TRUE)
+  )
+
+  success <- FALSE
+  schema <- NULL
+  tryCatch({
+    schema <- rs_prefs_schema_prepare(url)
+    success <- TRUE
+  }, error = function(err) {
+    cli::cli_inform(
+      "Could not download RStudio preference schema for version v{version}, defaulting to {.pkg rsthemes}' built-in version.",
+      parent = err
+    )
+    schema <<- rstudio_prefs_schema_default
+  })
+
+
+  if (success) {
+    fs::dir_create(fs::path_dir(path), recurse = TRUE)
+    saveRDS(schema, path)
+  }
+  schema
+}
+
+rs_prefs_schema_prepare <- function(url) {
+  cli::cli_process_start("Downloading preferences from: {.url {url}}")
+  rsp_schema <- jsonlite::read_json(url)
+
+  prep_properties <- function(x, name, parent = NULL) {
+    x[["name"]] <- name
+    if ("properties" %in% names(x)) {
+      x[["properties"]] <- purrr::imap(x[["properties"]], prep_properties, parent = x)
+    }
+    if (!is.null(parent)) {
+      x[["parent"]] <- c(x[["parent"]], parent[["name"]])
+      x[["default"]] <- parent[["default"]][[name]]
+    }
+    as_rsp_pref(x[union("name", names(x))])
+  }
+
+  rsp_schema <- purrr::pluck(rsp_schema, "properties")
+  purrr::imap(rsp_schema, prep_properties)
+}
+
+as_rsp_pref <- function(x) {
+  structure(x, class = "rsthemes_rstudio_pref")
 }
 
 #' @export
