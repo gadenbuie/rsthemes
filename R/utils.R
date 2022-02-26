@@ -4,6 +4,11 @@ is_null <- function(x) {
   vapply(x, is.null, logical(1))
 }
 
+is_url <- function(x) {
+  if (is.null(x)) return(FALSE)
+  grepl("^https?://.+", x)
+}
+
 requires_rstudioapi <- function(..., has_fun = "getThemes", version = "1.2.1335") {
   if (!requireNamespace("rstudioapi", quietly = TRUE)) {
     stop("The {rstudioapi} package is required")

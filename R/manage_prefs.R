@@ -9,6 +9,10 @@ rs_prefs_user_write <- function(
   prefs = rs_prefs_user_read(),
   path = NULL
 ) {
+  if (is_url(path)) {
+    cli::cli_abort("Cannot write to a URL, please provide a local {.code path}")
+  }
+
   if (is.null(path)) {
     path <- rs_prefs_user_path_default()
     cli::cli_process_start(
@@ -19,15 +23,20 @@ rs_prefs_user_write <- function(
     fs::dir_create(fs::path_dir(path), recurse = TRUE)
   }
 
-  jsonlite::write_json(prefs, path, null = "null", auto_unbox = TRUE)
+  checkmate::assert_character(path, len = 1, any.missing = FALSE)
+
+  jsonlite::write_json(prefs, path, null = "null", auto_unbox = TRUE, pretty = 2)
   invisible(path)
 }
 
 rs_prefs_user_read <- function(path = NULL) {
   path <- path %||% rs_prefs_user_path_default()
-  if (!fs::file_exists(path)) {
+
+  checkmate::assert_character(path, len = 1, any.missing = FALSE)
+  if (!is_url(path) && !fs::file_exists(path)) {
     cli::cli_abort("{.path {path}} does not exist")
   }
+
   jsonlite::read_json(path)
 }
 
@@ -41,6 +50,10 @@ rs_prefs_snapshot <- function(
 ) {
   requires_rstudioapi(has_fun = "readRStudioPreference")
   checkmate::assert_character(name, len = 1, any.missing = FALSE)
+
+  if (is_url(path)) {
+    cli::cli_abort("Cannot snapshot to a URL, please provide a local {.code path}")
+  }
 
   path <- path %||% rs_prefs_user_path_default()
 
