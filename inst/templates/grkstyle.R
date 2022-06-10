@@ -1,3 +1,5 @@
+THEME_APPLY <- NULL #"dark"
+
 grk_colors <- list(
   "red-100"    = "#fff8f9",
   "red-90"     = "#fee8eb",
@@ -73,10 +75,10 @@ grk_colors <- list(
 )
 
 grkstyle_light <- rstheme(
-  "grkstyle-light",
+  "grkstyle light",
   theme_dark    = FALSE,
   theme_flat    = TRUE,
-  theme_apply   = FALSE,
+  theme_apply   = identical(THEME_APPLY, "light"),
   theme_as_sass = FALSE,
   theme_path    = here::here("inst/themes/grkstyle-light.rstheme"),
   theme_palette = grk_colors,
@@ -119,8 +121,8 @@ grkstyle_light <- rstheme(
   ui_invisible                        = "$slate-70",
   ui_fold_arrows_foreground           = "$red-70",
   ui_fold_arrows_background           = "$red-20",
-  ui_completions_selected_foreground  = "mix($ui_completions_background, $purple-20, 50%)",
-  ui_completions_selected_background  = "$purple-80",
+  ui_completions_selected_foreground  = "$purple-10",
+  ui_completions_selected_background  = "mix($ui_completions_background, $purple-80, 30%)",
   ui_debug_background                 = "mix($ui_background, $pink-80, 60%)",
   rmd_chunk_header                    = "$blue-30",
   rmd_chunk_background                = "darken($slate-100, 2%)",
@@ -138,7 +140,25 @@ grkstyle_light <- rstheme(
   ),
   rstheme_dialog_options(),
   rstheme_large_tabs(),
-
+  rstheme_terminal_colors(
+    theme_dark = FALSE,
+    red = "$red-40",
+    red_bright = "$red-80",
+    green = "$green-80",
+    green_bright = "$green-80",
+    blue= "$blue-30",
+    blue_bright = "$blue-80",
+    yellow = "$orange-50",
+    yellow_bright = "$orange-80",
+    magenta= "$pink-40",
+    magenta_bright = "$pink-80",
+    cyan= "$purple-40",
+    cyan_bright = "$purple-80",
+    black = "$slate-00",
+    black_bright = "$slate-10",
+    white = "$slate-80",
+    white_bright = "$slate-90"
+  ),
 
   '
 [class="ace_keyword"] {
@@ -152,6 +172,9 @@ grkstyle_light <- rstheme(
 }
 *::-webkit-scrollbar-thumb:hover {
   background-color: mix($slate-100, $blue-40, 70%) !important;
+}
+#rstudio_shell_widget table[role="presentation"] {
+  background-color: $slate-100 !important;
 }
 .rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
   .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
@@ -192,10 +215,10 @@ grkstyle_light <- rstheme(
 )
 
 grkstyle_dark <- rstheme(
-  "grkstyle-dark",
+  "grkstyle dark",
   theme_dark    = TRUE,
   theme_flat    = TRUE,
-  theme_apply   = FALSE,
+  theme_apply   = identical(THEME_APPLY, "dark"),
   theme_as_sass = FALSE,
   theme_path    = here::here("inst/themes/grkstyle-dark.rstheme"),
   theme_palette = grk_colors,
@@ -251,6 +274,25 @@ grkstyle_dark <- rstheme(
   rstheme_rainbow_parentheses(
     "$slate-20", "$blue-40", "$red-40", "$green-60", "$purple-50", "$orange-60", "$pink-40"
   ),
+  rstheme_terminal_colors(
+    theme_dark = FALSE,
+    red = "$red-40",
+    red_bright = "$red-60",
+    green = "$green-40",
+    green_bright = "$green-70",
+    blue= "$blue-40",
+    blue_bright = "$blue-70",
+    yellow = "$orange-50",
+    yellow_bright = "$orange-70",
+    magenta= "$pink-40",
+    magenta_bright = "$pink-70",
+    cyan= "$purple-40",
+    cyan_bright = "$purple-50",
+    black = "$slate-10",
+    black_bright = "$slate-30",
+    white = "$slate-80",
+    white_bright = "$slate-100"
+  ),
 
   '
 [class="ace_keyword"] {
@@ -264,6 +306,12 @@ grkstyle_dark <- rstheme(
 }
 *::-webkit-scrollbar-thumb:hover {
   background-color: mix($slate-00, $blue-10, 30%) !important;
+}
+#rstudio_shell_widget {
+  border-color: $slate-00;
+  table[role="presentation"] {
+    background-color: $slate-00 !important;
+  }
 }
 .rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
   .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
