@@ -187,10 +187,10 @@ grkstyle_light <- rstheme(
     }
   }
 }
-.rstudio-themes-dark .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected):not(:hover) .rstheme_tabLayoutCenter img {
+.rstudio-themes-flat .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected):not(:hover) .rstheme_tabLayoutCenter img {
   opacity: 0.5;
 }
-.rstudio-themes-dark .gwt-TabLayoutPanelTab .rstheme_tabLayoutCenter td:first-child > img {
+.rstudio-themes-flat .gwt-TabLayoutPanelTab .rstheme_tabLayoutCenter td:first-child > img {
   position: relative;
   left: -5px;
 }
