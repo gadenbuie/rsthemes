@@ -476,7 +476,7 @@ hotload_rstheme <- function(path) {
     cli::cli_alert("Replacing existing theme {.file {theme_name}}")
     rstudioapi::removeTheme(theme_name)
   }
-  rstudioapi::addTheme(path)
+  rstudioapi::addTheme(path, force = TRUE)
   rstudioapi::applyTheme(theme_name)
 }
 
