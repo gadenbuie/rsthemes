@@ -110,7 +110,7 @@ grkstyle_light <- rstheme(
   ui_line_active            = "transparentize($blue-80, 0.85)",
   ui_line_active_selection  = "$ui_selection",
   ui_margin_line            = "$slate-90",
-  ui_cursor                 = "transparentize($pink-50, 0.2)",
+  ui_cursor                 = "$pink-60",
   ui_rstudio_job_progress_bar = "$blue-60",
 
   ui_rstudio_scrollbar_handle         = "$ui_rstudio_background",
@@ -121,6 +121,7 @@ grkstyle_light <- rstheme(
   ui_invisible                        = "$slate-70",
   ui_fold_arrows_foreground           = "$red-70",
   ui_fold_arrows_background           = "$red-20",
+  ui_bracket                          = "$red-80",
   ui_completions_selected_foreground  = "$purple-10",
   ui_completions_selected_background  = "mix($ui_completions_background, $purple-80, 30%)",
   ui_debug_background                 = "mix($ui_background, $pink-80, 60%)",
@@ -169,6 +170,12 @@ grkstyle_light <- rstheme(
 }
 .ace_comment {
   font-style: italic;
+}
+.ace_bracket {
+  margin: -1px 0 0 -1px !important;
+  padding: 1px;
+  border: 0 !important;
+  border-radius: 0;
 }
 *::-webkit-scrollbar-thumb:hover {
   background-color: mix($slate-100, $blue-40, 70%) !important;
@@ -246,13 +253,14 @@ grkstyle_dark <- rstheme(
   ui_line_active                      = "transparentize($slate-10, 0.75)",
   ui_line_active_selection            = "$ui_selection",
   ui_margin_line                      = "transparentize($slate-10, 0.66)",
-  ui_cursor                           = "transparentize($orange-80, 0.5)",
+  ui_cursor                           = "$orange-40",
   ui_rstudio_scrollbar_handle         = "mix($slate-00, $blue-10, 70%)",
   ui_rstudio_tabs_inactive_foreground = "$slate-70",
   ui_rstudio_tabs_inactive_background = "$slate-00",
   ui_rstudio_tabs_active_background   = "mix($slate-00, $slate-10, 85%)",
   ui_gutter_foreground                = "$slate-30",
   ui_invisible                        = "$slate-10",
+  ui_bracket                          = "$slate-10",
   ui_fold_arrows_foreground           = "$red-20",
   ui_fold_arrows_background           = "$red-70",
   ui_completions_selected_background  = "mix($ui_completions_background, $purple-20, 50%)",
@@ -303,6 +311,13 @@ grkstyle_dark <- rstheme(
 }
 .ace_comment {
   font-style: italic;
+}
+.ace_bracket {
+  margin: -2px 0 0 -2px !important;
+  padding: 1px;
+  border: 1px solid $pink-40 !important;
+  border-radius: 0;
+  background-color: black;
 }
 *::-webkit-scrollbar-thumb:hover {
   background-color: mix($slate-00, $blue-10, 30%) !important;
