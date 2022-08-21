@@ -1,5 +1,8 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# rsthemes (develepment version)
+
+
 # rsthemes 0.3.1 (2021-11-17)
 
 * Lighten the "black bright" terminal color across all themes since it's used for `crayon::silver()` and was hard to see with the previous default.
