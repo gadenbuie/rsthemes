@@ -144,21 +144,21 @@ elm_light <- rstheme(
   rstheme_terminal_colors(
     theme_dark = FALSE,
     red = "$red-40",
-    red_bright = "$red-80",
-    green = "$green-80",
-    green_bright = "$green-80",
-    blue= "$blue-30",
-    blue_bright = "$blue-80",
-    yellow = "$orange-50",
-    yellow_bright = "$orange-80",
+    red_bright = "$red-70",
+    green = "$green-50",
+    green_bright = "$green-70",
+    blue= "$blue-40",
+    blue_bright = "$blue-70",
+    yellow = "$orange-60",
+    yellow_bright = "$orange-70",
     magenta= "$pink-40",
-    magenta_bright = "$pink-80",
+    magenta_bright = "$pink-70",
     cyan= "$purple-40",
-    cyan_bright = "$purple-80",
+    cyan_bright = "$purple-70",
     black = "$slate-00",
     black_bright = "$slate-10",
-    white = "$slate-80",
-    white_bright = "$slate-90"
+    white = "$slate-70",
+    white_bright = "$slate-80"
   ),
 
   '

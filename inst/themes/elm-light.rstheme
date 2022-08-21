@@ -734,27 +734,27 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 .xtermColor2 {
-  color: #b9deb9 !important;
+  color: #69965d !important;
 }
 
 .xtermBgColor2 {
-  background-color: #b9deb9;
+  background-color: #69965d;
 }
 
 .xtermColor3 {
-  color: #cb7702 !important;
+  color: #ef8c02 !important;
 }
 
 .xtermBgColor3 {
-  background-color: #cb7702;
+  background-color: #ef8c02;
 }
 
 .xtermColor4 {
-  color: #0e6876 !important;
+  color: #1c7d8b !important;
 }
 
 .xtermBgColor4 {
-  background-color: #0e6876;
+  background-color: #1c7d8b;
 }
 
 .xtermColor5 {
@@ -774,11 +774,11 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 .xtermColor7 {
-  color: #cfd5d8 !important;
+  color: #b3bec2 !important;
 }
 
 .xtermBgColor7 {
-  background-color: #cfd5d8;
+  background-color: #b3bec2;
 }
 
 .xtermColor8 {
@@ -790,59 +790,59 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 }
 
 .xtermColor9 {
-  color: #fdc7cd !important;
+  color: #fca4ae !important;
 }
 
 .xtermBgColor9 {
-  background-color: #fdc7cd;
+  background-color: #fca4ae;
 }
 
 .xtermColor10 {
-  color: #b9deb9 !important;
+  color: #93ca8d !important;
 }
 
 .xtermBgColor10 {
-  background-color: #b9deb9;
+  background-color: #93ca8d;
 }
 
 .xtermColor11 {
-  color: #f9cd91 !important;
+  color: #f5ae4b !important;
 }
 
 .xtermBgColor11 {
-  background-color: #f9cd91;
+  background-color: #f5ae4b;
 }
 
 .xtermColor12 {
-  color: #bed9de !important;
+  color: #97c4ca !important;
 }
 
 .xtermBgColor12 {
-  background-color: #bed9de;
+  background-color: #97c4ca;
 }
 
 .xtermColor13 {
-  color: #f1c9e1 !important;
+  color: #e9a9cf !important;
 }
 
 .xtermBgColor13 {
-  background-color: #f1c9e1;
+  background-color: #e9a9cf;
 }
 
 .xtermColor14 {
-  color: #d4d3dd !important;
+  color: #bcbac9 !important;
 }
 
 .xtermBgColor14 {
-  background-color: #d4d3dd;
+  background-color: #bcbac9;
 }
 
 .xtermColor15 {
-  color: #ebeeef !important;
+  color: #cfd5d8 !important;
 }
 
 .xtermBgColor15 {
-  background-color: #ebeeef;
+  background-color: #cfd5d8;
 }
 
 .xtermColor16 {
