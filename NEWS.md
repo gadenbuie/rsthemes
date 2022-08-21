@@ -2,6 +2,8 @@
 
 # rsthemes (develepment version)
 
+* New theme: Elm Light and Dark, based on the syntax them I created for
+  [my website](https://garricakdenbuie.com) (#96).
 
 # rsthemes 0.3.1 (2021-11-17)
 
