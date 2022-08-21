@@ -1,9 +1,13 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
-# rsthemes (develepment version)
+# rsthemes 0.4.0 (2022-08-21)
 
-* New theme: Elm Light and Dark, based on the syntax them I created for
-  [my website](https://garricakdenbuie.com) (#96).
+- New theme: Elm Light and Dark, based on the syntax them I created for [my website](https://garricakdenbuie.com) (#96).
+
+- Added 10 new light variants of the Atelier base16 theme (@rossellhayes #95)
+
+- Increased text contrast on inactive tabs in the base16 light themes (@rossellhayes #94)
+
 
 # rsthemes 0.3.1 (2021-11-17)
 
