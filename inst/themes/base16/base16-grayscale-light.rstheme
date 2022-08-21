@@ -1,5 +1,7 @@
 /* rsthemes 0.3.1 */
 /* https://github.com/gadenbuie/rsthemes */
+/* rsthemes 0.3.1 */
+/* https://github.com/gadenbuie/rsthemes */
 /* rs-theme-name: base16 Grayscale Light {rsthemes} */
 /* Grayscale Light by Alexandre Gavioli (https://github.com/Alexx2/) */
 /* rs-theme-is-dark: FALSE */
@@ -341,7 +343,7 @@ table.rstheme_tabLayoutCenter,
 table.rstheme_tabLayoutCenter .gwt-Label,
 .rstudio-themes-flat .rstudio-themes-default .gwt-TabLayoutPanelTabs .gwt-Label,
 .rstheme_multiPodUtilityTabArea .gwt-Label {
-  color: #ababab;
+  color: #252525;
 }
 
 /* toolbar and selected tab */

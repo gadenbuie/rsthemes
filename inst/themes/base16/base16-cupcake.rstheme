@@ -1,5 +1,7 @@
 /* rsthemes 0.3.1 */
 /* https://github.com/gadenbuie/rsthemes */
+/* rsthemes 0.3.1 */
+/* https://github.com/gadenbuie/rsthemes */
 /* rs-theme-name: base16 Cupcake {rsthemes} */
 /* Cupcake by Chris Kempson (http://chriskempson.com) */
 /* rs-theme-is-dark: FALSE */
@@ -341,7 +343,7 @@ table.rstheme_tabLayoutCenter,
 table.rstheme_tabLayoutCenter .gwt-Label,
 .rstudio-themes-flat .rstudio-themes-default .gwt-TabLayoutPanelTabs .gwt-Label,
 .rstheme_multiPodUtilityTabArea .gwt-Label {
-  color: #bfb9c6;
+  color: #72677E;
 }
 
 /* toolbar and selected tab */

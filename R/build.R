@@ -105,6 +105,8 @@ base16_prep_theme <- function(palette_file) {
     "base16-light_template.scss"
   }
 
+  rsthemes_version <- utils::packageVersion("rsthemes")
+
   whisker::whisker.render(
     readLines(package_template("base16", base16_template), warn = FALSE)
   )
