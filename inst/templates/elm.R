@@ -1,6 +1,6 @@
 THEME_APPLY <- NULL #"dark"
 
-grk_colors <- list(
+elm_colors <- list(
   "red-100"    = "#fff8f9",
   "red-90"     = "#fee8eb",
   "red-80"     = "#fdc7cd",
@@ -74,14 +74,14 @@ grk_colors <- list(
   "slate-00"   = "#0e181e"
 )
 
-grkstyle_light <- rstheme(
-  "grkstyle light",
+elm_light <- rstheme(
+  "Elm light",
   theme_dark    = FALSE,
   theme_flat    = TRUE,
   theme_apply   = identical(THEME_APPLY, "light"),
   theme_as_sass = FALSE,
-  theme_path    = here::here("inst/themes/grkstyle-light.rstheme"),
-  theme_palette = grk_colors,
+  theme_path    = here::here("inst/themes/elm-light.rstheme"),
+  theme_palette = elm_colors,
 
   ui_background   = "$slate-100",
   ui_foreground   = "$slate-00",
@@ -221,14 +221,14 @@ grkstyle_light <- rstheme(
 '
 )
 
-grkstyle_dark <- rstheme(
-  "grkstyle dark",
+elm_dark <- rstheme(
+  "Elm dark",
   theme_dark    = TRUE,
   theme_flat    = TRUE,
   theme_apply   = identical(THEME_APPLY, "dark"),
   theme_as_sass = FALSE,
-  theme_path    = here::here("inst/themes/grkstyle-dark.rstheme"),
-  theme_palette = grk_colors,
+  theme_path    = here::here("inst/themes/elm-dark.rstheme"),
+  theme_palette = elm_colors,
 
   ui_background   = "$slate-00",
   ui_foreground   = "$slate-80",
