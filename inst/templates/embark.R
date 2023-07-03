@@ -88,7 +88,7 @@ rsthemes::rstheme(
   ##----------------------------------------
   ui_line_active                      = "lighten($bg_light, 5%)",
   ui_line_active_selection            = "$ui_selection",
-  ui_bracket                          = "transparentize($cyan, 0.5)",
+  ui_bracket                          = "transparentize($red, 0.6)",
   ui_invisible                        = "$accent_dark",
   ui_margin_line                      = "$accent_dark",
   ui_gutter_background                = "lighten($bg, 2%)",
@@ -198,28 +198,65 @@ rsthemes::rstheme(
   ##-----------------------------------------
   ##  Flat theme extras                    --
   ##-----------------------------------------
-  # I used this snippet found in the the `rsthemes` Material theme code at
-  # https://github.com/gadenbuie/rsthemes inst/templates/material.R
-  ".rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
-      .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
-        box-shadow: 0 3px 0 $cyan inset;
-        border-radius: 0 !important;
+  # I used this snippet found in the the `rsthemes` Elm theme code at
+  # https://github.com/gadenbuie/rsthemes inst/templates/elm.R
+  # In order:
+  # - add light bar, remove tab outline
+  # - dim the file icon when not selected
+  # - put more space between file icon and file name
+  '
+  .rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
+    .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
+      box-shadow: 0 3px 0 $cyan inset;
+      border-radius: 0 !important;
+      .gwt-Label {
+        \\ font-weight: 600;
+        \\ color: $fg;
       }
-    }",
-  "/* remove border from panes */
-      .rstudio-themes-flat
-      :-webkit-any(.windowframe, .rstheme_minimizedWindowObject)
-      > div:last-child {
-      border-color: $ui_rstudio_background !important;
-      }",
-  '#rstudio_command_palette_list [id^="rstudio_command_entry_"] >
-      :first-child:not([id]) {
-        background-color: $cyan;
-        .gwt-Label {
-          color: $bg;
-        }
+    }
+  }
+  .rstudio-themes-flat .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-seected):not(:hover) .rstheme_tabLayoutCenter img {
+    opacity: 0.5;
+  }
+  .rstudio-themes-flat .gwt-TabLayoutPanelTab .rstheme_tabLayoutCenter td:fist-child > img {
+    position: relative;
+    left: -5px;
+  }
+  ',
+  '
+  .rstudio-themes-flat .gwt-PopupPanel .popupContent
+  #rstudio_command_palette_list [aria-selected="true"] {
+    &, [id^="rstudio_command_entry"], table .gwt-Label, table td {
+      color: $ui_completions_selected_foreground;
+    }
+  }
+  .rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rtudio_command_entry_"] {
+    & > div:first-child:not([id^="rstudio_command_entry_"]) {
+      background-color: $cyan;
+      .gwt-Label {
+        color: $bg;
       }
-    .ace_comment {
-      font-style: italic;
-    }'
+    }
+    .gwt-Label.rstudio-fixed-width-font {
+      color: $fg_dark;
+    }
+  }
+  ',
+  '
+  [class="ace_keyword"] {
+    font-weight: 600;
+  }
+  .ace_function {
+    font-weight: 600;
+  }
+  .ace_comment {
+    font-style: italic;
+  }
+  .ace_bracket {
+    margin: -1px 0 0 0 !important;
+    padding: 0px;
+    border: 0 !important;
+    border-radius: 1;
+  }
+  '
 )

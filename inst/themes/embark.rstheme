@@ -57,7 +57,7 @@
 
 .ace_marker-layer .ace_bracket {
   margin: -1px 0 0 -1px;
-  border: 1px solid rgba(171, 248, 247, 0.5);
+  border: 1px solid rgba(244, 143, 177, 0.4);
 }
 
 .ace_marker-layer .ace_active-line {
@@ -213,7 +213,7 @@
 .ace_bracket {
   margin: 0 !important;
   border: 0 !important;
-  background-color: rgba(171, 248, 247, 0.5);
+  background-color: rgba(244, 143, 177, 0.4);
 }
 
 .ace_console_error {
@@ -558,23 +558,57 @@ table.rstheme_tabLayoutCenter .gwt-Label,
   border-radius: 0 !important;
 }
 
-/* remove border from panes */
-.rstudio-themes-flat
-:-webkit-any(.windowframe, .rstheme_minimizedWindowObject)
-> div:last-child {
-  border-color: #191729 !important;
+.rstudio-themes-flat .gwt-TabLayoutPanelTab-selected .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter .gwt-Label {
+  \ font-weight: 600;
+  \ color: #CBE3E7;
 }
 
-#rstudio_command_palette_list [id^="rstudio_command_entry_"] > :first-child:not([id]) {
+.rstudio-themes-flat .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-seected):not(:hover) .rstheme_tabLayoutCenter img {
+  opacity: 0.5;
+}
+
+.rstudio-themes-flat .gwt-TabLayoutPanelTab .rstheme_tabLayoutCenter td:fist-child > img {
+  position: relative;
+  left: -5px;
+}
+
+.rstudio-themes-flat .gwt-PopupPanel .popupContent
+#rstudio_command_palette_list [aria-selected="true"], .rstudio-themes-flat .gwt-PopupPanel .popupContent
+#rstudio_command_palette_list [aria-selected="true"] [id^="rstudio_command_entry"], .rstudio-themes-flat .gwt-PopupPanel .popupContent
+#rstudio_command_palette_list [aria-selected="true"] table .gwt-Label, .rstudio-themes-flat .gwt-PopupPanel .popupContent
+#rstudio_command_palette_list [aria-selected="true"] table td {
+  color: #CBE3E7;
+}
+
+.rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rtudio_command_entry_"] > div:first-child:not([id^="rstudio_command_entry_"]) {
   background-color: #ABF8F7;
 }
 
-#rstudio_command_palette_list [id^="rstudio_command_entry_"] > :first-child:not([id]) .gwt-Label {
+.rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rtudio_command_entry_"] > div:first-child:not([id^="rstudio_command_entry_"]) .gwt-Label {
   color: #1E1C31;
+}
+
+.rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rtudio_command_entry_"] .gwt-Label.rstudio-fixed-width-font {
+  color: #8A889D;
+}
+
+[class="ace_keyword"] {
+  font-weight: 600;
+}
+
+.ace_function {
+  font-weight: 600;
 }
 
 .ace_comment {
   font-style: italic;
+}
+
+.ace_bracket {
+  margin: -1px 0 0 0 !important;
+  padding: 0px;
+  border: 0 !important;
+  border-radius: 1;
 }
 
 .terminal {
