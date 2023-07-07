@@ -481,6 +481,14 @@ table.rstheme_tabLayoutCenter .gwt-Label,
   color: #333333;
 }
 
+.gwt-DialogBox.gwt-DialogBox-ModalDialog.GND-IWGDAY table[role="presentation"] .GND-IWGDJIC tbody {
+  color: #3a4264;
+}
+
+.gwt-DialogBox.gwt-DialogBox-ModalDialog.GND-IWGDAY table[role="tabpanel"] .gwt-Label {
+  color: #616da4;
+}
+
 /* job progress bar */
 .rstheme_toolbarWrapper [role="progressbar"] > div, .windowframe [role="progressbar"] > div {
   background-color: #C792EA;
@@ -2801,7 +2809,7 @@ input#rstudio_command_palette_search {
   color: #8F93A2 !important;
 }
 
-.rstudio-themes-flat .dialogContent .gwt-TabLayoutPanelContent .gwt-Label:not(label) {
+.rstudio-themes-flat .dialogContent .gwt-TabLayoutPanelContent :not(label).gwt-Label {
   color: #84FFFF !important;
 }
 
