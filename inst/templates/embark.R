@@ -169,7 +169,8 @@ rsthemes::rstheme(
     input_background = "$bg_light",
     input_foreground = "$code_string",
     checkbox_background = "$accent_light",
-    select_background = "$bg_light"
+    select_background = "$bg_light",
+    update_packages_foreground = "$accent_dark"
   ),
   #
   ##-----------------------------------------

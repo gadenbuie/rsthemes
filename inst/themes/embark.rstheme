@@ -2940,7 +2940,7 @@ input#rstudio_command_palette_search {
 }
 
 .rstudio-themes-flat .gwt-DialogBox[aria-label="Update Packages"] table[role="presentation"] tbody {
-  color: #413c6a;
+  color: #3E3859;
 }
 
 .rstudio-themes-flat .gwt-DialogBox table[role="tabpanel"] .gwt-Label {
