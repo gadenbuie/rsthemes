@@ -2801,7 +2801,7 @@ input#rstudio_command_palette_search {
   color: #A6ACCD !important;
 }
 
-.rstudio-themes-flat .dialogContent .gwt-TabLayoutPanelContent .gwt-Label:not(label) {
+.rstudio-themes-flat .dialogContent .gwt-TabLayoutPanelContent :not(label).gwt-Label {
   color: #C792EA !important;
 }
 
@@ -2864,6 +2864,14 @@ input#rstudio_command_palette_search {
 
 .rstudio-themes-flat .gwt-DialogBox .dialogContent [id^="rstudio_label"][aria-selected="true"] td .gwt-Label {
   color: #A6ACCD !important;
+}
+
+.rstudio-themes-flat .gwt-DialogBox[aria-label="Update Packages"] table[role="presentation"] tbody {
+  color: #4c5372;
+}
+
+.rstudio-themes-flat .gwt-DialogBox table[role="tabpanel"] .gwt-Label {
+  color: #C792EA;
 }
 
 .rstudio-themes-flat .dialogContent button {

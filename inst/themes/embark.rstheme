@@ -2939,6 +2939,14 @@ input#rstudio_command_palette_search {
   color: #CBE3E7 !important;
 }
 
+.rstudio-themes-flat .gwt-DialogBox[aria-label="Update Packages"] table[role="presentation"] tbody {
+  color: #413c6a;
+}
+
+.rstudio-themes-flat .gwt-DialogBox table[role="tabpanel"] .gwt-Label {
+  color: #63F2F1;
+}
+
 .rstudio-themes-flat .dialogContent button {
   border-width: 2px !important;
   border-style: solid !important;
