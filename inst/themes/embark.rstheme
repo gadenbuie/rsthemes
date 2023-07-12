@@ -563,11 +563,11 @@ table.rstheme_tabLayoutCenter .gwt-Label,
   \ color: #CBE3E7;
 }
 
-.rstudio-themes-flat .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-seected):not(:hover) .rstheme_tabLayoutCenter img {
+.rstudio-themes-flat .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected):not(:hover) .rstheme_tabLayoutCenter img {
   opacity: 0.5;
 }
 
-.rstudio-themes-flat .gwt-TabLayoutPanelTab .rstheme_tabLayoutCenter td:fist-child > img {
+.rstudio-themes-flat .gwt-TabLayoutPanelTab .rstheme_tabLayoutCenter td:first-child > img {
   position: relative;
   left: -5px;
 }
@@ -580,15 +580,15 @@ table.rstheme_tabLayoutCenter .gwt-Label,
   color: #CBE3E7;
 }
 
-.rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rtudio_command_entry_"] > div:first-child:not([id^="rstudio_command_entry_"]) {
+.rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rstudio_command_entry_"] > div:first-child:not([id^="rstudio_command_entry_"]) {
   background-color: #ABF8F7;
 }
 
-.rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rtudio_command_entry_"] > div:first-child:not([id^="rstudio_command_entry_"]) .gwt-Label {
+.rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rstudio_command_entry_"] > div:first-child:not([id^="rstudio_command_entry_"]) .gwt-Label {
   color: #1E1C31;
 }
 
-.rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rtudio_command_entry_"] .gwt-Label.rstudio-fixed-width-font {
+.rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rstudio_command_entry_"] .gwt-Label.rstudio-fixed-width-font {
   color: #8A889D;
 }
 
