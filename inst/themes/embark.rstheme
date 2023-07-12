@@ -479,14 +479,6 @@ table.rstheme_tabLayoutCenter .gwt-Label,
   color: #333333;
 }
 
-.gwt-DialogBox.gwt-DialogBox-ModalDialog.GND-IWGDAY table[role="presentation"] .GND-IWGDJIC tbody {
-  color: #413c6a;
-}
-
-.gwt-DialogBox.gwt-DialogBox-ModalDialog.GND-IWGDAY table[role="tabpanel"] .gwt-Label {
-  color: #6b65a7;
-}
-
 /* job progress bar */
 .rstheme_toolbarWrapper [role="progressbar"] > div, .windowframe [role="progressbar"] > div {
   background-color: #f48fb1;
@@ -571,21 +563,13 @@ table.rstheme_tabLayoutCenter .gwt-Label,
   \ color: #CBE3E7;
 }
 
-.rstudio-themes-flat .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected):not(:hover) .rstheme_tabLayoutCenter img {
+.rstudio-themes-flat .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-seected):not(:hover) .rstheme_tabLayoutCenter img {
   opacity: 0.5;
 }
 
-.rstudio-themes-flat .gwt-TabLayoutPanelTab .rstheme_tabLayoutCenter td:first-child > img {
+.rstudio-themes-flat .gwt-TabLayoutPanelTab .rstheme_tabLayoutCenter td:fist-child > img {
   position: relative;
   left: -5px;
-}
-
-.gwt-DialogBox.gwt-DialogBox-ModalDialog.GND-IWGDAY table[role="presentation"] .GND-IWGDJIC tbody {
-  color: #585273 !important;
-}
-
-.gwt-DialogBox.gwt-DialogBox-ModalDialog.GND-IWGDAY table[role="tabpanel"] .gwt-Label {
-  color: #63F2F1 !important;
 }
 
 .rstudio-themes-flat .gwt-PopupPanel .popupContent
@@ -596,15 +580,15 @@ table.rstheme_tabLayoutCenter .gwt-Label,
   color: #CBE3E7;
 }
 
-.rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rstudio_command_entry_"] > div:first-child:not([id^="rstudio_command_entry_"]) {
+.rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rtudio_command_entry_"] > div:first-child:not([id^="rstudio_command_entry_"]) {
   background-color: #ABF8F7;
 }
 
-.rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rstudio_command_entry_"] > div:first-child:not([id^="rstudio_command_entry_"]) .gwt-Label {
+.rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rtudio_command_entry_"] > div:first-child:not([id^="rstudio_command_entry_"]) .gwt-Label {
   color: #1E1C31;
 }
 
-.rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rstudio_command_entry_"] .gwt-Label.rstudio-fixed-width-font {
+.rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rtudio_command_entry_"] .gwt-Label.rstudio-fixed-width-font {
   color: #8A889D;
 }
 

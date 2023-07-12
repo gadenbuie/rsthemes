@@ -482,14 +482,6 @@ table.rstheme_tabLayoutCenter .gwt-Label,
   color: #333333;
 }
 
-.gwt-DialogBox.gwt-DialogBox-ModalDialog.GND-IWGDAY table[role="presentation"] .GND-IWGDJIC tbody {
-  color: #686655;
-}
-
-.gwt-DialogBox.gwt-DialogBox-ModalDialog.GND-IWGDAY table[role="tabpanel"] .gwt-Label {
-  color: #9d9a86;
-}
-
 /* job progress bar */
 .rstheme_toolbarWrapper [role="progressbar"] > div, .windowframe [role="progressbar"] > div {
   background-color: #929181;

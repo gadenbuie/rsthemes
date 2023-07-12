@@ -2830,7 +2830,7 @@ input#rstudio_command_palette_search {
   color: #7E939E !important;
 }
 
-.rstudio-themes-flat .dialogContent .gwt-TabLayoutPanelContent :not(label).gwt-Label {
+.rstudio-themes-flat .dialogContent .gwt-TabLayoutPanelContent .gwt-Label:not(label) {
   color: #80CBC4 !important;
 }
 

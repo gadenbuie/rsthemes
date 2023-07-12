@@ -2835,7 +2835,7 @@ input#rstudio_command_palette_search {
   color: #4589ff !important;
 }
 
-.rstudio-themes-flat .dialogContent .gwt-TabLayoutPanelContent :not(label).gwt-Label {
+.rstudio-themes-flat .dialogContent .gwt-TabLayoutPanelContent .gwt-Label:not(label) {
   color: #a173ff !important;
 }
 

@@ -200,46 +200,29 @@ rsthemes::rstheme(
   ##-----------------------------------------
   # I used this snippet found in the the `rsthemes` Elm theme code at
   # https://github.com/gadenbuie/rsthemes inst/templates/elm.R
+  # In order:
   # - add light bar, remove tab outline
+  # - dim the file icon when not selected
+  # - put more space between file icon and file name
   '
   .rstudio-themes-flat .gwt-TabLayoutPanelTab-selected {
     .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
       box-shadow: 0 3px 0 $cyan inset;
       border-radius: 0 !important;
-
       .gwt-Label {
         \\ font-weight: 600;
         \\ color: $fg;
       }
     }
   }
-  ',
-  # - dim the file icon when not selected
-  '
-  .rstudio-themes-flat .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected):not(:hover) .rstheme_tabLayoutCenter img {
+  .rstudio-themes-flat .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-seected):not(:hover) .rstheme_tabLayoutCenter img {
     opacity: 0.5;
   }
-    ',
-  # - put more space between file icon and file name
-  '
-  .rstudio-themes-flat .gwt-TabLayoutPanelTab .rstheme_tabLayoutCenter td:first-child > img {
+  .rstudio-themes-flat .gwt-TabLayoutPanelTab .rstheme_tabLayoutCenter td:fist-child > img {
     position: relative;
     left: -5px;
   }
   ',
-  # - fix light text on light background in Update Packages dialog
-  #   and dark text for some headings and help text in Options dialog
-  '
-  .gwt-DialogBox.gwt-DialogBox-ModalDialog.GND-IWGDAY {
-    & table[role="presentation"] .GND-IWGDJIC tbody {
-      color: $accent_light !important;
-    }
-    & table[role="tabpanel"] .gwt-Label {
-      color: $rmd_heading_foreground !important;
-    }
-  }
-  ',
-  # - command palette tweaks, table color, highlighting of recent command
   '
   .rstudio-themes-flat .gwt-PopupPanel .popupContent
   #rstudio_command_palette_list [aria-selected="true"] {
@@ -247,7 +230,7 @@ rsthemes::rstheme(
       color: $ui_completions_selected_foreground;
     }
   }
-  .rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rstudio_command_entry_"] {
+  .rstudio-themes-flat .popupContent [id^="rstudio_command"] [id^="rtudio_command_entry_"] {
     & > div:first-child:not([id^="rstudio_command_entry_"]) {
       background-color: $cyan;
       .gwt-Label {
@@ -259,7 +242,6 @@ rsthemes::rstheme(
     }
   }
   ',
-  # - changes to code styling
   '
   [class="ace_keyword"] {
     font-weight: 600;
