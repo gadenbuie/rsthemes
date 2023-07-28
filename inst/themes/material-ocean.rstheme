@@ -2870,7 +2870,7 @@ input#rstudio_command_palette_search {
   color: #3a4264;
 }
 
-.rstudio-themes-flat .gwt-DialogBox table[role="tabpanel"] .gwt-Label {
+.rstudio-themes-flat .gwt-DialogBox table[role="presentation"] .gwt-Label {
   color: #84FFFF;
 }
 
