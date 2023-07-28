@@ -125,7 +125,7 @@ $ui_rstudio_dialog_select_foreground: $ui_rstudio_dialog_foreground !default;
     &[aria-label="Update Packages"] table[role="presentation"] tbody {
       color: $ui_rstudio_dialog_update_packages_foreground;
     }
-    & table[role="tabpanel"] .gwt-Label {
+    & table[role="presentation"] .gwt-Label {
       color: $ui_rstudio_dialog_heading_foreground;
     }
   }
