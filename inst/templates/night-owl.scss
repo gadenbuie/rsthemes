@@ -154,6 +154,7 @@ $ui_rstudio_dialog_checkbox_foreground: $code_value;
 $ui_rstudio_dialog_checkbox_background: $dark1;
 $ui_rstudio_dialog_select_background: lighten($ui_rstudio_dialog_background, 5%);
 $ui_rstudio_dialog_select_foreground: $light1;
+$ui_rstudio_dialog_update_packages_foreground: if($ui_rstudio_is_dark, lighten($ui_rstudio_dialog_background, 20%), darken($ui_rstudio_dialog_background, 40%));
 $ui_paren_0: $code_bracket;
 $ui_paren_1: $blue2;
 $ui_paren_2: $purple;
