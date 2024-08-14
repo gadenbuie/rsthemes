@@ -121,7 +121,7 @@ rosepine_rstheme <- function(
     fg_3 = rp_pal$muted,
     # Code
     pal_comments = rp_pal$muted,
-    pal_messages = rp_pal$rose,
+    pal_messages = rp_pal$love,
     pal_errors = rp_pal$love,
     pal_operators = rp_pal$subtle,
     pal_punctuation = rp_pal$subtle,
