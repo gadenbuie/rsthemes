@@ -63,8 +63,8 @@ rose_pine_dawn <- list(
 #'
 #' @param variant A string - A string defining the theme palette variant to use
 #' [Rosé Pine Variants](https://rosepinetheme.com/palette/)
-#' @param install A Boolean - generate and install/apply the .rstheme file
-#' (TRUE), or just save the .rstheme file without installing/applying (FALSE)
+#' @param apply A Boolean - generate and install/apply the .rstheme file
+#' (TRUE), or just save the .rstheme file without applying (FALSE)
 #' @param as_sass A Boolean - save theme as .sass file and do not apply (TRUE),
 #' defaults to FALSE
 #' @param ... Additional arguments to pass to [rsthemes::rstheme()] overriding
@@ -73,7 +73,7 @@ rose_pine_dawn <- list(
 #' @export
 rosepine_rstheme <- function(
     variant = NULL,
-    install = TRUE,
+    apply = TRUE,
     as_sass = FALSE,
     ...
 ) {
@@ -172,10 +172,11 @@ rosepine_rstheme <- function(
       )
     )
   } else {
-    if (install) {
+    if (apply) {
       theme_apply <- TRUE
       theme_as_sass <- FALSE
       theme_path = here::here(
+        "inst/themes",
         paste0(
           "rose-pine",
           if (!is.null(variant)) "-",
@@ -187,6 +188,7 @@ rosepine_rstheme <- function(
       theme_apply <- FALSE
       theme_as_sass <- FALSE
       theme_path = here::here(
+        "inst/themes",
         paste0(
           "rose-pine",
           if (!is.null(variant)) "-",
@@ -435,6 +437,12 @@ rosepine_rstheme <- function(
   do.call(rsthemes::rstheme, theme_args)
 }
 
+# Create sass files
 rosepine_rstheme(as_sass = TRUE)
 rosepine_rstheme(variant = "moon", as_sass = TRUE)
 rosepine_rstheme(variant = "dawn", as_sass = TRUE)
+
+# Create rstheme files
+rosepine_rstheme(apply = FALSE)
+rosepine_rstheme(variant = "moon", apply = FALSE)
+rosepine_rstheme(variant = "dawn", apply = FALSE)
