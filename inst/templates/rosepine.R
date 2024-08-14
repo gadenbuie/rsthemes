@@ -434,3 +434,7 @@ rosepine_rstheme <- function(
   theme_args <- modifyList(theme_args, list(...))
   do.call(rsthemes::rstheme, theme_args)
 }
+
+rosepine_rstheme(as_sass = TRUE)
+rosepine_rstheme(variant = "moon", as_sass = TRUE)
+rosepine_rstheme(variant = "dawn", as_sass = TRUE)
