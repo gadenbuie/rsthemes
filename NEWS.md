@@ -1,5 +1,8 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+- New theme [Embark](https://embark-theme.github.io/) and some minor improvements to text coloring defaults when applying a dialog theme.  (#99)
+
+
 # rsthemes 0.4.0 (2022-08-21)
 
 - New theme: Elm Light and Dark, based on the syntax them I created for [my website](https://garricakdenbuie.com) (#96).
