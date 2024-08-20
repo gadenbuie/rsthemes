@@ -15,10 +15,10 @@ rstheme_command_palette(
   border = "$ui_command_palette_background",
   item_background = "$ui_command_palette_background",
   item_color = "$ui_foreground",
- 
-    item_hover_background = "if($ui_rstudio_is_dark, lighten($ui_command_palette_item_background, 5\%), darken($ui_command_palette_item_background, 5\%))",
- 
-    item_selected_background = "if($ui_rstudio_is_dark, lighten($ui_command_palette_item_background, 10\%), darken($ui_command_palette_item_background, 10\%))"
+  item_hover_background =
+    "if($ui_rstudio_is_dark, lighten($ui_command_palette_item_background, 5\%), darken($ui_command_palette_item_background, 5\%))",
+  item_selected_background =
+    "if($ui_rstudio_is_dark, lighten($ui_command_palette_item_background, 10\%), darken($ui_command_palette_item_background, 10\%))"
 )
 
 rstheme_rainbow_parentheses(
@@ -36,8 +36,8 @@ rstheme_large_tabs()
 rstheme_dialog_options(
   background = "$ui_rstudio_background",
   foreground = "$ui_rstudio_foreground",
- 
-    border = "if($ui_rstudio_is_dark, lighten($ui_rstudio_dialog_background, 5\%), darken($ui_rstudio_dialog_background, 5\%))",
+  border =
+    "if($ui_rstudio_is_dark, lighten($ui_rstudio_dialog_background, 5\%), darken($ui_rstudio_dialog_background, 5\%))",
   selected_background = "$ui_rstudio_dialog_border",
   selected_foreground = "$ui_rstudio_dialog_foreground",
   heading_foreground = "$code_function",
@@ -54,7 +54,9 @@ rstheme_dialog_options(
   checkbox_background = "lighten($ui_rstudio_dialog_background, 5\%)",
   checkbox_foreground = "$ui_rstudio_dialog_foreground",
   select_background = "lighten($ui_rstudio_dialog_background, 5\%)",
-  select_foreground = "$ui_rstudio_dialog_foreground"
+  select_foreground = "$ui_rstudio_dialog_foreground",
+  update_packages_foreground =
+    "if($ui_rstudio_is_dark, lighten($ui_rstudio_dialog_background, 20\%), darken($ui_rstudio_dialog_background, 40\%))"
 )
 
 rstheme_terminal_colors(
@@ -75,7 +77,7 @@ rstheme_terminal_colors(
   blue_bright = blue,
   magenta_bright = magenta,
   cyan_bright = cyan,
-  black_bright = "lighten($terminal_color_black, 10\%)",
+  black_bright = "mix($terminal_color_black, $terminal_color_white, 40\%)",
   white_bright = "lighten($terminal_color_white, 10\%)"
 )
 }
@@ -88,7 +90,7 @@ rstheme_terminal_colors(
 
 \item{foreground, background}{Foreground (text) or background color}
 
-\item{selected_background, selected_foreground, heading_foreground, help_foreground, button_foreground, button_background, button_border, button_hover_foreground, button_hover_background, button_hover_border, input_foreground, input_background, input_border, checkbox_background, checkbox_foreground, select_background, select_foreground}{Additional colors for RStudio dialog boxes, setting SCSS variables prefixed
+\item{selected_background, selected_foreground, heading_foreground, help_foreground, button_foreground, button_background, button_border, button_hover_foreground, button_hover_background, button_hover_border, input_foreground, input_background, input_border, checkbox_background, checkbox_foreground, select_background, select_foreground, update_packages_foreground}{Additional colors for RStudio dialog boxes, setting SCSS variables prefixed
 with \verb{$ui_rstudio_dialog_<argument>}.}
 
 \item{theme_dark}{Is the theme dark (otherwise light). Used to set the
@@ -102,14 +104,14 @@ Partial themes for RStudio to be included as desired in \code{\link[=rstheme]{rs
 }
 \section{Functions}{
 \itemize{
-\item \code{rstheme_command_palette}: Theme the RStudio Command Palette
+\item \code{rstheme_command_palette()}: Theme the RStudio Command Palette
 
-\item \code{rstheme_rainbow_parentheses}: Theme the rainbow parentheses colors
+\item \code{rstheme_rainbow_parentheses()}: Theme the rainbow parentheses colors
 
-\item \code{rstheme_large_tabs}: Enlarges the tabs
+\item \code{rstheme_large_tabs()}: Enlarges the tabs
 
-\item \code{rstheme_dialog_options}: Themes dialog windows, e.g. \emph{Global Options}
+\item \code{rstheme_dialog_options()}: Themes dialog windows, e.g. \emph{Global Options}
 
-\item \code{rstheme_terminal_colors}: Theme the terminal colors
+\item \code{rstheme_terminal_colors()}: Theme the terminal colors
+
 }}
-
