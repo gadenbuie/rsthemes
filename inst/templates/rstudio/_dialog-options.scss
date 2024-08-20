@@ -9,6 +9,7 @@ $ui_rstudio_dialog_selected_foreground: $ui_rstudio_dialog_foreground !default;
 // accents
 $ui_rstudio_dialog_heading_foreground: $code_function !default;
 $ui_rstudio_dialog_help_foreground: $code_value !default;
+$ui_rstudio_dialog_update_packages_foreground: if($ui_rstudio_is_dark, lighten($ui_rstudio_dialog_background, 20%), darken($ui_rstudio_dialog_background, 40%)) !default;
 
 // buttons
 $ui_rstudio_dialog_button_foreground: $ui_rstudio_dialog_foreground !default;
@@ -117,6 +118,15 @@ $ui_rstudio_dialog_select_foreground: $ui_rstudio_dialog_foreground !default;
     }
     [id^="rstudio_label"][aria-selected="true"] td .gwt-Label {
       color: $ui_rstudio_dialog_selected_foreground !important;
+    }
+  }
+
+  .gwt-DialogBox {
+    &[aria-label="Update Packages"] table[role="presentation"] tbody {
+      color: $ui_rstudio_dialog_update_packages_foreground;
+    }
+    & table[role="presentation"] .gwt-Label {
+      color: $ui_rstudio_dialog_heading_foreground;
     }
   }
 

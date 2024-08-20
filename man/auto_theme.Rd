@@ -69,30 +69,32 @@ instructions in the section below.
 }
 \section{Functions}{
 \itemize{
-\item \code{set_theme_light}: Set default light theme
+\item \code{set_theme_light()}: Set default light theme
 
-\item \code{set_theme_dark}: Set default dark theme
+\item \code{set_theme_dark()}: Set default dark theme
 
-\item \code{set_theme_favorite}: Set favorite themes
+\item \code{set_theme_favorite()}: Set favorite themes
 
-\item \code{use_theme_light}: Use default light theme
+\item \code{use_theme_light()}: Use default light theme
 
-\item \code{use_theme_dark}: Use default dark theme
+\item \code{use_theme_dark()}: Use default dark theme
 
-\item \code{use_theme_rstudio_default}: Use the RStudio default theme (Textmate)
+\item \code{use_theme_rstudio_default()}: Use the RStudio default theme (Textmate)
 
-\item \code{use_theme_toggle}: Toggle between dark and light themes
+\item \code{use_theme_toggle()}: Toggle between dark and light themes
 
-\item \code{use_theme_auto}: Auto switch between dark and light themes
+\item \code{use_theme_auto()}: Auto switch between dark and light themes
 
-\item \code{use_theme_favorite}: Walk through a list of favorite themes
+\item \code{use_theme_favorite()}: Walk through a list of favorite themes
+
 }}
-
 \section{Set preferred theme in \code{.Rprofile}}{
 
 
 Add the following to your \verb{~/.Rprofile} (see \code{\link[usethis:edit]{usethis::edit_r_profile()}}) to
-declare your default themes:\preformatted{if (interactive() && requireNamespace("rsthemes", quietly = TRUE)) \{
+declare your default themes:
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{if (interactive() && requireNamespace("rsthemes", quietly = TRUE)) \{
   # Set preferred themes if not handled elsewhere..
   rsthemes::set_theme_light("One Light \{rsthemes\}")  # light theme
   rsthemes::set_theme_dark("One Dark \{rsthemes\}") # dark theme
@@ -113,7 +115,7 @@ declare your default themes:\preformatted{if (interactive() && requireNamespace(
     # rsthemes::use_theme_auto()
   \}, action = "append")
 \}
-}
+}\if{html}{\out{</div>}}
 
 Note that the fully automated approach will use
 \href{https://ip-api.com/}{ip-api.com} to look up your current location using your
@@ -126,19 +128,23 @@ coordinates are cached on a per-project basis and only checked once per day
 
 Here are two other approaches that you can use. Both set the global
 options that declare the default themes, but rely on you manually calling
-\code{\link[=use_theme_auto]{use_theme_auto()}} or the Auto Dark/Light addin.\preformatted{# ~/.Rprofile
+\code{\link[=use_theme_auto]{use_theme_auto()}} or the Auto Dark/Light addin.
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{# ~/.Rprofile
 rsthemes::set_theme_light("One Light \{rsthemes\}")
 rsthemes::set_theme_dark("One Dark \{rsthemes\}")
 rsthemes::set_theme_favorite(c(
   "GitHub \{rsthemes\}", "Solarized Dark \{rsthemes\}", "Fairyfloss \{rsthemes\}"
 ))
-}\preformatted{# ~/.Rprofile
+}\if{html}{\out{</div>}}
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{# ~/.Rprofile
 options(
   rsthemes.theme_light = "One Light \{rsthemes\}",
   rsthemes.theme_dark = "One Dark \{rsthemes\}"
   rsthemes.theme_favorite = c("GitHub \{rsthemes\}", "One Light \{rsthemes\}")
 )
-}
+}\if{html}{\out{</div>}}
 }
 
 \section{RStudio Addins}{

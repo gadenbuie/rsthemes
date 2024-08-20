@@ -47,17 +47,17 @@ Install, List, Try or Remove RStudio Themes
 }
 \section{Functions}{
 \itemize{
-\item \code{install_rsthemes}: Install RStudio themes
+\item \code{install_rsthemes()}: Install RStudio themes
 
-\item \code{remove_rsthemes}: Remove rsthemes from RStudio
+\item \code{remove_rsthemes()}: Remove rsthemes from RStudio
 
-\item \code{list_rsthemes}: List installed themes (default) or available themes
+\item \code{list_rsthemes()}: List installed themes (default) or available themes
 
-\item \code{try_rsthemes}: Try each rsthemes RStudio theme
+\item \code{try_rsthemes()}: Try each rsthemes RStudio theme
 
-\item \code{rsthemes_styles}: List style options
+\item \code{rsthemes_styles()}: List style options
+
 }}
-
 \section{Palettes}{
  \pkg{rsthemes} includes RStudio themes based on the
 following colors palettes.
@@ -88,6 +88,7 @@ implementation in RStudio by \href{https://maraaverick.rbind.io/}{Mara Averick}
 \item Contributed to rsthemes by \href{https://www.zacdelusignan.com/}{Zac de Lusignan}
 }
 \item \href{https://wvsc.dev/}{Serendipity} (\href{https://www.wickedtemplates.com/}{wickedtemplates})
+\item \href{embark}{Embark} (\href{https://github.com/eric-hunt}{Eric Hunt})
 }
 }
 

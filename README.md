@@ -75,17 +75,16 @@ rstudioapi::applyTheme("One Dark {rsthemes}")
 **rsthemes** includes RStudio addins and functions to…
 <a name="automatic--light-and--dark-mode"></a>
 
--   🌅 **Toggle Dark Mode**<br>Switch between two preferred dark and
-    light themes
+- 🌅 **Toggle Dark Mode**<br>Switch between two preferred dark and light
+  themes
 
--   🌃 **Auto Dark Mode**<br>Automatically choose a dark or light theme
-    by time of day
+- 🌃 **Auto Dark Mode**<br>Automatically choose a dark or light theme by
+  time of day
 
--   ❤️ **Favorite Themes**<br>Switch between a few of your favorite
-    themes
+- ❤️ **Favorite Themes**<br>Switch between a few of your favorite themes
 
--   🥱 **Use Default RStudio Theme**<br>Switch back to RStudio’s default
-    theme
+- 🥱 **Use Default RStudio Theme**<br>Switch back to RStudio’s default
+  theme
 
 #### Choose Your Preferred Themes
 
@@ -219,40 +218,41 @@ rsthemes::remove_rsthemes("base16")
 
 ### Palettes
 
--   [base16](https://github.com/chriskempson/base16) (Various Authors)
--   [Fairyfloss](https://github.com/sailorhg/fairyfloss) ([Amy Wibowo
-    (sailorhg)](https://github.com/sailorhg))
--   [Flat White](https://github.com/biletskyy/flatwhite-syntax) ([Dmitry
-    Biletskyy](https://github.com/biletskyy))
--   [Nord](https://github.com/arcticicestudio/nord) ([Sven
-    Greb](https://www.svengreb.de/))
--   [Oceanic Plus](https://github.com/marcoms/oceanic-plus) ([Marco
-    Scannadinari](https://github.com/marcoms))
--   [Atom One
-    Dark](https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
--   [Atom One
-    Light](https://github.com/atom/atom/tree/master/packages/one-light-syntax)
--   [Solarized](https://ethanschoonover.com/solarized) (Ethan
-    Schoonover)
--   [Horizon Dark](https://horizontheme.netlify.app/) (Jonathan Olaleye)
--   [a11y-syntax-highlighting](https://github.com/ericwbailey/a11y-syntax-highlighting)
-    ([Eric Bailey](https://ericwbailey.design/))
--   [Night Owl](https://github.com/sdras/night-owl-vscode-theme) ([Sarah
-    Drasner](https://sarah.dev/))
-    -   with huge thanks to original [Night
-        Owlish](https://github.com/batpigandme/night-owlish)
-        implementation in RStudio by [Mara
-        Averick](https://maraaverick.rbind.io/)
--   Yule RStudio
-    -   Based on the [Yule
-        tmTheme](https://tmtheme-editor.herokuapp.com/#!/editor/theme/Yule)
-    -   Ported from
-        [gadenbuie/yule-rstudio](https://github.com/gadenbuie/yule-rstudio)
-    -   Featuring a background image by [Joanna
-        Kosinska](https://unsplash.com/@joannakosinska)
--   [Material Theme](https://material-theme.site/)
-    -   Contributed to rsthemes by [Zac de
-        Lusignan](https://www.zacdelusignan.com/)
+- [base16](https://github.com/chriskempson/base16) (Various Authors)
+- [Fairyfloss](https://github.com/sailorhg/fairyfloss) ([Amy Wibowo
+  (sailorhg)](https://github.com/sailorhg))
+- [Flat White](https://github.com/biletskyy/flatwhite-syntax) ([Dmitry
+  Biletskyy](https://github.com/biletskyy))
+- [Nord](https://github.com/arcticicestudio/nord) ([Sven
+  Greb](https://www.svengreb.de/))
+- [Oceanic Plus](https://github.com/marcoms/oceanic-plus) ([Marco
+  Scannadinari](https://github.com/marcoms))
+- [Atom One
+  Dark](https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
+- [Atom One
+  Light](https://github.com/atom/atom/tree/master/packages/one-light-syntax)
+- [Solarized](https://ethanschoonover.com/solarized) (Ethan Schoonover)
+- [Horizon Dark](https://horizontheme.netlify.app/) (Jonathan Olaleye)
+- [a11y-syntax-highlighting](https://github.com/ericwbailey/a11y-syntax-highlighting)
+  ([Eric Bailey](https://ericwbailey.design/))
+- [Night Owl](https://github.com/sdras/night-owl-vscode-theme) ([Sarah
+  Drasner](https://sarah.dev/))
+  - with huge thanks to original [Night
+    Owlish](https://github.com/batpigandme/night-owlish) implementation
+    in RStudio by [Mara Averick](https://maraaverick.rbind.io/)
+- Yule RStudio
+  - Based on the [Yule
+    tmTheme](https://tmtheme-editor.herokuapp.com/#!/editor/theme/Yule)
+  - Ported from
+    [gadenbuie/yule-rstudio](https://github.com/gadenbuie/yule-rstudio)
+  - Featuring a background image by [Joanna
+    Kosinska](https://unsplash.com/@joannakosinska)
+- [Material Theme](https://material-theme.site/)
+  - Contributed to rsthemes by [Zac de
+    Lusignan](https://www.zacdelusignan.com/)
+- [Serendipity](https://wvsc.dev/)
+  ([wickedtemplates](https://www.wickedtemplates.com/))
+- [Embark](embark) ([Eric Hunt](https://github.com/eric-hunt))
 
 ------------------------------------------------------------------------
 

@@ -361,7 +361,7 @@ rstheme_large_tabs <- function() {
 }
 
 #' @describeIn rstheme_partial Themes dialog windows, e.g. _Global Options_
-#' @param selected_background,selected_foreground,heading_foreground,help_foreground,button_foreground,button_background,button_border,button_hover_foreground,button_hover_background,button_hover_border,input_foreground,input_background,input_border,checkbox_background,checkbox_foreground,select_background,select_foreground
+#' @param selected_background,selected_foreground,heading_foreground,help_foreground,button_foreground,button_background,button_border,button_hover_foreground,button_hover_background,button_hover_border,input_foreground,input_background,input_border,checkbox_background,checkbox_foreground,select_background,select_foreground,update_packages_foreground
 #'   Additional colors for RStudio dialog boxes, setting SCSS variables prefixed
 #'   with `$ui_rstudio_dialog_<argument>`.
 #' @export
@@ -385,7 +385,8 @@ rstheme_dialog_options <- function(
   checkbox_background = "lighten($ui_rstudio_dialog_background, 5%)",
   checkbox_foreground = "$ui_rstudio_dialog_foreground",
   select_background = "lighten($ui_rstudio_dialog_background, 5%)",
-  select_foreground = "$ui_rstudio_dialog_foreground"
+  select_foreground = "$ui_rstudio_dialog_foreground",
+  update_packages_foreground = "if($ui_rstudio_is_dark, lighten($ui_rstudio_dialog_background, 20%), darken($ui_rstudio_dialog_background, 40%))"
 ) {
   structure(list(
     ui_rstudio_dialog_background = background,
@@ -407,7 +408,8 @@ rstheme_dialog_options <- function(
     ui_rstudio_dialog_checkbox_foreground = checkbox_foreground,
     ui_rstudio_dialog_checkbox_background = checkbox_background,
     ui_rstudio_dialog_select_background = select_background,
-    ui_rstudio_dialog_select_foreground = select_foreground
+    ui_rstudio_dialog_select_foreground = select_foreground,
+    ui_rstudio_dialog_update_packages_foreground = update_packages_foreground
   ), class = c("_dialog-options", "rstheme_template", "list"))
 }
 
