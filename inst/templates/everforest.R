@@ -260,8 +260,6 @@ everforest_rstheme <- function(
     pal_parameters = "$fg"
   )
 
-  print(theme_palette)
-
   if (as_sass) {
     theme_apply <- FALSE
     theme_as_sass <- TRUE
