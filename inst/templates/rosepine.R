@@ -189,6 +189,7 @@ rosepine_rstheme <- function(
     theme_apply <- FALSE
     theme_as_sass <- TRUE
     theme_path <- here::here(
+      "inst/templates/",
       paste0(
         "rose-pine",
         if (!is.null(variant)) "-",
@@ -483,17 +484,17 @@ rosepine_rstheme <- function(
 }
 
 # Create sass files
-purrr::walk(
-  c("base", "moon", "dawn"),
-  function(variant) {
-    rosepine_rstheme(variant = variant, as_sass = TRUE)
-  }
-)
+# purrr::walk(
+#   c("base", "moon", "dawn"),
+#   function(variant) {
+#     rosepine_rstheme(variant = variant, as_sass = TRUE)
+#   }
+# )
 
 # Create rstheme files
-purrr::walk(
-  c("base", "moon", "dawn"),
-  function(variant) {
-    rosepine_rstheme(variant = variant)
-  }
-)
+# purrr::walk(
+#   c("base", "moon", "dawn"),
+#   function(variant) {
+#     rosepine_rstheme(variant = variant)
+#   }
+# )
