@@ -18,7 +18,8 @@
 - [Material Theme][material]
   - Contributed to rsthemes by [Zac de Lusignan](https://www.zacdelusignan.com/)
 - [Serendipity][serendipity] ([wickedtemplates](https://www.wickedtemplates.com/))
-- [Embark](embark) ([Eric Hunt](https://github.com/eric-hunt))
+- [Embark](https://github.com/eric-hunt/embark.rstheme) ([Eric Hunt](https://github.com/eric-hunt))
+- [Rosé Pine](https://github.com/eric-hunt/rosepine.rstheme) ([Eric Hunt](https://github.com/eric-hunt))
 
 [base16]: https://github.com/chriskempson/base16
 [fairyfloss]: https://github.com/sailorhg/fairyfloss
@@ -35,3 +36,4 @@
 [material]: https://material-theme.site/
 [serendipity]: https://wvsc.dev/
 [embark]: https://embark-theme.github.io/
+[rose-pine]: https://rosepinetheme.com/
