@@ -552,3 +552,29 @@ everforest_rstheme <- function(
   theme_args <- modifyList(theme_args, list(...))
   do.call(rsthemes::rstheme, theme_args)
 }
+
+# Create sass files
+purrr::walk(
+  c(TRUE, FALSE),
+  function(dark) {
+    purrr::walk(
+      c("hard", "medium", "soft"),
+      function(variant) {
+        everforest_rstheme(dark = dark, variant = variant, as_sass = TRUE)
+      }
+    )
+  }
+)
+
+# Create rstheme files
+purrr::walk(
+  c(TRUE, FALSE),
+  function(dark) {
+    purrr::walk(
+      c("hard", "medium", "soft"),
+      function(variant) {
+        everforest_rstheme(dark = dark, variant = variant)
+      }
+    )
+  }
+)
