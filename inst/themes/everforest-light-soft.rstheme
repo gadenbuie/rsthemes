@@ -1,6 +1,6 @@
 /* rsthemes 0.4.0.9000 */
 /* https://github.com/gadenbuie/rsthemes */
-/* rs-theme-name: Everforest Light soft {rsthemes} */
+/* rs-theme-name: Everforest Light Soft {rsthemes} */
 /* rs-theme-is-dark: FALSE */
 .ace_gutter {
   background: #f3ead3;
@@ -587,11 +587,6 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 .rstudio-themes-flat .gwt-TabLayoutPanelTab-selected .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
   box-shadow: 0 3px 0 #93b259 inset;
   border-radius: 0 !important;
-}
-
-.rstudio-themes-flat .gwt-TabLayoutPanelTab-selected .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter .gwt-Label {
-  \ font-weight: 600;
-  \ color: #5c6a72;
 }
 
 .rstudio-themes-flat .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected):not(:hover) .rstheme_tabLayoutCenter img {

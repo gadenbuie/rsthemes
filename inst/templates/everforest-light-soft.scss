@@ -1,4 +1,4 @@
-/* rs-theme-name: Everforest Light soft {rsthemes} */
+/* rs-theme-name: Everforest Light Soft {rsthemes} */
 /* rs-theme-is-dark: FALSE */
 $bg: #f3ead3;
 $bg_dim: #e5dfc5;
@@ -149,11 +149,6 @@ $terminal_color_white_bright: lighten($terminal_color_white, 10%);
       .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
         box-shadow: 0 3px 0 $line_1 inset;
         border-radius: 0 !important;
-
-        .gwt-Label {
-          \ font-weight: 600;
-          \ color: $fg;
-        }
       }
     }
     
