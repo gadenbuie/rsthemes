@@ -83,11 +83,12 @@ rosepine_rstheme <- function(
 
   theme_dark <- !identical(variant, "Dawn")
 
-  rp_pal <- get(paste0(
-    "rose_pine",
-    if (!is.null(variant)) "_",
-    tolower(variant)
-  ))
+  rp_pal <- switch(
+    variant,
+    Dawn = rose_pine_dawn,
+    Moon = rose_pine_moon,
+    rose_pine
+  )
 
   lighten_factor <- 5
   darken_factor <- 5
