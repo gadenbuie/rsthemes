@@ -78,8 +78,10 @@ rosepine_rstheme <- function(
   as_sass = FALSE,
   ...
 ) {
-  rlang::arg_match(variant)
-  variant <- switch(variant, moon = "Moon", dawn = "Dawn")
+  variant <- switch(
+    rlang::arg_match(variant),
+    moon = "Moon", dawn = "Dawn", "base"
+  )
 
   theme_dark <- !identical(variant, "Dawn")
 
@@ -172,8 +174,7 @@ rosepine_rstheme <- function(
       "inst/templates/",
       paste0(
         "rose-pine",
-        if (!is.null(variant)) "-",
-        tolower(variant),
+        if (variant != "base") paste0("-", tolower(variant)),
         ".scss"
       )
     )
@@ -185,8 +186,7 @@ rosepine_rstheme <- function(
         "inst/themes",
         paste0(
           "rose-pine",
-          if (!is.null(variant)) "-",
-          tolower(variant),
+          if (variant != "base") paste0("-", tolower(variant)),
           ".rstheme"
         )
       )
@@ -197,8 +197,7 @@ rosepine_rstheme <- function(
         "inst/themes",
         paste0(
           "rose-pine",
-          if (!is.null(variant)) "-",
-          tolower(variant),
+          if (variant != "base") paste0("-", tolower(variant)),
           ".rstheme"
         )
       )
@@ -209,7 +208,10 @@ rosepine_rstheme <- function(
     ## >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     ##  THEME META                                          >>
     ## >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-    theme_name = paste0("Rosé Pine", if (!is.null(variant)) " ", variant),
+    theme_name = paste0(
+      "Rosé Pine",
+      if (variant != "base") paste0(" ", variant)
+    ),
     theme_dark = theme_dark,
     theme_flat = TRUE,
     theme_palette = theme_palette,
