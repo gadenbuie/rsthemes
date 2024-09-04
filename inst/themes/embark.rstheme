@@ -558,11 +558,6 @@ table.rstheme_tabLayoutCenter .gwt-Label,
   border-radius: 0 !important;
 }
 
-.rstudio-themes-flat .gwt-TabLayoutPanelTab-selected .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter .gwt-Label {
-  \ font-weight: 600;
-  \ color: #CBE3E7;
-}
-
 .rstudio-themes-flat .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected):not(:hover) .rstheme_tabLayoutCenter img {
   opacity: 0.5;
 }

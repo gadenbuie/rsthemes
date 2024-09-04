@@ -1,3 +1,5 @@
+/* rsthemes 0.4.0.9000 */
+/* https://github.com/gadenbuie/rsthemes */
 @charset "UTF-8";
 /* rs-theme-name: Rosé Pine Moon {rsthemes} */
 /* rs-theme-is-dark: TRUE */
@@ -557,11 +559,6 @@ table.rstheme_tabLayoutCenter .gwt-Label,
 .rstudio-themes-flat .gwt-TabLayoutPanelTab-selected .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
   box-shadow: 0 3px 0 #ea9a97 inset;
   border-radius: 0 !important;
-}
-
-.rstudio-themes-flat .gwt-TabLayoutPanelTab-selected .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter .gwt-Label {
-  \ font-weight: 600;
-  \ color: #e0def4;
 }
 
 .rstudio-themes-flat .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected):not(:hover) .rstheme_tabLayoutCenter img {

@@ -142,11 +142,6 @@ $terminal_color_white_bright: lighten($terminal_color_white, 10%);
       .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
         box-shadow: 0 3px 0 $cyan inset;
         border-radius: 0 !important;
-
-        .gwt-Label {
-          \ font-weight: 600;
-          \ color: $fg;
-        }
       }
     }
     
