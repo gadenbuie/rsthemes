@@ -380,6 +380,7 @@ rosepine_rstheme <- function(
       .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
         box-shadow: 0 3px 0 $cyan inset;
         border-radius: 0 !important;
+      }
     }
     ",
     # - dim the file icon when not selected
