@@ -466,11 +466,3 @@ purrr::walk(
     rosepine_rstheme(variant = variant, as_sass = TRUE)
   }
 )
-
-# Create rstheme files
-purrr::walk(
-  c("base", "moon", "dawn"),
-  function(variant) {
-    rosepine_rstheme(variant = variant)
-  }
-)
