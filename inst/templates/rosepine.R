@@ -73,16 +73,13 @@ rose_pine_dawn <- list(
 #'
 #' @export
 rosepine_rstheme <- function(
-    variant = "base",
-    apply = FALSE,
-    as_sass = FALSE,
-    ...) {
-  variant.choices <- list("base" = NULL, "moon" = "Moon", "dawn" = "Dawn")
-  stopifnot(
-    "Variant must be 'base', 'moon', or 'dawn'." =
-      tolower(variant) %in% names(variant.choices)
-  )
-  variant <- do.call(switch, c(tolower(variant), variant.choices))
+  variant = c("base", "moon", "dawn"),
+  apply = FALSE,
+  as_sass = FALSE,
+  ...
+) {
+  rlang::arg_match(variant)
+  variant <- switch(variant, moon = "Moon", dawn = "Dawn")
 
   theme_dark <- !identical(variant, "Dawn")
 
