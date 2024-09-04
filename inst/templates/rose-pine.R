@@ -101,7 +101,7 @@ rosepine_rstheme <- function(
     sprintf("darken($%s, %s%%)", nm, by)
   }
   .transparentize <- function(nm, by = 0.25) {
-    sprintf("transparentize($%s, %s%%)", nm, by)
+    sprintf("transparentize($%s, %s)", nm, by)
   }
 
   theme_palette <- list(
