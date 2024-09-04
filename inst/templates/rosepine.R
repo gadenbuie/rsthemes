@@ -95,13 +95,7 @@ rosepine_rstheme <- function(
   lighten_factor <- 5
   darken_factor <- 5
   .lighten <- function(nm, by = lighten_factor) {
-    paste0(
-      "lighten($",
-      nm,
-      ", ",
-      by,
-      "%)"
-    )
+    sprintf("lighten($%s, %s%%)", nm, by)
   }
   .darken <- function(nm, by = darken_factor) {
     paste0(
