@@ -102,7 +102,7 @@ light_background <- list(
     bg_2 = "#f2efdf",
     bg_3 = "#edeada",
     bg_4 = "#e8e5d5",
-    bg_5 = "#bec5b2",# not currently used
+    bg_5 = "#bec5b2", # not currently used
     bg_visual = "#f0f2d4",
     bg_red = "#ffe7de",
     bg_green = "#f3f5d9",
@@ -155,12 +155,14 @@ light_background <- list(
 #' @export
 everforest_rstheme <- function(
     dark = TRUE,
-    variant = "medium",
+    variant = c("medium", "hard", "soft"),
     apply = FALSE,
     as_sass = FALSE,
     ...) {
-  variant.choices <- c("medium", "hard", "soft")
-  variant <- match.arg(tolower(variant), variant.choices)
+  variant <- switch(
+    rlang::arg_match(variant),
+    hard = "Hard", soft = "Soft", "Medium"
+  )
 
   ef_foreground <- get(paste0(
     if (dark) "dark" else "light",
@@ -169,7 +171,7 @@ everforest_rstheme <- function(
   ef_background <- get(paste0(
     if (dark) "dark" else "light",
     "_background"
-  ))[[variant]]
+  ))[[tolower(variant)]]
   ef_pal <- c(
     ef_foreground,
     ef_background
@@ -178,22 +180,10 @@ everforest_rstheme <- function(
   lighten_factor <- 5
   darken_factor <- 5
   .lighten <- function(nm, by = lighten_factor) {
-    paste0(
-      "lighten($",
-      nm,
-      ", ",
-      by,
-      "%)"
-    )
+    sprintf("lighten($%s, %s%%)", nm, by)
   }
   .darken <- function(nm, by = darken_factor) {
-    paste0(
-      "darken($",
-      nm,
-      ", ",
-      by,
-      "%)"
-    )
+    sprintf("darken($%s, %s%%)", nm, by)
   }
 
   theme_palette <- list(
@@ -268,7 +258,7 @@ everforest_rstheme <- function(
       paste0(
         "everforest-",
         if (dark) "dark-" else "light-",
-        variant,
+        tolower(variant),
         ".scss"
       )
     )
@@ -281,7 +271,7 @@ everforest_rstheme <- function(
         paste0(
           "everforest-",
           if (dark) "dark-" else "light-",
-          variant,
+          tolower(variant),
           ".rstheme"
         )
       )
@@ -293,7 +283,7 @@ everforest_rstheme <- function(
         paste0(
           "everforest-",
           if (dark) "dark-" else "light-",
-          variant,
+          tolower(variant),
           ".rstheme"
         )
       )
@@ -466,11 +456,6 @@ everforest_rstheme <- function(
       .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
         box-shadow: 0 3px 0 $line_1 inset;
         border-radius: 0 !important;
-
-        .gwt-Label {
-          \\ font-weight: 600;
-          \\ color: $fg;
-        }
       }
     }
     ",
@@ -559,19 +544,6 @@ purrr::walk(
       c("hard", "medium", "soft"),
       function(variant) {
         everforest_rstheme(dark = dark, variant = variant, as_sass = TRUE)
-      }
-    )
-  }
-)
-
-# Create rstheme files
-purrr::walk(
-  c(TRUE, FALSE),
-  function(dark) {
-    purrr::walk(
-      c("hard", "medium", "soft"),
-      function(variant) {
-        everforest_rstheme(dark = dark, variant = variant)
       }
     )
   }
