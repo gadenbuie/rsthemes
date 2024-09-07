@@ -1,6 +1,9 @@
 # rsthemes (development version)
 
 - New theme(s) [Rosé Pine](https://rosepinetheme.com/) (@eric-hunt #102)
+
+- New theme(s) [Everforest](https://github.com/sainnhe/everforest) (@eric-hunt #103)
+
 - New theme [Embark](https://embark-theme.github.io/) and some minor improvements to text coloring defaults when applying a dialog theme.  (@eric-hunt #99)
 
 # rsthemes 0.4.0 (2022-08-21)
