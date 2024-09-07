@@ -4,9 +4,10 @@
 # getwindowid RStudio --list
 
 # Resize RStudio window to 1920 x 1600
-windows <- system("getwindowid RStudio --list", intern = TRUE)
-window <- grep("rsthemes - assets", windows, value = TRUE)
-rstudio_window <- strsplit(window, "id=")[[1]][2] # replace with window id found above
+# windows <- system("getwindowid RStudio --list", intern = TRUE)
+# window <- grep("rsthemes - assets", windows, value = TRUE)
+# rstudio_window <- strsplit(window, "id=")[[1]][2] # replace with window id found above
+rstudio_window <- 132873
 themes <- rsthemes::list_rsthemes(list_installed = FALSE)
 
 system("./resize-rstudio", wait = TRUE)
