@@ -207,11 +207,6 @@ rsthemes::rstheme(
     .gwt-TabLayoutPanelTabInner .rstheme_tabLayoutCenter {
       box-shadow: 0 3px 0 $cyan inset;
       border-radius: 0 !important;
-
-      .gwt-Label {
-        \\ font-weight: 600;
-        \\ color: $fg;
-      }
     }
   }
   ',
