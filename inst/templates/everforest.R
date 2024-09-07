@@ -250,45 +250,19 @@ everforest_rstheme <- function(
     pal_parameters = "$fg"
   )
 
-  if (as_sass) {
-    theme_apply <- FALSE
-    theme_as_sass <- TRUE
-    theme_path <- here::here(
-      "inst/templates",
-      paste0(
-        "everforest-",
-        if (dark) "dark-" else "light-",
-        tolower(variant),
-        ".scss"
-      )
-    )
-  } else {
-    if (apply) {
-      theme_apply <- TRUE
-      theme_as_sass <- FALSE
-      theme_path <- here::here(
-        "inst/themes",
-        paste0(
-          "everforest-",
-          if (dark) "dark-" else "light-",
-          tolower(variant),
-          ".rstheme"
-        )
-      )
-    } else {
-      theme_apply <- FALSE
-      theme_as_sass <- FALSE
-      theme_path <- here::here(
-        "inst/themes",
-        paste0(
-          "everforest-",
-          if (dark) "dark-" else "light-",
-          tolower(variant),
-          ".rstheme"
-        )
-      )
-    }
-  }
+  theme_file <- paste0(
+    "everforest-",
+    if (dark) "dark-" else "light-",
+    tolower(variant),
+    if (as_sass) ".scss" else ".rstheme"
+  )
+
+  theme_apply <- apply && !as_sass
+  theme_as_sass <- as_sass
+  theme_path <- here::here(
+    if (as_sass) "inst/templates" else "inst/themes",
+    theme_file
+  )
 
   theme_args <- list(
     ## >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
