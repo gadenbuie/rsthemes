@@ -9,7 +9,7 @@
 - [Horizon Dark][horizon] (Jonathan Olaleye)
 - [a11y-syntax-highlighting][a11y-syntax] ([Eric Bailey](https://ericwbailey.design/))
 - [Night Owl][night-owl] ([Sarah Drasner](https://sarah.dev/))
-  - with huge thanks to original [Night Owlish][night-owlish] 
+  - with huge thanks to original [Night Owlish][night-owlish]
     implementation in RStudio by [Mara Averick](https://maraaverick.rbind.io/)
 - Yule RStudio
   - Based on the [Yule tmTheme](https://tmtheme-editor.herokuapp.com/#!/editor/theme/Yule)
@@ -18,7 +18,8 @@
 - [Material Theme][material]
   - Contributed to rsthemes by [Zac de Lusignan](https://www.zacdelusignan.com/)
 - [Serendipity][serendipity] ([wickedtemplates](https://www.wickedtemplates.com/))
-- [Embark](https://github.com/eric-hunt/embark.rstheme) ([Eric Hunt](https://github.com/eric-hunt))
+- [Embark](https://github.com/eric-hunt/https://github.com/eric-hunt/embark.rstheme) ([Eric Hunt](https://github.com/eric-hunt))
+- [Rosé Pine](https://github.com/eric-hunt/rosepine.rstheme.rstheme) ([Eric Hunt](https://github.com/eric-hunt))
 - [Everforest](https://github.com/eric-hunt/everforest.rstheme) ([Eric Hunt](https://github.com/eric-hunt))
 
 [base16]: https://github.com/chriskempson/base16
@@ -36,4 +37,5 @@
 [material]: https://material-theme.site/
 [serendipity]: https://wvsc.dev/
 [embark]: https://embark-theme.github.io/
+[rose-pine]: https://rosepinetheme.com/
 [everforest]: https://github.com/sainnhe/everforest
