@@ -38,5 +38,10 @@ Useful links:
 \author{
 \strong{Maintainer}: Garrick Aden-Buie \email{garrick@adenbuie.com}
 
+Other contributors:
+\itemize{
+  \item Eric Hunt \email{52219938+eric-hunt@users.noreply.github.com} (\href{https://orcid.org/0000-0002-6891-8294}{ORCID}) [contributor]
+}
+
 }
 \keyword{internal}
