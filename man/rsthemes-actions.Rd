@@ -88,7 +88,9 @@ implementation in RStudio by \href{https://maraaverick.rbind.io/}{Mara Averick}
 \item Contributed to rsthemes by \href{https://www.zacdelusignan.com/}{Zac de Lusignan}
 }
 \item \href{https://wvsc.dev/}{Serendipity} (\href{https://www.wickedtemplates.com/}{wickedtemplates})
-\item \href{embark}{Embark} (\href{https://github.com/eric-hunt}{Eric Hunt})
+\item \href{https://github.com/eric-hunt/https://github.com/eric-hunt/embark.rstheme}{Embark} (\href{https://github.com/eric-hunt}{Eric Hunt})
+\item \href{https://github.com/eric-hunt/rosepine.rstheme.rstheme}{Rosé Pine} (\href{https://github.com/eric-hunt}{Eric Hunt})
+\item \href{https://github.com/eric-hunt/everforest.rstheme}{Everforest} (\href{https://github.com/eric-hunt}{Eric Hunt})
 }
 }
 
