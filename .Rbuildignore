@@ -8,3 +8,5 @@
 ^dev$
 ^screenshot_themes.R$
 ^README\.Rmd$
+^_dev$
+^\.tmp$
