@@ -1,4 +1,4 @@
-# rsthemes (development version)
+# rsthemes 0.5.0
 
 - New theme(s) [Rosé Pine](https://rosepinetheme.com/) (@eric-hunt #102)
 

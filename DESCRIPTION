@@ -1,6 +1,6 @@
 Package: rsthemes
 Title: Full Themes for RStudio v1.2+
-Version: 0.4.0.9000
+Version: 0.5.0
 Authors@R: c(
     person("Garrick", "Aden-Buie", , "garrick@adenbuie.com", role = c("aut", "cre")),
     person("Eric", "Hunt", , "52219938+eric-hunt@users.noreply.github.com", role = "ctb",
