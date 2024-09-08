@@ -7,7 +7,7 @@
 # windows <- system("getwindowid RStudio --list", intern = TRUE)
 # window <- grep("rsthemes - assets", windows, value = TRUE)
 # rstudio_window <- strsplit(window, "id=")[[1]][2] # replace with window id found above
-rstudio_window <- 132873
+rstudio_window <- 133078
 themes <- rsthemes::list_rsthemes(list_installed = FALSE)
 
 system("./resize-rstudio", wait = TRUE)
@@ -15,9 +15,11 @@ rstudioapi::executeCommand("activateConsole")
 rstudioapi::executeCommand("consoleClear")
 rstudioapi::sendToConsole('remotes::install_github("gadenbuie/rsthemes")\nrsthemes::install_rsthemes()', execute = FALSE)
 
+Sys.sleep(4)
+
 for (theme in themes) {
   rstudioapi::applyTheme(theme)
-  Sys.sleep(1)
+  Sys.sleep(1.5)
   theme_file <- sub(" {rsthemes}", "", theme, fixed = TRUE)
   theme_file <- gsub("[ ,;()-]", "_", theme_file)
   theme_file <- tolower(theme_file)
