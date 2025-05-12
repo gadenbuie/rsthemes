@@ -1,3 +1,5 @@
+- New theme(s) [Nightfox](https://github.com/EdenEast/nightfox.nvim) (@eric-hunt #105)
+
 # rsthemes 0.5.0
 
 - New theme(s) [Rosé Pine](https://rosepinetheme.com/) (@eric-hunt #102)
